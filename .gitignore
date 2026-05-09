@@ -1,13 +1,19 @@
-# Quarto
+# Quarto Build-Caches (NICHT der docs/ Ordner — der wird publiziert!)
 /.quarto/
-/_book/
 /_freeze/
-/docs/
-*.html
-!interactions/*.html
-*.pdf
-!interactions/*.pdf
-!images/*.pdf
+/_book/
+
+# LaTeX-Zwischendateien (vom PDF-Build im Projekt-Root)
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+/index.tex
 
 # R / RStudio
 .Rproj.user/
@@ -29,4 +35,3 @@ desktop.ini
 *.bak
 *.tmp
 ~$*
-.positai
