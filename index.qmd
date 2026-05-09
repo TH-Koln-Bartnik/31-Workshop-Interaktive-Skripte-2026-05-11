@@ -13,11 +13,11 @@ Am Ende des Tages steht ein eigenes interaktives Skript live im Netz. Du hast es
 ::: lernziel-box
 #### Am Ende des Tages kannst du …
 
-1.  ein Quarto-Projekt lokal in **RStudio** anlegen, rendern und über **GitHub Pages** veröffentlichen,
-2.  ein **automatisches Inhaltsverzeichnis** erzeugen und Quellen aus **Zotero** zitieren,
-3.  das Skript im **TH-Köln-Stil** formatieren (`_brand.yml`, CSS),
-4.  ein **interaktives Diagramm** und ein **iFrame-Spiel** einbauen,
-5.  einen **KI-Tutor** verlinken, der die Lernenden im Skript begleitet.
+1.  Ein leicht pflegbares **Online-Skript erstellen** (ein Quarto-Projekt lokal in RStudio anlegen, rendern und über GitHub Pages veröffentlichen),
+2.  ...das verschiedene **Formatierungen automatisch erzeugt** (etwa ein automatisches Inhaltsverzeichnis erzeugen und Quellen aus Zotero zitieren),
+3.  ...**Stilelemente** an Deine Vorlieben **anpasst** (das Skript im TH-Köln-Stil formatieren (`_brand.yml`, CSS)),
+4.  ...und den Lernenden erlaubt, mit den Inhalten zu **interagieren** (ein interaktives Diagramm und ein iFrame-Spiel einbauen),
+5.  **...**und **Hilfe durch KI** bereitzustellen (einen KI-Tutor verlinken, der die Lernenden im Skript begleitet).
 :::
 
 ## Drei Referenzen
