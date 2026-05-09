@@ -1,0 +1,83 @@
+---
+title: "Trouble-Shooting"
+subtitle: "Die zehn häufigsten Probleme und wie du sie löst"
+---
+
+Jeder Punkt: **Symptom → Ursache → Lösung**. Wenn nichts hilft: Tutor fragen mit dem Prompt am Ende.
+
+## 1. YAML-Fehler beim Rendern
+
+**Symptom:** `Error: Failed to load YAML metadata`.
+**Ursache:** Einrückung mit Tabs statt Leerzeichen, oder fehlender Doppelpunkt.
+**Lösung:** YAML-Block prüfen, immer **zwei Leerzeichen** einrücken, keine Tabs. Online-Validator: <https://www.yamllint.com>.
+
+## 2. GitHub Pages zeigt 404
+
+**Symptom:** Dein Skript ist online, aber die URL liefert „404 — File not found".
+**Ursache:** `output-dir: docs` fehlt in `_quarto.yml`, oder der Pages-Branch ist falsch eingestellt.
+**Lösung:** In `_quarto.yml` `output-dir: docs` setzen, render, push. In **Settings → Pages**: Branch `main`, Folder `/docs`.
+
+## 3. `docs/` wird nicht committet
+
+**Symptom:** Nach Push fehlt der `docs/`-Ordner auf GitHub.
+**Ursache:** `.gitignore` schließt `/docs/` aus.
+**Lösung:** Zeile `/docs/` aus `.gitignore` entfernen, dann commit und push.
+
+## 4. Zotero-Zitat erscheint als `[?]`
+
+**Symptom:** Zitate werden mit Fragezeichen statt Autor und Jahr gerendert.
+**Ursache:** Citation Key in der `.bib`-Datei stimmt nicht mit dem Key im Text überein.
+**Lösung:** `references.bib` öffnen, Schlüssel nachsehen, im Text exakt so verwenden. Better BibTeX in Zotero exportiert stabile Keys (z. B. `mayer2021`).
+
+## 5. iFrame ist leer
+
+**Symptom:** Der iFrame-Bereich ist sichtbar, aber leer oder zeigt eine Fehlermeldung.
+**Ursache:** Die externe Seite verbietet Einbettung (HTTP-Header `X-Frame-Options`).
+**Lösung:** Statt iFrame einen normalen Markdown-Link verwenden, oder eine andere Quelle wählen.
+
+## 6. CSV lässt sich nicht laden
+
+**Symptom:** `read_csv()` wirft `CORS error` oder `Forbidden`.
+**Ursache:** Der Server der Datenquelle erlaubt keinen Cross-Origin-Zugriff aus dem Browser.
+**Lösung:** Datei lokal in `data/` speichern und von dort laden.
+
+## 7. R-Paket fehlt
+
+**Symptom:** `Error in library(plotly): there is no package called 'plotly'`.
+**Ursache:** Paket nicht installiert.
+**Lösung:** In der R-Konsole `install.packages("plotly")`. Bei mehreren: `install.packages(c("plotly", "dplyr", "readr"))`.
+
+## 8. Quarto-Version zu alt
+
+**Symptom:** Neue Features (z. B. `_brand.yml`) funktionieren nicht.
+**Ursache:** Lokale Quarto-Installation ist älter als 1.5.
+**Lösung:** `quarto --version` prüfen, von <https://quarto.org/docs/get-started/> aktualisieren.
+
+## 9. GitHub Desktop fragt immer nach Anmeldung
+
+**Symptom:** Bei jedem Push wird das Passwort erneut verlangt.
+**Ursache:** Personal Access Token läuft ab oder Kontostatus inkonsistent.
+**Lösung:** In GitHub Desktop **File → Options → Accounts → Sign Out**, dann neu anmelden via Browser.
+
+## 10. Logo wird nicht angezeigt
+
+**Symptom:** Im gerenderten Skript erscheint kein Logo.
+**Ursache:** Pfad in `_brand.yml` stimmt nicht, oder Datei fehlt im `assets/`-Ordner.
+**Lösung:** Pfad relativ zur Projektwurzel (`assets/th-koeln-logo.png`), Datei dort tatsächlich ablegen.
+
+## Wenn nichts hilft — Tutor fragen
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt:
+
+> Ich versuche, ein Quarto-Skript zu rendern. Folgender Fehler tritt auf:
+>
+> [Fehlermeldung kopieren]
+>
+> Mein Setup: [Betriebssystem], Quarto-Version [X.X.X], R-Version [X.X.X], RStudio-Version [X.X.X]. Ich habe schon versucht: [...].
+>
+> Schreib mir die wahrscheinlichste Ursache in einem Satz, dann den nächsten Schritt zum Beheben. Wenn du mehr wissen musst, frag.
+:::

@@ -1,0 +1,97 @@
+---
+title: "Willkommen"
+subtitle: "Werkstatt-Skript zum Workshop am 11.05.2026"
+---
+
+::: th-color-bar
+:::
+
+# Was du heute baust
+
+Am Ende des Tages steht ein eigenes interaktives Skript live im Netz. Du hast es selbst gerendert, gepusht und veröffentlicht. Das ist das Ziel — alles andere ist Mittel zum Zweck.
+
+::: lernziel-box
+#### Am Ende des Tages kannst du …
+
+1.  ein Quarto-Projekt lokal in **RStudio** anlegen, rendern und über **GitHub Pages** veröffentlichen,
+2.  ein **automatisches Inhaltsverzeichnis** erzeugen und Quellen aus **Zotero** zitieren,
+3.  das Skript im **TH-Köln-Stil** formatieren (`_brand.yml`, CSS),
+4.  ein **interaktives Diagramm** und ein **iFrame-Spiel** einbauen,
+5.  einen **KI-Tutor** verlinken, der die Lernenden im Skript begleitet.
+:::
+
+## Drei Referenzen
+
+Bevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs.
+
+:::::: benchmark-grid
+::: benchmark-card
+### Lakens — Statistical Inferences
+
+Ein vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden".
+
+[Zum Skript →](https://lakens.github.io/statistical_inferences/){target="_blank"}
+:::
+
+::: benchmark-card
+### Bartnik — KI als Hilfe zum Lehren und Lernen
+
+Mein eigenes Skript, mit interaktiven Widgets, eingebetteten Tutor-Bots und H5P-Quizzen.
+
+[Zum Skript →](https://th-koln-bartnik.github.io/genai4teaching/){target="_blank"}
+:::
+
+::: benchmark-card
+### Békés — Data Analysis with AI
+
+Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Skript plus Slides plus Code".
+
+[Zum Skript →](https://gabors-data-analysis.com/ai-course/){target="_blank"}
+:::
+::::::
+
+## Wähle deinen Beispielstrang
+
+Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine **kurze Einführung ins wissenschaftliche Arbeiten**. Wähle einen der drei Stränge und behalte ihn den ganzen Tag bei.
+
+| Strang | Worum es geht | Quelle |
+|------------------------|------------------------|------------------------|
+| **A — Wissenschaftliche Einstellung** | Skepsis, Belege, intellektuelle Demut | [Calling Bullshit, Kap. „Wissenschaftliche Einstellung"](https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung){target="_blank"} |
+| **B — Recherche und Quellenqualität** | Suchen, prüfen, Quellen einordnen | [Calling Bullshit, Kap. „Kritische Informationssuche"](https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche){target="_blank"} |
+| **C — Transparent schreiben** | Methoden offenlegen, Reproduzierbarkeit | [Calling Bullshit, Kap. „Transparent schreiben"](https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben){target="_blank"} |
+
+Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang identisch.
+
+## Tagesablauf
+
+| Uhrzeit | Block | Was passiert |
+|------------------------|------------------------|------------------------|
+| 09:00–09:45 | Auftakt | Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl |
+| 09:45–10:30 | Kap. 1 — Didaktik | Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung |
+| 10:30–11:45 | Kap. 2 — Setup | Bausteine, Memory-Spiel, lokale Grundstruktur, **erster Push live** |
+| 11:45–12:30 | Pause |  |
+| 12:30–13:15 | Kap. 3a — Übersicht | Inhaltsverzeichnis, Zotero-Bibliothek, automatische Zitate |
+| 13:15–14:00 | Kap. 3b — Stil | TH-Köln-Brand einbauen |
+| 14:00–14:45 | Kap. 4 — Charts | Interaktives Diagramm mit echten Daten |
+| 14:45–15:30 | Kap. 5 — iFrames + Tutor | H5P-/iFrame-Einbettung, Link zum KI-Tutor |
+| 15:30–16:00 | Showcase + Puffer | Wer früh durch ist, baut Slides (Kap. 6); alle anderen holen auf |
+
+## Wie du dieses Skript benutzt
+
+Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was du nach diesem Kapitel kannst"), gefolgt von einem **„Mach mit"**-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels findest du einen Trouble-Shooting-Kasten („Was, wenn …") und einen fertigen **Tutor-Prompt** zum Kopieren.
+
+::: callout-tip
+## Drei Tabs offen halten
+
+Ein Tab mit RStudio (lokal), ein Tab mit GitHub Desktop (lokal), ein Tab mit dem KI-Tutor. Mehr brauchst du nicht.
+
+[**Tutor öffnen — „Interaktive Skripte"** →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+:::
+
+## Voraussetzungen
+
+Wenn du noch nichts installiert hast, springe zuerst in den [Quick-Starter Guide](appendix/quickstart.qmd). Dort steht, was du in welcher Reihenfolge installierst (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.
+
+## Quellen
+
+Lakens (2022); Bartnik (2025); Békés (2025); Biggs & Tang (2011); Mayer (2021).

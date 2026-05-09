@@ -1,0 +1,60 @@
+---
+title: "6 — Slides mit Quarto (optional)"
+---
+
+::: {.callout-note}
+## Optional, für Fortgeschrittene
+Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, kann hier weiterbauen. Vorlage und Inspiration: Békés (2025), [Course slides for "Data Analysis with AI"](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html){target="_blank"}.
+:::
+
+::: {.lernziel-box}
+#### Was du nach diesem Kapitel kannst
+
+- aus einem `.qmd`-Kapitel einen **Foliensatz** mit Quarto Reveal.js erzeugen,
+- die **TH-Köln-Farben** auf Slides übertragen,
+- den Foliensatz neben das Skript auf GitHub Pages stellen.
+:::
+
+## Schnellbau in vier Schritten
+
+1. Neue Datei `slides/kapitel-1-slides.qmd` anlegen.
+2. YAML-Header:
+
+```yaml
+---
+title: "Kapitel 1 — Didaktik"
+author: "Dein Name"
+format:
+  revealjs:
+    theme: [default, ../styles.css]
+    slide-number: true
+    chalkboard: true
+    incremental: true
+    logo: ../assets/th-koeln-logo.png
+---
+```
+
+3. Inhalt: **eine H2-Überschrift = eine Folie**, dazwischen Stichpunkte und Bilder. Speaker Notes mit `::: notes`.
+4. `quarto render slides/kapitel-1-slides.qmd` → Slide-Deck als HTML.
+
+## TH-Köln-Brand auf Slides
+
+Die `_brand.yml` aus deinem Skript wird auch von Reveal.js gelesen. Zusätzlich einbinden:
+
+```yaml
+format:
+  revealjs:
+    brand: ../_brand.yml
+    theme: [default, ../styles.css]
+```
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlag mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Gib mir den YAML-Header.
+:::

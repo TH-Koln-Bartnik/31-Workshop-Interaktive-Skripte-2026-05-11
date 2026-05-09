@@ -1,0 +1,127 @@
+---
+title: "5 — iFrames, Spiele und KI-Tutor"
+---
+
+::: {.lernziel-box}
+#### Was du nach diesem Kapitel kannst
+
+- ein **interaktives Quiz oder Spiel** als iFrame in dein Skript einbinden,
+- den Unterschied zwischen statischem HTML, **H5P** und externer Einbettung benennen,
+- einen **KI-Tutor** als Link einbauen, der die Lernenden begleitet — didaktisch begründet.
+:::
+
+## Worum es im Kern geht
+
+Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser [@karpicke2011; @fiorella2016]. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert [@mollick2023; @kasneci2023].
+
+## iFrame in einer Zeile
+
+Ein iFrame bettet eine fremde Seite in deine ein:
+
+```html
+<iframe src="https://h5p.org/h5p/embed/617" width="100%" height="500" frameborder="0"></iframe>
+```
+
+Höhe nach Inhalt anpassen, Breite immer 100 %, `frameborder="0"` für ein sauberes Aussehen.
+
+## Drei Wege, ein Spiel einzubauen
+
+| Variante | Aufwand | Vorteil | Nachteil |
+|---|---|---|---|
+| **A — Statisches HTML** (eigenes Widget) | hoch zur Erstellung, niedrig danach | volle Kontrolle, kein Konto, läuft offline | erfordert HTML/JS-Kenntnisse oder KI-Hilfe |
+| **B — H5P** (h5p.org / Moodle / WordPress) | mittel | viele fertige Vorlagen (Quiz, Drag-Drop, Memory) | erfordert Konto, externe Abhängigkeit |
+| **C — externer Editor** (Genially, Kahoot, Quizizz) | niedrig | schnell, hübsch, kollaborativ | Werbung, externe Datenhaltung, oft Login nötig |
+
+::: {.callout-tip}
+## Mach mit (Variante A — statisches HTML)
+Schau dir das **Lernspiel aus Kapitel 1** ([assets/lernspiel-kapitel1.html](../assets/lernspiel-kapitel1.html){target="_blank"}) im Browser an. Öffne die Datei in einem Texteditor — sie ist eine einzige HTML-Datei, ohne Backend. Diesen Bauplan kannst du selbst (oder dein KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.
+
+**Strang-Beispiele:**
+
+- Strang A — Drag-and-Drop: „Welche Aussage ist eine Hypothese, welche eine Behauptung?"
+- Strang B — Multiple Choice: „Welche der drei Quellen ist primärwissenschaftlich?"
+- Strang C — Memory: „Methodenbegriff zu transparenter Beschreibung"
+:::
+
+::: {.callout-tip}
+## Mach mit (Variante B — H5P, optional)
+Lege ein kostenloses Konto auf <https://h5p.org> an. Wähle **Drag the Words**, baue ein Mini-Quiz zu drei Begriffen aus deinem Strang. Klicke „Embed", kopiere den iFrame-Code, füge ihn in dein Kapitel ein. Render.
+:::
+
+## KI-Tutor als Link
+
+Der Tutor läuft **nicht** im iFrame, sondern in einem zweiten Tab. Du legst einen GPT (oder Custom GPT) mit System-Prompt an, holst dir den öffentlichen Link, baust ihn als Markdown-Link an passende Stellen im Skript ein. Drei Hosting-Varianten zur Auswahl:
+
+### Option 1 — Custom GPT auf ChatGPT (heute genutzt)
+
+Einfachste Variante, weltweit verfügbar, kein Hochschul-Login nötig. Im Skript einbauen:
+
+```markdown
+[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+```
+
+Der vorbereitete Tutor für diesen Workshop liegt unter dem oben verlinkten URL — der System-Prompt steckt dort schon drin. Die Lernenden klicken, ChatGPT-Login öffnet sich (kostenlos), der Tutor antwortet sofort im Workshop-Kontext.
+
+::: {.callout-note}
+**Datenschutz:** ChatGPT speichert Konversationen auf US-Servern. Für offene Lehre ohne personenbezogene Daten unkritisch. Wenn du europäische Datenhaltung brauchst, nimm Option 2.
+:::
+
+### Option 2 — Custom GPT in der AcademicCloud
+
+Variante mit europäischer Datenhaltung und Hochschul-Login. Du legst einen GPT mit dem vorbereiteten System-Prompt an (siehe [Anhang Tutor-Prompt](../appendix/tutor-prompt.qmd)) und verlinkst ihn:
+
+```markdown
+[Frag den Skript-Tutor →](https://chat.academiccloud.de/chat/DEIN-LINK){target="_blank"}
+```
+
+Lernende loggen sich mit Hochschul-Credentials ein.
+
+### Option 3 — eigenes statisches Widget oder voll gehosteter Tutor
+
+Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: `_relevance-widget.qmd` in <https://github.com/TH-Koln-Bartnik/genai4teaching>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: [BWL1 Tutor-Chatbot](https://main.difctumi6okdj.amplifyapp.com/){target="_blank"}). Mollick und Mollick [-@mollick2023] geben einen Überblick über die didaktischen Designentscheidungen.
+
+::: {.callout-tip}
+## Mach mit
+Wir nutzen heute den **vorbereiteten Workshop-Tutor** auf ChatGPT — du musst keinen eigenen GPT bauen, sondern nur den Link einbauen:
+
+```markdown
+[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+```
+
+Setze diesen Link an passende Stelle in dein Skript (z. B. in einen Callout-Tip am Kapitelende). Render und prüf den Klick.
+
+Wer einen **eigenen** Tutor mit eigenem System-Prompt bauen will, springt zum [Tutor-Prompt-Anhang](../appendix/tutor-prompt.qmd) und legt sich Option 1 oder Option 2 selbst an.
+:::
+
+## Wann **kein** KI-Tutor?
+
+Drei Situationen, in denen du es lassen solltest:
+
+- **Klar definierte Faktenfragen** — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.
+- **Sensible persönliche Themen** — der Tutor soll Lernen begleiten, keine Beratung ersetzen.
+- **Zeitkritisches Pflichtwissen** — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch [@kasneci2023].
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **iFrame zeigt nichts an?** → URL prüfen, oft fehlt `https://`. Manche Seiten erlauben kein Embedding (HTTP-Header `X-Frame-Options`) — dann nur als Link verwenden.
+- **iFrame zu kurz, Inhalt abgeschnitten?** → `height` höher setzen, oder `style="height: 90vh"` für 90 % der Bildschirmhöhe.
+- **AcademicCloud-Link funktioniert für andere nicht?** → Sharing aktivieren in den GPT-Einstellungen, „öffentlich" oder „mit Link".
+- **Tutor antwortet auf alles, auch außerhalb des Themas?** → System-Prompt nachschärfen, explizit Grenzen setzen („Antworte nur zu Quarto-Workflow-Fragen").
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlag mir den einfachsten ersten Schritt vor und schreib den Code-Schnipsel dazu. Erkläre vorher in zwei Sätzen, was ich da eigentlich tue.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::

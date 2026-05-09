@@ -1,0 +1,30 @@
+# Quarto
+/.quarto/
+/_book/
+/_freeze/
+/docs/
+*.html
+!assets/*.html
+*.pdf
+!assets/*.pdf
+
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Temporary
+*.bak
+*.tmp
+~$*

@@ -1,0 +1,93 @@
+---
+title: "3a — Inhaltsverzeichnis und Literatur"
+---
+
+::: {.lernziel-box}
+#### Was du nach diesem Kapitel kannst
+
+- ein **automatisches Inhaltsverzeichnis** in deinem Skript einschalten,
+- eine **Zotero-Bibliothek als BibTeX exportieren** und ins Projekt einbinden,
+- mit `[@key]` zitieren und ein **automatisches Literaturverzeichnis** am Kapitelende erzeugen.
+:::
+
+## Worum es im Kern geht
+
+Ein gutes Skript orientiert die Lesenden zwei Mal: oben durch das Inhaltsverzeichnis, unten durch die Literaturliste. Beides automatisch zu erzeugen ist mehr als Komfort — es vermeidet die typischen Fehlerquellen (vergessene Quellen, falsche Seitenzahlen, doppelte Einträge), die in Hand-pflege unweigerlich entstehen. Die Verbindung von Zotero und Quarto regelt das mit zwei Konfigurationszeilen.
+
+## Inhaltsverzeichnis — drei Zeilen
+
+In `_quarto.yml`:
+
+```yaml
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Inhalt"
+```
+
+Quarto baut das TOC automatisch aus den Überschriften. Tiefe drei heißt: Kapitel, Abschnitt, Unterabschnitt — alles, was tiefer geschachtelt ist, taucht im TOC nicht auf.
+
+## Zotero anbinden
+
+Zotero exportiert deine Bibliothek als `.bib`-Datei, Quarto liest sie ein, du zitierst per Schlüssel. Das **Better-BibTeX**-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. `mayer2021`) und der Export sich automatisch aktualisiert, wenn du in Zotero etwas änderst.
+
+### Mach mit — in fünf Schritten
+
+1. **Better BibTeX** in Zotero installieren: <https://retorque.re/zotero-better-bibtex/>.
+2. Eine kleine **Zotero-Sammlung** anlegen mit zwei oder drei Quellen aus deinem Strang.
+3. Sammlung **rechtsklicken → Export Collection → Better BibTeX → Keep updated**.
+4. Datei speichern als `references.bib` im Projektordner.
+5. In `_quarto.yml`:
+
+```yaml
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+link-citations: true
+```
+
+### Zitieren
+
+Im Text:
+
+```markdown
+Generative Lernaktivitäten verbessern das Behalten [@fiorella2016].
+Die zugrundeliegende Theorie geht auf Mayer [-@mayer2021] zurück.
+```
+
+Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern du dort einen `# Literatur`-Heading mit `::: {#refs}` setzt — wie in diesem Skript.
+
+::: {.callout-tip}
+## Mach mit — strangbezogen
+
+Wähle aus deinem Strang **drei Quellen**, lege sie in Zotero an, exportiere und zitiere sie in deinem Kapitel. Wenn du keinen passenden Startpunkt hast, hier je eine Empfehlung:
+
+- **Strang A — Wissenschaftliche Einstellung:** Bergstrom & West [-@bergstrom2024], dazu zwei eigene Ergänzungen.
+- **Strang B — Recherche und Quellenqualität:** Bergstrom & West [-@bergstrom2024], dazu eine Quelle zu Open-Access-Datenbanken (z. B. <https://doaj.org>) und eine zu Pre-Print-Servern.
+- **Strang C — Transparent schreiben:** Bergstrom & West [-@bergstrom2024], dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.
+:::
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **„Citation key not found"?** → BibTeX-Schlüssel im `.bib` prüfen, oder Better BibTeX neu auto-exportieren.
+- **Liste erscheint nicht?** → Am Kapitelende `# Literatur` und darunter `::: {#refs}` mit `:::` einfügen. Quarto füllt diesen Block.
+- **Stil falsch?** → CSL-URL prüfen oder eine eigene CSL-Datei aus <https://www.zotero.org/styles> herunterladen und lokal einbinden (`csl: my-style.csl`).
+- **Mehrere Schlüssel zugleich?** → `[@fiorella2016; @mayer2021]` mit Semikolon trennen.
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Frag, wo ich gerade stehe.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::

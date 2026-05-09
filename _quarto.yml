@@ -1,0 +1,74 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Interaktive Skripte mit KI erstellen"
+  subtitle: "Werkstatt-Skript zum Workshop am 11.05.2026, TH Köln"
+  author: "Prof. Dr. Roman Bartnik"
+  date: "2026-05-11"
+  date-format: "DD.MM.YYYY"
+  search: true
+  repo-url: "https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026"
+  repo-actions: [edit, issue]
+  downloads: [pdf]
+  sharing: [twitter, linkedin]
+  page-navigation: true
+  back-to-top-navigation: true
+  sidebar:
+    style: docked
+    background: light
+    collapse-level: 2
+  chapters:
+    - index.qmd
+    - part: "Teil 1 — Werkstatt"
+      chapters:
+        - parts/01-didaktik.qmd
+        - parts/02-setup.qmd
+        - parts/03a-uebersicht.qmd
+        - parts/03b-style.qmd
+        - parts/04-charts.qmd
+        - parts/05-iframes-tutor.qmd
+        - parts/06-slides-optional.qmd
+    - part: "Teil 2 — Quick-Starter"
+      chapters:
+        - appendix/quickstart.qmd
+        - appendix/troubleshooting.qmd
+        - appendix/tutor-prompt.qmd
+  page-footer:
+    left: "© 2026 Roman Bartnik · CC BY-SA 4.0"
+    right: "Erstellt mit [Quarto](https://quarto.org)"
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+citations-hover: true
+citation-location: document
+link-citations: true
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.css
+    toc: true
+    toc-depth: 3
+    toc-title: "Inhalt"
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    fig-cap-location: bottom
+    callout-appearance: simple
+    callout-icon: true
+    smooth-scroll: true
+    anchor-sections: true
+    number-sections: false
+    df-print: paged
+  pdf:
+    documentclass: scrreprt
+    papersize: a4
+    geometry: margin=2.5cm
+    toc: true
+    number-sections: true
+    colorlinks: true
+
+lang: de

@@ -1,0 +1,130 @@
+---
+title: "KI-Tutor: Link und System-Prompt"
+subtitle: "Der Workshop-Tutor und die Anleitung zum eigenen Tutor"
+---
+
+::: {.lernziel-box}
+#### Was dieser Anhang leistet
+Du findest hier den **fertigen Tutor** für diesen Workshop (ein Klick) und den vollständigen **System-Prompt**, mit dem du dir denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen kannst.
+:::
+
+## Der vorbereitete Workshop-Tutor (sofort nutzbar)
+
+::: {.callout-tip}
+## Tutor öffnen
+[**Tutor „Interaktive Skripte"** →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Ein Klick — der GPT öffnet sich in ChatGPT. Login mit kostenlosem ChatGPT-Konto. Der System-Prompt ist eingebaut.
+:::
+
+So baust du den Link in dein eigenes Skript ein:
+
+```markdown
+[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+```
+
+In jedem Kapitel als Callout am Ende:
+
+```markdown
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+:::
+```
+
+## Eigenen Tutor anlegen — drei Hosting-Wege
+
+### Weg 1 — eigenes Custom GPT auf ChatGPT
+
+1. <https://chatgpt.com> öffnen, oben links **„Explore GPTs"** → **„+ Create"**.
+2. **Configure**-Tab öffnen, Name vergeben, System-Prompt unten kopieren und einfügen.
+3. **Save → Share** → „Anyone with the link" oder „Public".
+4. Sharing-Link in dein Skript einbauen (siehe oben).
+
+### Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)
+
+1. <https://chat.academiccloud.de> öffnen, einloggen.
+2. Neuen **Custom GPT** anlegen (Modell: aktuelles Top-Modell).
+3. System-Prompt einfügen.
+4. **Sharing aktivieren** (öffentlich oder „mit Link").
+5. Link einbauen.
+
+### Weg 3 — statisches Widget (nur für Fortgeschrittene)
+
+Eine HTML-Datei mit eingebautem Prompt, die direkt eine OpenAI-kompatible API anspricht — Vorbild: `_relevance-widget.qmd` in <https://github.com/TH-Koln-Bartnik/genai4teaching>. Setzt Server-Proxy oder Tagesschlüssel voraus, deshalb hier nicht im Detail.
+
+## System-Prompt (Copy-Paste)
+
+```
+Du bist ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.
+Du begleitest Teilnehmende eines eintägigen Workshops, in dem sie ein
+eigenes interaktives Skript mit Quarto, RStudio, GitHub Desktop und
+GitHub Pages erstellen. Beispielthema ihres Skripts: eine kurze
+Einführung ins wissenschaftliche Arbeiten (Wissenschaftliche Einstellung,
+Recherche und Quellenqualität, oder Transparent Schreiben).
+
+DEIN VERHALTEN
+- Beginne jede Antwort mit einer Lay-Erklärung in ein bis zwei Sätzen.
+  Was ist das, warum gerade jetzt? Erst danach kommt der technische Schritt.
+- Frage zu Beginn: "Wo stehst du gerade?" Wenn du keinen Stand kennst,
+  frage nach einer kurzen Beschreibung.
+- Gib nie mehr als ZEHN Zeilen Code auf einmal. Lieber kleinere Schritte.
+- Erkläre alle Pfade explizit (relativer Pfad, absoluter Pfad, was bedeutet das).
+- Verwende deutsche Sprache. Bei Fachbegriffen: einmalig auf Englisch
+  in Klammern, dann auf Deutsch weiter.
+- Lasse Fehler nicht klein erscheinen. Wenn etwas typisch falsch läuft,
+  benenne es offen und erkläre warum.
+
+WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
+- Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,
+  Zotero mit Better BibTeX, optional H5P.
+- Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),
+  scharfe Ecken, Arial.
+- Struktur: Quarto-Buch mit Kapiteln in einem parts/-Ordner, output-dir: docs,
+  Veröffentlichung über GitHub Pages aus dem main-Branch, Folder /docs.
+- Inhaltsbeispiel: Einführung wissenschaftliches Arbeiten, drei Stränge:
+  Wissenschaftliche Einstellung / Recherche und Quellenqualität /
+  Transparent Schreiben (basierend auf Bergstrom & West, "Calling Bullshit").
+
+DEINE GRENZEN
+- Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).
+  Bleib bei Quarto.
+- Antworte nicht zu allgemeinen IT-Fragen außerhalb des Skript-Workflows.
+- Behaupte nichts, was du nicht sicher weißt. Bei Unsicherheit: sag das.
+- Erfinde keine Quellen, keine Pakete, keine API-Endpunkte.
+
+ZIEL
+Am Ende des Workshops haben die Teilnehmenden ein eigenes, im Netz
+veröffentlichtes Skript mit Inhaltsverzeichnis, Zotero-Zitaten,
+TH-Köln-Stil, einem interaktiven Diagramm und einem iFrame-Element.
+Hilf ihnen, dorthin zu kommen — Schritt für Schritt.
+```
+
+## Drei Kurz-Prompts für typische Aufgaben
+
+### A — Fehler erklären
+
+```
+Erkläre mir diesen Fehler aus dem Quarto-Render-Log in einem Satz,
+dann den wahrscheinlichsten nächsten Schritt:
+
+[Fehlermeldung einfügen]
+```
+
+### B — Code reviewen
+
+```
+Ich habe folgenden YAML/Code in meinem Quarto-Skript. Schau, ob
+Fehler oder Stolperfallen drin sind. Antworte mit drei kurzen Punkten:
+was funktioniert, was nicht, was würdest du anders machen.
+
+[Code einfügen]
+```
+
+### C — Kapitel ergänzen
+
+```
+Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende
+Übung vor — kurz, hands-on, mit konkretem Code-Snippet zum Einbauen.
+Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.
+```

@@ -1,0 +1,152 @@
+---
+title: "2 — Bausteine und Workflow"
+---
+
+::: {.lernziel-box}
+#### Was du nach diesem Kapitel kannst
+
+- die sechs Bausteine **Quarto, YAML, JSON, HTML, iFrame, GitHub** in eigenen Worten erklären,
+- ein leeres Quarto-Projekt **lokal anlegen** (RStudio + Terminal),
+- es mit **GitHub Desktop** in ein neues Repository legen,
+- es einmal über **GitHub Pages** veröffentlichen — ein erster klickbarer Link.
+:::
+
+## Worum es im Kern geht
+
+Du schreibst Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt [@bryan2018]; Quarto bringt diese Logik in die Lehre [@allaire2024].
+
+## Die sechs Bausteine — Lay-Erklärung zuerst
+
+Jeder Begriff wird in der Fachsprache schwerer als nötig. Hier zuerst die einfache Idee, dann das Detail.
+
+| Baustein | In einem Satz | Was es technisch ist |
+|---|---|---|
+| **Quarto** | Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht. | Open-Source-Publishing-System, Nachfolger von R Markdown [@allaire2024]. |
+| **YAML** | Einstellungsdatei am Anfang jedes Kapitels — sagt z. B., ob es ein Inhaltsverzeichnis gibt. | „YAML Ain't Markup Language", strukturiertes Format mit Einrückungen. |
+| **JSON** | Wie YAML, aber mit Klammern. Wird intern für Daten verwendet. | „JavaScript Object Notation", Standardformat zum Datenaustausch. |
+| **HTML** | Sprache, in der Webseiten geschrieben sind. | „HyperText Markup Language", Tags wie `<h1>` oder `<p>`. |
+| **iFrame** | Fenster im Fenster — bettet eine fremde Seite in deine ein. | HTML-Tag `<iframe src="...">`, isoliert vom Rest der Seite. |
+| **GitHub** | Speicher für Code im Netz, mit eingebautem Webserver (Pages). | Hosting-Plattform auf Basis von Git, gehört Microsoft. |
+
+::: {.callout-tip}
+## Mach mit — Memory-Spiel zu den Bausteinen
+Drei Minuten, sechs Paare. Versuche, alle Begriffe ihrer Lay-Definition zuzuordnen.
+
+[Memory-Spiel öffnen →](../assets/memory-spiel.html){target="_blank"}
+:::
+
+## Der Workflow in einem Bild
+
+Drei Werkzeuge, ein Kreislauf:
+
+```
+RStudio (schreiben)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
+        ↑                                                              │
+        └──────────────────  AcademicCloud-Tutor (helfen)  ────────────┘
+```
+
+Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass dein Skript jederzeit reproduzierbar gerendert werden kann und dass du ohne Angst Änderungen vornimmst — ein Punkt, den Bryan [-@bryan2018] für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.
+
+## Mach mit — die ersten 30 Minuten
+
+Halte dich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.
+
+### Schritt 1 — neues Projekt in RStudio
+
+1. RStudio öffnen → **File → New Project → New Directory → Quarto Book**.
+2. Ordnernamen wählen, z. B. `mein-erstes-skript`.
+3. Speicherort wählen — am besten direkt in deinem GitHub-Ordner.
+4. **Create Project**.
+
+RStudio legt automatisch eine Mini-Buchstruktur an (`_quarto.yml`, `index.qmd`, ein paar Beispielkapitel).
+
+### Schritt 2 — Render und Preview
+
+Im Terminal von RStudio (Tab unten):
+
+```bash
+quarto preview
+```
+
+Im Browser öffnet sich `http://localhost:4XXX` mit einer Live-Vorschau. Jede Änderung an einer `.qmd`-Datei führt zu sofortigem Reload.
+
+### Schritt 3 — Beispielkapitel auf deinen Strang anpassen
+
+Öffne `intro.qmd` und ersetze den Beispielinhalt durch eine Mini-Einleitung zu deinem gewählten Strang. Drei Vorlagen, je nach Strangwahl:
+
+::: {.panel-tabset}
+
+#### Strang A — Wissenschaftliche Einstellung
+
+```markdown
+# Wissenschaftliche Einstellung
+
+Wissenschaftliche Einstellung heißt, Aussagen nicht zu glauben, sondern
+zu prüfen — und sich selbst genauso zu prüfen wie andere. Drei Haltungen
+gehören dazu: Skepsis, intellektuelle Demut, Bereitschaft zur Korrektur.
+Quelle: Bergstrom & West (2024).
+```
+
+#### Strang B — Recherche und Quellenqualität
+
+```markdown
+# Recherche und Quellenqualität
+
+Quellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,
+sondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,
+mit denen du eine Quelle in 30 Sekunden grob einordnest.
+Quelle: Bergstrom & West (2024).
+```
+
+#### Strang C — Transparent schreiben
+
+```markdown
+# Transparent schreiben
+
+Transparenz heißt, dass jeder Leser nachvollziehen kann, wie du zu deinen
+Ergebnissen gekommen bist — welche Daten, welche Methoden, welche
+Annahmen. In diesem Kapitel: drei Bausteine eines transparenten
+Methodenteils. Quelle: Bergstrom & West (2024).
+```
+
+:::
+
+### Schritt 4 — GitHub Desktop verknüpfen
+
+1. GitHub Desktop öffnen → **File → Add Local Repository** → Ordner wählen.
+2. Wenn noch kein Git-Repo: „Create a repository" akzeptieren.
+3. **Publish repository** klicken → Name eingeben (z. B. `mein-erstes-skript`) → **Public** → **Publish**.
+
+Dein Code liegt jetzt auf GitHub.
+
+### Schritt 5 — GitHub Pages aktivieren
+
+1. Auf github.com im Repository auf **Settings → Pages**.
+2. **Source: Deploy from a branch**.
+3. **Branch: main → Folder: /docs → Save**.
+4. Nach 1–2 Minuten: dein Skript liegt unter `https://DEIN-USERNAME.github.io/mein-erstes-skript/`.
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **Render funktioniert lokal, aber GitHub Pages zeigt 404?** → In `_quarto.yml` muss `output-dir: docs` stehen, und der Ordner `docs/` muss committet sein. Schau in `.gitignore`, ob `/docs/` ausgeschlossen wird, und nimm die Zeile heraus.
+- **YAML-Fehler beim Rendern?** → Einrückungen prüfen (zwei Leerzeichen, keine Tabs). Doppelpunkte und Anführungszeichen ebenfalls.
+- **GitHub Desktop fragt nach Login?** → Im Browser anmelden, dann in GitHub Desktop „Sign in".
+- **`quarto: command not found`?** → Quarto-Installation prüfen mit `quarto --version`. Wenn leer: neu installieren von <https://quarto.org/docs/get-started/>.
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Frag mich zurück, wenn etwas unklar ist.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::
