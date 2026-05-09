@@ -19,6 +19,7 @@ book:
     style: docked
     background: light
     collapse-level: 2
+    logo: images/th-koeln-logo.png
   chapters:
     - index.qmd
     - part: "Teil 1 — Werkstatt"
@@ -49,7 +50,7 @@ format:
   html:
     theme:
       - cosmo
-      - styles.css
+      - styles.scss
     toc: true
     toc-depth: 3
     toc-title: "Inhalt"

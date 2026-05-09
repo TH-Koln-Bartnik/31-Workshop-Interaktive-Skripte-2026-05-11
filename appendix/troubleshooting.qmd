@@ -62,8 +62,8 @@ Jeder Punkt: **Symptom → Ursache → Lösung**. Wenn nichts hilft: Tutor frage
 ## 10. Logo wird nicht angezeigt
 
 **Symptom:** Im gerenderten Skript erscheint kein Logo.
-**Ursache:** Pfad in `_brand.yml` stimmt nicht, oder Datei fehlt im `assets/`-Ordner.
-**Lösung:** Pfad relativ zur Projektwurzel (`assets/th-koeln-logo.png`), Datei dort tatsächlich ablegen.
+**Ursache:** Pfad in `_brand.yml` stimmt nicht, oder Datei fehlt im `images/`-Ordner.
+**Lösung:** Pfad relativ zur Projektwurzel (`images/th-koeln-logo.png`), Datei dort tatsächlich ablegen.
 
 ## Wenn nichts hilft — Tutor fragen
 

@@ -1,11 +1,11 @@
 ---
 title: "Quick-Starter Guide"
-subtitle: "Von Null auf erstem Skript live im Netz"
+subtitle: "Von Null auf erstem Skript live im Netz — alles aus RStudio"
 ---
 
 ::: {.lernziel-box}
 #### Was dieser Anhang leistet
-Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit.
+Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. **RStudio ist dein einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.
 :::
 
 ## Checkliste vor dem Workshop
@@ -13,14 +13,26 @@ Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum W
 | | Schritt | Wo? | Zeit |
 |---|---|---|---|
 | ☐ | Quarto installieren | <https://quarto.org/docs/get-started/> | 5 min |
-| ☐ | R installieren (für Diagramme) | <https://cran.r-project.org/> | 5 min |
+| ☐ | R installieren | <https://cran.r-project.org/> | 5 min |
 | ☐ | RStudio Desktop (kostenlos) | <https://posit.co/download/rstudio-desktop/> | 5 min |
 | ☐ | GitHub Desktop | <https://desktop.github.com/> | 5 min |
 | ☐ | GitHub-Konto erstellen | <https://github.com/signup> | 5 min |
 | ☐ | Zotero + Better BibTeX | <https://www.zotero.org/> | 10 min |
-| ☐ | ChatGPT-Konto (kostenlos) und Tutor-Link testen | <https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte> | 2 min |
+| ☐ | ChatGPT-Konto und Tutor-Link testen | <https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte> | 2 min |
 
 Insgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.
+
+## RStudio-Cockpit auf einen Blick
+
+| Bereich | Position | Wofür im Workshop? |
+|---|---|---|
+| **Editor** | oben links | `.qmd`-Dateien schreiben |
+| **Console** | unten links, Tab 1 | R-Pakete installieren (`install.packages(...)`) |
+| **Terminal** | unten links, Tab 2 | `quarto render`, `quarto preview` |
+| **Files** | unten rechts, Tab 1 | Ordner und Dateien anlegen, Dateien öffnen |
+| **Build** | oben rechts, Tab 5 | Knopf „Render Book" als Klick-Alternative |
+
+Drei Shortcuts, die du dir merken solltest: **Strg+Shift+K** rendert die aktuelle Datei, **Strg+Shift+B** rendert das ganze Buch, **Alt+Shift+R** öffnet einen neuen Terminal-Tab.
 
 ## Schritt-für-Schritt: dein erstes Skript
 
@@ -28,17 +40,19 @@ Insgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.
 
 In RStudio: **File → New Project → New Directory → Quarto Book → Create Project**.
 
-### 2. Projekt rendern
+### 2. Erste Vorschau
 
-Im Terminal von RStudio:
+Im **Terminal-Tab** (unten links, neben Console):
 
 ```bash
 quarto preview
 ```
 
-Browser öffnet sich, du siehst die Beispielinhalte.
+Browser öffnet sich. Du siehst die Beispielinhalte. **Strg+C** im Terminal beendet den Preview-Server.
 
 ### 3. `_quarto.yml` minimal anpassen
+
+Im **Editor** öffnest du `_quarto.yml` und ersetzt den Inhalt durch:
 
 ```yaml
 project:
@@ -59,9 +73,13 @@ format:
 
 `output-dir: docs` ist wichtig — GitHub Pages erwartet das später.
 
-### 4. Erstes Kapitel schreiben
+### 4. Ordner für Bilder, Daten und Widgets anlegen
 
-Öffne `index.qmd`, ersetze den Beispielinhalt durch:
+Im **Files-Pane** (unten rechts) klickst du auf **New Folder** und legst nacheinander an: `images/`, `interactions/`, `include/`, `data/`. So weißt du immer, wo etwas hingehört.
+
+### 5. Erstes Kapitel schreiben
+
+Öffne `index.qmd` im Editor, ersetze den Beispielinhalt durch:
 
 ```markdown
 # Willkommen
@@ -75,31 +93,29 @@ Mein erstes Skript zum Thema [Strang A/B/C].
 - Punkt 3
 ```
 
-### 5. Render
+### 6. Render
+
+Im Terminal:
 
 ```bash
 quarto render
 ```
 
-Im `docs/`-Ordner liegt jetzt die fertige Webseite.
+Oder Knopf **Build → Render Book** klicken. Im `docs/`-Ordner liegt jetzt die fertige Webseite.
 
-### 6. GitHub Desktop: Repo anlegen
+### 7. GitHub Desktop: Repo anlegen
 
 GitHub Desktop → **File → Add Local Repository** → Projektordner wählen → **Create a repository** zustimmen → Name: `mein-erstes-skript` → **Publish repository** (Public).
 
-### 7. GitHub Pages aktivieren
+### 8. GitHub Pages aktivieren
 
-Auf github.com im Repo: **Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save**.
+Auf <https://github.com> im Repo: **Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save**.
 
 Nach 1–2 Minuten ist dein Skript unter `https://DEIN-USERNAME.github.io/mein-erstes-skript/` live.
 
-### 8. Erste Änderung publizieren
+### 9. Erste Änderung publizieren
 
-Bearbeite `index.qmd`, render lokal (`quarto render`), in GitHub Desktop **Commit → Push origin**. Webseite aktualisiert sich automatisch.
-
-## Lange Version mit Screenshots
-
-(Wird im Workshop schrittweise ergänzt — pro Schritt ein Screenshot, hier am gleichen Ort.)
+Bearbeite `index.qmd`, render lokal (Terminal: `quarto render` oder Knopf), in GitHub Desktop **Commit → Push origin**. Webseite aktualisiert sich automatisch in 30–60 Sekunden.
 
 ## Was als Nächstes?
 

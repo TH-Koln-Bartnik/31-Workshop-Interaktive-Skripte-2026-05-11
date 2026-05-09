@@ -55,7 +55,7 @@ Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Sk
 Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine **kurze Einführung ins wissenschaftliche Arbeiten**. Wähle einen der drei Stränge und behalte ihn den ganzen Tag bei.
 
 | Strang | Worum es geht | Quelle |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **A — Wissenschaftliche Einstellung** | Skepsis, Belege, intellektuelle Demut | [Calling Bullshit, Kap. „Wissenschaftliche Einstellung"](https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung){target="_blank"} |
 | **B — Recherche und Quellenqualität** | Suchen, prüfen, Quellen einordnen | [Calling Bullshit, Kap. „Kritische Informationssuche"](https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche){target="_blank"} |
 | **C — Transparent schreiben** | Methoden offenlegen, Reproduzierbarkeit | [Calling Bullshit, Kap. „Transparent schreiben"](https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben){target="_blank"} |
@@ -65,7 +65,7 @@ Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang iden
 ## Tagesablauf
 
 | Uhrzeit | Block | Was passiert |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | 09:00–09:45 | Auftakt | Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl |
 | 09:45–10:30 | Kap. 1 — Didaktik | Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung |
 | 10:30–11:45 | Kap. 2 — Setup | Bausteine, Memory-Spiel, lokale Grundstruktur, **erster Push live** |
@@ -81,12 +81,25 @@ Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang iden
 Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was du nach diesem Kapitel kannst"), gefolgt von einem **„Mach mit"**-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels findest du einen Trouble-Shooting-Kasten („Was, wenn …") und einen fertigen **Tutor-Prompt** zum Kopieren.
 
 ::: callout-tip
-## Drei Tabs offen halten
+## RStudio ist deine Arbeitszentrale
 
-Ein Tab mit RStudio (lokal), ein Tab mit GitHub Desktop (lokal), ein Tab mit dem KI-Tutor. Mehr brauchst du nicht.
+Innerhalb von RStudio hast du **Editor**, **Terminal** (für `quarto render` und `quarto preview`), **Files-Pane** (zum Anlegen von Ordnern und Dateien), **Build-Pane** (Knopf „Render Book") und **Console** (für R-Pakete) auf einem Schirm. Daneben brauchst du nur **GitHub Desktop** zum Versionieren und einen Browser-Tab mit dem **Tutor**.
 
 [**Tutor öffnen — „Interaktive Skripte"** →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
 :::
+
+## Ordnerstruktur deines Skripts
+
+Damit du immer weißt, wo etwas hingehört (Lakens-Konvention):
+
+| Ordner          | Was kommt rein?                                         |
+|-----------------|---------------------------------------------------------|
+| `parts/`        | Deine Kapiteldateien (`.qmd`)                           |
+| `images/`       | Logos, Screenshots, statische Grafiken (PNG, JPG, SVG)  |
+| `interactions/` | HTML-Widgets ohne Backend (Lernspiel, Memory, Quiz)     |
+| `include/`      | Wiederverwendbare qmd-Schnipsel (per `{{< include >}}`) |
+| `data/`         | CSV/JSON-Daten für interaktive Charts                   |
+| `appendix/`     | Quickstart, Troubleshooting, Tutor-Prompt               |
 
 ## Voraussetzungen
 

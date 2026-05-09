@@ -26,11 +26,11 @@ title: "Kapitel 1 — Didaktik"
 author: "Dein Name"
 format:
   revealjs:
-    theme: [default, ../styles.css]
+    theme: [default, ../styles.scss]
     slide-number: true
     chalkboard: true
     incremental: true
-    logo: ../assets/th-koeln-logo.png
+    logo: ../images/th-koeln-logo.png
 ---
 ```
 
@@ -45,7 +45,7 @@ Die `_brand.yml` aus deinem Skript wird auch von Reveal.js gelesen. Zusätzlich 
 format:
   revealjs:
     brand: ../_brand.yml
-    theme: [default, ../styles.css]
+    theme: [default, ../styles.scss]
 ```
 
 ## Tutor

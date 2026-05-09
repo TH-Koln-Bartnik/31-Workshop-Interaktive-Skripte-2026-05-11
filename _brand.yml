@@ -32,5 +32,5 @@ typography:
     decoration: underline
 
 logo:
-  small: assets/th-koeln-logo.png
-  medium: assets/th-koeln-logo.png
+  small: images/th-koeln-logo.png
+  medium: images/th-koeln-logo.png

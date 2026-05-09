@@ -52,13 +52,13 @@ Drei Beispiele, drei Prinzipien, fünf Minuten. Ziehe jedes Beispiel auf das Pri
 
 ::: {.callout-tip}
 ## Lernspiel öffnen
-[Lernspiel: Welches Prinzip steckt hinter welchem Beispiel? →](../assets/lernspiel-kapitel1.html){target="_blank"}
+[Lernspiel: Welches Prinzip steckt hinter welchem Beispiel? →](../interactions/lernspiel-kapitel1.html){target="_blank"}
 :::
 
 ::: {.callout-warning}
 ## Was, wenn …
 
-- **Das Spiel öffnet sich nicht?** → Direkt im Browser über die Datei `assets/lernspiel-kapitel1.html` öffnen. Die Datei ist eine einzige HTML-Datei, ohne Backend.
+- **Das Spiel öffnet sich nicht?** → Direkt im Browser über die Datei `interactions/lernspiel-kapitel1.html` öffnen. Die Datei ist eine einzige HTML-Datei, ohne Backend.
 - **Die Lösungen scheinen mehrdeutig?** → Stimmt — in der Praxis überschneiden sich die Prinzipien. Schau in die Erklärung am Ende des Spiels, dort steht, warum die jeweilige Zuordnung am stärksten passt.
 :::
 

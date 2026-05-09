@@ -4,9 +4,10 @@
 /_freeze/
 /docs/
 *.html
-!assets/*.html
+!interactions/*.html
 *.pdf
-!assets/*.pdf
+!interactions/*.pdf
+!images/*.pdf
 
 # R / RStudio
 .Rproj.user/
@@ -28,3 +29,4 @@ desktop.ini
 *.bak
 *.tmp
 ~$*
+.positai

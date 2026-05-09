@@ -19,7 +19,7 @@ Gestaltung ist nicht Dekoration, sondern Lese-Hilfe. Ein konsistentes Layout red
 Drei Stellschrauben, in dieser Reihenfolge:
 
 1. **`_brand.yml`** — die Hochschulfarben und -schriften an einem Ort.
-2. **`styles.css`** — alles, was `_brand.yml` nicht abdeckt (Layout, Akzente, eigene Boxen).
+2. **`styles.scss`** — alles, was `_brand.yml` nicht abdeckt (Layout, Akzente, eigene Boxen).
 3. **`format.html.theme`** in `_quarto.yml` — wählt das Bootstrap-Basistheme.
 
 ## Die TH-Köln-Palette in Stichworten
@@ -48,23 +48,29 @@ color:
   secondary: th-magenta
 ```
 
-## CSS-Ergänzungen
+## SCSS-Ergänzungen
 
-Drei Dinge, die `_brand.yml` nicht regelt: scharfe Ecken („kantig"), die magenta H2-Unterstreichung und die TH-Farbleiste am Seitenanfang.
+Drei Dinge, die `_brand.yml` nicht regelt: scharfe Ecken („kantig"), die magenta H2-Unterstreichung und die TH-Farbleiste am Seitenanfang. Quarto verarbeitet eigene Stile als **SCSS** (Sass) — eine Erweiterung von CSS, die mit Bootstrap zusammenarbeitet. Du brauchst dafür kein Sass-Wissen: jede gültige CSS-Regel ist auch gültiges SCSS.
 
-Lege `styles.css` an und binde sie in `_quarto.yml` ein:
+::: {.callout-warning}
+Die Datei muss `styles.scss` heißen (nicht `.css`) und am Anfang einen **Layer-Marker** enthalten — sonst bricht `quarto render` mit einer Fehlermeldung „doesn't contain at least one layer boundary" ab.
+:::
+
+Lege `styles.scss` an und binde sie in `_quarto.yml` ein:
 
 ```yaml
 format:
   html:
     theme:
       - cosmo
-      - styles.css
+      - styles.scss
 ```
 
-In `styles.css` (Auszug):
+In `styles.scss` (Auszug — Layer-Marker am Anfang ist Pflicht):
 
-```css
+```scss
+/*-- scss:rules --*/
+
 :root {
   --th-red: #c81e0f;
   --th-magenta: #b43092;
@@ -83,13 +89,13 @@ Render dein Skript einmal **vor** und einmal **nach** dem Einbau von `_brand.yml
 
 ## Logo einbinden
 
-1. Lade das TH-Köln-Logo (PNG, transparent) in `assets/th-koeln-logo.png`.
+1. Lade das TH-Köln-Logo (PNG, transparent) in `images/th-koeln-logo.png`.
 2. In `_brand.yml`:
 
 ```yaml
 logo:
-  small: assets/th-koeln-logo.png
-  medium: assets/th-koeln-logo.png
+  small: images/th-koeln-logo.png
+  medium: images/th-koeln-logo.png
 ```
 
 3. Render und prüfen.
@@ -99,8 +105,9 @@ logo:
 
 - **Farben tauchen nicht auf?** → Cache leeren (`quarto render --cache-refresh`) oder den Ordner `_freeze/` löschen.
 - **CSS wird nicht geladen?** → Pfad in `_quarto.yml` prüfen, relative Pfade ohne führenden Slash.
-- **Logo wird nicht angezeigt?** → PNG-Datei muss tatsächlich im `assets/`-Ordner liegen, nicht nur in `_brand.yml` referenziert sein.
-- **Farben sehen ausgewaschen aus?** → Eventuell ein Bootstrap-Theme aktiv, das die Variablen überschreibt. `theme: [cosmo, styles.css]` in dieser Reihenfolge halten — `styles.css` muss zuletzt geladen werden.
+- **Logo wird nicht angezeigt?** → PNG-Datei muss tatsächlich im `images/`-Ordner liegen, nicht nur in `_brand.yml` referenziert sein.
+- **Farben sehen ausgewaschen aus?** → Eventuell ein Bootstrap-Theme aktiv, das die Variablen überschreibt. `theme: [cosmo, styles.scss]` in dieser Reihenfolge halten — die SCSS-Datei muss zuletzt geladen werden.
+- **„doesn't contain at least one layer boundary"** beim Render? → Am Anfang von `styles.scss` muss `/*-- scss:rules --*/` stehen.
 :::
 
 ## Tutor
@@ -111,7 +118,7 @@ logo:
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.css vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.
+> Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.
 :::
 
 # Literatur {.unnumbered}

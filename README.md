@@ -23,18 +23,21 @@ quarto preview
 quarto publish gh-pages
 ```
 
-## Struktur
+## Struktur (Lakens-Konvention)
 
 ```
 .
 ├── _quarto.yml             # Buch-Konfiguration
 ├── _brand.yml              # TH Köln Farben & Typografie
-├── styles.css              # CSS-Ergänzungen
+├── styles.scss             # SCSS-Ergänzungen (TH-Köln-Brand)
 ├── references.bib          # Zotero-Export
 ├── index.qmd               # Landing Page mit Lernzielen
 ├── parts/                  # Workshop-Kapitel 1–6
 ├── appendix/               # Quickstart, Troubleshooting, Tutor-Prompt
-└── assets/                 # Bilder, Lernspiel-HTML, Memory-Spiel
+├── images/                 # Logos, Screenshots, statische Grafiken
+├── interactions/           # HTML-Widgets (Lernspiel, Memory)
+├── include/                # Wiederverwendbare qmd-Partials
+└── data/                   # CSV/JSON-Daten für interaktive Charts
 ```
 
 ## Lizenz

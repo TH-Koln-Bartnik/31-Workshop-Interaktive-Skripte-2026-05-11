@@ -34,7 +34,7 @@ Höhe nach Inhalt anpassen, Breite immer 100 %, `frameborder="0"` für ein saube
 
 ::: {.callout-tip}
 ## Mach mit (Variante A — statisches HTML)
-Schau dir das **Lernspiel aus Kapitel 1** ([assets/lernspiel-kapitel1.html](../assets/lernspiel-kapitel1.html){target="_blank"}) im Browser an. Öffne die Datei in einem Texteditor — sie ist eine einzige HTML-Datei, ohne Backend. Diesen Bauplan kannst du selbst (oder dein KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.
+Schau dir das **Lernspiel aus Kapitel 1** ([interactions/lernspiel-kapitel1.html](../interactions/lernspiel-kapitel1.html){target="_blank"}) im Browser an. Öffne die Datei in RStudio (im **Files**-Tab anklicken → Open in editor) — sie ist eine einzige HTML-Datei, ohne Backend. Diesen Bauplan kannst du selbst (oder dein KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.
 
 **Strang-Beispiele:**
 
