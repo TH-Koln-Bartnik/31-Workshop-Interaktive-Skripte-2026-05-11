@@ -9,7 +9,7 @@ book:
   date: "2026-05-11"
   date-format: "DD.MM.YYYY"
   search: true
-  repo-url: "https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026"
+  repo-url: "https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik"
   repo-actions: [edit, issue]
   downloads: [pdf]
   sharing: [twitter, linkedin]

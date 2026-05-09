@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Prof.&nbsp;Dr.&nbsp;Roman Bartnik">
 
-<title>3b — TH-Köln-Stil einbauen – Interaktive Skripte mit KI erstellen</title>
+<title>Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,84 +21,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../parts/04-charts.html" rel="next">
-<link href="../parts/03a-uebersicht.html" rel="prev">
-<link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6656fbe30be9f1601599c2c2789eaba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./parts/01-didaktik.html" rel="next">
+<link href="./images/th-koeln-logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6656fbe30be9f1601599c2c2789eaba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -139,7 +84,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03b-style.html"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Willkommen</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -153,14 +98,14 @@ div.csl-indent {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/th-koeln-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/th-koeln-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Interaktive Skripte mit KI erstellen</a> 
+      <a href="./">Interaktive Skripte mit KI erstellen</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="./Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -190,7 +135,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Willkommen</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Willkommen</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -204,37 +149,37 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/01-didaktik.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 — Warum interaktiv?</span></a>
+  <a href="./parts/01-didaktik.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 — Warum interaktiv?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/02-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
+  <a href="./parts/02-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
+  <a href="./parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03b-style.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
+  <a href="./parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
+  <a href="./parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
+  <a href="./parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
+  <a href="./parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
   </div>
 </li>
       </ul>
@@ -250,17 +195,17 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/quickstart.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick-Starter Guide</span></a>
+  <a href="./appendix/quickstart.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick-Starter Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/troubleshooting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Trouble-Shooting</span></a>
+  <a href="./appendix/troubleshooting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Trouble-Shooting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
+  <a href="./appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
       </ul>
@@ -275,30 +220,45 @@ div.csl-indent {
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
-  <li><a href="#wie-quarto-aussehen-handhabt" id="toc-wie-quarto-aussehen-handhabt" class="nav-link" data-scroll-target="#wie-quarto-aussehen-handhabt">Wie Quarto Aussehen handhabt</a></li>
-  <li><a href="#die-th-köln-palette-in-stichworten" id="toc-die-th-köln-palette-in-stichworten" class="nav-link" data-scroll-target="#die-th-köln-palette-in-stichworten">Die TH-Köln-Palette in Stichworten</a></li>
-  <li><a href="#mach-mit-_brand.yml-kopieren" id="toc-mach-mit-_brand.yml-kopieren" class="nav-link" data-scroll-target="#mach-mit-_brand.yml-kopieren">Mach mit — <code>_brand.yml</code> kopieren</a></li>
-  <li><a href="#scss-ergänzungen" id="toc-scss-ergänzungen" class="nav-link" data-scroll-target="#scss-ergänzungen">SCSS-Ergänzungen</a></li>
-  <li><a href="#logo-einbinden" id="toc-logo-einbinden" class="nav-link" data-scroll-target="#logo-einbinden">Logo einbinden</a></li>
-  <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#was-du-heute-baust" id="toc-was-du-heute-baust" class="nav-link active" data-scroll-target="#was-du-heute-baust">Was du heute baust</a>
+  <ul class="collapse">
+  <li><a href="#drei-referenzen" id="toc-drei-referenzen" class="nav-link" data-scroll-target="#drei-referenzen">Drei Referenzen</a></li>
+  <li><a href="#wähle-deinen-beispielstrang" id="toc-wähle-deinen-beispielstrang" class="nav-link" data-scroll-target="#wähle-deinen-beispielstrang">Wähle deinen Beispielstrang</a></li>
+  <li><a href="#tagesablauf" id="toc-tagesablauf" class="nav-link" data-scroll-target="#tagesablauf">Tagesablauf</a></li>
+  <li><a href="#wie-du-dieses-skript-benutzt" id="toc-wie-du-dieses-skript-benutzt" class="nav-link" data-scroll-target="#wie-du-dieses-skript-benutzt">Wie du dieses Skript benutzt</a></li>
+  <li><a href="#ordnerstruktur-deines-skripts" id="toc-ordnerstruktur-deines-skripts" class="nav-link" data-scroll-target="#ordnerstruktur-deines-skripts">Ordnerstruktur deines Skripts</a></li>
+  <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
+  <li><a href="#quellen" id="toc-quellen" class="nav-link" data-scroll-target="#quellen">Quellen</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/parts/03b-style.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03b-style.html"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></h1>
+<h1 class="title">Interaktive Skripte mit KI erstellen</h1>
+<p class="subtitle lead">Skript zum Workshop am 11.05.2026</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Autor:in</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prof.&nbsp;Dr.&nbsp;Roman Bartnik </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">11.05.2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -308,187 +268,208 @@ div.csl-indent {
 </header>
 
 
-<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
-<ul>
-<li>die Hochschulfarben über <code>_brand.yml</code> setzen,</li>
-<li>per CSS scharfkantige Callouts, Tabellen und Code-Blöcke gestalten,</li>
-<li>das TH-Köln-Logo einbinden und prüfen, dass es überall korrekt erscheint.</li>
-</ul>
-</section>
-<section id="worum-es-im-kern-geht" class="level2">
-<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Gestaltung ist nicht Dekoration, sondern Lese-Hilfe. Ein konsistentes Layout reduziert kognitive Last <span class="citation" data-cites="mayer2021">(<a href="#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span> — die Lernenden müssen nicht für jedes neue Element wieder verstehen, was wo wichtig ist. Tufte <span class="citation" data-cites="tufte2001">(<a href="#ref-tufte2001" role="doc-biblioref">2001</a>)</span> formuliert dasselbe Prinzip für Datenvisualisierung: maximaler Informationsgehalt bei minimalem Tinte-zu-Daten-Verhältnis. Beides spricht für Zurückhaltung im Stil — wenige Farben, klare Hierarchien, kein Schmuck.</p>
-</section>
-<section id="wie-quarto-aussehen-handhabt" class="level2">
-<h2 class="anchored" data-anchor-id="wie-quarto-aussehen-handhabt">Wie Quarto Aussehen handhabt</h2>
-<p>Drei Stellschrauben, in dieser Reihenfolge:</p>
+<div class="th-color-bar">
+
+</div>
+<section id="was-du-heute-baust" class="level1">
+<h1>Was du heute baust</h1>
+<p>Am Ende des Tages steht ein eigenes interaktives Skript live im Netz. Du hast es selbst gerendert, gepusht und veröffentlicht. Das ist das Ziel — alles andere ist Mittel zum Zweck.</p>
+<section id="am-ende-des-tages-kannst-du" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="am-ende-des-tages-kannst-du">Am Ende des Tages kannst du …</h4>
 <ol type="1">
-<li><strong><code>_brand.yml</code></strong> — die Hochschulfarben und -schriften an einem Ort.</li>
-<li><strong><code>styles.scss</code></strong> — alles, was <code>_brand.yml</code> nicht abdeckt (Layout, Akzente, eigene Boxen).</li>
-<li><strong><code>format.html.theme</code></strong> in <code>_quarto.yml</code> — wählt das Bootstrap-Basistheme.</li>
+<li>ein Quarto-Projekt lokal in <strong>RStudio</strong> anlegen, rendern und über <strong>GitHub Pages</strong> veröffentlichen,</li>
+<li>ein <strong>automatisches Inhaltsverzeichnis</strong> erzeugen und Quellen aus <strong>Zotero</strong> zitieren,</li>
+<li>das Skript im <strong>TH-Köln-Stil</strong> formatieren (<code>_brand.yml</code>, CSS),</li>
+<li>ein <strong>interaktives Diagramm</strong> und ein <strong>iFrame-Spiel</strong> einbauen,</li>
+<li>einen <strong>KI-Tutor</strong> verlinken, der die Lernenden im Skript begleitet.</li>
 </ol>
 </section>
-<section id="die-th-köln-palette-in-stichworten" class="level2">
-<h2 class="anchored" data-anchor-id="die-th-köln-palette-in-stichworten">Die TH-Köln-Palette in Stichworten</h2>
-<p>Drei Farben, sonst nur Grautöne. Alles andere ist Verstoß gegen das Corporate Design.</p>
+<section id="drei-referenzen" class="level2">
+<h2 class="anchored" data-anchor-id="drei-referenzen">Drei Referenzen</h2>
+<p>Bevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs.</p>
+<div class="benchmark-grid">
+<section id="lakens-statistical-inferences" class="level3 benchmark-card">
+<h3 class="anchored" data-anchor-id="lakens-statistical-inferences">Lakens — Statistical Inferences</h3>
+<p>Ein vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden”.</p>
+<p><a href="https://lakens.github.io/statistical_inferences/" target="_blank">Zum Skript →</a></p>
+</section>
+<section id="bartnik-ki-als-hilfe-zum-lehren-und-lernen" class="level3 benchmark-card">
+<h3 class="anchored" data-anchor-id="bartnik-ki-als-hilfe-zum-lehren-und-lernen">Bartnik — KI als Hilfe zum Lehren und Lernen</h3>
+<p>Mein eigenes Skript, mit interaktiven Widgets, eingebetteten Tutor-Bots und H5P-Quizzen.</p>
+<p><a href="https://th-koln-bartnik.github.io/genai4teaching/" target="_blank">Zum Skript →</a></p>
+</section>
+<section id="békés-data-analysis-with-ai" class="level3 benchmark-card">
+<h3 class="anchored" data-anchor-id="békés-data-analysis-with-ai">Békés — Data Analysis with AI</h3>
+<p>Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Skript plus Slides plus Code”.</p>
+<p><a href="https://gabors-data-analysis.com/ai-course/" target="_blank">Zum Skript →</a></p>
+</section>
+</div>
+</section>
+<section id="wähle-deinen-beispielstrang" class="level2">
+<h2 class="anchored" data-anchor-id="wähle-deinen-beispielstrang">Wähle deinen Beispielstrang</h2>
+<p>Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine <strong>kurze Einführung ins wissenschaftliche Arbeiten</strong>. Wähle einen der drei Stränge und behalte ihn den ganzen Tag bei.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Rolle</th>
-<th>Hex</th>
-<th>Wo?</th>
+<th>Strang</th>
+<th>Worum es geht</th>
+<th>Quelle</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>TH Red</td>
-<td><code>#c81e0f</code></td>
-<td>Links, Akzente, wichtige Hervorhebungen</td>
+<td><strong>A — Wissenschaftliche Einstellung</strong></td>
+<td>Skepsis, Belege, intellektuelle Demut</td>
+<td><a href="https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung" target="_blank">Calling Bullshit, Kap. „Wissenschaftliche Einstellung”</a></td>
 </tr>
 <tr class="even">
-<td>TH Magenta</td>
-<td><code>#b43092</code></td>
-<td>Strukturlinien, Callout-Ränder</td>
+<td><strong>B — Recherche und Quellenqualität</strong></td>
+<td>Suchen, prüfen, Quellen einordnen</td>
+<td><a href="https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche" target="_blank">Calling Bullshit, Kap. „Kritische Informationssuche”</a></td>
 </tr>
 <tr class="odd">
-<td>TH Orange</td>
-<td><code>#ea5a00</code></td>
-<td>Sehr sparsam — Warnungen, Verlauf</td>
+<td><strong>C — Transparent schreiben</strong></td>
+<td>Methoden offenlegen, Reproduzierbarkeit</td>
+<td><a href="https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben" target="_blank">Calling Bullshit, Kap. „Transparent schreiben”</a></td>
+</tr>
+</tbody>
+</table>
+<p>Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang identisch.</p>
+</section>
+<section id="tagesablauf" class="level2">
+<h2 class="anchored" data-anchor-id="tagesablauf">Tagesablauf</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Uhrzeit</th>
+<th>Block</th>
+<th>Was passiert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>09:00–09:45</td>
+<td>Auftakt</td>
+<td>Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl</td>
 </tr>
 <tr class="even">
-<td>Ink</td>
-<td><code>#111111</code></td>
-<td>Fließtext (weicheres Schwarz)</td>
+<td>09:45–10:30</td>
+<td>Kap. 1 — Didaktik</td>
+<td>Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung</td>
 </tr>
 <tr class="odd">
-<td>Paper</td>
-<td><code>#ffffff</code></td>
-<td>Hintergründe, immer</td>
+<td>10:30–11:45</td>
+<td>Kap. 2 — Setup</td>
+<td>Bausteine, Memory-Spiel, lokale Grundstruktur, <strong>erster Push live</strong></td>
+</tr>
+<tr class="even">
+<td>11:45–12:30</td>
+<td>Pause</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>12:30–13:15</td>
+<td>Kap. 3a — Übersicht</td>
+<td>Inhaltsverzeichnis, Zotero-Bibliothek, automatische Zitate</td>
+</tr>
+<tr class="even">
+<td>13:15–14:00</td>
+<td>Kap. 3b — Stil</td>
+<td>TH-Köln-Brand einbauen</td>
+</tr>
+<tr class="odd">
+<td>14:00–14:45</td>
+<td>Kap. 4 — Charts</td>
+<td>Interaktives Diagramm mit echten Daten</td>
+</tr>
+<tr class="even">
+<td>14:45–15:30</td>
+<td>Kap. 5 — iFrames + Tutor</td>
+<td>H5P-/iFrame-Einbettung, Link zum KI-Tutor</td>
+</tr>
+<tr class="odd">
+<td>15:30–16:00</td>
+<td>Showcase + Puffer</td>
+<td>Wer früh durch ist, baut Slides (Kap. 6); alle anderen holen auf</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="mach-mit-_brand.yml-kopieren" class="level2">
-<h2 class="anchored" data-anchor-id="mach-mit-_brand.yml-kopieren">Mach mit — <code>_brand.yml</code> kopieren</h2>
-<p>Im Repository des Workshops liegt eine fertige <code>_brand.yml</code> mit der TH-Köln-Palette. Kopiere sie in dein Projektverzeichnis. Beim nächsten <code>quarto render</code> sind Links rot, Überschriften schwarz, Akzente magenta.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">th-red</span><span class="kw">:</span><span class="at"> </span><span class="st">"#c81e0f"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">th-magenta</span><span class="kw">:</span><span class="at"> </span><span class="st">"#b43092"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">th-orange</span><span class="kw">:</span><span class="at"> </span><span class="st">"#ea5a00"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> th-red</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> th-magenta</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="scss-ergänzungen" class="level2">
-<h2 class="anchored" data-anchor-id="scss-ergänzungen">SCSS-Ergänzungen</h2>
-<p>Drei Dinge, die <code>_brand.yml</code> nicht regelt: scharfe Ecken („kantig”), die magenta H2-Unterstreichung und die TH-Farbleiste am Seitenanfang. Quarto verarbeitet eigene Stile als <strong>SCSS</strong> (Sass) — eine Erweiterung von CSS, die mit Bootstrap zusammenarbeitet. Du brauchst dafür kein Sass-Wissen: jede gültige CSS-Regel ist auch gültiges SCSS.</p>
-<div class="callout callout-style-simple callout-warning">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-body-container">
-<p>Die Datei muss <code>styles.scss</code> heißen (nicht <code>.css</code>) und am Anfang einen <strong>Layer-Marker</strong> enthalten — sonst bricht <code>quarto render</code> mit einer Fehlermeldung „doesn’t contain at least one layer boundary” ab.</p>
-</div>
-</div>
-</div>
-<p>Lege <code>styles.scss</code> an und binde sie in <code>_quarto.yml</code> ein:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> cosmo</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> styles.scss</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In <code>styles.scss</code> (Auszug — Layer-Marker am Anfang ist Pflicht):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="va">--th-red</span>: <span class="cn">#c81e0f</span><span class="op">;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="va">--th-magenta</span>: <span class="cn">#b43092</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>h1<span class="op">,</span> h2<span class="op">,</span> h3 { <span class="kw">border-radius</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span> <span class="kw">font-weight</span>: <span class="dv">600</span><span class="op">;</span> }</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>h2 { <span class="kw">border-bottom</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">rgba(</span><span class="dv">180</span><span class="op">,</span> <span class="dv">48</span><span class="op">,</span> <span class="dv">146</span><span class="op">,</span> <span class="dv">0.35</span><span class="fu">)</span><span class="op">;</span> <span class="kw">padding-bottom</span>: <span class="dv">0.3</span><span class="dt">rem</span><span class="op">;</span> }</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.callout</span> { <span class="kw">border-radius</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span> }</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>pre<span class="op">,</span> code { <span class="kw">border-radius</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span> }</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="wie-du-dieses-skript-benutzt" class="level2">
+<h2 class="anchored" data-anchor-id="wie-du-dieses-skript-benutzt">Wie du dieses Skript benutzt</h2>
+<p>Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was du nach diesem Kapitel kannst”), gefolgt von einem <strong>„Mach mit”</strong>-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels findest du einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen <strong>Tutor-Prompt</strong> zum Kopieren.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Mach mit — Vorher/Nachher
+RStudio ist deine Arbeitszentrale
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Render dein Skript einmal <strong>vor</strong> und einmal <strong>nach</strong> dem Einbau von <code>_brand.yml</code>. Vergleich beide Versionen nebeneinander. Was ändert sich? Was nicht? Schreib dir drei Beobachtungen auf — wir nutzen sie im Showcase am Ende.</p>
+<p>Innerhalb von RStudio hast du <strong>Editor</strong>, <strong>Terminal</strong> (für <code>quarto render</code> und <code>quarto preview</code>), <strong>Files-Pane</strong> (zum Anlegen von Ordnern und Dateien), <strong>Build-Pane</strong> (Knopf „Render Book”) und <strong>Console</strong> (für R-Pakete) auf einem Schirm. Daneben brauchst du nur <strong>GitHub Desktop</strong> zum Versionieren und einen Browser-Tab mit dem <strong>Tutor</strong>.</p>
+<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank"><strong>Tutor öffnen — „Interaktive Skripte”</strong> →</a></p>
 </div>
 </div>
 </section>
-<section id="logo-einbinden" class="level2">
-<h2 class="anchored" data-anchor-id="logo-einbinden">Logo einbinden</h2>
-<ol type="1">
-<li>Lade das TH-Köln-Logo (PNG, transparent) in <code>images/th-koeln-logo.png</code>.</li>
-<li>In <code>_brand.yml</code>:</li>
-</ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">logo</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">small</span><span class="kw">:</span><span class="at"> images/th-koeln-logo.png</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">medium</span><span class="kw">:</span><span class="at"> images/th-koeln-logo.png</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="1">
-<li>Render und prüfen.</li>
-</ol>
-<div class="callout callout-style-simple callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Was, wenn …
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Farben tauchen nicht auf?</strong> → Cache leeren (<code>quarto render --cache-refresh</code>) oder den Ordner <code>_freeze/</code> löschen.</li>
-<li><strong>CSS wird nicht geladen?</strong> → Pfad in <code>_quarto.yml</code> prüfen, relative Pfade ohne führenden Slash.</li>
-<li><strong>Logo wird nicht angezeigt?</strong> → PNG-Datei muss tatsächlich im <code>images/</code>-Ordner liegen, nicht nur in <code>_brand.yml</code> referenziert sein.</li>
-<li><strong>Farben sehen ausgewaschen aus?</strong> → Eventuell ein Bootstrap-Theme aktiv, das die Variablen überschreibt. <code>theme: [cosmo, styles.scss]</code> in dieser Reihenfolge halten — die SCSS-Datei muss zuletzt geladen werden.</li>
-<li><strong>„doesn’t contain at least one layer boundary”</strong> beim Render? → Am Anfang von <code>styles.scss</code> muss <code>/*-- scss:rules --*/</code> stehen.</li>
-</ul>
-</div>
-</div>
+<section id="ordnerstruktur-deines-skripts" class="level2">
+<h2 class="anchored" data-anchor-id="ordnerstruktur-deines-skripts">Ordnerstruktur deines Skripts</h2>
+<p>Damit du immer weißt, wo etwas hingehört (Lakens-Konvention):</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ordner</th>
+<th>Was kommt rein?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>parts/</code></td>
+<td>Deine Kapiteldateien (<code>.qmd</code>)</td>
+</tr>
+<tr class="even">
+<td><code>images/</code></td>
+<td>Logos, Screenshots, statische Grafiken (PNG, JPG, SVG)</td>
+</tr>
+<tr class="odd">
+<td><code>interactions/</code></td>
+<td>HTML-Widgets ohne Backend (Lernspiel, Memory, Quiz)</td>
+</tr>
+<tr class="even">
+<td><code>include/</code></td>
+<td>Wiederverwendbare qmd-Schnipsel (per <code>{{&lt; include &gt;}}</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>data/</code></td>
+<td>CSV/JSON-Daten für interaktive Charts</td>
+</tr>
+<tr class="even">
+<td><code>appendix/</code></td>
+<td>Quickstart, Troubleshooting, Tutor-Prompt</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="tutor" class="level2">
-<h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tutor öffnen
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
-<p>Vorschlag-Prompt für dieses Kapitel:</p>
-<blockquote class="blockquote">
-<p>Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.</p>
-</blockquote>
-</div>
-</div>
+<section id="voraussetzungen" class="level2">
+<h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
+<p>Wenn du noch nichts installiert hast, springe zuerst in den <a href="./appendix/quickstart.html">Quick-Starter Guide</a>. Dort steht, was du in welcher Reihenfolge installierst (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.</p>
 </section>
-<section id="literatur" class="level1 unnumbered">
-<h1 class="unnumbered">Literatur</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-mayer2021" class="csl-entry" role="listitem">
-Mayer, R. E. (2021). <em>Multimedia Learning</em> (3. Aufl.). Cambridge University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
-</div>
-<div id="ref-tufte2001" class="csl-entry" role="listitem">
-Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2. Aufl.). Graphics Press.
-</div>
-</div>
+<section id="quellen" class="level2">
+<h2 class="anchored" data-anchor-id="quellen">Quellen</h2>
+<p>Lakens (2022); Bartnik (2025); Békés (2025); Biggs &amp; Tang (2011); Mayer (2021).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -898,13 +879,10 @@ Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../parts/03a-uebersicht.html" class="pagination-link" aria-label="3a — Inhaltsverzeichnis und Literatur">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../parts/04-charts.html" class="pagination-link" aria-label="4 — Interaktive Diagramme">
-        <span class="nav-page-text"><span class="chapter-title">4 — Interaktive Diagramme</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./parts/01-didaktik.html" class="pagination-link" aria-label="1 — Warum interaktiv?">
+        <span class="nav-page-text"><span class="chapter-title">1 — Warum interaktiv?</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -916,7 +894,7 @@ Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2.
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/parts/03b-style.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>
@@ -926,5 +904,5 @@ Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2.
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

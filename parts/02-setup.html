@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>KI-Tutor: Link und System-Prompt – Interaktive Skripte mit KI erstellen</title>
+<title>2 — Bausteine und Workflow – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,7 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appendix/troubleshooting.html" rel="prev">
+<link href="../parts/03a-uebersicht.html" rel="next">
+<link href="../parts/01-didaktik.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -118,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/tutor-prompt.html"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/02-setup.html"><span class="chapter-title">2 — Bausteine und Workflow</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -138,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Interaktive Skripte mit KI erstellen</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
     <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
@@ -188,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/02-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
+  <a href="../parts/02-setup.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -239,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
+  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
       </ul>
@@ -254,30 +275,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#der-vorbereitete-workshop-tutor-sofort-nutzbar" id="toc-der-vorbereitete-workshop-tutor-sofort-nutzbar" class="nav-link active" data-scroll-target="#der-vorbereitete-workshop-tutor-sofort-nutzbar">Der vorbereitete Workshop-Tutor (sofort nutzbar)</a></li>
-  <li><a href="#eigenen-tutor-anlegen-drei-hosting-wege" id="toc-eigenen-tutor-anlegen-drei-hosting-wege" class="nav-link" data-scroll-target="#eigenen-tutor-anlegen-drei-hosting-wege">Eigenen Tutor anlegen — drei Hosting-Wege</a>
+  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
+  <li><a href="#die-sechs-bausteine-lay-erklärung-zuerst" id="toc-die-sechs-bausteine-lay-erklärung-zuerst" class="nav-link" data-scroll-target="#die-sechs-bausteine-lay-erklärung-zuerst">Die sechs Bausteine — Lay-Erklärung zuerst</a></li>
+  <li><a href="#der-workflow-in-einem-bild" id="toc-der-workflow-in-einem-bild" class="nav-link" data-scroll-target="#der-workflow-in-einem-bild">Der Workflow in einem Bild</a></li>
+  <li><a href="#rstudio-als-arbeitszentrale-vier-bereiche" id="toc-rstudio-als-arbeitszentrale-vier-bereiche" class="nav-link" data-scroll-target="#rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</a></li>
+  <li><a href="#mach-mit-die-ersten-30-minuten" id="toc-mach-mit-die-ersten-30-minuten" class="nav-link" data-scroll-target="#mach-mit-die-ersten-30-minuten">Mach mit — die ersten 30 Minuten</a>
   <ul class="collapse">
-  <li><a href="#weg-1-eigenes-custom-gpt-auf-chatgpt" id="toc-weg-1-eigenes-custom-gpt-auf-chatgpt" class="nav-link" data-scroll-target="#weg-1-eigenes-custom-gpt-auf-chatgpt">Weg 1 — eigenes Custom GPT auf ChatGPT</a></li>
-  <li><a href="#weg-2-academiccloud-hochschul-login-eu-datenhaltung" id="toc-weg-2-academiccloud-hochschul-login-eu-datenhaltung" class="nav-link" data-scroll-target="#weg-2-academiccloud-hochschul-login-eu-datenhaltung">Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)</a></li>
-  <li><a href="#weg-3-statisches-widget-nur-für-fortgeschrittene" id="toc-weg-3-statisches-widget-nur-für-fortgeschrittene" class="nav-link" data-scroll-target="#weg-3-statisches-widget-nur-für-fortgeschrittene">Weg 3 — statisches Widget (nur für Fortgeschrittene)</a></li>
+  <li><a href="#schritt-1-neues-projekt-in-rstudio" id="toc-schritt-1-neues-projekt-in-rstudio" class="nav-link" data-scroll-target="#schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</a></li>
+  <li><a href="#schritt-2-render-und-preview-in-rstudio" id="toc-schritt-2-render-und-preview-in-rstudio" class="nav-link" data-scroll-target="#schritt-2-render-und-preview-in-rstudio">Schritt 2 — Render und Preview (in RStudio)</a></li>
+  <li><a href="#schritt-3-beispielkapitel-auf-deinen-strang-anpassen" id="toc-schritt-3-beispielkapitel-auf-deinen-strang-anpassen" class="nav-link" data-scroll-target="#schritt-3-beispielkapitel-auf-deinen-strang-anpassen">Schritt 3 — Beispielkapitel auf deinen Strang anpassen</a></li>
+  <li><a href="#schritt-4-ordnerstruktur-anlegen-in-rstudio" id="toc-schritt-4-ordnerstruktur-anlegen-in-rstudio" class="nav-link" data-scroll-target="#schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</a></li>
+  <li><a href="#schritt-5-github-desktop-verknüpfen" id="toc-schritt-5-github-desktop-verknüpfen" class="nav-link" data-scroll-target="#schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</a></li>
+  <li><a href="#schritt-6-github-pages-aktivieren" id="toc-schritt-6-github-pages-aktivieren" class="nav-link" data-scroll-target="#schritt-6-github-pages-aktivieren">Schritt 6 — GitHub Pages aktivieren</a></li>
   </ul></li>
-  <li><a href="#system-prompt-copy-paste" id="toc-system-prompt-copy-paste" class="nav-link" data-scroll-target="#system-prompt-copy-paste">System-Prompt (Copy-Paste)</a></li>
-  <li><a href="#drei-kurz-prompts-für-typische-aufgaben" id="toc-drei-kurz-prompts-für-typische-aufgaben" class="nav-link" data-scroll-target="#drei-kurz-prompts-für-typische-aufgaben">Drei Kurz-Prompts für typische Aufgaben</a>
-  <ul class="collapse">
-  <li><a href="#a-fehler-erklären" id="toc-a-fehler-erklären" class="nav-link" data-scroll-target="#a-fehler-erklären">A — Fehler erklären</a></li>
-  <li><a href="#b-code-reviewen" id="toc-b-code-reviewen" class="nav-link" data-scroll-target="#b-code-reviewen">B — Code reviewen</a></li>
-  <li><a href="#c-kapitel-ergänzen" id="toc-c-kapitel-ergänzen" class="nav-link" data-scroll-target="#c-kapitel-ergänzen">C — Kapitel ergänzen</a></li>
-  </ul></li>
+  <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/appendix/tutor-prompt.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/02-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/tutor-prompt.html"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/02-setup.html"><span class="chapter-title">2 — Bausteine und Workflow</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></h1>
-<p class="subtitle lead">Der Workshop-Tutor und die Anleitung zum eigenen Tutor</p>
+<h1 class="title"><span class="chapter-title">2 — Bausteine und Workflow</span></h1>
 </div>
 
 
@@ -294,12 +315,242 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="was-dieser-anhang-leistet" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-dieser-anhang-leistet">Was dieser Anhang leistet</h4>
-<p>Du findest hier den <strong>fertigen Tutor</strong> für diesen Workshop (ein Klick) und den vollständigen <strong>System-Prompt</strong>, mit dem du dir denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen kannst.</p>
+<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
+<ul>
+<li>die sechs Bausteine <strong>Quarto, YAML, JSON, HTML, iFrame, GitHub</strong> in eigenen Worten erklären,</li>
+<li>ein leeres Quarto-Projekt <strong>lokal anlegen</strong> (RStudio + Terminal),</li>
+<li>es mit <strong>GitHub Desktop</strong> in ein neues Repository legen,</li>
+<li>es einmal über <strong>GitHub Pages</strong> veröffentlichen — ein erster klickbarer Link.</li>
+</ul>
 </section>
-<section id="der-vorbereitete-workshop-tutor-sofort-nutzbar" class="level2">
-<h2 class="anchored" data-anchor-id="der-vorbereitete-workshop-tutor-sofort-nutzbar">Der vorbereitete Workshop-Tutor (sofort nutzbar)</h2>
+<section id="worum-es-im-kern-geht" class="level2">
+<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
+<p>Du schreibst Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+</section>
+<section id="die-sechs-bausteine-lay-erklärung-zuerst" class="level2">
+<h2 class="anchored" data-anchor-id="die-sechs-bausteine-lay-erklärung-zuerst">Die sechs Bausteine — Lay-Erklärung zuerst</h2>
+<p>Jeder Begriff wird in der Fachsprache schwerer als nötig. Hier zuerst die einfache Idee, dann das Detail.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Baustein</th>
+<th>In einem Satz</th>
+<th>Was es technisch ist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Quarto</strong></td>
+<td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+</tr>
+<tr class="even">
+<td><strong>YAML</strong></td>
+<td>Einstellungsdatei am Anfang jedes Kapitels — sagt z. B., ob es ein Inhaltsverzeichnis gibt.</td>
+<td>„YAML Ain’t Markup Language”, strukturiertes Format mit Einrückungen.</td>
+</tr>
+<tr class="odd">
+<td><strong>JSON</strong></td>
+<td>Wie YAML, aber mit Klammern. Wird intern für Daten verwendet.</td>
+<td>„JavaScript Object Notation”, Standardformat zum Datenaustausch.</td>
+</tr>
+<tr class="even">
+<td><strong>HTML</strong></td>
+<td>Sprache, in der Webseiten geschrieben sind.</td>
+<td>„HyperText Markup Language”, Tags wie <code>&lt;h1&gt;</code> oder <code>&lt;p&gt;</code>.</td>
+</tr>
+<tr class="odd">
+<td><strong>iFrame</strong></td>
+<td>Fenster im Fenster — bettet eine fremde Seite in deine ein.</td>
+<td>HTML-Tag <code>&lt;iframe src="..."&gt;</code>, isoliert vom Rest der Seite.</td>
+</tr>
+<tr class="even">
+<td><strong>GitHub</strong></td>
+<td>Speicher für Code im Netz, mit eingebautem Webserver (Pages).</td>
+<td>Hosting-Plattform auf Basis von Git, gehört Microsoft.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mach mit — Memory-Spiel zu den Bausteinen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Drei Minuten, sechs Paare. Versuche, alle Begriffe ihrer Lay-Definition zuzuordnen.</p>
+<p><a href="../interactions/memory-spiel.html" target="_blank">Memory-Spiel öffnen →</a></p>
+</div>
+</div>
+</section>
+<section id="der-workflow-in-einem-bild" class="level2">
+<h2 class="anchored" data-anchor-id="der-workflow-in-einem-bild">Der Workflow in einem Bild</h2>
+<p>Drei Werkzeuge, ein Kreislauf:</p>
+<pre><code>RStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
+        ↑                                                                            │
+        └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘</code></pre>
+<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass dein Skript jederzeit reproduzierbar gerendert werden kann und dass du ohne Angst Änderungen vornimmst — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
+</section>
+<section id="rstudio-als-arbeitszentrale-vier-bereiche" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</h2>
+<p>Du arbeitest fast immer in RStudio. Vier Bereiche reichen für alles, was wir heute machen:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bereich</th>
+<th>Wo?</th>
+<th>Wofür?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Editor</strong></td>
+<td>oben links</td>
+<td><code>.qmd</code>-Dateien schreiben</td>
+</tr>
+<tr class="even">
+<td><strong>Terminal</strong></td>
+<td>unten links, Tab neben Console</td>
+<td><code>quarto render</code>, <code>quarto preview</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Files</strong></td>
+<td>unten rechts</td>
+<td>neue Ordner und Dateien anlegen, Dateien öffnen</td>
+</tr>
+<tr class="even">
+<td><strong>Build</strong></td>
+<td>oben rechts</td>
+<td>Knopf „Render Book” als Klick-Alternative</td>
+</tr>
+</tbody>
+</table>
+<p>Drei nützliche Shortcuts:</p>
+<ul>
+<li><strong>Strg+Shift+K</strong> — die aktuell geöffnete <code>.qmd</code>-Datei einzeln rendern (für schnelles Vorschauen einzelner Kapitel).</li>
+<li><strong>Strg+Shift+B</strong> — komplettes Buch rendern (entspricht dem Build-Knopf).</li>
+<li><strong>Alt+Shift+R</strong> — neuen Terminal-Tab öffnen, falls keiner sichtbar ist.</li>
+</ul>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Falls dein Terminal-Tab fehlt:</strong> <strong>Tools → Terminal → New Terminal</strong>. Voreinstellung auf Windows ist PowerShell, einstellbar unter <strong>Tools → Global Options → Terminal</strong>. Quarto-Befehle funktionieren in jeder Shell.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="mach-mit-die-ersten-30-minuten" class="level2">
+<h2 class="anchored" data-anchor-id="mach-mit-die-ersten-30-minuten">Mach mit — die ersten 30 Minuten</h2>
+<p>Halte dich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.</p>
+<section id="schritt-1-neues-projekt-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</h3>
+<ol type="1">
+<li>RStudio öffnen → <strong>File → New Project → New Directory → Quarto Book</strong>.</li>
+<li>Ordnernamen wählen, z. B. <code>mein-erstes-skript</code>.</li>
+<li>Speicherort wählen — am besten direkt in deinem GitHub-Ordner.</li>
+<li><strong>Create Project</strong>.</li>
+</ol>
+<p>RStudio legt automatisch eine Mini-Buchstruktur an (<code>_quarto.yml</code>, <code>index.qmd</code>, ein paar Beispielkapitel).</p>
+</section>
+<section id="schritt-2-render-und-preview-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-2-render-und-preview-in-rstudio">Schritt 2 — Render und Preview (in RStudio)</h3>
+<p>Im <strong>Terminal-Tab</strong> (unten neben Console):</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Im Browser öffnet sich <code>http://localhost:4XXX</code> mit einer Live-Vorschau. Jede Änderung an einer <code>.qmd</code>-Datei führt zu sofortigem Reload. Alternative ohne Tippen: <strong>Build-Pane</strong> oben rechts → Knopf „Render Book” (rendert das ganze Buch einmal, ohne Live-Reload).</p>
+</section>
+<section id="schritt-3-beispielkapitel-auf-deinen-strang-anpassen" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-3-beispielkapitel-auf-deinen-strang-anpassen">Schritt 3 — Beispielkapitel auf deinen Strang anpassen</h3>
+<p>Öffne <code>intro.qmd</code> und ersetze den Beispielinhalt durch eine Mini-Einleitung zu deinem gewählten Strang. Drei Vorlagen, je nach Strangwahl:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Strang A — Wissenschaftliche Einstellung</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Strang B — Recherche und Quellenqualität</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Strang C — Transparent schreiben</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Wissenschaftliche Einstellung</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Wissenschaftliche Einstellung heißt, Aussagen nicht zu glauben, sondern</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>zu prüfen — und sich selbst genauso zu prüfen wie andere. Drei Haltungen</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>gehören dazu: Skepsis, intellektuelle Demut, Bereitschaft zur Korrektur.</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>Quelle: Bergstrom &amp; West (2024).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Recherche und Quellenqualität</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Quellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>mit denen du eine Quelle in 30 Sekunden grob einordnest.</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Quelle: Bergstrom &amp; West (2024).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Transparent schreiben</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Transparenz heißt, dass jeder Leser nachvollziehen kann, wie du zu deinen</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Ergebnissen gekommen bist — welche Daten, welche Methoden, welche</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Annahmen. In diesem Kapitel: drei Bausteine eines transparenten</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Methodenteils. Quelle: Bergstrom &amp; West (2024).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klickst du auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für deine späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+</section>
+<section id="schritt-5-github-desktop-verknüpfen" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</h3>
+<ol type="1">
+<li>GitHub Desktop öffnen → <strong>File → Add Local Repository</strong> → Ordner wählen.</li>
+<li>Wenn noch kein Git-Repo: „Create a repository” akzeptieren.</li>
+<li><strong>Publish repository</strong> klicken → Name eingeben (z. B. <code>mein-erstes-skript</code>) → <strong>Public</strong> → <strong>Publish</strong>.</li>
+</ol>
+<p>Dein Code liegt jetzt auf GitHub.</p>
+</section>
+<section id="schritt-6-github-pages-aktivieren" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-6-github-pages-aktivieren">Schritt 6 — GitHub Pages aktivieren</h3>
+<ol type="1">
+<li>Auf github.com im Repository auf <strong>Settings → Pages</strong>.</li>
+<li><strong>Source: Deploy from a branch</strong>.</li>
+<li><strong>Branch: main → Folder: /docs → Save</strong>.</li>
+<li>Nach 1–2 Minuten: dein Skript liegt unter <code>https://DEIN-USERNAME.github.io/mein-erstes-skript/</code>.</li>
+</ol>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Was, wenn …
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Render funktioniert lokal, aber GitHub Pages zeigt 404?</strong> → In <code>_quarto.yml</code> muss <code>output-dir: docs</code> stehen, und der Ordner <code>docs/</code> muss committet sein. Schau in <code>.gitignore</code>, ob <code>/docs/</code> ausgeschlossen wird, und nimm die Zeile heraus.</li>
+<li><strong>YAML-Fehler beim Rendern?</strong> → Einrückungen prüfen (zwei Leerzeichen, keine Tabs). Doppelpunkte und Anführungszeichen ebenfalls.</li>
+<li><strong>GitHub Desktop fragt nach Login?</strong> → Im Browser anmelden, dann in GitHub Desktop „Sign in”.</li>
+<li><strong><code>quarto: command not found</code>?</strong> → Quarto-Installation prüfen mit <code>quarto --version</code>. Wenn leer: neu installieren von <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="tutor" class="level2">
+<h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -310,114 +561,29 @@ Tutor öffnen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank"><strong>Tutor „Interaktive Skripte”</strong> →</a></p>
-<p>Ein Klick — der GPT öffnet sich in ChatGPT. Login mit kostenlosem ChatGPT-Konto. Der System-Prompt ist eingebaut.</p>
+<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
+<p>Vorschlag-Prompt für dieses Kapitel:</p>
+<blockquote class="blockquote">
+<p>Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Frag mich zurück, wenn etwas unklar ist.</p>
+</blockquote>
 </div>
 </div>
-<p>So baust du den Link in dein eigenes Skript ein:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Frag den Skript-Tutor →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>In jedem Kapitel als Callout am Ende:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tutor öffnen</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Tutor „Interaktive Skripte" →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="eigenen-tutor-anlegen-drei-hosting-wege" class="level2">
-<h2 class="anchored" data-anchor-id="eigenen-tutor-anlegen-drei-hosting-wege">Eigenen Tutor anlegen — drei Hosting-Wege</h2>
-<section id="weg-1-eigenes-custom-gpt-auf-chatgpt" class="level3">
-<h3 class="anchored" data-anchor-id="weg-1-eigenes-custom-gpt-auf-chatgpt">Weg 1 — eigenes Custom GPT auf ChatGPT</h3>
-<ol type="1">
-<li><a href="https://chatgpt.com" class="uri">https://chatgpt.com</a> öffnen, oben links <strong>„Explore GPTs”</strong> → <strong>„+ Create”</strong>.</li>
-<li><strong>Configure</strong>-Tab öffnen, Name vergeben, System-Prompt unten kopieren und einfügen.</li>
-<li><strong>Save → Share</strong> → „Anyone with the link” oder „Public”.</li>
-<li>Sharing-Link in dein Skript einbauen (siehe oben).</li>
-</ol>
-</section>
-<section id="weg-2-academiccloud-hochschul-login-eu-datenhaltung" class="level3">
-<h3 class="anchored" data-anchor-id="weg-2-academiccloud-hochschul-login-eu-datenhaltung">Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)</h3>
-<ol type="1">
-<li><a href="https://chat.academiccloud.de" class="uri">https://chat.academiccloud.de</a> öffnen, einloggen.</li>
-<li>Neuen <strong>Custom GPT</strong> anlegen (Modell: aktuelles Top-Modell).</li>
-<li>System-Prompt einfügen.</li>
-<li><strong>Sharing aktivieren</strong> (öffentlich oder „mit Link”).</li>
-<li>Link einbauen.</li>
-</ol>
-</section>
-<section id="weg-3-statisches-widget-nur-für-fortgeschrittene" class="level3">
-<h3 class="anchored" data-anchor-id="weg-3-statisches-widget-nur-für-fortgeschrittene">Weg 3 — statisches Widget (nur für Fortgeschrittene)</h3>
-<p>Eine HTML-Datei mit eingebautem Prompt, die direkt eine OpenAI-kompatible API anspricht — Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>. Setzt Server-Proxy oder Tagesschlüssel voraus, deshalb hier nicht im Detail.</p>
-</section>
-</section>
-<section id="system-prompt-copy-paste" class="level2">
-<h2 class="anchored" data-anchor-id="system-prompt-copy-paste">System-Prompt (Copy-Paste)</h2>
-<pre><code>Du bist ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.
-Du begleitest Teilnehmende eines eintägigen Workshops, in dem sie ein
-eigenes interaktives Skript mit Quarto, RStudio, GitHub Desktop und
-GitHub Pages erstellen. Beispielthema ihres Skripts: eine kurze
-Einführung ins wissenschaftliche Arbeiten (Wissenschaftliche Einstellung,
-Recherche und Quellenqualität, oder Transparent Schreiben).
-
-DEIN VERHALTEN
-- Beginne jede Antwort mit einer Lay-Erklärung in ein bis zwei Sätzen.
-  Was ist das, warum gerade jetzt? Erst danach kommt der technische Schritt.
-- Frage zu Beginn: "Wo stehst du gerade?" Wenn du keinen Stand kennst,
-  frage nach einer kurzen Beschreibung.
-- Gib nie mehr als ZEHN Zeilen Code auf einmal. Lieber kleinere Schritte.
-- Erkläre alle Pfade explizit (relativer Pfad, absoluter Pfad, was bedeutet das).
-- Verwende deutsche Sprache. Bei Fachbegriffen: einmalig auf Englisch
-  in Klammern, dann auf Deutsch weiter.
-- Lasse Fehler nicht klein erscheinen. Wenn etwas typisch falsch läuft,
-  benenne es offen und erkläre warum.
-
-WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
-- Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,
-  Zotero mit Better BibTeX, optional H5P.
-- Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),
-  scharfe Ecken, Arial.
-- Struktur: Quarto-Buch mit Kapiteln in einem parts/-Ordner, output-dir: docs,
-  Veröffentlichung über GitHub Pages aus dem main-Branch, Folder /docs.
-- Inhaltsbeispiel: Einführung wissenschaftliches Arbeiten, drei Stränge:
-  Wissenschaftliche Einstellung / Recherche und Quellenqualität /
-  Transparent Schreiben (basierend auf Bergstrom &amp; West, "Calling Bullshit").
-
-DEINE GRENZEN
-- Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).
-  Bleib bei Quarto.
-- Antworte nicht zu allgemeinen IT-Fragen außerhalb des Skript-Workflows.
-- Behaupte nichts, was du nicht sicher weißt. Bei Unsicherheit: sag das.
-- Erfinde keine Quellen, keine Pakete, keine API-Endpunkte.
-
-ZIEL
-Am Ende des Workshops haben die Teilnehmenden ein eigenes, im Netz
-veröffentlichtes Skript mit Inhaltsverzeichnis, Zotero-Zitaten,
-TH-Köln-Stil, einem interaktiven Diagramm und einem iFrame-Element.
-Hilf ihnen, dorthin zu kommen — Schritt für Schritt.</code></pre>
-</section>
-<section id="drei-kurz-prompts-für-typische-aufgaben" class="level2">
-<h2 class="anchored" data-anchor-id="drei-kurz-prompts-für-typische-aufgaben">Drei Kurz-Prompts für typische Aufgaben</h2>
-<section id="a-fehler-erklären" class="level3">
-<h3 class="anchored" data-anchor-id="a-fehler-erklären">A — Fehler erklären</h3>
-<pre><code>Erkläre mir diesen Fehler aus dem Quarto-Render-Log in einem Satz,
-dann den wahrscheinlichsten nächsten Schritt:
-
-[Fehlermeldung einfügen]</code></pre>
-</section>
-<section id="b-code-reviewen" class="level3">
-<h3 class="anchored" data-anchor-id="b-code-reviewen">B — Code reviewen</h3>
-<pre><code>Ich habe folgenden YAML/Code in meinem Quarto-Skript. Schau, ob
-Fehler oder Stolperfallen drin sind. Antworte mit drei kurzen Punkten:
-was funktioniert, was nicht, was würdest du anders machen.
-
-[Code einfügen]</code></pre>
-</section>
-<section id="c-kapitel-ergänzen" class="level3">
-<h3 class="anchored" data-anchor-id="c-kapitel-ergänzen">C — Kapitel ergänzen</h3>
-<pre><code>Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende
-Übung vor — kurz, hands-on, mit konkretem Code-Snippet zum Einbauen.
-Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.</code></pre>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-allaire2024" class="csl-entry" role="listitem">
+Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C. (2024). <em>Quarto: An Open-Source Scientific and Technical Publishing System</em>. <a href="https://quarto.org/">https://quarto.org/</a>
+</div>
+<div id="ref-bryan2018" class="csl-entry" role="listitem">
+Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
+</div>
+<div id="ref-lakens2022" class="csl-entry" role="listitem">
+Lakens, D. (2022). <em>Improving Your Statistical Inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -827,11 +993,14 @@ Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendix/troubleshooting.html" class="pagination-link" aria-label="Trouble-Shooting">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Trouble-Shooting</span></span>
+      <a href="../parts/01-didaktik.html" class="pagination-link" aria-label="1 — Warum interaktiv?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1 — Warum interaktiv?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../parts/03a-uebersicht.html" class="pagination-link" aria-label="3a — Inhaltsverzeichnis und Literatur">
+        <span class="nav-page-text"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -842,7 +1011,7 @@ Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.</code></pre>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/appendix/tutor-prompt.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/02-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>

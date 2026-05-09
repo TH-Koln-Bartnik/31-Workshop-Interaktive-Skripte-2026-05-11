@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quick-Starter Guide – Interaktive Skripte mit KI erstellen</title>
+<title>4 — Interaktive Diagramme – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,8 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appendix/troubleshooting.html" rel="next">
-<link href="../parts/06-slides-optional.html" rel="prev">
+<link href="../parts/05-iframes-tutor.html" rel="next">
+<link href="../parts/03b-style.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -119,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/quickstart.html"><span class="chapter-title">Quick-Starter Guide</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/04-charts.html"><span class="chapter-title">4 — Interaktive Diagramme</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -139,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Interaktive Skripte mit KI erstellen</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
     <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
@@ -204,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
+  <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/quickstart.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Quick-Starter Guide</span></a>
+  <a href="../appendix/quickstart.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick-Starter Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -255,31 +275,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#checkliste-vor-dem-workshop" id="toc-checkliste-vor-dem-workshop" class="nav-link active" data-scroll-target="#checkliste-vor-dem-workshop">Checkliste vor dem Workshop</a></li>
-  <li><a href="#rstudio-cockpit-auf-einen-blick" id="toc-rstudio-cockpit-auf-einen-blick" class="nav-link" data-scroll-target="#rstudio-cockpit-auf-einen-blick">RStudio-Cockpit auf einen Blick</a></li>
-  <li><a href="#schritt-für-schritt-dein-erstes-skript" id="toc-schritt-für-schritt-dein-erstes-skript" class="nav-link" data-scroll-target="#schritt-für-schritt-dein-erstes-skript">Schritt-für-Schritt: dein erstes Skript</a>
-  <ul class="collapse">
-  <li><a href="#neues-quarto-buch-anlegen" id="toc-neues-quarto-buch-anlegen" class="nav-link" data-scroll-target="#neues-quarto-buch-anlegen">1. Neues Quarto-Buch anlegen</a></li>
-  <li><a href="#erste-vorschau" id="toc-erste-vorschau" class="nav-link" data-scroll-target="#erste-vorschau">2. Erste Vorschau</a></li>
-  <li><a href="#quarto.yml-minimal-anpassen" id="toc-quarto.yml-minimal-anpassen" class="nav-link" data-scroll-target="#quarto.yml-minimal-anpassen">3. <code>_quarto.yml</code> minimal anpassen</a></li>
-  <li><a href="#ordner-für-bilder-daten-und-widgets-anlegen" id="toc-ordner-für-bilder-daten-und-widgets-anlegen" class="nav-link" data-scroll-target="#ordner-für-bilder-daten-und-widgets-anlegen">4. Ordner für Bilder, Daten und Widgets anlegen</a></li>
-  <li><a href="#erstes-kapitel-schreiben" id="toc-erstes-kapitel-schreiben" class="nav-link" data-scroll-target="#erstes-kapitel-schreiben">5. Erstes Kapitel schreiben</a></li>
-  <li><a href="#render" id="toc-render" class="nav-link" data-scroll-target="#render">6. Render</a></li>
-  <li><a href="#github-desktop-repo-anlegen" id="toc-github-desktop-repo-anlegen" class="nav-link" data-scroll-target="#github-desktop-repo-anlegen">7. GitHub Desktop: Repo anlegen</a></li>
-  <li><a href="#github-pages-aktivieren" id="toc-github-pages-aktivieren" class="nav-link" data-scroll-target="#github-pages-aktivieren">8. GitHub Pages aktivieren</a></li>
-  <li><a href="#erste-änderung-publizieren" id="toc-erste-änderung-publizieren" class="nav-link" data-scroll-target="#erste-änderung-publizieren">9. Erste Änderung publizieren</a></li>
-  </ul></li>
-  <li><a href="#was-als-nächstes" id="toc-was-als-nächstes" class="nav-link" data-scroll-target="#was-als-nächstes">Was als Nächstes?</a></li>
+  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
+  <li><a href="#drei-wege-ein-diagramm-einzubauen" id="toc-drei-wege-ein-diagramm-einzubauen" class="nav-link" data-scroll-target="#drei-wege-ein-diagramm-einzubauen">Drei Wege, ein Diagramm einzubauen</a></li>
+  <li><a href="#mach-mit-ein-interaktives-diagramm-in-10-minuten" id="toc-mach-mit-ein-interaktives-diagramm-in-10-minuten" class="nav-link" data-scroll-target="#mach-mit-ein-interaktives-diagramm-in-10-minuten">Mach mit — ein interaktives Diagramm in 10 Minuten</a></li>
+  <li><a href="#wann-kein-interaktives-diagramm" id="toc-wann-kein-interaktives-diagramm" class="nav-link" data-scroll-target="#wann-kein-interaktives-diagramm">Wann <strong>kein</strong> interaktives Diagramm?</a></li>
+  <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/appendix/quickstart.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/04-charts.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/quickstart.html"><span class="chapter-title">Quick-Starter Guide</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/04-charts.html"><span class="chapter-title">4 — Interaktive Diagramme</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Quick-Starter Guide</span></h1>
-<p class="subtitle lead">Von Null auf erstem Skript live im Netz — alles aus RStudio</p>
+<h1 class="title"><span class="chapter-title">4 — Interaktive Diagramme</span></h1>
 </div>
 
 
@@ -296,70 +306,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="was-dieser-anhang-leistet" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-dieser-anhang-leistet">Was dieser Anhang leistet</h4>
-<p>Eine <strong>Schritt-für-Schritt-Anleitung für komplette Anfänger</strong>, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. <strong>RStudio ist dein einziges Editor-Programm</strong> — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.</p>
+<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
+<ul>
+<li>ein <strong>interaktives Diagramm</strong> mit echten Daten in dein Skript einbauen,</li>
+<li>Daten direkt aus dem Netz laden (z. B. <strong>Our World in Data</strong>),</li>
+<li>erklären, <strong>wann</strong> sich Interaktivität didaktisch lohnt und wann nicht.</li>
+</ul>
 </section>
-<section id="checkliste-vor-dem-workshop" class="level2">
-<h2 class="anchored" data-anchor-id="checkliste-vor-dem-workshop">Checkliste vor dem Workshop</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Schritt</th>
-<th>Wo?</th>
-<th>Zeit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>☐</td>
-<td>Quarto installieren</td>
-<td><a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a></td>
-<td>5 min</td>
-</tr>
-<tr class="even">
-<td>☐</td>
-<td>R installieren</td>
-<td><a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></td>
-<td>5 min</td>
-</tr>
-<tr class="odd">
-<td>☐</td>
-<td>RStudio Desktop (kostenlos)</td>
-<td><a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></td>
-<td>5 min</td>
-</tr>
-<tr class="even">
-<td>☐</td>
-<td>GitHub Desktop</td>
-<td><a href="https://desktop.github.com/" class="uri">https://desktop.github.com/</a></td>
-<td>5 min</td>
-</tr>
-<tr class="odd">
-<td>☐</td>
-<td>GitHub-Konto erstellen</td>
-<td><a href="https://github.com/signup" class="uri">https://github.com/signup</a></td>
-<td>5 min</td>
-</tr>
-<tr class="even">
-<td>☐</td>
-<td>Zotero + Better BibTeX</td>
-<td><a href="https://www.zotero.org/" class="uri">https://www.zotero.org/</a></td>
-<td>10 min</td>
-</tr>
-<tr class="odd">
-<td>☐</td>
-<td>ChatGPT-Konto und Tutor-Link testen</td>
-<td><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" class="uri">https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte</a></td>
-<td>2 min</td>
-</tr>
-</tbody>
-</table>
-<p>Insgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.</p>
+<section id="worum-es-im-kern-geht" class="level2">
+<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
+<p>Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte <span class="citation" data-cites="tufte2001">(<a href="#ref-tufte2001" role="doc-biblioref">2001</a>)</span> formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy <span class="citation" data-cites="healy2018">(<a href="#ref-healy2018" role="doc-biblioref">2018</a>)</span> ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.</p>
 </section>
-<section id="rstudio-cockpit-auf-einen-blick" class="level2">
-<h2 class="anchored" data-anchor-id="rstudio-cockpit-auf-einen-blick">RStudio-Cockpit auf einen Blick</h2>
+<section id="drei-wege-ein-diagramm-einzubauen" class="level2">
+<h2 class="anchored" data-anchor-id="drei-wege-ein-diagramm-einzubauen">Drei Wege, ein Diagramm einzubauen</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -368,112 +328,181 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </colgroup>
 <thead>
 <tr class="header">
-<th>Bereich</th>
-<th>Position</th>
-<th>Wofür im Workshop?</th>
+<th>Weg</th>
+<th>Werkzeug</th>
+<th>Wann passend?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Editor</strong></td>
-<td>oben links</td>
-<td><code>.qmd</code>-Dateien schreiben</td>
+<td><strong>R + ggplot2 + plotly</strong></td>
+<td>R-Code-Chunk</td>
+<td>Du kennst R oder willst es lernen. Volle Kontrolle, schöne Grafiken <span class="citation" data-cites="wickham2019">(<a href="#ref-wickham2019" role="doc-biblioref">Wickham et al., 2019</a>)</span>.</td>
 </tr>
 <tr class="even">
-<td><strong>Console</strong></td>
-<td>unten links, Tab 1</td>
-<td>R-Pakete installieren (<code>install.packages(...)</code>)</td>
+<td><strong>Observable JS</strong></td>
+<td>OJS-Chunk in Quarto</td>
+<td>Du willst dich auf JavaScript einlassen. Sehr schnell, modern.</td>
 </tr>
 <tr class="odd">
-<td><strong>Terminal</strong></td>
-<td>unten links, Tab 2</td>
-<td><code>quarto render</code>, <code>quarto preview</code></td>
-</tr>
-<tr class="even">
-<td><strong>Files</strong></td>
-<td>unten rechts, Tab 1</td>
-<td>Ordner und Dateien anlegen, Dateien öffnen</td>
-</tr>
-<tr class="odd">
-<td><strong>Build</strong></td>
-<td>oben rechts, Tab 5</td>
-<td>Knopf „Render Book” als Klick-Alternative</td>
+<td><strong>iFrame mit Datawrapper / Flourish</strong></td>
+<td>externer Editor, Embed-Code</td>
+<td>Du willst gar nicht programmieren.</td>
 </tr>
 </tbody>
 </table>
-<p>Drei Shortcuts, die du dir merken solltest: <strong>Strg+Shift+K</strong> rendert die aktuelle Datei, <strong>Strg+Shift+B</strong> rendert das ganze Buch, <strong>Alt+Shift+R</strong> öffnet einen neuen Terminal-Tab.</p>
+<p>Wir gehen heute den ersten Weg — er ist mit RStudio am robustesten und nutzt die R-Pakete, die du wahrscheinlich ohnehin im Werkzeugkasten haben willst.</p>
 </section>
-<section id="schritt-für-schritt-dein-erstes-skript" class="level2">
-<h2 class="anchored" data-anchor-id="schritt-für-schritt-dein-erstes-skript">Schritt-für-Schritt: dein erstes Skript</h2>
-<section id="neues-quarto-buch-anlegen" class="level3">
-<h3 class="anchored" data-anchor-id="neues-quarto-buch-anlegen">1. Neues Quarto-Buch anlegen</h3>
-<p>In RStudio: <strong>File → New Project → New Directory → Quarto Book → Create Project</strong>.</p>
+<section id="mach-mit-ein-interaktives-diagramm-in-10-minuten" class="level2">
+<h2 class="anchored" data-anchor-id="mach-mit-ein-interaktives-diagramm-in-10-minuten">Mach mit — ein interaktives Diagramm in 10 Minuten</h2>
+<p>Wir laden CO₂-Daten von Our World in Data <span class="citation" data-cites="owid2024">(<a href="#ref-owid2024" role="doc-biblioref">Roser et al., 2024</a>)</span> und zeichnen sie als interaktive Linie. Drei Strang-Varianten — jede passt auf das Stoffgebiet, das du gewählt hast.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Strang A — Wissenschaftliche Einstellung</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Strang B — Recherche und Quellenqualität</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Strang C — Transparent schreiben</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Frage: <em>Wie haben sich Schätzungen zur globalen Lebenserwartung über die Zeit verändert?</em> Diese Frage zeigt, dass „Fakten” historisch sind — sie verändern sich mit besserer Datenlage.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-le</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Lebenserwartung bei Geburt, ausgewählte Länder. Daten: Our World in Data (Roser et al., 2024)."</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>owid <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://ourworldindata.org/grapher/life-expectancy.csv?v=1"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ausgewaehlt <span class="ot">&lt;-</span> owid <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Entity <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Germany"</span>, <span class="st">"Japan"</span>, <span class="st">"World"</span>),</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>         Year <span class="sc">&gt;=</span> <span class="dv">1950</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(ausgewaehlt,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="sc">~</span>Year, <span class="at">y =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Life expectancy at birth (historical)</span><span class="st">`</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="sc">~</span>Entity, <span class="at">type =</span> <span class="st">"scatter"</span>, <span class="at">mode =</span> <span class="st">"lines"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#c81e0f"</span>, <span class="st">"#b43092"</span>, <span class="st">"#ea5a00"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Lebenserwartung (Jahre)"</span>),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">""</span>))</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Frage: <em>Wie viele wissenschaftliche Publikationen erscheinen pro Jahr?</em> Antwort führt zur Notwendigkeit, Quellen zu filtern.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-pub</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Wissenschaftliche Publikationen weltweit. Daten: Our World in Data."</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>owid <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://ourworldindata.org/grapher/scientific-publications.csv?v=1"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(owid <span class="sc">|&gt;</span> <span class="fu">filter</span>(Year <span class="sc">&gt;=</span> <span class="dv">1990</span>),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="sc">~</span>Year, <span class="at">y =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Articles</span><span class="st">`</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">color =</span> <span class="sc">~</span>Entity, <span class="at">type =</span> <span class="st">"scatter"</span>, <span class="at">mode =</span> <span class="st">"lines"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#c81e0f"</span>, <span class="st">"#b43092"</span>, <span class="st">"#ea5a00"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Publikationen pro Jahr"</span>),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">""</span>))</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Frage: <em>Wie hat sich der Anteil registrierter Studien (Pre-Registration) entwickelt?</em> Datenquelle hier ggf. selbst recherchieren — Beispiel-Code unten lädt einen kleinen lokalen CSV.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-prereg</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Anzahl pre-registrierter Studien auf OSF. Daten: eigener Auszug."</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>prereg <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/osf-preregistrations.csv"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_ly</span>(prereg, <span class="at">x =</span> <span class="sc">~</span>Jahr, <span class="at">y =</span> <span class="sc">~</span>Anzahl, <span class="at">type =</span> <span class="st">"bar"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"#c81e0f"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">layout</span>(<span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Pre-Registrierungen"</span>),</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">""</span>))</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>Im Browser kannst du jetzt mit der Maus über die Linien fahren, Länder ein- und ausschalten, in Bereiche zoomen. Das Bild im Skript ist live.</p>
 </section>
-<section id="erste-vorschau" class="level3">
-<h3 class="anchored" data-anchor-id="erste-vorschau">2. Erste Vorschau</h3>
-<p>Im <strong>Terminal-Tab</strong> (unten links, neben Console):</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Browser öffnet sich. Du siehst die Beispielinhalte. <strong>Strg+C</strong> im Terminal beendet den Preview-Server.</p>
+<section id="wann-kein-interaktives-diagramm" class="level2">
+<h2 class="anchored" data-anchor-id="wann-kein-interaktives-diagramm">Wann <strong>kein</strong> interaktives Diagramm?</h2>
+<p>Drei Situationen, in denen ein statisches PNG genauso gut wirkt:</p>
+<ul>
+<li><strong>Reine Illustration</strong> — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen”, reicht ein Bild <span class="citation" data-cites="tufte2001">(<a href="#ref-tufte2001" role="doc-biblioref">Tufte, 2001</a>)</span>.</li>
+<li><strong>Print-Version</strong> wichtig — interaktive Plots werden im PDF zu statischen Screenshots; wenn das PDF die Hauptform ist, plane direkt für Print.</li>
+<li><strong>Performance</strong> — sehr große Datensätze (&gt;100.000 Punkte) machen plotly träge. Dann besser aggregieren oder ein statisches ggplot exportieren.</li>
+</ul>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mach mit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Tausche im Code zwei Länder gegen welche aus, die für deinen Strang interessant sind. Render, schau das Ergebnis im Browser an, push.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Was, wenn …
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong><code>could not find function "plot_ly"</code></strong> → <code>install.packages("plotly")</code> in der R-Konsole.</li>
+<li><strong>CSV lässt sich nicht laden</strong> → Datei lokal in <code>data/</code> speichern und von dort lesen (CORS-Beschränkungen). Die OWID-Grapher-URLs ändern sich gelegentlich; im Zweifel den CSV-Download direkt von der Grapher-Seite holen.</li>
+<li><strong>Diagramm zu klein</strong> → <code>fig-width: 8</code> und <code>fig-height: 5</code> im Chunk-Header setzen.</li>
+<li><strong>Spaltenname unbekannt</strong> → <code>colnames(owid)</code> in der R-Konsole laufen lassen, um die exakte Schreibweise zu sehen (manche Spalten haben Sonderzeichen).</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="quarto.yml-minimal-anpassen" class="level3">
-<h3 class="anchored" data-anchor-id="quarto.yml-minimal-anpassen">3. <code>_quarto.yml</code> minimal anpassen</h3>
-<p>Im <strong>Editor</strong> öffnest du <code>_quarto.yml</code> und ersetzt den Inhalt durch:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> book</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">book</span><span class="kw">:</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mein erstes Skript"</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">chapters</span><span class="kw">:</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> index.qmd</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> intro.qmd</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>output-dir: docs</code> ist wichtig — GitHub Pages erwartet das später.</p>
+<section id="tutor" class="level2">
+<h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tutor öffnen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
+<p>Vorschlag-Prompt für dieses Kapitel:</p>
+<blockquote class="blockquote">
+<p>Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Ich bin R-Anfänger. Schreibe mir einen kommentierten Code-Chunk, in dem jede Zeile mit einer Lay-Erklärung versehen ist. Falls die Daten nicht ladbar sind, schlag einen Workaround vor.</p>
+</blockquote>
+</div>
+</div>
 </section>
-<section id="ordner-für-bilder-daten-und-widgets-anlegen" class="level3">
-<h3 class="anchored" data-anchor-id="ordner-für-bilder-daten-und-widgets-anlegen">4. Ordner für Bilder, Daten und Widgets anlegen</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klickst du auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. So weißt du immer, wo etwas hingehört.</p>
-</section>
-<section id="erstes-kapitel-schreiben" class="level3">
-<h3 class="anchored" data-anchor-id="erstes-kapitel-schreiben">5. Erstes Kapitel schreiben</h3>
-<p>Öffne <code>index.qmd</code> im Editor, ersetze den Beispielinhalt durch:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Willkommen</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Mein erstes Skript zum Thema <span class="co">[</span><span class="ot">Strang A/B/C</span><span class="co">]</span>.</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Was ich hier behandele</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt 1</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt 2</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt 3</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="render" class="level3">
-<h3 class="anchored" data-anchor-id="render">6. Render</h3>
-<p>Im Terminal:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Oder Knopf <strong>Build → Render Book</strong> klicken. Im <code>docs/</code>-Ordner liegt jetzt die fertige Webseite.</p>
-</section>
-<section id="github-desktop-repo-anlegen" class="level3">
-<h3 class="anchored" data-anchor-id="github-desktop-repo-anlegen">7. GitHub Desktop: Repo anlegen</h3>
-<p>GitHub Desktop → <strong>File → Add Local Repository</strong> → Projektordner wählen → <strong>Create a repository</strong> zustimmen → Name: <code>mein-erstes-skript</code> → <strong>Publish repository</strong> (Public).</p>
-</section>
-<section id="github-pages-aktivieren" class="level3">
-<h3 class="anchored" data-anchor-id="github-pages-aktivieren">8. GitHub Pages aktivieren</h3>
-<p>Auf <a href="https://github.com" class="uri">https://github.com</a> im Repo: <strong>Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save</strong>.</p>
-<p>Nach 1–2 Minuten ist dein Skript unter <code>https://DEIN-USERNAME.github.io/mein-erstes-skript/</code> live.</p>
-</section>
-<section id="erste-änderung-publizieren" class="level3">
-<h3 class="anchored" data-anchor-id="erste-änderung-publizieren">9. Erste Änderung publizieren</h3>
-<p>Bearbeite <code>index.qmd</code>, render lokal (Terminal: <code>quarto render</code> oder Knopf), in GitHub Desktop <strong>Commit → Push origin</strong>. Webseite aktualisiert sich automatisch in 30–60 Sekunden.</p>
-</section>
-</section>
-<section id="was-als-nächstes" class="level2">
-<h2 class="anchored" data-anchor-id="was-als-nächstes">Was als Nächstes?</h2>
-<p>Springe zurück in <a href="../parts/03a-uebersicht.html">Kapitel 3a — Übersicht</a> und baue Inhaltsverzeichnis und Literaturverwaltung ein. Dann zu <a href="../parts/03b-style.html">Kapitel 3b — Stil</a>.</p>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-healy2018" class="csl-entry" role="listitem">
+Healy, K. (2018). <em>Data Visualization: A Practical Introduction</em>. Princeton University Press.
+</div>
+<div id="ref-owid2024" class="csl-entry" role="listitem">
+Roser, M., Ritchie, H., Mathieu, E., &amp; Ortiz-Ospina, E. (2024). <em>Our World in Data</em>. <a href="https://ourworldindata.org/">https://ourworldindata.org/</a>
+</div>
+<div id="ref-tufte2001" class="csl-entry" role="listitem">
+Tufte, E. R. (2001). <em>The Visual Display of Quantitative Information</em> (2. Aufl.). Graphics Press.
+</div>
+<div id="ref-wickham2019" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the Tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+</div>
 
 
 </section>
@@ -885,13 +914,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../parts/06-slides-optional.html" class="pagination-link" aria-label="6 — Slides mit Quarto (optional)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></span>
+      <a href="../parts/03b-style.html" class="pagination-link" aria-label="3b — TH-Köln-Stil einbauen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendix/troubleshooting.html" class="pagination-link" aria-label="Trouble-Shooting">
-        <span class="nav-page-text"><span class="chapter-title">Trouble-Shooting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../parts/05-iframes-tutor.html" class="pagination-link" aria-label="5 — iFrames, Spiele und KI-Tutor">
+        <span class="nav-page-text"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -903,7 +932,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/appendix/quickstart.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/04-charts.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3a — Inhaltsverzeichnis und Literatur – Interaktive Skripte mit KI erstellen</title>
+<title>KI-Tutor: Link und System-Prompt – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,27 +55,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -85,8 +65,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../parts/03b-style.html" rel="next">
-<link href="../parts/02-setup.html" rel="prev">
+<link href="../appendix/troubleshooting.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -139,7 +118,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03a-uebersicht.html"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/tutor-prompt.html"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -159,7 +138,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Interaktive Skripte mit KI erstellen</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
     <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
@@ -214,7 +193,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
+  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -260,7 +239,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
+  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
       </ul>
@@ -275,24 +254,30 @@ div.csl-indent {
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
-  <li><a href="#inhaltsverzeichnis-drei-zeilen" id="toc-inhaltsverzeichnis-drei-zeilen" class="nav-link" data-scroll-target="#inhaltsverzeichnis-drei-zeilen">Inhaltsverzeichnis — drei Zeilen</a></li>
-  <li><a href="#zotero-anbinden" id="toc-zotero-anbinden" class="nav-link" data-scroll-target="#zotero-anbinden">Zotero anbinden</a>
+  <li><a href="#der-vorbereitete-workshop-tutor-sofort-nutzbar" id="toc-der-vorbereitete-workshop-tutor-sofort-nutzbar" class="nav-link active" data-scroll-target="#der-vorbereitete-workshop-tutor-sofort-nutzbar">Der vorbereitete Workshop-Tutor (sofort nutzbar)</a></li>
+  <li><a href="#eigenen-tutor-anlegen-drei-hosting-wege" id="toc-eigenen-tutor-anlegen-drei-hosting-wege" class="nav-link" data-scroll-target="#eigenen-tutor-anlegen-drei-hosting-wege">Eigenen Tutor anlegen — drei Hosting-Wege</a>
   <ul class="collapse">
-  <li><a href="#mach-mit-in-fünf-schritten" id="toc-mach-mit-in-fünf-schritten" class="nav-link" data-scroll-target="#mach-mit-in-fünf-schritten">Mach mit — in fünf Schritten</a></li>
-  <li><a href="#zitieren" id="toc-zitieren" class="nav-link" data-scroll-target="#zitieren">Zitieren</a></li>
+  <li><a href="#weg-1-eigenes-custom-gpt-auf-chatgpt" id="toc-weg-1-eigenes-custom-gpt-auf-chatgpt" class="nav-link" data-scroll-target="#weg-1-eigenes-custom-gpt-auf-chatgpt">Weg 1 — eigenes Custom GPT auf ChatGPT</a></li>
+  <li><a href="#weg-2-academiccloud-hochschul-login-eu-datenhaltung" id="toc-weg-2-academiccloud-hochschul-login-eu-datenhaltung" class="nav-link" data-scroll-target="#weg-2-academiccloud-hochschul-login-eu-datenhaltung">Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)</a></li>
+  <li><a href="#weg-3-statisches-widget-nur-für-fortgeschrittene" id="toc-weg-3-statisches-widget-nur-für-fortgeschrittene" class="nav-link" data-scroll-target="#weg-3-statisches-widget-nur-für-fortgeschrittene">Weg 3 — statisches Widget (nur für Fortgeschrittene)</a></li>
   </ul></li>
-  <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#system-prompt-copy-paste" id="toc-system-prompt-copy-paste" class="nav-link" data-scroll-target="#system-prompt-copy-paste">System-Prompt (Copy-Paste)</a></li>
+  <li><a href="#drei-kurz-prompts-für-typische-aufgaben" id="toc-drei-kurz-prompts-für-typische-aufgaben" class="nav-link" data-scroll-target="#drei-kurz-prompts-für-typische-aufgaben">Drei Kurz-Prompts für typische Aufgaben</a>
+  <ul class="collapse">
+  <li><a href="#a-fehler-erklären" id="toc-a-fehler-erklären" class="nav-link" data-scroll-target="#a-fehler-erklären">A — Fehler erklären</a></li>
+  <li><a href="#b-code-reviewen" id="toc-b-code-reviewen" class="nav-link" data-scroll-target="#b-code-reviewen">B — Code reviewen</a></li>
+  <li><a href="#c-kapitel-ergänzen" id="toc-c-kapitel-ergänzen" class="nav-link" data-scroll-target="#c-kapitel-ergänzen">C — Kapitel ergänzen</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/parts/03a-uebersicht.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/appendix/tutor-prompt.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03a-uebersicht.html"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix/quickstart.html">Teil 2 — Quick-Starter</a></li><li class="breadcrumb-item"><a href="../appendix/tutor-prompt.html"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></h1>
+<h1 class="title"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></h1>
+<p class="subtitle lead">Der Workshop-Tutor und die Anleitung zum eigenen Tutor</p>
 </div>
 
 
@@ -309,90 +294,12 @@ div.csl-indent {
 </header>
 
 
-<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
-<ul>
-<li>ein <strong>automatisches Inhaltsverzeichnis</strong> in deinem Skript einschalten,</li>
-<li>eine <strong>Zotero-Bibliothek als BibTeX exportieren</strong> und ins Projekt einbinden,</li>
-<li>mit <code>[@key]</code> zitieren und ein <strong>automatisches Literaturverzeichnis</strong> am Kapitelende erzeugen.</li>
-</ul>
+<section id="was-dieser-anhang-leistet" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-dieser-anhang-leistet">Was dieser Anhang leistet</h4>
+<p>Du findest hier den <strong>fertigen Tutor</strong> für diesen Workshop (ein Klick) und den vollständigen <strong>System-Prompt</strong>, mit dem du dir denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen kannst.</p>
 </section>
-<section id="worum-es-im-kern-geht" class="level2">
-<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Ein gutes Skript orientiert die Lesenden zwei Mal: oben durch das Inhaltsverzeichnis, unten durch die Literaturliste. Beides automatisch zu erzeugen ist mehr als Komfort — es vermeidet die typischen Fehlerquellen (vergessene Quellen, falsche Seitenzahlen, doppelte Einträge), die in Hand-pflege unweigerlich entstehen. Die Verbindung von Zotero und Quarto regelt das mit zwei Konfigurationszeilen.</p>
-</section>
-<section id="inhaltsverzeichnis-drei-zeilen" class="level2">
-<h2 class="anchored" data-anchor-id="inhaltsverzeichnis-drei-zeilen">Inhaltsverzeichnis — drei Zeilen</h2>
-<p>In <code>_quarto.yml</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc-depth</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc-title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Inhalt"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Quarto baut das TOC automatisch aus den Überschriften. Tiefe drei heißt: Kapitel, Abschnitt, Unterabschnitt — alles, was tiefer geschachtelt ist, taucht im TOC nicht auf.</p>
-</section>
-<section id="zotero-anbinden" class="level2">
-<h2 class="anchored" data-anchor-id="zotero-anbinden">Zotero anbinden</h2>
-<p>Zotero exportiert deine Bibliothek als <code>.bib</code>-Datei, Quarto liest sie ein, du zitierst per Schlüssel. Das <strong>Better-BibTeX</strong>-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. <code>mayer2021</code>) und der Export sich automatisch aktualisiert, wenn du in Zotero etwas änderst.</p>
-<section id="mach-mit-in-fünf-schritten" class="level3">
-<h3 class="anchored" data-anchor-id="mach-mit-in-fünf-schritten">Mach mit — in fünf Schritten</h3>
-<ol type="1">
-<li><strong>Better BibTeX</strong> in Zotero installieren: <a href="https://retorque.re/zotero-better-bibtex/" class="uri">https://retorque.re/zotero-better-bibtex/</a>.</li>
-<li>Eine kleine <strong>Zotero-Sammlung</strong> anlegen mit zwei oder drei Quellen aus deinem Strang.</li>
-<li>Sammlung <strong>rechtsklicken → Export Collection → Better BibTeX → Keep updated</strong>.</li>
-<li>Datei speichern als <code>references.bib</code> im Projektordner.</li>
-<li>In <code>_quarto.yml</code>:</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">csl</span><span class="kw">:</span><span class="at"> https://www.zotero.org/styles/apa</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">link-citations</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="zitieren" class="level3">
-<h3 class="anchored" data-anchor-id="zitieren">Zitieren</h3>
-<p>Im Text:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Generative Lernaktivitäten verbessern das Behalten <span class="co">[</span><span class="ot">@fiorella2016</span><span class="co">]</span>.</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Die zugrundeliegende Theorie geht auf Mayer <span class="co">[</span><span class="ot">-@mayer2021</span><span class="co">]</span> zurück.</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern du dort einen <code># Literatur</code>-Heading mit <code>::: {#refs}</code> setzt — wie in diesem Skript.</p>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Mach mit — strangbezogen
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Wähle aus deinem Strang <strong>drei Quellen</strong>, lege sie in Zotero an, exportiere und zitiere sie in deinem Kapitel. Wenn du keinen passenden Startpunkt hast, hier je eine Empfehlung:</p>
-<ul>
-<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(<a href="#ref-bergstrom2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
-<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(<a href="#ref-bergstrom2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
-<li><strong>Strang C — Transparent schreiben:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(<a href="#ref-bergstrom2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-simple callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Was, wenn …
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>„Citation key not found”?</strong> → BibTeX-Schlüssel im <code>.bib</code> prüfen, oder Better BibTeX neu auto-exportieren.</li>
-<li><strong>Liste erscheint nicht?</strong> → Am Kapitelende <code># Literatur</code> und darunter <code>::: {#refs}</code> mit <code>:::</code> einfügen. Quarto füllt diesen Block.</li>
-<li><strong>Stil falsch?</strong> → CSL-URL prüfen oder eine eigene CSL-Datei aus <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a> herunterladen und lokal einbinden (<code>csl: my-style.csl</code>).</li>
-<li><strong>Mehrere Schlüssel zugleich?</strong> → <code>[@fiorella2016; @mayer2021]</code> mit Semikolon trennen.</li>
-</ul>
-</div>
-</div>
-</section>
-</section>
-<section id="tutor" class="level2">
-<h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
+<section id="der-vorbereitete-workshop-tutor-sofort-nutzbar" class="level2">
+<h2 class="anchored" data-anchor-id="der-vorbereitete-workshop-tutor-sofort-nutzbar">Der vorbereitete Workshop-Tutor (sofort nutzbar)</h2>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -403,23 +310,114 @@ Tutor öffnen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
-<p>Vorschlag-Prompt für dieses Kapitel:</p>
-<blockquote class="blockquote">
-<p>Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Frag, wo ich gerade stehe.</p>
-</blockquote>
+<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank"><strong>Tutor „Interaktive Skripte”</strong> →</a></p>
+<p>Ein Klick — der GPT öffnet sich in ChatGPT. Login mit kostenlosem ChatGPT-Konto. Der System-Prompt ist eingebaut.</p>
 </div>
 </div>
+<p>So baust du den Link in dein eigenes Skript ein:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Frag den Skript-Tutor →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In jedem Kapitel als Callout am Ende:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tutor öffnen</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Tutor „Interaktive Skripte" →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="literatur" class="level1 unnumbered">
-<h1 class="unnumbered">Literatur</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-bergstrom2024" class="csl-entry" role="listitem">
-Bergstrom, C. T., &amp; West, J. D. (2024). <em>Calling Bullshit: Wissenschaftliches Arbeiten und kritisches Denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
-</div>
-</div>
+<section id="eigenen-tutor-anlegen-drei-hosting-wege" class="level2">
+<h2 class="anchored" data-anchor-id="eigenen-tutor-anlegen-drei-hosting-wege">Eigenen Tutor anlegen — drei Hosting-Wege</h2>
+<section id="weg-1-eigenes-custom-gpt-auf-chatgpt" class="level3">
+<h3 class="anchored" data-anchor-id="weg-1-eigenes-custom-gpt-auf-chatgpt">Weg 1 — eigenes Custom GPT auf ChatGPT</h3>
+<ol type="1">
+<li><a href="https://chatgpt.com" class="uri">https://chatgpt.com</a> öffnen, oben links <strong>„Explore GPTs”</strong> → <strong>„+ Create”</strong>.</li>
+<li><strong>Configure</strong>-Tab öffnen, Name vergeben, System-Prompt unten kopieren und einfügen.</li>
+<li><strong>Save → Share</strong> → „Anyone with the link” oder „Public”.</li>
+<li>Sharing-Link in dein Skript einbauen (siehe oben).</li>
+</ol>
+</section>
+<section id="weg-2-academiccloud-hochschul-login-eu-datenhaltung" class="level3">
+<h3 class="anchored" data-anchor-id="weg-2-academiccloud-hochschul-login-eu-datenhaltung">Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)</h3>
+<ol type="1">
+<li><a href="https://chat.academiccloud.de" class="uri">https://chat.academiccloud.de</a> öffnen, einloggen.</li>
+<li>Neuen <strong>Custom GPT</strong> anlegen (Modell: aktuelles Top-Modell).</li>
+<li>System-Prompt einfügen.</li>
+<li><strong>Sharing aktivieren</strong> (öffentlich oder „mit Link”).</li>
+<li>Link einbauen.</li>
+</ol>
+</section>
+<section id="weg-3-statisches-widget-nur-für-fortgeschrittene" class="level3">
+<h3 class="anchored" data-anchor-id="weg-3-statisches-widget-nur-für-fortgeschrittene">Weg 3 — statisches Widget (nur für Fortgeschrittene)</h3>
+<p>Eine HTML-Datei mit eingebautem Prompt, die direkt eine OpenAI-kompatible API anspricht — Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>. Setzt Server-Proxy oder Tagesschlüssel voraus, deshalb hier nicht im Detail.</p>
+</section>
+</section>
+<section id="system-prompt-copy-paste" class="level2">
+<h2 class="anchored" data-anchor-id="system-prompt-copy-paste">System-Prompt (Copy-Paste)</h2>
+<pre><code>Du bist ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.
+Du begleitest Teilnehmende eines eintägigen Workshops, in dem sie ein
+eigenes interaktives Skript mit Quarto, RStudio, GitHub Desktop und
+GitHub Pages erstellen. Beispielthema ihres Skripts: eine kurze
+Einführung ins wissenschaftliche Arbeiten (Wissenschaftliche Einstellung,
+Recherche und Quellenqualität, oder Transparent Schreiben).
+
+DEIN VERHALTEN
+- Beginne jede Antwort mit einer Lay-Erklärung in ein bis zwei Sätzen.
+  Was ist das, warum gerade jetzt? Erst danach kommt der technische Schritt.
+- Frage zu Beginn: "Wo stehst du gerade?" Wenn du keinen Stand kennst,
+  frage nach einer kurzen Beschreibung.
+- Gib nie mehr als ZEHN Zeilen Code auf einmal. Lieber kleinere Schritte.
+- Erkläre alle Pfade explizit (relativer Pfad, absoluter Pfad, was bedeutet das).
+- Verwende deutsche Sprache. Bei Fachbegriffen: einmalig auf Englisch
+  in Klammern, dann auf Deutsch weiter.
+- Lasse Fehler nicht klein erscheinen. Wenn etwas typisch falsch läuft,
+  benenne es offen und erkläre warum.
+
+WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
+- Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,
+  Zotero mit Better BibTeX, optional H5P.
+- Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),
+  scharfe Ecken, Arial.
+- Struktur: Quarto-Buch mit Kapiteln in einem parts/-Ordner, output-dir: docs,
+  Veröffentlichung über GitHub Pages aus dem main-Branch, Folder /docs.
+- Inhaltsbeispiel: Einführung wissenschaftliches Arbeiten, drei Stränge:
+  Wissenschaftliche Einstellung / Recherche und Quellenqualität /
+  Transparent Schreiben (basierend auf Bergstrom &amp; West, "Calling Bullshit").
+
+DEINE GRENZEN
+- Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).
+  Bleib bei Quarto.
+- Antworte nicht zu allgemeinen IT-Fragen außerhalb des Skript-Workflows.
+- Behaupte nichts, was du nicht sicher weißt. Bei Unsicherheit: sag das.
+- Erfinde keine Quellen, keine Pakete, keine API-Endpunkte.
+
+ZIEL
+Am Ende des Workshops haben die Teilnehmenden ein eigenes, im Netz
+veröffentlichtes Skript mit Inhaltsverzeichnis, Zotero-Zitaten,
+TH-Köln-Stil, einem interaktiven Diagramm und einem iFrame-Element.
+Hilf ihnen, dorthin zu kommen — Schritt für Schritt.</code></pre>
+</section>
+<section id="drei-kurz-prompts-für-typische-aufgaben" class="level2">
+<h2 class="anchored" data-anchor-id="drei-kurz-prompts-für-typische-aufgaben">Drei Kurz-Prompts für typische Aufgaben</h2>
+<section id="a-fehler-erklären" class="level3">
+<h3 class="anchored" data-anchor-id="a-fehler-erklären">A — Fehler erklären</h3>
+<pre><code>Erkläre mir diesen Fehler aus dem Quarto-Render-Log in einem Satz,
+dann den wahrscheinlichsten nächsten Schritt:
+
+[Fehlermeldung einfügen]</code></pre>
+</section>
+<section id="b-code-reviewen" class="level3">
+<h3 class="anchored" data-anchor-id="b-code-reviewen">B — Code reviewen</h3>
+<pre><code>Ich habe folgenden YAML/Code in meinem Quarto-Skript. Schau, ob
+Fehler oder Stolperfallen drin sind. Antworte mit drei kurzen Punkten:
+was funktioniert, was nicht, was würdest du anders machen.
+
+[Code einfügen]</code></pre>
+</section>
+<section id="c-kapitel-ergänzen" class="level3">
+<h3 class="anchored" data-anchor-id="c-kapitel-ergänzen">C — Kapitel ergänzen</h3>
+<pre><code>Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende
+Übung vor — kurz, hands-on, mit konkretem Code-Snippet zum Einbauen.
+Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.</code></pre>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -829,14 +827,11 @@ Bergstrom, C. T., &amp; West, J. D. (2024). <em>Calling Bullshit: Wissenschaftli
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../parts/02-setup.html" class="pagination-link" aria-label="2 — Bausteine und Workflow">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2 — Bausteine und Workflow</span></span>
+      <a href="../appendix/troubleshooting.html" class="pagination-link" aria-label="Trouble-Shooting">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Trouble-Shooting</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../parts/03b-style.html" class="pagination-link" aria-label="3b — TH-Köln-Stil einbauen">
-        <span class="nav-page-text"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -847,7 +842,7 @@ Bergstrom, C. T., &amp; West, J. D. (2024). <em>Calling Bullshit: Wissenschaftli
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/edit/main/parts/03a-uebersicht.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/interaktive-skripte-2026/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/appendix/tutor-prompt.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>

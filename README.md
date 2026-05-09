@@ -8,7 +8,7 @@ die Teilnehmenden bauen im Workshop ein Skript dieser Art selbst auf.
 
 ## Schnellstart (für Lesende)
 
-Online-Version: <https://th-koln-bartnik.github.io/interaktive-skripte-2026/>
+Online-Version: <https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/>
 
 ## Schnellstart (für die Workshop-Vorbereitung)
 
