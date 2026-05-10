@@ -218,3 +218,99 @@ table th, table td {
   color: var(--gray-500);
   font-size: 0.85em;
 }
+
+/* ============================================================
+   Reveal.js — TH-Köln-Brand auch für Slides
+   Reveal wickelt alle Folien-Elemente in <div class="reveal">,
+   weshalb wir gezielt mit .reveal-Präfix arbeiten müssen.
+   ============================================================ */
+
+.reveal {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Folien-Titel in TH Red */
+.reveal .slide h1,
+.reveal .slide h2.title,
+.reveal section > h1:first-child,
+.reveal section > h2:first-child {
+  color: var(--th-red);
+}
+
+/* Magenta-Linie unter H2 wie im HTML-Buch */
+.reveal h2 {
+  border-bottom: 2px solid rgba(180, 48, 146, 0.35);
+  padding-bottom: 0.3rem;
+}
+
+/* Links in TH Red, Hover in TH Magenta */
+.reveal a, .reveal a:visited {
+  color: var(--th-red);
+  text-decoration: underline;
+}
+.reveal a:hover { color: var(--th-magenta); }
+
+/* Bullet-Marker in TH Magenta */
+.reveal ul li::marker { color: var(--th-magenta); }
+.reveal ol li::marker { color: var(--th-magenta); }
+
+/* Inline-Code: TH Red auf Hellgrau, kantig */
+.reveal code {
+  color: var(--th-red);
+  background: var(--gray-100);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0;
+  font-family: Consolas, Monaco, monospace;
+}
+
+.reveal pre {
+  border-left: 3px solid var(--th-magenta);
+  background: var(--gray-100);
+  border-radius: 0;
+}
+
+/* Slide-Number top-right in TH Red dezent */
+.reveal .slide-number {
+  color: var(--th-red);
+  background: transparent;
+  font-size: 0.7em;
+}
+
+/* Footer dezent in Ink, nicht zu aufdringlich */
+.reveal .footer {
+  color: var(--gray-500);
+  font-size: 0.65em;
+}
+
+/* Title-Slide: Titel deutlich, klein-gehalten Rest */
+.reveal .title-slide h1.title {
+  color: var(--th-red);
+  font-size: 2.5em;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.reveal .title-slide .subtitle {
+  color: var(--gray-500);
+  font-size: 1.1em;
+}
+.reveal .title-slide .quarto-title-author-name {
+  color: var(--ink);
+  font-size: 1em;
+}
+
+/* Auf der roten Schluss-Folie: Footer und Slide-Nummer nicht stören lassen */
+.reveal section[data-background-color="#c81e0f"] .footer,
+.reveal section[data-background-color="#c81e0f"] + .footer,
+.reveal[data-background-color="#c81e0f"] .footer {
+  display: none;
+}

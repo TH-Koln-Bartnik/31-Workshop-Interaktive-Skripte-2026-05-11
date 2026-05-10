@@ -50,7 +50,7 @@ Hier zwei Minuten Spannungsaufbau: erst die Behauptung, dass *jeder* das schafft
 
 ::: incremental
 - **Hochschule und Lehrgebiet** (wo, was unterrichten Sie?)
-- **Was Sie heute mitbringen** (haben Sie Quarto / R / GitHub schon mal angefasst? Was nutzen Sie sonst zum Schreiben?)
+- **Was Sie heute mitbringen** (Erfahrungen mit Tools o.ä.?)
 - **Warum sind Sie hier?** (welches konkrete Skript haben Sie im Kopf — und was hindert Sie bisher?)
 :::
 :::
@@ -119,17 +119,21 @@ Dies ist der Kreislauf, in den die Teilnehmenden den ganzen Tag eintauchen: Schr
 
 # Los geht's {background-color="#c81e0f"}
 
-::: {style="text-align:center; color: white; font-size: 2em; margin-top: 2em;"}
+::: {style="text-align:center; color: white; margin-top: 2.5em;"}
+::: {style="font-size: 1.4em;"}
 **Skript geöffnet?**
+:::
 
-[https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/](https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/){style="color: white;"}
+::: {style="font-size: 0.85em; margin-top: 1.2em; word-break: break-all;"}
+[https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/](https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/){style="color: white; text-decoration: underline;"}
+:::
 :::
 
 ::: notes
 Letzte Folie: Nur die URL, weiße Schrift auf TH-Rot. Pause aushalten, bis alle die URL geöffnet haben — der Wechsel von Folien zu interaktivem Skript ist der eigentliche Workshop-Start.
 :::
 
-# Bild-Generierungs-Prompts {background-color="#ffffff"}
+# Bild-Generierungs-Prompts {background-color="#ffffff" visibility="hidden"}
 
 ::: {style="font-size: 0.7em;"}
 
