@@ -56,9 +56,9 @@ Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mi
 
 | Strang | Worum es geht | Quelle |
 |----|----|----|
-| **A — Wissenschaftliche Einstellung** | Skepsis, Belege, intellektuelle Demut | [Calling Bullshit, Kap. „Wissenschaftliche Einstellung"](https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung){target="_blank"} |
-| **B — Recherche und Quellenqualität** | Suchen, prüfen, Quellen einordnen | [Calling Bullshit, Kap. „Kritische Informationssuche"](https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche){target="_blank"} |
-| **C — Transparent schreiben** | Methoden offenlegen, Reproduzierbarkeit | [Calling Bullshit, Kap. „Transparent schreiben"](https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben){target="_blank"} |
+| **A — Wissenschaftliche Einstellung** | Skepsis, Belege, intellektuelle Demut | [Bartnik & Palmer (2024), Kap. „Wissenschaftliche Einstellung"](https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung){target="_blank"} |
+| **B — Recherche und Quellenqualität** | Suchen, prüfen, Quellen einordnen | [Bartnik & Palmer (2024), Kap. „Kritische Informationssuche"](https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche){target="_blank"} |
+| **C — Transparent schreiben** | Methoden offenlegen, Reproduzierbarkeit | [Bartnik & Palmer (2024), Kap. „Transparent schreiben"](https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben){target="_blank"} |
 
 Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang identisch.
 

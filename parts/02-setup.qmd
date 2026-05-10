@@ -106,7 +106,7 @@ Im Browser öffnet sich `http://localhost:4XXX` mit einer Live-Vorschau. Jede Ä
 Wissenschaftliche Einstellung heißt, Aussagen nicht zu glauben, sondern
 zu prüfen — und sich selbst genauso zu prüfen wie andere. Drei Haltungen
 gehören dazu: Skepsis, intellektuelle Demut, Bereitschaft zur Korrektur.
-Quelle: Bergstrom & West (2024).
+Quelle: Bartnik & Palmer (2024).
 ```
 
 #### Strang B — Recherche und Quellenqualität
@@ -117,7 +117,7 @@ Quelle: Bergstrom & West (2024).
 Quellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,
 sondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,
 mit denen du eine Quelle in 30 Sekunden grob einordnest.
-Quelle: Bergstrom & West (2024).
+Quelle: Bartnik & Palmer (2024).
 ```
 
 #### Strang C — Transparent schreiben
@@ -128,7 +128,7 @@ Quelle: Bergstrom & West (2024).
 Transparenz heißt, dass jeder Leser nachvollziehen kann, wie du zu deinen
 Ergebnissen gekommen bist — welche Daten, welche Methoden, welche
 Annahmen. In diesem Kapitel: drei Bausteine eines transparenten
-Methodenteils. Quelle: Bergstrom & West (2024).
+Methodenteils. Quelle: Bartnik & Palmer (2024).
 ```
 
 :::

@@ -84,7 +84,9 @@ WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
   Veröffentlichung über GitHub Pages aus dem main-Branch, Folder /docs.
 - Inhaltsbeispiel: Einführung wissenschaftliches Arbeiten, drei Stränge:
   Wissenschaftliche Einstellung / Recherche und Quellenqualität /
-  Transparent Schreiben (basierend auf Bergstrom & West, "Calling Bullshit").
+  Transparent Schreiben (Bartnik & Palmer, 2024:
+  "Projektorientierte Einführung in kritisches wissenschaftliches Denken",
+  konzeptionelle Vorlage: Bergstrom & West, "Calling Bullshit").
 
 DEINE GRENZEN
 - Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).

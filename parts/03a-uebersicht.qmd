@@ -63,9 +63,9 @@ Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturli
 
 Wähle aus deinem Strang **drei Quellen**, lege sie in Zotero an, exportiere und zitiere sie in deinem Kapitel. Wenn du keinen passenden Startpunkt hast, hier je eine Empfehlung:
 
-- **Strang A — Wissenschaftliche Einstellung:** Bergstrom & West [-@bergstrom2024], dazu zwei eigene Ergänzungen.
-- **Strang B — Recherche und Quellenqualität:** Bergstrom & West [-@bergstrom2024], dazu eine Quelle zu Open-Access-Datenbanken (z. B. <https://doaj.org>) und eine zu Pre-Print-Servern.
-- **Strang C — Transparent schreiben:** Bergstrom & West [-@bergstrom2024], dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.
+- **Strang A — Wissenschaftliche Einstellung:** Bartnik & Palmer [-@bartnik2024], dazu zwei eigene Ergänzungen.
+- **Strang B — Recherche und Quellenqualität:** Bartnik & Palmer [-@bartnik2024], dazu eine Quelle zu Open-Access-Datenbanken (z. B. <https://doaj.org>) und eine zu Pre-Print-Servern.
+- **Strang C — Transparent schreiben:** Bartnik & Palmer [-@bartnik2024], dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.
 :::
 
 ::: {.callout-warning}
