@@ -67,6 +67,15 @@ Wählen Sie aus Ihrem Strang **drei Quellen**, legen Sie sie in Zotero an, expor
 - **Strang C — Transparent schreiben:** Bartnik & Palmer [-@bartnik2024], dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.
 :::
 
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Stil wechseln:** Tauschen Sie das CSL auf einen anderen Stil — z. B. Chicago-author-date (`csl: chicago-author-date`) oder Vancouver. Render und vergleichen Sie, wie sich Inline-Zitat und Liste ändern.
+2. **Locator nutzen:** Schreiben Sie statt `[@mayer2021]` ein Zitat mit Seitenzahl: `[@mayer2021, p. 47]`. Render und prüfen, dass die Seitenzahl im Klammerzitat erscheint.
+3. **Mehrere Quellen kombinieren:** Setzen Sie zwei Schlüssel zusammen: `[@fiorella2016; @mayer2021]`. Wie wird das gerendert?
+4. **Eigene Kernaussage notieren:** Zu jeder Ihrer drei Zotero-Quellen ein Satz: „Was ist die Aussage, die für mein Skript zählt?" — diese Notizen werden später Teil Ihres Lauftexts.
+:::
+
 ::: {.callout-warning}
 ## Was, wenn …
 

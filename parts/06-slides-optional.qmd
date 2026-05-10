@@ -148,6 +148,27 @@ slides/template-vorlesungsfolien.qmd
 
 Im RStudio-Files-Pane öffnen, ansehen, einzelne Folien herauspicken und in eigene Foliensätze übernehmen.
 
+::: {.callout-tip}
+## Mach mit — eigene Mini-Foliensequenz
+
+Bauen Sie eine **eigene Drei-Folien-Sequenz** zu einem Argument aus Ihrem Strang. Vorgehen:
+
+1. **Folie 1 — Frage:** Eine zentrale Frage als Headline (`## Was ist …?`).
+2. **Folie 2 — Argument:** Drei Punkte mit `::: incremental`, die einer nach dem anderen erscheinen.
+3. **Folie 3 — Auflösung:** Eine Quintessenz, mit `::: {.fragment .highlight-current-red}` markiert.
+
+Render mit **Strg+Shift+K** oder im Terminal: `quarto render slides/meine-sequenz.qmd`. Im Browser durchklicken (Pfeiltaste / Leertaste).
+:::
+
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Drei-Spalten-Layout:** Erweitern Sie das Zwei-Spalten-Beispiel um eine dritte Spalte (`width="33%"` jeweils). Wie wirkt das visuell — überladen oder strukturiert?
+2. **Bild + Text mit Fragment:** Lassen Sie ein Bild und einen Erklärtext gleichzeitig auf Klick erscheinen — packen Sie beide in **einen** `::: {.fragment}`-Block.
+3. **Speaker-Notes prüfen:** Drücken Sie während des Foliendurchlaufs die Taste **„S"** — die Sprecher­ansicht öffnet sich in einem zweiten Fenster mit Notizen und Vorschau der nächsten Folie.
+4. **Eigenes Theme:** Tauschen Sie `theme: [default, ../styles.scss]` gegen ein dunkles Theme: `theme: [dark, ../styles.scss]`. Render und vergleichen.
+:::
+
 ## TH-Köln-Brand auf Slides
 
 Die `_brand.yml` aus Ihrem Skript wird auch von Reveal.js gelesen, sobald Sie sie in den Reveal-YAML einbauen:

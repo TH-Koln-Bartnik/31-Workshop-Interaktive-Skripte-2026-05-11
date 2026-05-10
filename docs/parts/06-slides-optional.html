@@ -300,6 +300,7 @@ div.csl-indent {
   <li><a href="#die-komplette-vorlage-zum-kopieren" id="toc-die-komplette-vorlage-zum-kopieren" class="nav-link" data-scroll-target="#die-komplette-vorlage-zum-kopieren">Die komplette Vorlage zum Kopieren</a></li>
   <li><a href="#th-köln-brand-auf-slides" id="toc-th-köln-brand-auf-slides" class="nav-link" data-scroll-target="#th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/06-slides-optional.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -350,7 +351,7 @@ Optional, für Fortgeschrittene
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Folien sind nicht der bessere Skripttext, sondern ein eigener Modus — sie unterstützen die mündliche Erläuterung. Mayer <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">2021</a>)</span> zeigt: Folien wirken am stärksten, wenn sie <strong>Bild plus wenig Text</strong> kombinieren und Inhalte <strong>schrittweise</strong> enthüllen. Genau das liefert Quarto Reveal.js mit zwei Konstrukten: <code>incremental</code> (Listen punktweise) und <code>::: {.fragment}</code> (beliebige Blöcke einzeln).</p>
+<p>Folien sind nicht der bessere Skripttext, sondern ein eigener Modus — sie unterstützen die mündliche Erläuterung. Mayer <span class="citation" data-cites="mayer2021">(<a href="../index.html#ref-mayer2021" role="doc-biblioref">2021</a>)</span> zeigt: Folien wirken am stärksten, wenn sie <strong>Bild plus wenig Text</strong> kombinieren und Inhalte <strong>schrittweise</strong> enthüllen. Genau das liefert Quarto Reveal.js mit zwei Konstrukten: <code>incremental</code> (Listen punktweise) und <code>::: {.fragment}</code> (beliebige Blöcke einzeln).</p>
 </section>
 <section id="schnellbau-in-vier-schritten" class="level2">
 <h2 class="anchored" data-anchor-id="schnellbau-in-vier-schritten">Schnellbau in vier Schritten</h2>
@@ -457,6 +458,43 @@ Optional, für Fortgeschrittene
 <p>Acht Beispielfolien — Titel, Section-Divider, Bullets statisch und mit Appear, Bild ganzseitig, Bild mit Fragment, zwei Spalten, Code-Folie mit Zeilen-Highlighting, Schlussfolie. Liegt im Projekt unter:</p>
 <pre><code>slides/template-vorlesungsfolien.qmd</code></pre>
 <p>Im RStudio-Files-Pane öffnen, ansehen, einzelne Folien herauspicken und in eigene Foliensätze übernehmen.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mach mit — eigene Mini-Foliensequenz
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bauen Sie eine <strong>eigene Drei-Folien-Sequenz</strong> zu einem Argument aus Ihrem Strang. Vorgehen:</p>
+<ol type="1">
+<li><strong>Folie 1 — Frage:</strong> Eine zentrale Frage als Headline (<code>## Was ist …?</code>).</li>
+<li><strong>Folie 2 — Argument:</strong> Drei Punkte mit <code>::: incremental</code>, die einer nach dem anderen erscheinen.</li>
+<li><strong>Folie 3 — Auflösung:</strong> Eine Quintessenz, mit <code>::: {.fragment .highlight-current-red}</code> markiert.</li>
+</ol>
+<p>Render mit <strong>Strg+Shift+K</strong> oder im Terminal: <code>quarto render slides/meine-sequenz.qmd</code>. Im Browser durchklicken (Pfeiltaste / Leertaste).</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variieren Sie
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Drei-Spalten-Layout:</strong> Erweitern Sie das Zwei-Spalten-Beispiel um eine dritte Spalte (<code>width="33%"</code> jeweils). Wie wirkt das visuell — überladen oder strukturiert?</li>
+<li><strong>Bild + Text mit Fragment:</strong> Lassen Sie ein Bild und einen Erklärtext gleichzeitig auf Klick erscheinen — packen Sie beide in <strong>einen</strong> <code>::: {.fragment}</code>-Block.</li>
+<li><strong>Speaker-Notes prüfen:</strong> Drücken Sie während des Foliendurchlaufs die Taste <strong>„S”</strong> — die Sprecher­ansicht öffnet sich in einem zweiten Fenster mit Notizen und Vorschau der nächsten Folie.</li>
+<li><strong>Eigenes Theme:</strong> Tauschen Sie <code>theme: [default, ../styles.scss]</code> gegen ein dunkles Theme: <code>theme: [dark, ../styles.scss]</code>. Render und vergleichen.</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="th-köln-brand-auf-slides" class="level2">
 <h2 class="anchored" data-anchor-id="th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</h2>
@@ -503,6 +541,12 @@ Tutor öffnen
 </blockquote>
 </div>
 </div>
+</section>
+<section id="end-test" class="level2">
+<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
+<p>Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Wirkung, dann auf <strong>„Auflösung anzeigen”</strong> klicken — Sie erhalten Feedback pro Eintrag.</p>
+<iframe src="../interactions/end-test-kap06.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>

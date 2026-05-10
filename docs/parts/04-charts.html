@@ -313,6 +313,7 @@ div.csl-indent {
   <li><a href="#daten-direkt-aus-dem-netz-für-fortgeschrittene-mit-r" id="toc-daten-direkt-aus-dem-netz-für-fortgeschrittene-mit-r" class="nav-link" data-scroll-target="#daten-direkt-aus-dem-netz-für-fortgeschrittene-mit-r">Daten direkt aus dem Netz (für Fortgeschrittene mit R)</a></li>
   <li><a href="#wann-kein-interaktives-diagramm" id="toc-wann-kein-interaktives-diagramm" class="nav-link" data-scroll-target="#wann-kein-interaktives-diagramm">Wann <strong>kein</strong> interaktives Diagramm?</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/04-charts.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -350,7 +351,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte <span class="citation" data-cites="tufte2001">(<a href="01-didaktik.html#ref-tufte2001" role="doc-biblioref">2001</a>)</span> formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy <span class="citation" data-cites="healy2018">(<a href="01-didaktik.html#ref-healy2018" role="doc-biblioref">2018</a>)</span> ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.</p>
+<p>Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte <span class="citation" data-cites="tufte2001">(<a href="../index.html#ref-tufte2001" role="doc-biblioref">2001</a>)</span> formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy <span class="citation" data-cites="healy2018">(<a href="../index.html#ref-healy2018" role="doc-biblioref">2018</a>)</span> ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -381,7 +382,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>R + plotly</strong></td>
 <td>R-Code-Chunk in Quarto</td>
-<td>Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken <span class="citation" data-cites="wickham2019">(<a href="01-didaktik.html#ref-wickham2019" role="doc-biblioref">Wickham et al., 2019</a>)</span>.</td>
+<td>Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken <span class="citation" data-cites="wickham2019">(<a href="../index.html#ref-wickham2019" role="doc-biblioref">Wickham et al., 2019</a>)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>Plotly.js direkt</strong></td>
@@ -402,7 +403,7 @@ div.csl-indent {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Strang A — Wissenschaftliche Einstellung</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Strang B — Recherche und Quellenqualität</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Strang C — Transparent schreiben</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Frage: <em>Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?</em> Daten: vereinfacht aus Our World in Data <span class="citation" data-cites="owid2024">(<a href="01-didaktik.html#ref-owid2024" role="doc-biblioref">Roser et al., 2024</a>)</span>.</p>
+<p>Frage: <em>Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?</em></p>
 <div id="plot-le" style="width:100%; height:420px;"></div>
 <script>
 Plotly.newPlot('plot-le', [
@@ -415,6 +416,9 @@ Plotly.newPlot('plot-le', [
   margin: {t: 30, r: 30, b: 50, l: 60}
 }, {responsive: true});
 </script>
+<div style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;">
+<p><strong>Datenquelle:</strong> Our World in Data, Serie „Life expectancy at birth (historical)” <span class="citation" data-cites="owid2024">(<a href="../index.html#ref-owid2024" role="doc-biblioref">Roser et al., 2024</a>)</span>. Stichprobe aus den Originaldaten (5 Jahre, 3 Entitäten); vollständiger Datensatz und Methodologie unter <a href="https://ourworldindata.org/life-expectancy" class="uri">https://ourworldindata.org/life-expectancy</a>. Zur didaktischen Nutzung im Unterricht; für Forschungszwecke aktuelle CSV direkt von OWID laden.</p>
+</div>
 <p><strong>R-Code zum Übernehmen</strong> (wenn Sie R + <code>plotly</code> + <code>tibble</code> installiert haben):</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
@@ -478,8 +482,8 @@ Plotly.newPlot('plot-le', [
 <span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>::: {#fig-le .cell-output-display}</span>
 <span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-f4dfbe7886a41d50c154" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-f4dfbe7886a41d50c154"&gt;{"x":{"visdat":{"93e02f4b63c3":["function () ","plotlyVisDat"]},"cur_data":"93e02f4b63c3","attrs":{"93e02f4b63c3":{"x":{},"y":{},"mode":"lines+markers","color":{},"colors":["#c81e0f","#b43092","#ea5a00"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Lebenserwartung (Jahre)"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1950,1970,1990,2010,2022],"y":[67.5,70.599999999999994,75.299999999999997,80,80.700000000000003],"mode":"lines+markers","type":"scatter","name":"Deutschland","marker":{"color":"rgba(200,30,15,1)","line":{"color":"rgba(200,30,15,1)"}},"textfont":{"color":"rgba(200,30,15,1)"},"error_y":{"color":"rgba(200,30,15,1)"},"error_x":{"color":"rgba(200,30,15,1)"},"line":{"color":"rgba(200,30,15,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1950,2022],"y":[62,84.099999999999994],"mode":"lines+markers","type":"scatter","name":"Japan","marker":{"color":"rgba(180,48,146,1)","line":{"color":"rgba(180,48,146,1)"}},"textfont":{"color":"rgba(180,48,146,1)"},"error_y":{"color":"rgba(180,48,146,1)"},"error_x":{"color":"rgba(180,48,146,1)"},"line":{"color":"rgba(180,48,146,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1950,2022],"y":[47,72.599999999999994],"mode":"lines+markers","type":"scatter","name":"Welt","marker":{"color":"rgba(234,90,0,1)","line":{"color":"rgba(234,90,0,1)"}},"textfont":{"color":"rgba(234,90,0,1)"},"error_y":{"color":"rgba(234,90,0,1)"},"error_x":{"color":"rgba(234,90,0,1)"},"line":{"color":"rgba(234,90,0,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-bd21f66fe06445683b4c" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-bd21f66fe06445683b4c"&gt;{"x":{"visdat":{"7510207b284b":["function () ","plotlyVisDat"]},"cur_data":"7510207b284b","attrs":{"7510207b284b":{"x":{},"y":{},"mode":"lines+markers","color":{},"colors":["#c81e0f","#b43092","#ea5a00"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Lebenserwartung (Jahre)"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1950,1970,1990,2010,2022],"y":[67.5,70.599999999999994,75.299999999999997,80,80.700000000000003],"mode":"lines+markers","type":"scatter","name":"Deutschland","marker":{"color":"rgba(200,30,15,1)","line":{"color":"rgba(200,30,15,1)"}},"textfont":{"color":"rgba(200,30,15,1)"},"error_y":{"color":"rgba(200,30,15,1)"},"error_x":{"color":"rgba(200,30,15,1)"},"line":{"color":"rgba(200,30,15,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1950,2022],"y":[62,84.099999999999994],"mode":"lines+markers","type":"scatter","name":"Japan","marker":{"color":"rgba(180,48,146,1)","line":{"color":"rgba(180,48,146,1)"}},"textfont":{"color":"rgba(180,48,146,1)"},"error_y":{"color":"rgba(180,48,146,1)"},"error_x":{"color":"rgba(180,48,146,1)"},"line":{"color":"rgba(180,48,146,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1950,2022],"y":[47,72.599999999999994],"mode":"lines+markers","type":"scatter","name":"Welt","marker":{"color":"rgba(234,90,0,1)","line":{"color":"rgba(234,90,0,1)"}},"textfont":{"color":"rgba(234,90,0,1)"},"error_y":{"color":"rgba(234,90,0,1)"},"error_x":{"color":"rgba(234,90,0,1)"},"line":{"color":"rgba(234,90,0,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
@@ -501,6 +505,9 @@ Plotly.newPlot('plot-pub', [
   margin: {t: 30, r: 30, b: 50, l: 60}
 }, {responsive: true});
 </script>
+<div style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;">
+<p><strong>Datenquelle:</strong> Eigene Schätzung in Anlehnung an die NSF Science &amp; Engineering Indicators sowie an Bornmann, Haunschild &amp; Mutz (2021), <em>Growth rates of modern science: a latent piecewise growth curve approach to model publication numbers from established and new literature databases</em>. Humanities and Social Sciences Communications, 8, 224. <a href="https://doi.org/10.1057/s41599-021-00903-w" class="uri">https://doi.org/10.1057/s41599-021-00903-w</a>. Aktuelle Originaldaten: NSF Science &amp; Engineering Indicators <a href="https://ncses.nsf.gov/indicators" class="uri">https://ncses.nsf.gov/indicators</a>. Für Forschungszwecke bitte aktuelle Originalquelle nutzen.</p>
+</div>
 <p><strong>R-Code zum Übernehmen:</strong></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
@@ -527,8 +534,8 @@ Plotly.newPlot('plot-pub', [
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>::: {#fig-pub .cell-output-display}</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-3b056a951b5bd7a2891f" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-3b056a951b5bd7a2891f"&gt;{"x":{"visdat":{"93e07aa1192c":["function () ","plotlyVisDat"]},"cur_data":"93e07aa1192c","attrs":{"93e07aa1192c":{"x":{},"y":{},"marker":{"color":"#c81e0f"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Publikationen (Mio. pro Jahr)"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1990,2000,2010,2020,2023],"y":[0.80000000000000004,1.2,2.1000000000000001,2.8999999999999999,3.2999999999999998],"marker":{"color":"#c81e0f","line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-3c0007059734c6e01a83" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-3c0007059734c6e01a83"&gt;{"x":{"visdat":{"7510667036b6":["function () ","plotlyVisDat"]},"cur_data":"7510667036b6","attrs":{"7510667036b6":{"x":{},"y":{},"marker":{"color":"#c81e0f"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Publikationen (Mio. pro Jahr)"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Year"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1990,2000,2010,2020,2023],"y":[0.80000000000000004,1.2,2.1000000000000001,2.8999999999999999,3.2999999999999998],"marker":{"color":"#c81e0f","line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
@@ -537,7 +544,7 @@ Plotly.newPlot('plot-pub', [
 <span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p>Frage: <em>Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt?</em> Antwort zeigt: Transparenz ist wachsende Praxis.</p>
+<p>Frage: <em>Wie hat sich die Zahl der Pre-Registrierungen auf OSF entwickelt?</em> Antwort zeigt: Transparenz ist wachsende Praxis.</p>
 <div id="plot-prereg" style="width:100%; height:420px;"></div>
 <script>
 Plotly.newPlot('plot-prereg', [
@@ -550,6 +557,9 @@ Plotly.newPlot('plot-prereg', [
   margin: {t: 30, r: 30, b: 50, l: 60}
 }, {responsive: true});
 </script>
+<div style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;">
+<p><strong>Datenquelle:</strong> Eigene Schätzung in Anlehnung an die OSF-Statistik des Center for Open Science. Aktuelle Werte und Methodologie: OSF Registries Browser <a href="https://osf.io/registries" class="uri">https://osf.io/registries</a> sowie der COS Annual Report unter <a href="https://www.cos.io/about/annual-report" class="uri">https://www.cos.io/about/annual-report</a>. Die Größenordnungen sind belastbar, exakte Jahreswerte vor Publikation eigener Arbeiten direkt prüfen.</p>
+</div>
 <p><strong>R-Code zum Übernehmen:</strong></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
@@ -576,8 +586,8 @@ Plotly.newPlot('plot-prereg', [
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>::: {#fig-prereg .cell-output-display}</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-5d2ca4aa586ca741a64a" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-5d2ca4aa586ca741a64a"&gt;{"x":{"visdat":{"93e07064549a":["function () ","plotlyVisDat"]},"cur_data":"93e07064549a","attrs":{"93e07064549a":{"x":{},"y":{},"marker":{"color":"#b43092"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Pre-Registrierungen pro Jahr"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Jahr"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2015,2017,2019,2021,2023],"y":[1500,4200,9800,16500,22000],"marker":{"color":"#b43092","line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div class="plotly html-widget html-fill-item" id="htmlwidget-47d0d7e30a3ca5f81942" style="width:100%;height:464px;"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="application/json" data-for="htmlwidget-47d0d7e30a3ca5f81942"&gt;{"x":{"visdat":{"7510775e7ddf":["function () ","plotlyVisDat"]},"cur_data":"7510775e7ddf","attrs":{"7510775e7ddf":{"x":{},"y":{},"marker":{"color":"#b43092"},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"Pre-Registrierungen pro Jahr"},"xaxis":{"domain":[0,1],"automargin":true,"title":"Jahr"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2015,2017,2019,2021,2023],"y":[1500,4200,9800,16500,22000],"marker":{"color":"#b43092","line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}&lt;/script&gt;</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
@@ -626,7 +636,7 @@ Plotly.newPlot('plot-prereg', [
 <section id="wann-kein-interaktives-diagramm" class="level2">
 <h2 class="anchored" data-anchor-id="wann-kein-interaktives-diagramm">Wann <strong>kein</strong> interaktives Diagramm?</h2>
 <ul>
-<li><strong>Reine Illustration</strong> — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen”, reicht ein Bild <span class="citation" data-cites="tufte2001">(<a href="01-didaktik.html#ref-tufte2001" role="doc-biblioref">Tufte, 2001</a>)</span>.</li>
+<li><strong>Reine Illustration</strong> — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen”, reicht ein Bild <span class="citation" data-cites="tufte2001">(<a href="../index.html#ref-tufte2001" role="doc-biblioref">Tufte, 2001</a>)</span>.</li>
 <li><strong>Print-Version</strong> wichtig — interaktive Plots werden im PDF zu statischen Screenshots.</li>
 <li><strong>Performance</strong> — sehr große Datensätze (&gt;100.000 Punkte) machen plotly träge.</li>
 </ul>
@@ -641,6 +651,24 @@ Mach mit
 </div>
 <div class="callout-body-container callout-body">
 <p>Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Rendern Sie, schauen Sie das Ergebnis im Browser an, pushen Sie.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variieren Sie
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Datenpunkt austauschen:</strong> Ändern Sie im <code>&lt;script&gt;</code>-Block einen Y-Wert deutlich (z. B. setzen Sie das Jahr 2022 auf 90 statt 80). Rendern Sie und beobachten Sie, wie Plotly die Y-Achse automatisch skaliert.</li>
+<li><strong>Diagrammtyp wechseln:</strong> Tauschen Sie <code>type: 'bar'</code> gegen <code>type: 'scatter'</code> mit <code>mode: 'lines+markers'</code>. Render und entscheiden Sie: Welche Daten passen besser zu welchem Typ?</li>
+<li><strong>Vierte Reihe:</strong> Fügen Sie in Strang A eine vierte Datenreihe hinzu (z. B. ein weiteres Land, ein weiteres Bundesland) — vergeben Sie eine vierte Farbe. Render.</li>
+<li><strong>Eigene Daten:</strong> Ersetzen Sie den Beispieldatensatz vollständig durch echte Daten aus Ihrem Lehrgebiet. Render und prüfen Sie, ob die Achsenbeschriftungen noch passen.</li>
+</ol>
 </div>
 </div>
 <div class="callout callout-style-simple callout-warning callout-titled">
@@ -681,6 +709,12 @@ Tutor öffnen
 </blockquote>
 </div>
 </div>
+</section>
+<section id="end-test" class="level2">
+<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
+<p>Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf <strong>„Auflösung anzeigen”</strong> klicken — Sie erhalten Feedback pro Eintrag.</p>
+<iframe src="../interactions/end-test-kap04.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>

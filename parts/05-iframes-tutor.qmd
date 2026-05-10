@@ -77,6 +77,15 @@ Schauen Sie sich `interactions/lernspiel-kapitel1.html` in RStudio an (im **File
 - Strang C — Memory: „Methodenbegriff zu transparenter Beschreibung"
 :::
 
+::: {.callout-tip}
+## Variieren Sie
+
+1. **iFrame-Höhe ändern:** Setzen Sie `height` von 900 auf 600 herab und beobachten Sie, was abgeschnitten wird. Wann ist 90 % Bildschirmhöhe (`style="height:90vh"`) die bessere Wahl?
+2. **Eigenes Mini-Spiel:** Lassen Sie den KI-Tutor ein einfaches Drag-and-Drop-Quiz zu Ihrem Strang als HTML-Datei generieren (Prompt aus dem Anhang nutzen). Speichern Sie es in `interactions/` und betten Sie es ein.
+3. **Eigener System-Prompt:** Schreiben Sie einen System-Prompt für einen GPT, der ein bestimmtes Konzept aus Ihrem Strang erklärt. Drei Sätze: Rolle, Verhalten, Grenzen.
+4. **iFrame versus Link:** Bauen Sie eine Seite ein, die `X-Frame-Options: DENY` setzt (z. B. `https://google.com`). Was sehen Sie? Wann ist ein einfacher Link die bessere Lösung als ein iFrame?
+:::
+
 ## H5P-Embed (Variante B, optional)
 
 H5P liefert fertige interaktive Vorlagen, die Sie ohne Programmierung im Browser konfigurieren. Workflow:

@@ -297,6 +297,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#wann-kein-ki-tutor" id="toc-wann-kein-ki-tutor" class="nav-link" data-scroll-target="#wann-kein-ki-tutor">Wann <strong>kein</strong> KI-Tutor?</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/05-iframes-tutor.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -333,7 +334,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser <span class="citation" data-cites="karpicke2011 fiorella2016">(<a href="01-didaktik.html#ref-fiorella2016" role="doc-biblioref">Fiorella &amp; Mayer, 2016</a>; <a href="01-didaktik.html#ref-karpicke2011" role="doc-biblioref">Karpicke &amp; Blunt, 2011</a>)</span>. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert <span class="citation" data-cites="mollick2023 kasneci2023">(<a href="01-didaktik.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>; <a href="01-didaktik.html#ref-mollick2023" role="doc-biblioref">Mollick &amp; Mollick, 2023</a>)</span>.</p>
+<p>Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser <span class="citation" data-cites="karpicke2011 fiorella2016">(<a href="../index.html#ref-fiorella2016" role="doc-biblioref">Fiorella &amp; Mayer, 2016</a>; <a href="../index.html#ref-karpicke2011" role="doc-biblioref">Karpicke &amp; Blunt, 2011</a>)</span>. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert <span class="citation" data-cites="mollick2023 kasneci2023">(<a href="../index.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>; <a href="../index.html#ref-mollick2023" role="doc-biblioref">Mollick &amp; Mollick, 2023</a>)</span>.</p>
 </section>
 <section id="live-beispiel-1-drag-and-drop-lernspiel-als-iframe" class="level2">
 <h2 class="anchored" data-anchor-id="live-beispiel-1-drag-and-drop-lernspiel-als-iframe">Live-Beispiel 1 — Drag-and-Drop-Lernspiel als iFrame</h2>
@@ -459,6 +460,24 @@ Mach mit (Variante A — eigenes Spiel)
 </ul>
 </div>
 </div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variieren Sie
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>iFrame-Höhe ändern:</strong> Setzen Sie <code>height</code> von 900 auf 600 herab und beobachten Sie, was abgeschnitten wird. Wann ist 90 % Bildschirmhöhe (<code>style="height:90vh"</code>) die bessere Wahl?</li>
+<li><strong>Eigenes Mini-Spiel:</strong> Lassen Sie den KI-Tutor ein einfaches Drag-and-Drop-Quiz zu Ihrem Strang als HTML-Datei generieren (Prompt aus dem Anhang nutzen). Speichern Sie es in <code>interactions/</code> und betten Sie es ein.</li>
+<li><strong>Eigener System-Prompt:</strong> Schreiben Sie einen System-Prompt für einen GPT, der ein bestimmtes Konzept aus Ihrem Strang erklärt. Drei Sätze: Rolle, Verhalten, Grenzen.</li>
+<li><strong>iFrame versus Link:</strong> Bauen Sie eine Seite ein, die <code>X-Frame-Options: DENY</code> setzt (z. B. <code>https://google.com</code>). Was sehen Sie? Wann ist ein einfacher Link die bessere Lösung als ein iFrame?</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="h5p-embed-variante-b-optional" class="level2">
 <h2 class="anchored" data-anchor-id="h5p-embed-variante-b-optional">H5P-Embed (Variante B, optional)</h2>
@@ -504,7 +523,7 @@ Mach mit (Variante A — eigenes Spiel)
 </section>
 <section id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" class="level3">
 <h3 class="anchored" data-anchor-id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor">Option 3 — eigenes statisches Widget oder voll gehosteter Tutor</h3>
-<p>Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: <a href="https://main.difctumi6okdj.amplifyapp.com/" target="_blank">BWL1 Tutor-Chatbot</a>). Mollick und Mollick <span class="citation" data-cites="mollick2023">(<a href="01-didaktik.html#ref-mollick2023" role="doc-biblioref">2023</a>)</span> geben einen Überblick über die didaktischen Designentscheidungen.</p>
+<p>Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: <a href="https://main.difctumi6okdj.amplifyapp.com/" target="_blank">BWL1 Tutor-Chatbot</a>). Mollick und Mollick <span class="citation" data-cites="mollick2023">(<a href="../index.html#ref-mollick2023" role="doc-biblioref">2023</a>)</span> geben einen Überblick über die didaktischen Designentscheidungen.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -529,7 +548,7 @@ Mach mit
 <ul>
 <li><strong>Klar definierte Faktenfragen</strong> — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.</li>
 <li><strong>Sensible persönliche Themen</strong> — der Tutor soll Lernen begleiten, keine Beratung ersetzen.</li>
-<li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(<a href="01-didaktik.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>)</span>.</li>
+<li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(<a href="../index.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>)</span>.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -570,6 +589,12 @@ Tutor öffnen
 </blockquote>
 </div>
 </div>
+</section>
+<section id="end-test" class="level2">
+<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
+<p>Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf <strong>„Auflösung anzeigen”</strong> klicken — Sie erhalten Feedback pro Eintrag.</p>
+<iframe src="../interactions/end-test-kap05.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>

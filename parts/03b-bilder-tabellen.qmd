@@ -130,6 +130,15 @@ Bauen Sie in Ihr Kapitel **ein Bild und eine Tabelle** ein, beide mit Label und 
 :::
 :::
 
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Zweites Bild einbauen:** Bauen Sie zusätzlich ein zweites Bild ein (eigenes Foto, Diagramm oder Screenshot) und verweisen Sie aus dem Lauftext auf beide. Render und prüfen, dass die Nummerierung sich automatisch fortsetzt.
+2. **Label umbenennen:** Ändern Sie das Label einer Abbildung von `#fig-x` auf `#fig-y`. Was passiert, wenn Sie einen Verweis vergessen anzupassen? Sie sehen `?@fig-x` im Render — die Trouble-Shooting-Box deckt das ab.
+3. **Tabelle aus Code:** Ersetzen Sie eine der Markdown-Tabellen durch einen R-Chunk mit `knitr::kable()` und denselben Daten. Vergleichen Sie Aufwand und Flexibilität.
+4. **Hover prüfen:** Fahren Sie mit der Maus über einen `@fig-…`-Verweis im gerenderten Browser. Sehen Sie die Vorschau-Box? Falls nicht: in `_quarto.yml` unter `format.html:` muss `crossrefs-hover: true` stehen.
+:::
+
 ## Wann **kein** Cross-Reference?
 
 Drei Fälle, in denen Sie es lassen können:

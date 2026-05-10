@@ -298,6 +298,7 @@ div.csl-indent {
   <li><a href="#verweisen-mit-hover-fig--und-tbl-" id="toc-verweisen-mit-hover-fig--und-tbl-" class="nav-link" data-scroll-target="#verweisen-mit-hover-fig--und-tbl-">Verweisen mit Hover — <code>@fig-…</code> und <code>@tbl-…</code></a></li>
   <li><a href="#wann-kein-cross-reference" id="toc-wann-kein-cross-reference" class="nav-link" data-scroll-target="#wann-kein-cross-reference">Wann <strong>kein</strong> Cross-Reference?</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/03b-bilder-tabellen.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -334,7 +335,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine <strong>stabile Adresse</strong> (Label). Ein Verweis wie „siehe <span class="quarto-unresolved-ref">?fig-co2</span>” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.</p>
+<p>Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt <span class="citation" data-cites="mayer2021">(<a href="../index.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine <strong>stabile Adresse</strong> (Label). Ein Verweis wie „siehe <code>@fig-co2</code>” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.</p>
 <p>Das spart Pflege (Nummerierung passt sich an), reduziert Fehler (kein „siehe Abbildung 7”, die längst Abbildung 8 ist), und es macht das Skript für die Lesenden bequemer.</p>
 </section>
 <section id="bilder-einbinden-zwei-wege" class="level2">
@@ -442,25 +443,43 @@ Mach mit — strangbezogen
 <ul>
 <li><strong>Bild:</strong> Ein Diagramm „Wie wissenschaftliches Wissen entsteht” (Skizze als PNG in <code>images/</code>, Label <code>#fig-wissenszyklus</code>).</li>
 <li><strong>Tabelle:</strong> Drei Haltungen (Skepsis, intellektuelle Demut, Korrektur­bereitschaft), je mit Beispiel — Label <code>#tbl-haltungen</code>.</li>
-<li><strong>Verweis im Text:</strong> „<span class="quarto-unresolved-ref">?fig-wissenszyklus</span> zeigt den Kreislauf, <span class="quarto-unresolved-ref">?tbl-haltungen</span> die drei Haltungen.”</li>
+<li><strong>Verweis im Text:</strong> „<code>@fig-wissenszyklus</code> zeigt den Kreislauf, <code>@tbl-haltungen</code> die drei Haltungen.”</li>
 </ul>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <ul>
 <li><strong>Bild:</strong> Eine Pyramide der Quellenarten (primär/sekundär/tertiär) als PNG, Label <code>#fig-quellpyramide</code>.</li>
 <li><strong>Tabelle:</strong> Drei Filter zur 30-Sekunden-Quellenprüfung — Label <code>#tbl-filter</code>.</li>
-<li><strong>Verweis:</strong> „Die Hierarchie zeigt <span class="quarto-unresolved-ref">?fig-quellpyramide</span>; die Schnellprüfung folgt <span class="quarto-unresolved-ref">?tbl-filter</span>.”</li>
+<li><strong>Verweis:</strong> „Die Hierarchie zeigt <code>@fig-quellpyramide</code>; die Schnellprüfung folgt <code>@tbl-filter</code>.”</li>
 </ul>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <ul>
 <li><strong>Bild:</strong> Ein Schema „Bestandteile eines transparenten Methodenteils” als PNG, Label <code>#fig-methodenteil</code>.</li>
 <li><strong>Tabelle:</strong> Vergleich „transparent” vs.&nbsp;„intransparent” für drei Methodenentscheidungen — Label <code>#tbl-vergleich</code>.</li>
-<li><strong>Verweis:</strong> „Den Aufbau zeigt <span class="quarto-unresolved-ref">?fig-methodenteil</span>, den Kontrast <span class="quarto-unresolved-ref">?tbl-vergleich</span>.”</li>
+<li><strong>Verweis:</strong> „Den Aufbau zeigt <code>@fig-methodenteil</code>, den Kontrast <code>@tbl-vergleich</code>.”</li>
 </ul>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variieren Sie
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><strong>Zweites Bild einbauen:</strong> Bauen Sie zusätzlich ein zweites Bild ein (eigenes Foto, Diagramm oder Screenshot) und verweisen Sie aus dem Lauftext auf beide. Render und prüfen, dass die Nummerierung sich automatisch fortsetzt.</li>
+<li><strong>Label umbenennen:</strong> Ändern Sie das Label einer Abbildung von <code>#fig-x</code> auf <code>#fig-y</code>. Was passiert, wenn Sie einen Verweis vergessen anzupassen? Sie sehen <code>?@fig-x</code> im Render — die Trouble-Shooting-Box deckt das ab.</li>
+<li><strong>Tabelle aus Code:</strong> Ersetzen Sie eine der Markdown-Tabellen durch einen R-Chunk mit <code>knitr::kable()</code> und denselben Daten. Vergleichen Sie Aufwand und Flexibilität.</li>
+<li><strong>Hover prüfen:</strong> Fahren Sie mit der Maus über einen <code>@fig-…</code>-Verweis im gerenderten Browser. Sehen Sie die Vorschau-Box? Falls nicht: in <code>_quarto.yml</code> unter <code>format.html:</code> muss <code>crossrefs-hover: true</code> stehen.</li>
+</ol>
 </div>
 </div>
 </section>
@@ -511,15 +530,22 @@ Tutor öffnen
 </div>
 </div>
 </section>
+<section id="end-test" class="level2">
+<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
+<p>Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf <strong>„Auflösung anzeigen”</strong> klicken — Sie erhalten Feedback pro Eintrag.</p>
+<iframe src="../interactions/end-test-kap03b.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>
+<p>::</p>
+
+
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-mayer2021" class="csl-entry" role="listitem">
 Mayer, R. E. (2021). <em>Multimedia Learning</em> (3. Aufl.). Cambridge University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
 </div>
 </div>
-
-
 </section>
 
 </main> <!-- /main -->

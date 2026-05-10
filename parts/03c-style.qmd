@@ -92,6 +92,15 @@ pre, code { border-radius: 0 !important; }
 Rendern Sie Ihr Skript einmal **vor** und einmal **nach** dem Einbau von `_brand.yml`. Vergleichen Sie beide Versionen nebeneinander. Was ändert sich? Was nicht? Schreiben Sie sich drei Beobachtungen auf — wir nutzen sie im Showcase am Ende.
 :::
 
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Andere Hochschulfarbe:** Tauschen Sie TH Red (`#c81e0f`) gegen die Hauptfarbe Ihrer eigenen Fakultät oder Hochschule. Render — wie wirkt der Wechsel?
+2. **Eigene CSS-Regel:** Ergänzen Sie in `styles.scss` eine Regel, die `<strong>`-Text in TH Magenta hervorhebt (`strong { color: var(--th-magenta); }`). Render und prüfen.
+3. **Anderes Theme:** Tauschen Sie unter `format.html.theme` `cosmo` gegen ein anderes Bootstrap-Theme (z. B. `flatly`, `journal`, `cerulean`, `simplex`) und vergleichen Sie das Gesamtbild.
+4. **Schriftgröße erhöhen:** Setzen Sie in `styles.scss` `body { font-size: 1.1rem; }`. Render — wie verändert sich Lesbarkeit und Folgewirkung auf andere Elemente?
+:::
+
 ## Logo einbinden
 
 1. Laden Sie das TH-Köln-Logo (PNG, transparent) in `images/th-koeln-logo.png`.

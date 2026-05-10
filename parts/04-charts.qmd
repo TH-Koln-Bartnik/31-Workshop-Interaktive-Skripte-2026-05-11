@@ -234,6 +234,15 @@ Wenn das Laden fehlschlägt: Datei manuell aus der Grapher-Seite herunterladen, 
 Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Rendern Sie, schauen Sie das Ergebnis im Browser an, pushen Sie.
 :::
 
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Datenpunkt austauschen:** Ändern Sie im `<script>`-Block einen Y-Wert deutlich (z. B. setzen Sie das Jahr 2022 auf 90 statt 80). Rendern Sie und beobachten Sie, wie Plotly die Y-Achse automatisch skaliert.
+2. **Diagrammtyp wechseln:** Tauschen Sie `type: 'bar'` gegen `type: 'scatter'` mit `mode: 'lines+markers'`. Render und entscheiden Sie: Welche Daten passen besser zu welchem Typ?
+3. **Vierte Reihe:** Fügen Sie in Strang A eine vierte Datenreihe hinzu (z. B. ein weiteres Land, ein weiteres Bundesland) — vergeben Sie eine vierte Farbe. Render.
+4. **Eigene Daten:** Ersetzen Sie den Beispieldatensatz vollständig durch echte Daten aus Ihrem Lehrgebiet. Render und prüfen Sie, ob die Achsenbeschriftungen noch passen.
+:::
+
 ::: {.callout-warning}
 ## Was, wenn …
 

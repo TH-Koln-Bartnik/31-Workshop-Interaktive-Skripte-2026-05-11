@@ -30,9 +30,17 @@ Jeder Begriff wird in der Fachsprache schwerer als nötig. Hier zuerst die einfa
 
 ::: {.callout-tip}
 ## Mach mit — Memory-Spiel zu den Bausteinen
-Drei Minuten, sechs Paare. Versuche, alle Begriffe ihrer Lay-Definition zuzuordnen.
+Drei Minuten, sechs Paare. Versuchen Sie, alle Begriffe ihrer Lay-Definition zuzuordnen.
 
 [Memory-Spiel öffnen →](../interactions/memory-spiel.html){target="_blank"}
+:::
+
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Siebter Baustein:** Öffnen Sie `interactions/memory-spiel.html` in RStudio, ergänzen Sie ein siebtes Begriffspaar (Vorschläge: „CSS", „SCSS", „Markdown" oder „CDN") inklusive Lay-Definition.
+2. **Selbst-Test:** Spielen Sie das Memory zu zweit auf Zeit — wer schafft alle Paare in unter zehn Zügen? Optimum sind sechs.
+3. **Reihenfolge:** Schreiben Sie die sechs Bausteine in der Reihenfolge auf, in der ein Skript-Autor sie tatsächlich nutzt — von „Idee" bis „Live im Netz".
 :::
 
 ## Der Workflow in einem Bild
@@ -150,6 +158,15 @@ Ihr Code liegt jetzt auf GitHub.
 2. **Source: Deploy from a branch**.
 3. **Branch: main → Folder: /docs → Save**.
 4. Nach 1–2 Minuten: Ihr Skript liegt unter `https://IHR-USERNAME.github.io/mein-erstes-skript/`.
+
+::: {.callout-tip}
+## Variieren Sie weiter
+
+1. **Titel ändern:** Öffnen Sie `_quarto.yml` und ändern Sie den Buchtitel. Render — wo erscheint der neue Titel überall (Sidebar, Browser-Tab, Footer)?
+2. **Eigenes Kapitel anlegen:** Legen Sie eine zweite `.qmd`-Datei an (z. B. `parts/02-eigenes.qmd`) mit zwei Sätzen Inhalt. Tragen Sie sie in `_quarto.yml` unter `chapters:` ein. Render und prüfen.
+3. **YAML-Fehler provozieren:** Ändern Sie absichtlich die Einrückung in `_quarto.yml` von 2 auf 3 Leerzeichen oder vergessen Sie einen Doppelpunkt. Was meldet Quarto? Lerneffekt: YAML-Fehlermeldungen entschlüsseln.
+4. **Footer anpassen:** Ergänzen Sie unter `book.page-footer` Ihren eigenen Namen und das aktuelle Jahr. Render.
+:::
 
 ::: {.callout-warning}
 ## Was, wenn …
