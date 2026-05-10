@@ -5,7 +5,7 @@ subtitle: "Von Null auf erstem Skript live im Netz — alles aus RStudio"
 
 ::: {.lernziel-box}
 #### Was dieser Anhang leistet
-Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. **RStudio ist dein einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.
+Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. **RStudio ist Ihr einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.
 :::
 
 ## Checkliste vor dem Workshop
@@ -32,9 +32,9 @@ Insgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.
 | **Files** | unten rechts, Tab 1 | Ordner und Dateien anlegen, Dateien öffnen |
 | **Build** | oben rechts, Tab 5 | Knopf „Render Book" als Klick-Alternative |
 
-Drei Shortcuts, die du dir merken solltest: **Strg+Shift+K** rendert die aktuelle Datei, **Strg+Shift+B** rendert das ganze Buch, **Alt+Shift+R** öffnet einen neuen Terminal-Tab.
+Drei Shortcuts, die Sie sich merken sollten: **Strg+Shift+K** rendert die aktuelle Datei, **Strg+Shift+B** rendert das ganze Buch, **Alt+Shift+R** öffnet einen neuen Terminal-Tab.
 
-## Schritt-für-Schritt: dein erstes Skript
+## Schritt-für-Schritt: Ihr erstes Skript
 
 ### 1. Neues Quarto-Buch anlegen
 
@@ -48,11 +48,11 @@ Im **Terminal-Tab** (unten links, neben Console):
 quarto preview
 ```
 
-Browser öffnet sich. Du siehst die Beispielinhalte. **Strg+C** im Terminal beendet den Preview-Server.
+Browser öffnet sich. Sie sehen die Beispielinhalte. **Strg+C** im Terminal beendet den Preview-Server.
 
 ### 3. `_quarto.yml` minimal anpassen
 
-Im **Editor** öffnest du `_quarto.yml` und ersetzt den Inhalt durch:
+Im **Editor** öffnen Sie `_quarto.yml` und ersetzt den Inhalt durch:
 
 ```yaml
 project:
@@ -75,11 +75,11 @@ format:
 
 ### 4. Ordner für Bilder, Daten und Widgets anlegen
 
-Im **Files-Pane** (unten rechts) klickst du auf **New Folder** und legst nacheinander an: `images/`, `interactions/`, `include/`, `data/`. So weißt du immer, wo etwas hingehört.
+Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legst nacheinander an: `images/`, `interactions/`, `include/`, `data/`. So wissen Sie immer, wo etwas hingehört.
 
 ### 5. Erstes Kapitel schreiben
 
-Öffne `index.qmd` im Editor, ersetze den Beispielinhalt durch:
+Öffnen Sie `index.qmd` im Editor, ersetzen Sie den Beispielinhalt durch:
 
 ```markdown
 # Willkommen
@@ -93,7 +93,7 @@ Mein erstes Skript zum Thema [Strang A/B/C].
 - Punkt 3
 ```
 
-### 6. Render
+### 6. Rendern
 
 Im Terminal:
 
@@ -111,12 +111,12 @@ GitHub Desktop → **File → Add Local Repository** → Projektordner wählen �
 
 Auf <https://github.com> im Repo: **Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save**.
 
-Nach 1–2 Minuten ist dein Skript unter `https://DEIN-USERNAME.github.io/mein-erstes-skript/` live.
+Nach 1–2 Minuten ist Ihr Skript unter `https://IHR-USERNAME.github.io/mein-erstes-skript/` live.
 
 ### 9. Erste Änderung publizieren
 
-Bearbeite `index.qmd`, render lokal (Terminal: `quarto render` oder Knopf), in GitHub Desktop **Commit → Push origin**. Webseite aktualisiert sich automatisch in 30–60 Sekunden.
+Bearbeiten Sie `index.qmd`, rendern Sie lokal (Terminal: `quarto render` oder Knopf), in GitHub Desktop **Commit → Push origin**. Webseite aktualisiert sich automatisch in 30–60 Sekunden.
 
 ## Was als Nächstes?
 
-Springe zurück in [Kapitel 3a — Übersicht](../parts/03a-uebersicht.qmd) und baue Inhaltsverzeichnis und Literaturverwaltung ein. Dann zu [Kapitel 3b — Stil](../parts/03b-style.qmd).
+Springen Sie zurück in [Kapitel 3a — Übersicht](../parts/03a-uebersicht.qmd) und bauen Sie Inhaltsverzeichnis und Literaturverwaltung ein. Dann zu [Kapitel 3b — Stil](../parts/03b-style.qmd).

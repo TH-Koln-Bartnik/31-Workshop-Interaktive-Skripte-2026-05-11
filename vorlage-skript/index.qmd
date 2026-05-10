@@ -1,0 +1,27 @@
+---
+title: "Willkommen"
+subtitle: "Untertitel anpassen"
+suppress-bibliography: true
+---
+
+# Was Sie hier finden
+
+Beschreiben Sie in zwei bis drei Sätzen, worum es in Ihrem Skript geht und für wen es gedacht ist.
+
+::: {.lernziel-box}
+#### Lernziele
+
+Am Ende des Skripts können die Lesenden …
+
+1. ...erstes Lernziel,
+2. ...zweites Lernziel,
+3. ...drittes Lernziel.
+:::
+
+## Wie Sie dieses Skript benutzen
+
+Jedes Kapitel öffnet mit einem Lernziel-Kasten, gefolgt von einem Mach-mit-Block. Am Kapitelende: Trouble-Shooting und ein KI-Tutor-Link.
+
+## Voraussetzungen
+
+Was die Lesenden mitbringen sollten — Vorwissen, installierte Programme, etc.

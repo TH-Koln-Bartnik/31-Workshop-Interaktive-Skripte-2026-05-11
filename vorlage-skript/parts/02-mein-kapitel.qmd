@@ -1,0 +1,43 @@
+---
+title: "2 — Mein Kapitel"
+---
+
+::: {.lernziel-box}
+#### Was Sie nach diesem Kapitel können
+
+- Lernziel 1
+- Lernziel 2
+- Lernziel 3
+:::
+
+## Worum es im Kern geht
+
+Lay-Erklärung in zwei bis drei Sätzen. Wissenschaftliche Quelle hier zitieren [@mayer2021].
+
+## Hauptinhalt
+
+Ihr Inhalt. Bilder, Tabellen, Charts und iFrames nach dem Muster aus Kapitel 1 einfügen.
+
+::: {.callout-tip}
+## Mach mit
+Konkrete Aufgabe für die Lesenden.
+:::
+
+::: {.callout-warning}
+## Was, wenn …
+
+- Mögliches Problem 1 → Lösung
+- Mögliches Problem 2 → Lösung
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::

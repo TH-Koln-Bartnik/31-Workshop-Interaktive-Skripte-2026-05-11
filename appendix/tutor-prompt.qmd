@@ -5,7 +5,7 @@ subtitle: "Der Workshop-Tutor und die Anleitung zum eigenen Tutor"
 
 ::: {.lernziel-box}
 #### Was dieser Anhang leistet
-Du findest hier den **fertigen Tutor** für diesen Workshop (ein Klick) und den vollständigen **System-Prompt**, mit dem du dir denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen kannst.
+Sie finden hier den **fertigen Tutor** für diesen Workshop (ein Klick) und den vollständigen **System-Prompt**, mit dem Sie sich denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen können.
 :::
 
 ## Der vorbereitete Workshop-Tutor (sofort nutzbar)
@@ -17,10 +17,10 @@ Du findest hier den **fertigen Tutor** für diesen Workshop (ein Klick) und den 
 Ein Klick — der GPT öffnet sich in ChatGPT. Login mit kostenlosem ChatGPT-Konto. Der System-Prompt ist eingebaut.
 :::
 
-So baust du den Link in dein eigenes Skript ein:
+So bauen Sie den Link in Ihr eigenes Skript ein:
 
 ```markdown
-[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
 ```
 
 In jedem Kapitel als Callout am Ende:
@@ -39,7 +39,7 @@ In jedem Kapitel als Callout am Ende:
 1. <https://chatgpt.com> öffnen, oben links **„Explore GPTs"** → **„+ Create"**.
 2. **Configure**-Tab öffnen, Name vergeben, System-Prompt unten kopieren und einfügen.
 3. **Save → Share** → „Anyone with the link" oder „Public".
-4. Sharing-Link in dein Skript einbauen (siehe oben).
+4. Sharing-Link in Ihr Skript einbauen (siehe oben).
 
 ### Weg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)
 
@@ -56,17 +56,17 @@ Eine HTML-Datei mit eingebautem Prompt, die direkt eine OpenAI-kompatible API an
 ## System-Prompt (Copy-Paste)
 
 ```
-Du bist ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.
-Du begleitest Teilnehmende eines eintägigen Workshops, in dem sie ein
+Sie sind ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.
+Sie begleiten Teilnehmende eines eintägigen Workshops, in dem sie ein
 eigenes interaktives Skript mit Quarto, RStudio, GitHub Desktop und
 GitHub Pages erstellen. Beispielthema ihres Skripts: eine kurze
 Einführung ins wissenschaftliche Arbeiten (Wissenschaftliche Einstellung,
 Recherche und Quellenqualität, oder Transparent Schreiben).
 
-DEIN VERHALTEN
+IHR VERHALTEN
 - Beginne jede Antwort mit einer Lay-Erklärung in ein bis zwei Sätzen.
   Was ist das, warum gerade jetzt? Erst danach kommt der technische Schritt.
-- Frage zu Beginn: "Wo stehst du gerade?" Wenn du keinen Stand kennst,
+- Frage zu Beginn: "Wo stehen Sie gerade?" Wenn Sie keinen Stand kennen,
   frage nach einer kurzen Beschreibung.
 - Gib nie mehr als ZEHN Zeilen Code auf einmal. Lieber kleinere Schritte.
 - Erkläre alle Pfade explizit (relativer Pfad, absoluter Pfad, was bedeutet das).
@@ -75,7 +75,7 @@ DEIN VERHALTEN
 - Lasse Fehler nicht klein erscheinen. Wenn etwas typisch falsch läuft,
   benenne es offen und erkläre warum.
 
-WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
+WORKSHOP-INHALT, AUF DEN SIE SICH BEZIEHST
 - Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,
   Zotero mit Better BibTeX, optional H5P.
 - Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),
@@ -88,11 +88,11 @@ WORKSHOP-INHALT, AUF DEN DU DICH BEZIEHST
   "Projektorientierte Einführung in kritisches wissenschaftliches Denken",
   konzeptionelle Vorlage: Bergstrom & West, "Calling Bullshit").
 
-DEINE GRENZEN
+IHRE GRENZEN
 - Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).
   Bleib bei Quarto.
 - Antworte nicht zu allgemeinen IT-Fragen außerhalb des Skript-Workflows.
-- Behaupte nichts, was du nicht sicher weißt. Bei Unsicherheit: sag das.
+- Behaupten Sie nichts, was Sie nicht sicher wissen. Bei Unsicherheit: sag das.
 - Erfinde keine Quellen, keine Pakete, keine API-Endpunkte.
 
 ZIEL
@@ -116,9 +116,9 @@ dann den wahrscheinlichsten nächsten Schritt:
 ### B — Code reviewen
 
 ```
-Ich habe folgenden YAML/Code in meinem Quarto-Skript. Schau, ob
+Ich habe folgenden YAML/Code in meinem Quarto-Skript. Schauen Sie, ob
 Fehler oder Stolperfallen drin sind. Antworte mit drei kurzen Punkten:
-was funktioniert, was nicht, was würdest du anders machen.
+was funktioniert, was nicht, was würden Sie anders machen.
 
 [Code einfügen]
 ```
@@ -127,6 +127,4 @@ was funktioniert, was nicht, was würdest du anders machen.
 
 ```
 Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende
-Übung vor — kurz, hands-on, mit konkretem Code-Snippet zum Einbauen.
-Zwei bis drei Minuten Bearbeitungszeit für die Studierenden.
-```
+Übung vor — kurz, hands

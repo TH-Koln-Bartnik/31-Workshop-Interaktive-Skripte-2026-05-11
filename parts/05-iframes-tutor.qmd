@@ -3,9 +3,9 @@ title: "5 — iFrames, Spiele und KI-Tutor"
 ---
 
 ::: {.lernziel-box}
-#### Was du nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
-- ein **interaktives Quiz oder Spiel** als iFrame in dein Skript einbinden,
+- ein **interaktives Quiz oder Spiel** als iFrame in Ihr Skript einbinden,
 - den Unterschied zwischen statischem HTML, **H5P** und externer Einbettung benennen,
 - einen **KI-Tutor** als Link einbauen, der die Lernenden begleitet — didaktisch begründet.
 :::
@@ -14,27 +14,61 @@ title: "5 — iFrames, Spiele und KI-Tutor"
 
 Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser [@karpicke2011; @fiorella2016]. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert [@mollick2023; @kasneci2023].
 
-## iFrame in einer Zeile
+## Live-Beispiel 1 — Drag-and-Drop-Lernspiel als iFrame
 
-Ein iFrame bettet eine fremde Seite in deine ein:
+Hier zuerst, was am Ende dabei herauskommen kann. Probieren Sie es direkt aus — drei Prinzipien auf drei Beispiele ziehen, dann „Auflösung anzeigen":
+
+<iframe src="../interactions/lernspiel-kapitel1.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+**Code zum Übernehmen** (an gewünschter Stelle in Ihr `.qmd`-Kapitel einfügen):
 
 ```html
-<iframe src="https://h5p.org/h5p/embed/617" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="../interactions/lernspiel-kapitel1.html"
+        width="100%" height="900" frameborder="0"
+        style="border: 1px solid #e6e6ea;">
+</iframe>
 ```
 
-Höhe nach Inhalt anpassen, Breite immer 100 %, `frameborder="0"` für ein sauberes Aussehen.
+**Was die Attribute bedeuten:**
+
+| Attribut | Wozu? |
+|---|---|
+| `src` | Pfad zur HTML-Datei, relativ zum Kapitel (`../` geht eine Ebene hoch) |
+| `width="100%"` | füllt die Spaltenbreite |
+| `height="900"` | feste Höhe in Pixeln — anpassen, bis nichts abgeschnitten ist |
+| `frameborder="0"` | kein hässlicher 3D-Rahmen |
+| `style="border: …"` | dezenter eigener Rahmen in TH-Grau |
+
+## Live-Beispiel 2 — Memory-Spiel als iFrame
+
+Dasselbe Prinzip, anderer Spieltyp:
+
+<iframe src="../interactions/memory-spiel.html" width="100%" height="850" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+**Code zum Übernehmen:**
+
+```html
+<iframe src="../interactions/memory-spiel.html"
+        width="100%" height="850" frameborder="0"
+        style="border: 1px solid #e6e6ea;">
+</iframe>
+```
+
+::: {.callout-note}
+**Damit das funktioniert,** müssen die HTML-Dateien tatsächlich im Ordner `interactions/` liegen — und in `_quarto.yml` muss unter `project:` die Zeile `resources: ["interactions/*"]` stehen, sonst kopiert Quarto die Dateien beim Render nicht in den `docs/`-Ordner mit.
+:::
 
 ## Drei Wege, ein Spiel einzubauen
 
 | Variante | Aufwand | Vorteil | Nachteil |
 |---|---|---|---|
-| **A — Statisches HTML** (eigenes Widget) | hoch zur Erstellung, niedrig danach | volle Kontrolle, kein Konto, läuft offline | erfordert HTML/JS-Kenntnisse oder KI-Hilfe |
+| **A — Statisches HTML** (eigenes Widget, wie oben) | hoch zur Erstellung, niedrig danach | volle Kontrolle, kein Konto, läuft offline | erfordert HTML/JS-Kenntnisse oder KI-Hilfe |
 | **B — H5P** (h5p.org / Moodle / WordPress) | mittel | viele fertige Vorlagen (Quiz, Drag-Drop, Memory) | erfordert Konto, externe Abhängigkeit |
 | **C — externer Editor** (Genially, Kahoot, Quizizz) | niedrig | schnell, hübsch, kollaborativ | Werbung, externe Datenhaltung, oft Login nötig |
 
 ::: {.callout-tip}
-## Mach mit (Variante A — statisches HTML)
-Schau dir das **Lernspiel aus Kapitel 1** ([interactions/lernspiel-kapitel1.html](../interactions/lernspiel-kapitel1.html){target="_blank"}) im Browser an. Öffne die Datei in RStudio (im **Files**-Tab anklicken → Open in editor) — sie ist eine einzige HTML-Datei, ohne Backend. Diesen Bauplan kannst du selbst (oder dein KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.
+## Mach mit (Variante A — eigenes Spiel)
+Schauen Sie sich `interactions/lernspiel-kapitel1.html` in RStudio an (im **Files**-Tab anklicken → Open in editor). Es ist eine einzige HTML-Datei mit eingebetteten Styles und JavaScript — kein Backend, kein Build-Schritt. Diesen Bauplan können Sie selbst (oder Ihr KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.
 
 **Strang-Beispiele:**
 
@@ -43,35 +77,51 @@ Schau dir das **Lernspiel aus Kapitel 1** ([interactions/lernspiel-kapitel1.html
 - Strang C — Memory: „Methodenbegriff zu transparenter Beschreibung"
 :::
 
-::: {.callout-tip}
-## Mach mit (Variante B — H5P, optional)
-Lege ein kostenloses Konto auf <https://h5p.org> an. Wähle **Drag the Words**, baue ein Mini-Quiz zu drei Begriffen aus deinem Strang. Klicke „Embed", kopiere den iFrame-Code, füge ihn in dein Kapitel ein. Render.
-:::
+## H5P-Embed (Variante B, optional)
+
+H5P liefert fertige interaktive Vorlagen, die Sie ohne Programmierung im Browser konfigurieren. Workflow:
+
+1. Konto auf <https://h5p.org> oder <https://h5p.com> anlegen.
+2. „New Content" → **Drag the Words** (oder eine andere Vorlage) wählen.
+3. Mini-Quiz zu drei Begriffen aus Ihrem Strang bauen.
+4. Auf **Embed** klicken, den iFrame-Code kopieren.
+5. In Ihr `.qmd`-Kapitel einfügen — fertig.
+
+Ein H5P-Embed sieht typischerweise so aus:
+
+```html
+<iframe src="https://h5p.org/h5p/embed/617"
+        width="100%" height="500" frameborder="0"
+        allowfullscreen="allowfullscreen">
+</iframe>
+```
+
+Vorteil: H5P kümmert sich um die Speicherung der Antworten, falls Sie LRS-Anbindung haben. Nachteil: externe Abhängigkeit, Konto nötig, Werbung in der Free-Variante.
 
 ## KI-Tutor als Link
 
-Der Tutor läuft **nicht** im iFrame, sondern in einem zweiten Tab. Du legst einen GPT (oder Custom GPT) mit System-Prompt an, holst dir den öffentlichen Link, baust ihn als Markdown-Link an passende Stellen im Skript ein. Drei Hosting-Varianten zur Auswahl:
+Der Tutor läuft **nicht** im iFrame, sondern in einem zweiten Tab. Sie legen einen GPT (oder Custom GPT) mit System-Prompt an, holen sich den öffentlichen Link, bauen ihn als Markdown-Link an passende Stellen im Skript ein. Drei Hosting-Varianten zur Auswahl:
 
 ### Option 1 — Custom GPT auf ChatGPT (heute genutzt)
 
 Einfachste Variante, weltweit verfügbar, kein Hochschul-Login nötig. Im Skript einbauen:
 
 ```markdown
-[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
 ```
 
 Der vorbereitete Tutor für diesen Workshop liegt unter dem oben verlinkten URL — der System-Prompt steckt dort schon drin. Die Lernenden klicken, ChatGPT-Login öffnet sich (kostenlos), der Tutor antwortet sofort im Workshop-Kontext.
 
 ::: {.callout-note}
-**Datenschutz:** ChatGPT speichert Konversationen auf US-Servern. Für offene Lehre ohne personenbezogene Daten unkritisch. Wenn du europäische Datenhaltung brauchst, nimm Option 2.
+**Datenschutz:** ChatGPT speichert Konversationen auf US-Servern. Für offene Lehre ohne personenbezogene Daten unkritisch. Wenn Sie europäische Datenhaltung brauchen, nehmen Sie Option 2.
 :::
 
 ### Option 2 — Custom GPT in der AcademicCloud
 
-Variante mit europäischer Datenhaltung und Hochschul-Login. Du legst einen GPT mit dem vorbereiteten System-Prompt an (siehe [Anhang Tutor-Prompt](../appendix/tutor-prompt.qmd)) und verlinkst ihn:
+Variante mit europäischer Datenhaltung und Hochschul-Login. Sie legen einen GPT mit dem vorbereiteten System-Prompt an (siehe [Anhang Tutor-Prompt](../appendix/tutor-prompt.qmd)) und verlinken ihn:
 
 ```markdown
-[Frag den Skript-Tutor →](https://chat.academiccloud.de/chat/DEIN-LINK){target="_blank"}
+[Fragen Sie den Skript-Tutor →](https://chat.academiccloud.de/chat/IHR-LINK){target="_blank"}
 ```
 
 Lernende loggen sich mit Hochschul-Credentials ein.
@@ -82,20 +132,20 @@ Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt an
 
 ::: {.callout-tip}
 ## Mach mit
-Wir nutzen heute den **vorbereiteten Workshop-Tutor** auf ChatGPT — du musst keinen eigenen GPT bauen, sondern nur den Link einbauen:
+Wir nutzen heute den **vorbereiteten Workshop-Tutor** auf ChatGPT — Sie müssen keinen eigenen GPT bauen, sondern nur den Link einbauen:
 
 ```markdown
-[Frag den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
 ```
 
-Setze diesen Link an passende Stelle in dein Skript (z. B. in einen Callout-Tip am Kapitelende). Render und prüf den Klick.
+Setzen Sie diesen Link an passende Stelle in Ihr Skript (z. B. in einen Callout-Tip am Kapitelende). Rendern Sie und prüfen Sie den Klick.
 
 Wer einen **eigenen** Tutor mit eigenem System-Prompt bauen will, springt zum [Tutor-Prompt-Anhang](../appendix/tutor-prompt.qmd) und legt sich Option 1 oder Option 2 selbst an.
 :::
 
 ## Wann **kein** KI-Tutor?
 
-Drei Situationen, in denen du es lassen solltest:
+Drei Situationen, in denen Sie es lassen sollten:
 
 - **Klar definierte Faktenfragen** — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.
 - **Sensible persönliche Themen** — der Tutor soll Lernen begleiten, keine Beratung ersetzen.
@@ -104,10 +154,11 @@ Drei Situationen, in denen du es lassen solltest:
 ::: {.callout-warning}
 ## Was, wenn …
 
-- **iFrame zeigt nichts an?** → URL prüfen, oft fehlt `https://`. Manche Seiten erlauben kein Embedding (HTTP-Header `X-Frame-Options`) — dann nur als Link verwenden.
+- **iFrame zeigt nichts an?** → Pfad prüfen: aus `parts/05-iframes-tutor.qmd` zeigt `../interactions/datei.html` ins richtige Verzeichnis. Externe URLs immer mit `https://` beginnen. Manche Seiten erlauben kein Embedding (HTTP-Header `X-Frame-Options`) — dann nur als Link verwenden.
+- **iFrame leer im gerenderten `docs/`-Ordner?** → In `_quarto.yml` muss `resources: ["interactions/*"]` unter `project:` stehen, damit Quarto die HTML-Dateien beim Render mitkopiert.
 - **iFrame zu kurz, Inhalt abgeschnitten?** → `height` höher setzen, oder `style="height: 90vh"` für 90 % der Bildschirmhöhe.
 - **AcademicCloud-Link funktioniert für andere nicht?** → Sharing aktivieren in den GPT-Einstellungen, „öffentlich" oder „mit Link".
-- **Tutor antwortet auf alles, auch außerhalb des Themas?** → System-Prompt nachschärfen, explizit Grenzen setzen („Antworte nur zu Quarto-Workflow-Fragen").
+- **Tutor antwortet auf alles, auch außerhalb des Themas?** → System-Prompt nachschärfen, explizit Grenzen setzen („Antworten Sie nur zu Quarto-Workflow-Fragen").
 :::
 
 ## Tutor
@@ -118,7 +169,7 @@ Drei Situationen, in denen du es lassen solltest:
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlag mir den einfachsten ersten Schritt vor und schreib den Code-Schnipsel dazu. Erkläre vorher in zwei Sätzen, was ich da eigentlich tue.
+> Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlagen Sie mir den einfachsten ersten Schritt vor und schreiben Sie den Code-Schnipsel dazu. Erklären Sie vorher in zwei Sätzen, was ich da eigentlich tue.
 :::
 
 # Literatur {.unnumbered}

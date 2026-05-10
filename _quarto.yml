@@ -1,6 +1,12 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - "interactions/*"
+    - "images/*"
+    - "data/*"
+    - "slides/*"
+    - "downloads/*"
 
 book:
   title: "Interaktive Skripte mit KI erstellen"
@@ -27,9 +33,10 @@ book:
         - parts/01-didaktik.qmd
         - parts/02-setup.qmd
         - parts/03a-uebersicht.qmd
-        - parts/03b-style.qmd
+        - parts/03b-bilder-tabellen.qmd
         - parts/04-charts.qmd
         - parts/05-iframes-tutor.qmd
+        - parts/03c-style.qmd
         - parts/06-slides-optional.qmd
     - part: "Teil 2 — Quick-Starter"
       chapters:

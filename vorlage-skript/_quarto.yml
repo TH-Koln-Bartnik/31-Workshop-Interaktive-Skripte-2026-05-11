@@ -1,0 +1,57 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - "interactions/*"
+    - "images/*"
+    - "data/*"
+
+book:
+  title: "Mein interaktives Skript"
+  subtitle: "Untertitel anpassen"
+  author: "Ihr Name"
+  date: today
+  date-format: "DD.MM.YYYY"
+  search: true
+  page-navigation: true
+  back-to-top-navigation: true
+  sidebar:
+    style: docked
+    background: light
+    collapse-level: 2
+    logo: images/platzhalter.png
+  chapters:
+    - index.qmd
+    - parts/01-beispielkapitel.qmd
+    - parts/02-mein-kapitel.qmd
+    - appendix/literatur.qmd
+  page-footer:
+    left: "© 2026 Ihr Name · CC BY-SA 4.0"
+    right: "Erstellt mit [Quarto](https://quarto.org)"
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-depth: 3
+    toc-title: "Inhalt"
+    code-copy: true
+    code-overflow: wrap
+    link-external-newwindow: true
+    fig-cap-location: bottom
+    callout-appearance: simple
+    callout-icon: true
+    smooth-scroll: true
+    citations-hover: true
+    footnotes-hover: true
+    crossrefs-hover: true
+    link-citations: true
+    citation-location: document
+    reference-location: document
+
+lang: de

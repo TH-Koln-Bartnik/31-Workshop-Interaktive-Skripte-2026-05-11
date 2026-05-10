@@ -1,0 +1,129 @@
+---
+title: "1 — Beispielkapitel mit allen Elementen"
+---
+
+::: {.lernziel-box}
+#### Was Sie nach diesem Kapitel können
+
+- alle wichtigen Quarto-Bausteine erkennen und im eigenen Skript einsetzen,
+- Bilder, Tabellen, Charts, iFrames und Zitate korrekt mit Labels und Captions anlegen,
+- die Cross-Reference- und Citation-Hover-Tooltips nutzen.
+:::
+
+## Worum es im Kern geht
+
+Dieser Block ist ein Platz für die Lay-Erklärung Ihres Themas. Zwei bis drei Sätze. Wenn Sie eine wissenschaftliche Quelle nennen, geht das so [@fiorella2016] — der Hover zeigt die volle APA-Angabe.
+
+## Bild mit Caption und Label
+
+@fig-platzhalter zeigt das TH-Köln-Logo als Beispielbild. Mauszeiger über `@fig-platzhalter` halten — eine Vorschau erscheint.
+
+![Beispielbild als Platzhalter. Eigene Datei in `images/` ablegen und hier verweisen.](../images/platzhalter.png){#fig-platzhalter width=40%}
+
+## Tabelle mit Caption und Label
+
+Die drei Lernprinzipien im Überblick (siehe @tbl-prinzipien):
+
+| Prinzip                | Quelle                  | Skript-Element        |
+|------------------------|-------------------------|-----------------------|
+| Generatives Lernen     | Fiorella & Mayer (2016) | KI-Tutor, Übung       |
+| Retrieval Practice     | Karpicke & Blunt (2011) | Quiz, Memory          |
+| Multimedia-Prinzip     | Mayer (2021)            | Interaktive Grafik    |
+
+: Drei Lernprinzipien und ihre Skript-Elemente. {#tbl-prinzipien}
+
+## Interaktive Grafik aus R-Chunk
+
+Live-gerendert (zuerst die Grafik, dann der Code zum Kopieren):
+
+```{r}
+#| label: fig-beispielchart
+#| fig-cap: "Beispielhafter Lerneffekt verschiedener Lernaktivitäten."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(plotly)
+library(tibble)
+
+d <- tribble(
+  ~Methode,                  ~Behalten,
+  "Lesen × 3",               30,
+  "Lesen × 2 + Test × 1",    65,
+  "Lesen + Selbst erklären", 78
+)
+
+plot_ly(d, x = ~Methode, y = ~Behalten, type = "bar",
+        marker = list(color = "#c81e0f")) |>
+  layout(yaxis = list(title = "Behalten nach 1 Woche (%)"))
+```
+
+**Code zum Übernehmen:**
+
+````markdown
+```{r}
+#| label: fig-beispielchart
+#| fig-cap: "Beispielhafter Lerneffekt verschiedener Lernaktivitäten."
+#| message: false
+
+library(plotly)
+library(tibble)
+
+d <- tribble(
+  ~Methode,                  ~Behalten,
+  "Lesen × 3",               30,
+  "Lesen × 2 + Test × 1",    65,
+  "Lesen + Selbst erklären", 78
+)
+
+plot_ly(d, x = ~Methode, y = ~Behalten, type = "bar",
+        marker = list(color = "#c81e0f")) |>
+  layout(yaxis = list(title = "Behalten nach 1 Woche (%)"))
+```
+````
+
+## iFrame mit eigenem HTML-Widget
+
+Ein einfaches Quiz, eingebettet als iFrame:
+
+<iframe src="../interactions/beispiel-quiz.html" width="100%" height="500" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+**Code zum Übernehmen:**
+
+```html
+<iframe src="../interactions/beispiel-quiz.html"
+        width="100%" height="500" frameborder="0"
+        style="border: 1px solid #e6e6ea;">
+</iframe>
+```
+
+## Mach-mit-Callout
+
+::: {.callout-tip}
+## Mach mit
+Ersetzen Sie das Platzhalterbild und die Beispieltabelle durch eigene Inhalte aus Ihrem Themengebiet. Rendern Sie und prüfen Sie, ob alle Cross-References (`@fig-…`, `@tbl-…`) korrekt aufgelöst werden.
+:::
+
+## Trouble-Shooting
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **`?@fig-xyz` im gerenderten Text?** → Label-Tippfehler, prüfen.
+- **iFrame leer?** → `resources: ["interactions/*"]` in `_quarto.yml`.
+- **Citation als `[?]`?** → Citation-Key in `references.bib` prüfen.
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt: „Erklären Sie mir, wie ich [konkrete Frage] in meinem Quarto-Skript umsetze."
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::

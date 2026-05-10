@@ -1,9 +1,10 @@
 ---
 title: "1 — Warum interaktiv?"
+suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
-#### Was du nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel kannst
 
 - drei lerntheoretisch gestützte Argumente nennen, **warum** ein interaktives Skript ein passives Skriptum schlägt,
 - jedes Argument einem **konkreten Skript-Element** zuordnen (Quiz, Diagramm, Tutor),
@@ -12,23 +13,23 @@ title: "1 — Warum interaktiv?"
 
 ## Drei Argumente in drei Sätzen
 
-Lehrforschung sagt es seit Jahren — aber selten so kompakt: Lernen klappt besser, wenn Lernende **selbst etwas tun**, **regelmäßig abrufen** und **Bilder neben Worten** bekommen. Drei Prinzipien, drei Belege, drei Konsequenzen für dein Skript.
+Lehrforschung sagt es seit Jahren — aber selten so kompakt: Lernen klappt besser, wenn Lernende **selbst etwas tun**, **regelmäßig abrufen** und **Bilder neben Worten** bekommen. Drei Prinzipien, drei Belege, drei Konsequenzen für Ihr Skript.
 
 ### Generatives Lernen
 
-Wer den Stoff selbst zusammenfasst, erklärt oder anwendet, behält ihn besser, als wer ihn nur liest [@fiorella2016]. Das ist kein Geschmack, das ist eine Meta-Analyse über acht Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in deinem Skript braucht jedes Kapitel **eine Aufgabe, die der Lernende selbst tut**, nicht nur einen Text, den er liest.
+Auch beim Lernen gilt eine Form von "wer schreibt, der bleibt". Wenn wir einen Lerninhalt selbst zusammenfassen, erklären oder anwenden, behalten wir ihn besser, als wenn wir einen Text nur lesen [@fiorella2016]. Das beinhaltet verschiedene Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in Ihrem Skript braucht jedes Kapitel **eine Aufgabe, die der Lernende selbst tut**, nicht nur einen Text, den er liest.
 
 ### Retrieval Practice
 
-Sich an etwas erinnern zu **müssen** verbessert das Behalten stärker als wiederholtes Lesen [@roediger2006]. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein **kurzes Quiz** oder eine **Drag-and-Drop-Aufgabe** in deinem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.
+Sich an etwas erinnern zu **müssen** verbessert das Behalten stärker als wiederholtes Lesen [@roediger2006]. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein **kurzes Quiz** oder eine **Drag-and-Drop-Aufgabe** in Ihrem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.
 
 ### Multimedia-Prinzip
 
-Worte plus passende Bilder schlagen Worte allein [@mayer2021]. „Passend" heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das **interaktive Diagramm**, das du in Kapitel 4 einbauen wirst, hat einen lerntheoretischen Grund — keine Spielerei.
+Worte plus passende Bilder schlagen Worte allein [@mayer2021]. „Passend" heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das **interaktive Diagramm**, das Sie in Kapitel 4 einbauen wirst, hat einen lerntheoretischen Grund — keine Spielerei.
 
-## Was das für dein Skript heißt
+## Was das für Ihr Skript heißt
 
-Drei Bauteile, die du heute alle einbaust, lassen sich genau diesen drei Prinzipien zuordnen:
+Drei Bauteile, die Sie heute alle einbaust, lassen sich genau diesen drei Prinzipien zuordnen:
 
 | Prinzip | Skript-Element | Wo im Workshop? |
 |---|---|---|
@@ -36,7 +37,7 @@ Drei Bauteile, die du heute alle einbaust, lassen sich genau diesen drei Prinzip
 | Retrieval Practice | Lernspiel, Memory, Quiz (iFrame oder H5P) | Kap. 1, 2, 5 |
 | Multimedia | Interaktives Diagramm, Grafiken | Kap. 4 |
 
-Das ist die didaktische Architektur deines Skripts — und gleichzeitig die Architektur dieses Workshops.
+Das ist die didaktische Architektur Ihres Skripts — und gleichzeitig die Architektur dieses Workshops.
 
 ## Wann **kein** interaktives Element?
 
@@ -59,7 +60,7 @@ Drei Beispiele, drei Prinzipien, fünf Minuten. Ziehe jedes Beispiel auf das Pri
 ## Was, wenn …
 
 - **Das Spiel öffnet sich nicht?** → Direkt im Browser über die Datei `interactions/lernspiel-kapitel1.html` öffnen. Die Datei ist eine einzige HTML-Datei, ohne Backend.
-- **Die Lösungen scheinen mehrdeutig?** → Stimmt — in der Praxis überschneiden sich die Prinzipien. Schau in die Erklärung am Ende des Spiels, dort steht, warum die jeweilige Zuordnung am stärksten passt.
+- **Die Lösungen scheinen mehrdeutig?** → Stimmt — in der Praxis überschneiden sich die Prinzipien. Schauen Sie in die Erklärung am Ende des Spiels, dort steht, warum die jeweilige Zuordnung am stärksten passt.
 :::
 
 ## Tutor
@@ -68,12 +69,6 @@ Drei Beispiele, drei Prinzipien, fünf Minuten. Ziehe jedes Beispiel auf das Pri
 ## Tutor öffnen
 [Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
 
-Frag den Tutor nach passenden interaktiven Elementen für dein Kapitel. Vorschlag-Prompt:
+Fragen Sie den Tutor nach passenden interaktiven Elementen für Ihr Kapitel. Vorschlag-Prompt:
 
-> Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Frag mich nach dem Lernziel des jeweiligen Kapitels und schlage dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründe in einem Satz, warum genau dieses Element passt.
-:::
-
-# Literatur {.unnumbered}
-
-::: {#refs}
-:::
+> Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Fragen Sie mich nach dem Lernziel des jeweiligen Kapitels und schlage dann pro Kapitel EIN passendes Element vor — verbund

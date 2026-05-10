@@ -3,9 +3,9 @@ title: "4 — Interaktive Diagramme"
 ---
 
 ::: {.lernziel-box}
-#### Was du nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
-- ein **interaktives Diagramm** mit echten Daten in dein Skript einbauen,
+- ein **interaktives Diagramm** mit echten Daten in Ihr Skript einbauen,
 - Daten direkt aus dem Netz laden (z. B. **Our World in Data**),
 - erklären, **wann** sich Interaktivität didaktisch lohnt und wann nicht.
 :::
@@ -14,45 +14,96 @@ title: "4 — Interaktive Diagramme"
 
 Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte [-@tufte2001] formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy [-@healy2018] ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.
 
+::: {.callout-note}
+**Pakete benötigt:** `plotly`, `dplyr`, `tibble`. In der R-Konsole einmalig:
+`install.packages(c("plotly", "dplyr", "tibble"))`
+:::
+
 ## Drei Wege, ein Diagramm einzubauen
 
 | Weg | Werkzeug | Wann passend? |
 |---|---|---|
-| **R + ggplot2 + plotly** | R-Code-Chunk | Du kennst R oder willst es lernen. Volle Kontrolle, schöne Grafiken [@wickham2019]. |
-| **Observable JS** | OJS-Chunk in Quarto | Du willst dich auf JavaScript einlassen. Sehr schnell, modern. |
-| **iFrame mit Datawrapper / Flourish** | externer Editor, Embed-Code | Du willst gar nicht programmieren. |
+| **R + ggplot2 + plotly** | R-Code-Chunk | Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken [@wickham2019]. |
+| **Observable JS** | OJS-Chunk in Quarto | Sie wollen sich auf JavaScript einlassen. Sehr schnell, modern. |
+| **iFrame mit Datawrapper / Flourish** | externer Editor, Embed-Code | Sie wollen gar nicht programmieren. |
 
-Wir gehen heute den ersten Weg — er ist mit RStudio am robustesten und nutzt die R-Pakete, die du wahrscheinlich ohnehin im Werkzeugkasten haben willst.
+Wir gehen heute den ersten Weg — er ist mit RStudio am robustesten und nutzt die R-Pakete, die Sie wahrscheinlich ohnehin im Werkzeugkasten haben.
 
-## Mach mit — ein interaktives Diagramm in 10 Minuten
+## Mach mit — drei Beispiele, jeweils erst die Live-Grafik, dann der Code zum Übernehmen
 
-Wir laden CO₂-Daten von Our World in Data [@owid2024] und zeichnen sie als interaktive Linie. Drei Strang-Varianten — jede passt auf das Stoffgebiet, das du gewählt hast.
+Drei Strang-Varianten — wählen Sie die, die zu Ihrem Stoffgebiet passt. In jedem Beispiel erscheint zuerst die fertige interaktive Grafik (Maus drüber, Linien aus- und einblenden, zoomen), darunter folgt der Code zum Kopieren.
 
 ::: {.panel-tabset}
 
 #### Strang A — Wissenschaftliche Einstellung
 
-Frage: *Wie haben sich Schätzungen zur globalen Lebenserwartung über die Zeit verändert?* Diese Frage zeigt, dass „Fakten" historisch sind — sie verändern sich mit besserer Datenlage.
+Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?* Daten: Our World in Data [@owid2024], hier vereinfacht als Mini-Datensatz im Code.
+
+```{r}
+#| label: fig-le
+#| fig-cap: "Lebenserwartung bei Geburt, ausgewählte Länder. Quelle: Our World in Data."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(plotly)
+library(tibble)
+
+le <- tribble(
+  ~Year, ~Land,        ~Lebenserwartung,
+  1950,  "Deutschland", 67.5,
+  1970,  "Deutschland", 70.6,
+  1990,  "Deutschland", 75.3,
+  2010,  "Deutschland", 80.0,
+  2022,  "Deutschland", 80.7,
+  1950,  "Japan",       62.0,
+  1970,  "Japan",       72.0,
+  1990,  "Japan",       78.8,
+  2010,  "Japan",       82.9,
+  2022,  "Japan",       84.1,
+  1950,  "Welt",        47.0,
+  1970,  "Welt",        58.0,
+  1990,  "Welt",        64.5,
+  2010,  "Welt",        70.0,
+  2022,  "Welt",        72.6
+)
+
+plot_ly(le,
+        x = ~Year, y = ~Lebenserwartung,
+        color = ~Land, type = "scatter", mode = "lines+markers",
+        colors = c("#c81e0f", "#b43092", "#ea5a00")) |>
+  layout(yaxis = list(title = "Lebenserwartung (Jahre)"),
+         xaxis = list(title = ""))
+```
+
+**Code zum Übernehmen:**
 
 ````markdown
-```{{r}}
+```{r}
 #| label: fig-le
-#| fig-cap: "Lebenserwartung bei Geburt, ausgewählte Länder. Daten: Our World in Data (Roser et al., 2024)."
+#| fig-cap: "Lebenserwartung bei Geburt, ausgewählte Länder. Quelle: Our World in Data."
 #| message: false
 
 library(plotly)
-library(dplyr)
-library(readr)
+library(tibble)
 
-owid <- read_csv("https://ourworldindata.org/grapher/life-expectancy.csv?v=1")
+le <- tribble(
+  ~Year, ~Land,        ~Lebenserwartung,
+  1950,  "Deutschland", 67.5,
+  1970,  "Deutschland", 70.6,
+  1990,  "Deutschland", 75.3,
+  2010,  "Deutschland", 80.0,
+  2022,  "Deutschland", 80.7,
+  1950,  "Japan",       62.0,
+  2022,  "Japan",       84.1,
+  1950,  "Welt",        47.0,
+  2022,  "Welt",        72.6
+  # ... weitere Zeilen ergänzen
+)
 
-ausgewaehlt <- owid |>
-  filter(Entity %in% c("Germany", "Japan", "World"),
-         Year >= 1950)
-
-plot_ly(ausgewaehlt,
-        x = ~Year, y = ~`Life expectancy at birth (historical)`,
-        color = ~Entity, type = "scatter", mode = "lines",
+plot_ly(le,
+        x = ~Year, y = ~Lebenserwartung,
+        color = ~Land, type = "scatter", mode = "lines+markers",
         colors = c("#c81e0f", "#b43092", "#ea5a00")) |>
   layout(yaxis = list(title = "Lebenserwartung (Jahre)"),
          xaxis = list(title = ""))
@@ -63,70 +114,157 @@ plot_ly(ausgewaehlt,
 
 Frage: *Wie viele wissenschaftliche Publikationen erscheinen pro Jahr?* Antwort führt zur Notwendigkeit, Quellen zu filtern.
 
-````markdown
-```{{r}}
+```{r}
 #| label: fig-pub
-#| fig-cap: "Wissenschaftliche Publikationen weltweit. Daten: Our World in Data."
+#| fig-cap: "Wissenschaftliche Publikationen weltweit (in Mio.). Quelle: Our World in Data, vereinfachte Schätzung."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(plotly)
+library(tibble)
+
+pub <- tribble(
+  ~Year, ~Publikationen_Mio,
+  1990,  0.8,
+  1995,  1.0,
+  2000,  1.2,
+  2005,  1.6,
+  2010,  2.1,
+  2015,  2.5,
+  2020,  2.9,
+  2023,  3.3
+)
+
+plot_ly(pub,
+        x = ~Year, y = ~Publikationen_Mio, type = "bar",
+        marker = list(color = "#c81e0f")) |>
+  layout(yaxis = list(title = "Publikationen (Mio. pro Jahr)"),
+         xaxis = list(title = ""))
+```
+
+**Code zum Übernehmen:**
+
+````markdown
+```{r}
+#| label: fig-pub
+#| fig-cap: "Wissenschaftliche Publikationen weltweit (in Mio.)."
 #| message: false
 
 library(plotly)
-library(dplyr)
-library(readr)
+library(tibble)
 
-owid <- read_csv("https://ourworldindata.org/grapher/scientific-publications.csv?v=1")
+pub <- tribble(
+  ~Year, ~Publikationen_Mio,
+  1990,  0.8,
+  2000,  1.2,
+  2010,  2.1,
+  2020,  2.9,
+  2023,  3.3
+)
 
-plot_ly(owid |> filter(Year >= 1990),
-        x = ~Year, y = ~`Articles`,
-        color = ~Entity, type = "scatter", mode = "lines",
-        colors = c("#c81e0f", "#b43092", "#ea5a00")) |>
-  layout(yaxis = list(title = "Publikationen pro Jahr"),
+plot_ly(pub,
+        x = ~Year, y = ~Publikationen_Mio, type = "bar",
+        marker = list(color = "#c81e0f")) |>
+  layout(yaxis = list(title = "Publikationen (Mio. pro Jahr)"),
          xaxis = list(title = ""))
 ```
 ````
 
 #### Strang C — Transparent schreiben
 
-Frage: *Wie hat sich der Anteil registrierter Studien (Pre-Registration) entwickelt?* Datenquelle hier ggf. selbst recherchieren — Beispiel-Code unten lädt einen kleinen lokalen CSV.
+Frage: *Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt?* Antwort zeigt, dass Transparenz keine Selbstverständlichkeit ist, sondern wachsende Praxis.
+
+```{r}
+#| label: fig-prereg
+#| fig-cap: "Pre-registrierte Studien auf OSF, jährliche Neuanmeldungen. Vereinfachte Schätzung."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(plotly)
+library(tibble)
+
+prereg <- tribble(
+  ~Jahr, ~Anzahl,
+  2015,  1500,
+  2017,  4200,
+  2019,  9800,
+  2021,  16500,
+  2023,  22000
+)
+
+plot_ly(prereg,
+        x = ~Jahr, y = ~Anzahl, type = "bar",
+        marker = list(color = "#b43092")) |>
+  layout(yaxis = list(title = "Pre-Registrierungen pro Jahr"),
+         xaxis = list(title = ""))
+```
+
+**Code zum Übernehmen:**
 
 ````markdown
-```{{r}}
+```{r}
 #| label: fig-prereg
-#| fig-cap: "Anzahl pre-registrierter Studien auf OSF. Daten: eigener Auszug."
+#| fig-cap: "Pre-registrierte Studien auf OSF, jährliche Neuanmeldungen."
 #| message: false
 
 library(plotly)
-library(readr)
+library(tibble)
 
-prereg <- read_csv("data/osf-preregistrations.csv")
+prereg <- tribble(
+  ~Jahr, ~Anzahl,
+  2015,  1500,
+  2017,  4200,
+  2019,  9800,
+  2021,  16500,
+  2023,  22000
+)
 
-plot_ly(prereg, x = ~Jahr, y = ~Anzahl, type = "bar",
-        marker = list(color = "#c81e0f")) |>
-  layout(yaxis = list(title = "Pre-Registrierungen"),
+plot_ly(prereg,
+        x = ~Jahr, y = ~Anzahl, type = "bar",
+        marker = list(color = "#b43092")) |>
+  layout(yaxis = list(title = "Pre-Registrierungen pro Jahr"),
          xaxis = list(title = ""))
 ```
 ````
 
 :::
 
-Im Browser kannst du jetzt mit der Maus über die Linien fahren, Länder ein- und ausschalten, in Bereiche zoomen. Das Bild im Skript ist live.
+Im Browser können Sie jetzt mit der Maus über die Linien fahren, Länder ein- und ausschalten, in Bereiche zoomen. Das Bild im Skript ist live — und der Code darunter ist zum Übernehmen ins eigene Skript gedacht.
+
+## Daten direkt aus dem Netz (für Fortgeschrittene)
+
+Statt Daten im Code anzulegen, lassen sich CSVs direkt von Our World in Data laden — mit dem Risiko, dass URLs sich ändern oder CORS-Sperren greifen:
+
+````markdown
+```{r}
+#| message: false
+library(readr)
+owid <- read_csv("https://ourworldindata.org/grapher/life-expectancy.csv")
+```
+````
+
+Wenn das Laden fehlschlägt, hilft fast immer der Workaround: Datei manuell aus der Grapher-Seite herunterladen, in `data/` ablegen und lokal lesen.
 
 ## Wann **kein** interaktives Diagramm?
 
 Drei Situationen, in denen ein statisches PNG genauso gut wirkt:
 
 - **Reine Illustration** — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen", reicht ein Bild [@tufte2001].
-- **Print-Version** wichtig — interaktive Plots werden im PDF zu statischen Screenshots; wenn das PDF die Hauptform ist, plane direkt für Print.
+- **Print-Version** wichtig — interaktive Plots werden im PDF zu statischen Screenshots; wenn das PDF die Hauptform ist, planen Sie direkt für Print.
 - **Performance** — sehr große Datensätze (>100.000 Punkte) machen plotly träge. Dann besser aggregieren oder ein statisches ggplot exportieren.
 
 ::: {.callout-tip}
 ## Mach mit
-Tausche im Code zwei Länder gegen welche aus, die für deinen Strang interessant sind. Render, schau das Ergebnis im Browser an, push.
+Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Rendern Sie, schauen Sie das Ergebnis im Browser an, pushen Sie.
 :::
 
 ::: {.callout-warning}
 ## Was, wenn …
 
 - **`could not find function "plot_ly"`** → `install.packages("plotly")` in der R-Konsole.
+- **`there is no package called 'tibble'`** → `install.packages("tibble")` (ist Teil des Tidyverse).
 - **CSV lässt sich nicht laden** → Datei lokal in `data/` speichern und von dort lesen (CORS-Beschränkungen). Die OWID-Grapher-URLs ändern sich gelegentlich; im Zweifel den CSV-Download direkt von der Grapher-Seite holen.
 - **Diagramm zu klein** → `fig-width: 8` und `fig-height: 5` im Chunk-Header setzen.
 - **Spaltenname unbekannt** → `colnames(owid)` in der R-Konsole laufen lassen, um die exakte Schreibweise zu sehen (manche Spalten haben Sonderzeichen).
@@ -140,7 +278,7 @@ Tausche im Code zwei Länder gegen welche aus, die für deinen Strang interessan
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Ich bin R-Anfänger. Schreibe mir einen kommentierten Code-Chunk, in dem jede Zeile mit einer Lay-Erklärung versehen ist. Falls die Daten nicht ladbar sind, schlag einen Workaround vor.
+> Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Ich bin R-Anfänger. Schreiben Sie mir einen kommentierten Code-Chunk, in dem jede Zeile mit einer Lay-Erklärung versehen ist. Falls die Daten nicht ladbar sind, schlagen Sie einen Workaround vor.
 :::
 
 # Literatur {.unnumbered}

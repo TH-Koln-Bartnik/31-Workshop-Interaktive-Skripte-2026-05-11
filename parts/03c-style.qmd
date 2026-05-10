@@ -1,9 +1,14 @@
 ---
-title: "3b — TH-Köln-Stil einbauen"
+title: "3c — TH-Köln-Stil einbauen (optional)"
 ---
 
+::: {.callout-note}
+## Optional, für die Feinarbeit
+Dieses Kapitel ist nicht zwingend für den Workshop-Erfolg. Wer mit Kapitel 1–3b und 4–5 noch nicht durch ist, überspringt es. Wer früh fertig ist, baut hier den TH-Köln-Stil ein.
+:::
+
 ::: {.lernziel-box}
-#### Was Sie nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
 - die Hochschulfarben über `_brand.yml` setzen,
 - per CSS scharfkantige Callouts, Tabellen und Code-Blöcke gestalten,
@@ -36,7 +41,7 @@ Drei Farben, sonst nur Grautöne. Alles andere ist Verstoß gegen das Corporate 
 
 ## Mach mit — `_brand.yml` kopieren
 
-Im Repository des Workshops liegt eine fertige `_brand.yml` mit der TH-Köln-Palette. Kopiere sie in Ihr Projektverzeichnis. Beim nächsten `quarto render` sind Links rot, Überschriften schwarz, Akzente magenta.
+Im Repository des Workshops liegt eine fertige `_brand.yml` mit der TH-Köln-Palette. Kopieren Sie sie in Ihr Projektverzeichnis. Beim nächsten `quarto render` sind Links rot, Überschriften schwarz, Akzente magenta.
 
 ```yaml
 color:
@@ -56,7 +61,7 @@ Drei Dinge, die `_brand.yml` nicht regelt: scharfe Ecken („kantig"), die magen
 Die Datei muss `styles.scss` heißen (nicht `.css`) und am Anfang einen **Layer-Marker** enthalten — sonst bricht `quarto render` mit einer Fehlermeldung „doesn't contain at least one layer boundary" ab.
 :::
 
-Lege `styles.scss` an und binde sie in `_quarto.yml` ein:
+Legen Sie `styles.scss` an und binden Sie sie in `_quarto.yml` ein:
 
 ```yaml
 format:
@@ -122,3 +127,6 @@ Vorschlag-Prompt für dieses Kapitel:
 :::
 
 # Literatur {.unnumbered}
+
+::: {#refs}
+:::

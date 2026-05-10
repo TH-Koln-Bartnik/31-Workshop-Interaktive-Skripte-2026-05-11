@@ -1,0 +1,36 @@
+color:
+  palette:
+    th-red: "#c81e0f"
+    th-magenta: "#b43092"
+    th-orange: "#ea5a00"
+    ink: "#111111"
+    paper: "#ffffff"
+    gray-100: "#f5f5f7"
+    gray-200: "#e6e6ea"
+    gray-500: "#6b6b73"
+  primary: th-red
+  secondary: th-magenta
+  tertiary: th-orange
+  foreground: ink
+  background: paper
+  link: th-red
+
+typography:
+  fonts:
+    - family: "Arial"
+      source: system
+  base:
+    family: "Arial"
+    weight: 400
+    line-height: 1.55
+  headings:
+    family: "Arial"
+    weight: 600
+    color: ink
+  link:
+    color: th-red
+    decoration: underline
+
+logo:
+  small: images/platzhalter.png
+  medium: images/platzhalter.png

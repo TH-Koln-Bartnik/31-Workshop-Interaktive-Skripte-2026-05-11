@@ -1,6 +1,6 @@
 ---
 title: "Trouble-Shooting"
-subtitle: "Die zehn häufigsten Probleme und wie du sie löst"
+subtitle: "Die zehn häufigsten Probleme und wie Sie sie lösen"
 ---
 
 Jeder Punkt: **Symptom → Ursache → Lösung**. Wenn nichts hilft: Tutor fragen mit dem Prompt am Ende.
@@ -13,7 +13,7 @@ Jeder Punkt: **Symptom → Ursache → Lösung**. Wenn nichts hilft: Tutor frage
 
 ## 2. GitHub Pages zeigt 404
 
-**Symptom:** Dein Skript ist online, aber die URL liefert „404 — File not found".
+**Symptom:** Ihr Skript ist online, aber die URL liefert „404 — File not found".
 **Ursache:** `output-dir: docs` fehlt in `_quarto.yml`, oder der Pages-Branch ist falsch eingestellt.
 **Lösung:** In `_quarto.yml` `output-dir: docs` setzen, render, push. In **Settings → Pages**: Branch `main`, Folder `/docs`.
 
@@ -79,5 +79,5 @@ Vorschlag-Prompt:
 >
 > Mein Setup: [Betriebssystem], Quarto-Version [X.X.X], R-Version [X.X.X], RStudio-Version [X.X.X]. Ich habe schon versucht: [...].
 >
-> Schreib mir die wahrscheinlichste Ursache in einem Satz, dann den nächsten Schritt zum Beheben. Wenn du mehr wissen musst, frag.
+> Schreiben Sie mir die wahrscheinlichste Ursache in einem Satz, dann den nächsten Schritt zum Beheben. Wenn Sie mehr wissen müssen, fragen Sie nach.
 :::

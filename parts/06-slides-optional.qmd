@@ -4,42 +4,153 @@ title: "6 — Slides mit Quarto (optional)"
 
 ::: {.callout-note}
 ## Optional, für Fortgeschrittene
-Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, kann hier weiterbauen. Vorlage und Inspiration: Békés (2025), [Course slides for "Data Analysis with AI"](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html){target="_blank"}.
+Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, baut hier eigene Folien. Vorlage und Inspiration: Békés (2025), [Course slides for "Data Analysis with AI"](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html){target="_blank"}.
 :::
 
 ::: {.lernziel-box}
-#### Was du nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
 - aus einem `.qmd`-Kapitel einen **Foliensatz** mit Quarto Reveal.js erzeugen,
-- die **TH-Köln-Farben** auf Slides übertragen,
-- den Foliensatz neben das Skript auf GitHub Pages stellen.
+- **Stichpunkte schrittweise einblenden** (Appear-Effekt wie in PowerPoint),
+- **Bilder und Diagramme** in Folien einbetten — auch in zwei Spalten neben dem Text,
+- die **TH-Köln-Farben** auf Slides übertragen.
 :::
+
+## Worum es im Kern geht
+
+Folien sind nicht der bessere Skripttext, sondern ein eigener Modus — sie unterstützen die mündliche Erläuterung. Mayer [-@mayer2021] zeigt: Folien wirken am stärksten, wenn sie **Bild plus wenig Text** kombinieren und Inhalte **schrittweise** enthüllen. Genau das liefert Quarto Reveal.js mit zwei Konstrukten: `incremental` (Listen punktweise) und `::: {.fragment}` (beliebige Blöcke einzeln).
 
 ## Schnellbau in vier Schritten
 
-1. Neue Datei `slides/kapitel-1-slides.qmd` anlegen.
-2. YAML-Header:
+1. Neue Datei `slides/template-vorlesungsfolien.qmd` anlegen — oder die [vorhandene Vorlage](../slides/template-vorlesungsfolien.qmd) kopieren.
+2. YAML-Header ergänzen (siehe unten).
+3. Inhalt strukturieren: **eine `##`-Überschrift = eine Folie**.
+4. Im RStudio-Terminal rendern: `quarto render slides/template-vorlesungsfolien.qmd` oder Knopf **Render** im Editor.
+
+## YAML-Header für Reveal.js
 
 ```yaml
 ---
-title: "Kapitel 1 — Didaktik"
-author: "Dein Name"
+title: "Vorlesungsfolien — Vorlage"
+author: "Ihr Name"
 format:
   revealjs:
     theme: [default, ../styles.scss]
     slide-number: true
     chalkboard: true
-    incremental: true
+    incremental: false
     logo: ../images/th-koeln-logo.png
+    footer: "Workshop · TH Köln"
+    transition: fade
 ---
 ```
 
-3. Inhalt: **eine H2-Überschrift = eine Folie**, dazwischen Stichpunkte und Bilder. Speaker Notes mit `::: notes`.
-4. `quarto render slides/kapitel-1-slides.qmd` → Slide-Deck als HTML.
+Wichtig: `theme: [default, ../styles.scss]` zieht Ihre TH-Köln-Farben auch auf die Folien.
+
+## Bausteine — sieben Techniken zum Übernehmen
+
+### 1. Eine Folie pro `##`-Überschrift
+
+```markdown
+## Eine Folie pro Überschrift
+
+Stichpunkte direkt darunter, Bilder, Code — was Sie wollen.
+```
+
+### 2. Section-Divider (großer Trenner zwischen Themenblöcken)
+
+```markdown
+# Block 2 — Stichpunkte
+```
+
+Ein einfaches `#` (statt `##`) erzeugt eine Übersichts-/Trennfolie.
+
+### 3. Stichpunkte mit Appear-Effekt — einer nach dem anderen
+
+```markdown
+::: incremental
+- Punkt eins
+- Punkt zwei
+- Punkt drei
+:::
+```
+
+Im Vortrag: erst der erste Punkt, dann auf Klick (Pfeiltaste, Leertaste oder Klicker) der zweite, der dritte.
+
+### 4. Beliebige Blöcke einzeln einblenden
+
+```markdown
+::: {.fragment}
+**Beobachtung:** Lernende vergessen 70 % innerhalb einer Woche.
+:::
+
+::: {.fragment}
+**Konsequenz:** Spaced Repetition statt Frontalvortrag.
+:::
+
+::: {.fragment}
+**Konkret heute:** Mini-Quizze in jedem Skriptkapitel.
+:::
+```
+
+Drei Klicks, drei Erkenntnis­schritte — perfekt für Argumentationsketten.
+
+### 5. Bild mit Appear-Effekt
+
+```markdown
+Was ist Generatives Lernen?
+
+::: {.fragment}
+![](../images/wissens-zyklus.png){fig-align="center" width="60%"}
+:::
+```
+
+Erst die Frage in den Raum stellen, dann das Schaubild aufdecken.
+
+### 6. Zwei Spalten — Text links, Bild rechts
+
+```markdown
+:::: {.columns}
+
+::: {.column width="50%"}
+**Drei Hebel:**
+
+::: incremental
+- Selbst zusammenfassen
+- Selbst erklären
+- Selbst anwenden
+:::
+:::
+
+::: {.column width="50%"}
+![](../images/skizze.png){fig-align="center" width="80%"}
+:::
+
+::::
+```
+
+### 7. Speaker-Notes (sichtbar nur in der Sprecher­ansicht, Taste „S")
+
+```markdown
+::: notes
+Hier baue ich Spannung auf. Erst Punkt eins erklären, dann
+mit der Pfeiltaste den nächsten enthüllen. Beispiel aus Kapitel 4 nennen.
+:::
+```
+
+## Die komplette Vorlage zum Kopieren
+
+Acht Beispielfolien — Titel, Section-Divider, Bullets statisch und mit Appear, Bild ganzseitig, Bild mit Fragment, zwei Spalten, Code-Folie mit Zeilen-Highlighting, Schlussfolie. Liegt im Projekt unter:
+
+```
+slides/template-vorlesungsfolien.qmd
+```
+
+Im RStudio-Files-Pane öffnen, ansehen, einzelne Folien herauspicken und in eigene Foliensätze übernehmen.
 
 ## TH-Köln-Brand auf Slides
 
-Die `_brand.yml` aus deinem Skript wird auch von Reveal.js gelesen. Zusätzlich einbinden:
+Die `_brand.yml` aus Ihrem Skript wird auch von Reveal.js gelesen, sobald Sie sie in den Reveal-YAML einbauen:
 
 ```yaml
 format:
@@ -47,6 +158,15 @@ format:
     brand: ../_brand.yml
     theme: [default, ../styles.scss]
 ```
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **Pfeiltaste blättert über Fragmente weg statt sie einzeln zu zeigen?** → `incremental: true` im YAML setzen oder einzelne Listen mit `::: incremental` umhüllen.
+- **Bild wird nicht angezeigt?** → Pfad relativ zur Slides-Datei: aus `slides/foo.qmd` zeigt `../images/bild.png` ins richtige Verzeichnis.
+- **Diagramm aus R-Chunk erscheint nicht?** → Pakete prüfen (`install.packages("plotly")`), und am Chunk `#| echo: false` setzen, sonst stört der Code-Block die Folienaufteilung.
+- **Folien zu textreich?** → Faustregel: max. 6 Zeilen pro Folie, eine Idee pro Folie.
+:::
 
 ## Tutor
 
@@ -56,5 +176,10 @@ format:
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlag mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Gib mir den YAML-Header.
+> Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlagen Sie mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Welche Stichpunkte sollen mit Appear-Effekt erscheinen? Geben Sie mir den YAML-Header und ein bis zwei Beispielfolien.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
 :::

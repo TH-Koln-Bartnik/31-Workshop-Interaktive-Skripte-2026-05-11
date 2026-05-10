@@ -1,0 +1,10 @@
+---
+title: "Literatur"
+nocite: |
+  @*
+---
+
+Vollständige Quellenliste, automatisch aus `references.bib` generiert (APA-7-Format mit deutscher Lokalisierung, DGPs-konform).
+
+::: {#refs}
+:::
