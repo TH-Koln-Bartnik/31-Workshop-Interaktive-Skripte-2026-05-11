@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Sortier-Aufgabe — Veröffentlichen mit GitHub Pages</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --green: #2d8c2d;
+    --green-bg: #f3fff3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .stats {
+    display: flex; gap: 1.5rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+  }
+  .stats span strong { color: var(--th-red); margin-right: 0.3rem; }
+  ol#list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--paper);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--gray-200);
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 0.5rem;
+    cursor: grab;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  }
+  .card:active { cursor: grabbing; }
+  .card.dragging { opacity: 0.4; }
+  .card.over-top { border-top: 3px solid var(--th-magenta); }
+  .card.over-bottom { border-bottom: 3px solid var(--th-magenta); }
+  .card.correct {
+    border-left-color: var(--green);
+    background: var(--green-bg);
+  }
+  .card.wrong {
+    border-left-color: var(--th-red);
+  }
+  .pos {
+    width: 2rem; height: 2rem;
+    border-radius: 50%;
+    background: var(--gray-100);
+    color: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .card.correct .pos { background: var(--green); color: var(--paper); }
+  .card.wrong .pos { background: var(--th-red); color: var(--paper); }
+  .text { font-size: 0.95rem; line-height: 1.4; }
+  .text code {
+    background: var(--gray-100);
+    padding: 0.05rem 0.25rem;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.85em;
+    color: var(--th-red);
+  }
+  .arrows { display: flex; flex-direction: column; gap: 0.2rem; }
+  .arrows button {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    width: 2rem; height: 1.4rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0;
+  }
+  .arrows button:hover:not(:disabled) { background: var(--th-magenta); color: var(--paper); border-color: var(--th-magenta); }
+  .arrows button:disabled { opacity: 0.3; cursor: default; }
+  .controls {
+    margin: 1.25rem 0 0;
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+  }
+  button.btn {
+    background: var(--th-red);
+    color: var(--paper);
+    border: none;
+    padding: 0.55rem 1.1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button.btn:hover { background: var(--th-magenta); }
+  .hint { color: var(--gray-500); font-size: 0.85rem; }
+  .win {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+    display: none;
+  }
+  .win.visible { display: block; }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1>Sortieren — der Weg zur Live-URL</h1>
+<p class="lead">Sechs Schritte, in zufälliger Reihenfolge. Ziehen Sie sie in die richtige Reihenfolge — oder nutzen Sie die Pfeil-Knöpfe rechts. Korrekte Position: grün; noch nicht: grau.</p>
+
+<div class="stats">
+  <span><strong id="correct-count">0</strong>von 6 in richtiger Position</span>
+</div>
+
+<ol id="list"></ol>
+
+<div class="controls">
+  <button class="btn" id="reset">Neu mischen</button>
+  <span class="hint">Tipp: am Drag-Griff anfassen oder Pfeil-Knöpfe verwenden.</span>
+</div>
+
+<div class="win" id="win">
+  <strong>Geschafft!</strong> Alle sechs Schritte in der richtigen Reihenfolge — Ihr Skript wäre jetzt unter Ihrer Pages-URL erreichbar.
+</div>
+
+<footer>
+  Sortier-Aufgabe zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const correctOrder = [
+    { id: 's1', text: 'GitHub-Konto anlegen (auf <code>github.com/signup</code>) — Username wird Teil der späteren URL.' },
+    { id: 's2', text: 'In <code>_quarto.yml</code> prüfen, dass <code>output-dir: docs</code> gesetzt ist.' },
+    { id: 's3', text: 'Lokal <code>quarto render</code> ausführen — der Ordner <code>docs/</code> entsteht mit der fertigen Webseite.' },
+    { id: 's4', text: 'In GitHub Desktop das lokale Repository hinzufügen und <strong>Publish repository</strong> klicken (Public).' },
+    { id: 's5', text: 'Auf github.com im Repo: <strong>Settings → Pages</strong> → Branch <code>main</code>, Folder <code>/docs</code>, Save.' },
+    { id: 's6', text: 'Live-URL <code>https://USER.github.io/REPO/</code> öffnen, Hard-Reload (<strong>Strg+F5</strong>), erste Änderung committen und pushen.' }
+  ];
+
+  const list = document.getElementById('list');
+  const resetBtn = document.getElementById('reset');
+  const correctCountEl = document.getElementById('correct-count');
+  const winBox = document.getElementById('win');
+
+  let order = [];
+  let dragSrc = null;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function render() {
+    list.innerHTML = '';
+    order.forEach((item, idx) => {
+      const li = document.createElement('li');
+      li.className = 'card';
+      li.draggable = true;
+      li.dataset.id = item.id;
+      li.innerHTML = `
+        <div class="pos">${idx + 1}</div>
+        <div class="text">${item.text}</div>
+        <div class="arrows">
+          <button class="up" aria-label="Nach oben" ${idx === 0 ? 'disabled' : ''}>▲</button>
+          <button class="down" aria-label="Nach unten" ${idx === order.length - 1 ? 'disabled' : ''}>▼</button>
+        </div>
+      `;
+      attachEvents(li, idx);
+      list.appendChild(li);
+    });
+    update();
+  }
+
+  function attachEvents(li, idx) {
+    li.querySelector('.up').addEventListener('click', () => move(idx, -1));
+    li.querySelector('.down').addEventListener('click', () => move(idx, 1));
+    li.addEventListener('dragstart', e => {
+      dragSrc = idx;
+      li.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/plain', String(idx));
+    });
+    li.addEventListener('dragend', () => {
+      li.classList.remove('dragging');
+      document.querySelectorAll('.card').forEach(c => {
+        c.classList.remove('over-top', 'over-bottom');
+      });
+    });
+    li.addEventListener('dragover', e => {
+      e.preventDefault();
+      if (dragSrc === null || dragSrc === idx) return;
+      const rect = li.getBoundingClientRect();
+      const after = e.clientY > rect.top + rect.height / 2;
+      li.classList.toggle('over-top', !after);
+      li.classList.toggle('over-bottom', after);
+    });
+    li.addEventListener('dragleave', () => {
+      li.classList.remove('over-top', 'over-bottom');
+    });
+    li.addEventListener('drop', e => {
+      e.preventDefault();
+      if (dragSrc === null || dragSrc === idx) return;
+      const rect = li.getBoundingClientRect();
+      const after = e.clientY > rect.top + rect.height / 2;
+      const dropAt = after ? idx + 1 : idx;
+      const item = order.splice(dragSrc, 1)[0];
+      const insertAt = dropAt > dragSrc ? dropAt - 1 : dropAt;
+      order.splice(insertAt, 0, item);
+      dragSrc = null;
+      render();
+    });
+  }
+
+  function move(idx, delta) {
+    const target = idx + delta;
+    if (target < 0 || target >= order.length) return;
+    [order[idx], order[target]] = [order[target], order[idx]];
+    render();
+  }
+
+  function update() {
+    let correct = 0;
+    document.querySelectorAll('.card').forEach((card, idx) => {
+      const id = card.dataset.id;
+      const isCorrect = correctOrder[idx].id === id;
+      card.classList.toggle('correct', isCorrect);
+      card.classList.toggle('wrong', !isCorrect);
+      if (isCorrect) correct++;
+    });
+    correctCountEl.textContent = String(correct);
+    if (correct === correctOrder.length) {
+      winBox.classList.add('visible');
+    } else {
+      winBox.classList.remove('visible');
+    }
+  }
+
+  function start() {
+    order = shuffle(correctOrder);
+    // Sicherstellen, dass nicht zufällig schon korrekt sortiert ist
+    if (order.every((it, i) => it.id === correctOrder[i].id)) {
+      [order[0], order[order.length - 1]] = [order[order.length - 1], order[0]];
+    }
+    render();
+  }
+
+  resetBtn.addEventListener('click', start);
+  start();
+})();
+</script>
+
+</body>
+</html>

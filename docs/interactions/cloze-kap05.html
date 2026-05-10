@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Lückentext — Zitations-Syntax</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --green: #2d8c2d;
+    --green-bg: #f3fff3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .stats {
+    display: flex; gap: 1.5rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+  }
+  .stats span strong { color: var(--th-red); margin-right: 0.3rem; }
+  .text {
+    background: var(--gray-100);
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0 1.5rem;
+    line-height: 1.85;
+    font-size: 1.05rem;
+  }
+  .blank {
+    display: inline-block;
+    min-width: 11rem;
+    padding: 0.1rem 0.5rem;
+    background: var(--paper);
+    border: 1px dashed var(--th-magenta);
+    text-align: center;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.95em;
+    color: var(--gray-500);
+    vertical-align: baseline;
+  }
+  .blank.target-active {
+    border-style: solid;
+    background: rgba(180,48,146,0.08);
+  }
+  .blank.filled {
+    background: var(--green-bg);
+    border: 1px solid var(--green);
+    color: var(--green);
+    font-weight: 600;
+  }
+  .blank.wrong {
+    background: rgba(200,30,15,0.12);
+    border-color: var(--th-red);
+    color: var(--th-red);
+  }
+  .bank-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
+    margin-bottom: 0.4rem;
+  }
+  .bank {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .tile {
+    background: var(--paper);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--th-magenta);
+    padding: 0.5rem 0.8rem;
+    cursor: grab;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.95em;
+    color: var(--th-red);
+    user-select: none;
+  }
+  .tile:active { cursor: grabbing; }
+  .tile.selected {
+    outline: 2px solid var(--th-magenta);
+    outline-offset: -2px;
+    background: rgba(180,48,146,0.08);
+  }
+  .tile.used { opacity: 0.3; cursor: default; pointer-events: none; }
+  .controls {
+    margin: 1.25rem 0 0;
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+  }
+  button.btn {
+    background: var(--th-red);
+    color: var(--paper);
+    border: none;
+    padding: 0.55rem 1.1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button.btn:hover { background: var(--th-magenta); }
+  .hint { color: var(--gray-500); font-size: 0.85rem; }
+  .win {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+    display: none;
+  }
+  .win.visible { display: block; }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1>Lückentext — Zitations-Syntax in Quarto</h1>
+<p class="lead">Drei Lücken im Absatz, sechs Token in der Bank — drei davon passen, drei sind Distraktoren. Token in die Lücke ziehen oder erst Token, dann Lücke antippen. Korrekt = grün; falsch = kurz rot, Token springt zurück.</p>
+
+<div class="stats">
+  <span><strong id="filled">0</strong>von 3 Lücken korrekt</span>
+</div>
+
+<p class="text" id="paragraph">
+  Generative Lernaktivitäten verbessern das Behalten <span class="blank" data-target="0">_______</span>.
+  Diese Idee geht auf Mayer zurück, der das Multimedia-Prinzip <span class="blank" data-target="1">_______</span> ausführlich beschreibt.
+  Wer beide Quellen zusammen anführen möchte, schreibt im Lauftext einfach <span class="blank" data-target="2">_______</span>.
+</p>
+
+<div class="bank-title">Citation-Token-Bank</div>
+<div class="bank" id="bank"></div>
+
+<div class="controls">
+  <button class="btn" id="reset">Zurücksetzen</button>
+  <span class="hint">Drag-Drop oder Klick: erst Token, dann Lücke.</span>
+</div>
+
+<div class="win" id="win">
+  <strong>Geschafft!</strong> Drei Lücken korrekt befüllt. Diese drei Schreibweisen sind die häufigsten — Sie haben damit über 90 % aller Zitationsfälle abgedeckt.
+</div>
+
+<footer>
+  Lückentext zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const tokens = [
+    { id: 't1', text: '[@fiorella2016]',                 correctFor: 0 },
+    { id: 't2', text: '[-@mayer2021]',                   correctFor: 1 },
+    { id: 't3', text: '[@fiorella2016; @mayer2021]',     correctFor: 2 },
+    { id: 't4', text: '[@mayer2021]',                    correctFor: -1 },
+    { id: 't5', text: '[fiorella2016]',                  correctFor: -1 },
+    { id: 't6', text: '@fiorella2016',                   correctFor: -1 }
+  ];
+
+  const bank = document.getElementById('bank');
+  const blanks = Array.from(document.querySelectorAll('.blank'));
+  const filledEl = document.getElementById('filled');
+  const winBox = document.getElementById('win');
+  const resetBtn = document.getElementById('reset');
+
+  let selectedTile = null;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function build() {
+    bank.innerHTML = '';
+    selectedTile = null;
+    filledEl.textContent = '0';
+    winBox.classList.remove('visible');
+    blanks.forEach(b => {
+      b.className = 'blank';
+      b.textContent = '_______';
+      b.dataset.filled = '';
+    });
+    shuffle(tokens).forEach(tok => {
+      const tile = document.createElement('div');
+      tile.className = 'tile';
+      tile.draggable = true;
+      tile.textContent = tok.text;
+      tile.dataset.id = tok.id;
+      tile.dataset.correct = String(tok.correctFor);
+      tile.addEventListener('click', () => selectTile(tile));
+      tile.addEventListener('dragstart', e => {
+        if (tile.classList.contains('used')) { e.preventDefault(); return; }
+        e.dataTransfer.setData('text/plain', tok.id);
+        e.dataTransfer.effectAllowed = 'move';
+        selectTile(tile);
+      });
+      bank.appendChild(tile);
+    });
+  }
+
+  function selectTile(tile) {
+    if (tile.classList.contains('used')) return;
+    if (selectedTile === tile) {
+      tile.classList.remove('selected');
+      selectedTile = null;
+      blanks.forEach(b => b.classList.remove('target-active'));
+      return;
+    }
+    if (selectedTile) selectedTile.classList.remove('selected');
+    selectedTile = tile;
+    tile.classList.add('selected');
+    blanks.forEach(b => {
+      if (!b.classList.contains('filled')) b.classList.add('target-active');
+    });
+  }
+
+  function fillBlank(blank, tile) {
+    if (blank.classList.contains('filled')) return;
+    const correct = Number(tile.dataset.correct) === Number(blank.dataset.target);
+    if (correct) {
+      blank.textContent = tile.textContent;
+      blank.classList.remove('target-active');
+      blank.classList.add('filled');
+      blank.dataset.filled = tile.dataset.id;
+      tile.classList.add('used');
+      tile.classList.remove('selected');
+      selectedTile = null;
+      blanks.forEach(b => b.classList.remove('target-active'));
+      const filled = blanks.filter(b => b.classList.contains('filled')).length;
+      filledEl.textContent = String(filled);
+      if (filled === blanks.length) winBox.classList.add('visible');
+    } else {
+      blank.classList.add('wrong');
+      blank.textContent = tile.textContent;
+      setTimeout(() => {
+        blank.classList.remove('wrong');
+        blank.textContent = '_______';
+      }, 700);
+      tile.classList.remove('selected');
+      selectedTile = null;
+      blanks.forEach(b => b.classList.remove('target-active'));
+    }
+  }
+
+  blanks.forEach(blank => {
+    blank.addEventListener('click', () => {
+      if (selectedTile && !blank.classList.contains('filled')) {
+        fillBlank(blank, selectedTile);
+      }
+    });
+    blank.addEventListener('dragover', e => {
+      if (!blank.classList.contains('filled')) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+      }
+    });
+    blank.addEventListener('drop', e => {
+      e.preventDefault();
+      const id = e.dataTransfer.getData('text/plain');
+      const tile = bank.querySelector(`[data-id="${id}"]`);
+      if (tile && !blank.classList.contains('filled')) {
+        fillBlank(blank, tile);
+      }
+    });
+  });
+
+  resetBtn.addEventListener('click', build);
+  build();
+})();
+</script>
+
+</body>
+</html>

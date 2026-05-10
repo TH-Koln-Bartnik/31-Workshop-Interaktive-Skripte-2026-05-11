@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Hot-Spot auf Code — Bilder, Tabellen, Verweise</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --green: #2d8c2d;
+    --green-bg: #e8f7e8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .progress {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+  .progress strong { color: var(--th-red); }
+  .prompt {
+    background: var(--gray-100);
+    border-left: 4px solid var(--th-magenta);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 1rem;
+  }
+  .prompt strong { color: var(--th-magenta); }
+  .code {
+    background: #fcfcfd;
+    border: 1px solid var(--gray-200);
+    border-left: 3px solid var(--th-magenta);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .tok {
+    cursor: pointer;
+    padding: 0.05rem 0.05rem;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+  .tok:hover:not(.locked):not(.flash-wrong) { background: rgba(180,48,146,0.12); }
+  .tok.locked-correct {
+    background: var(--green-bg);
+    color: var(--green);
+    font-weight: 600;
+    cursor: default;
+    outline: 1px solid var(--green);
+  }
+  .tok.flash-wrong {
+    background: rgba(200,30,15,0.2);
+    outline: 1px solid var(--th-red);
+  }
+  .feedback {
+    margin: 0.75rem 0;
+    padding: 0.6rem 0.9rem;
+    background: var(--gray-100);
+    font-size: 0.92rem;
+    color: var(--ink);
+    border-left: 3px solid var(--gray-200);
+    display: none;
+  }
+  .feedback.visible { display: block; }
+  .feedback strong { color: var(--th-magenta); }
+  .controls {
+    margin: 1rem 0 0;
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+  }
+  button.btn {
+    background: var(--th-red);
+    color: var(--paper);
+    border: none;
+    padding: 0.55rem 1.1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button.btn:hover { background: var(--th-magenta); }
+  .summary {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+    display: none;
+  }
+  .summary.visible { display: block; }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1>Hot-Spot — finden Sie die drei Bestandteile</h1>
+<p class="lead">Hier ein Quarto-Markdown-Snippet, wie es in Ihren Kapiteln vorkommt. Drei Aufgaben nacheinander: klicken Sie auf die jeweils gefragte Stelle. Richtig = grün und gelockt; daneben = kurz rot.</p>
+
+<div class="progress">Aufgabe <strong id="taskNum">1</strong> von 3</div>
+
+<div class="prompt" id="prompt"></div>
+
+<div class="code" id="code"></div>
+
+<div class="feedback" id="feedback"></div>
+
+<div class="controls">
+  <button class="btn" id="reset">Von vorne</button>
+</div>
+
+<div class="summary" id="summary">
+  <strong>Alle drei Bestandteile gefunden.</strong> Caption (was unter dem Bild erscheint), Label (die stabile Adresse) und der Verweis im Lauftext sitzen jetzt visuell. Wenn Sie diese Dreiteiligkeit kennen, schreiben Sie Quarto-Markdown ohne Suchen.
+</div>
+
+<footer>
+  Hot-Spot zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const tasks = [
+    {
+      target: 'caption',
+      prompt: 'Klicken Sie auf die <strong>Caption</strong> — die spätere Bildunterschrift, die unter dem Bild erscheint.',
+      explain: 'Richtig — die Caption steht in den eckigen Klammern direkt nach dem <code>!</code>. Quarto rendert sie automatisch mit „Abbildung 1: …" als Bildunterschrift.'
+    },
+    {
+      target: 'label',
+      prompt: 'Klicken Sie auf das <strong>Label</strong> — die stabile Adresse, mit der das Bild später aus dem Lauftext referenziert wird.',
+      explain: 'Richtig — das Label steht in den geschweiften Klammern, beginnt mit <code>#fig-</code> und kann zusätzliche Optionen wie <code>width=80%</code> enthalten. Ohne <code>fig-</code>-Präfix erkennt Quarto es nicht als Abbildung.'
+    },
+    {
+      target: 'ref',
+      prompt: 'Klicken Sie auf den <strong>Verweis</strong> im Lauftext — die Stelle, an der das Bild später nummeriert eingeblendet wird.',
+      explain: 'Richtig — <code>@fig-supply</code> wird beim Render zu „Abbildung 1" und bekommt automatisch den Hover-Tooltip mit der Bildvorschau.'
+    }
+  ];
+
+  const code = document.getElementById('code');
+  const prompt = document.getElementById('prompt');
+  const feedback = document.getElementById('feedback');
+  const taskNum = document.getElementById('taskNum');
+  const summary = document.getElementById('summary');
+  const resetBtn = document.getElementById('reset');
+
+  let taskIdx = 0;
+
+  function buildCode() {
+    // We render the snippet as a sequence of tokens. Each .tok element is clickable.
+    // Targets carry data-target = caption/label/ref.
+    const parts = [
+      ['other', '!'],
+      ['other', '['],
+      ['target', 'Aufbau einer typischen Versorgungskette. Eigene Darstellung.', 'caption'],
+      ['other', ']'],
+      ['other', '(../images/sc.png)'],
+      ['target', '{#fig-supply width=80%}', 'label'],
+      ['other', '\n\n'],
+      ['other', 'Ein typisches Beispiel zeigt '],
+      ['target', '@fig-supply', 'ref'],
+      ['other', '.']
+    ];
+    code.innerHTML = '';
+    parts.forEach(p => {
+      const span = document.createElement('span');
+      span.className = 'tok';
+      span.textContent = p[1];
+      if (p[0] === 'target') {
+        span.dataset.target = p[2];
+      } else {
+        span.dataset.target = 'other';
+      }
+      span.addEventListener('click', () => onClick(span));
+      code.appendChild(span);
+    });
+  }
+
+  function onClick(span) {
+    if (taskIdx >= tasks.length) return;
+    if (span.classList.contains('locked-correct') || span.classList.contains('flash-wrong')) return;
+    const want = tasks[taskIdx].target;
+    if (span.dataset.target === want) {
+      span.classList.add('locked-correct');
+      feedback.innerHTML = tasks[taskIdx].explain;
+      feedback.classList.add('visible');
+      taskIdx++;
+      if (taskIdx >= tasks.length) {
+        prompt.innerHTML = '<strong>Geschafft.</strong> Alle drei Stellen markiert.';
+        summary.classList.add('visible');
+        taskNum.textContent = '3';
+      } else {
+        setTimeout(() => {
+          taskNum.textContent = String(taskIdx + 1);
+          prompt.innerHTML = tasks[taskIdx].prompt;
+          feedback.classList.remove('visible');
+        }, 1100);
+      }
+    } else {
+      span.classList.add('flash-wrong');
+      setTimeout(() => span.classList.remove('flash-wrong'), 600);
+    }
+  }
+
+  function reset() {
+    taskIdx = 0;
+    summary.classList.remove('visible');
+    feedback.classList.remove('visible');
+    taskNum.textContent = '1';
+    prompt.innerHTML = tasks[0].prompt;
+    buildCode();
+  }
+
+  resetBtn.addEventListener('click', reset);
+  reset();
+})();
+</script>
+
+</body>
+</html>
