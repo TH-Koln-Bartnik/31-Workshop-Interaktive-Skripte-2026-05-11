@@ -179,6 +179,12 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlagen Sie mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Welche Stichpunkte sollen mit Appear-Effekt erscheinen? Geben Sie mir den YAML-Header und ein bis zwei Beispielfolien.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Wirkung, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap06.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
 ::: {#refs}

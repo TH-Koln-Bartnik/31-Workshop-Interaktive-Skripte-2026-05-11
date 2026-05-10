@@ -87,6 +87,12 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap03a.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
 ::: {#refs}

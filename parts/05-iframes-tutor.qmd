@@ -172,6 +172,12 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlagen Sie mir den einfachsten ersten Schritt vor und schreiben Sie den Code-Schnipsel dazu. Erklären Sie vorher in zwei Sätzen, was ich da eigentlich tue.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap05.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
 ::: {#refs}

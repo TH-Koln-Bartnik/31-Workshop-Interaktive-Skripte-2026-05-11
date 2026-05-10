@@ -158,7 +158,12 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich will in mein Quarto-Skript ein Bild und eine Tabelle einbauen, jeweils mit Bildunterschrift, Label und Verweis aus dem Fließtext. Mein Stand: [Bild liegt in `images/` / muss noch erstellt werden]; [Tabelle als Markdown / aus R-Chunk]. Schreiben Sie mir den Code-Block für Bild und Tabelle plus den Verweis im Lauftext, mit Lay-Erklärung vor jedem Schritt.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap03b.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
-::: {#refs}
-:::
+::

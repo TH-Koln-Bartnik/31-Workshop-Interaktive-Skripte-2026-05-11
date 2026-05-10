@@ -73,6 +73,12 @@ Fragen Sie den Tutor nach passenden interaktiven Elementen für Ihr Kapitel. Vor
 > Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Fragen Sie mich nach dem Lernziel des jeweiligen Kapitels und schlagen Sie dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründen Sie in einem Satz, warum genau dieses Element passt.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jedes Beispiel auf das Lernprinzip, das es illustriert, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/lernspiel-kapitel1.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
 ::: {#refs}

@@ -126,6 +126,12 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap03c.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
 
 ::: {#refs}

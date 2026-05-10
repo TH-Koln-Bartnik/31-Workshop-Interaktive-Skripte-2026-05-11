@@ -36,7 +36,7 @@ Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie
 
 #### Strang A — Wissenschaftliche Einstellung
 
-Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?* Daten: vereinfacht aus Our World in Data [@owid2024].
+Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?*
 
 ```{=html}
 <div id="plot-le" style="width:100%; height:420px;"></div>
@@ -52,6 +52,10 @@ Plotly.newPlot('plot-le', [
 }, {responsive: true});
 </script>
 ```
+
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** Our World in Data, Serie „Life expectancy at birth (historical)" [@owid2024]. Stichprobe aus den Originaldaten (5 Jahre, 3 Entitäten); vollständiger Datensatz und Methodologie unter <https://ourworldindata.org/life-expectancy>. Zur didaktischen Nutzung im Unterricht; für Forschungszwecke aktuelle CSV direkt von OWID laden.
+:::
 
 **R-Code zum Übernehmen** (wenn Sie R + `plotly` + `tibble` installiert haben):
 
@@ -104,6 +108,10 @@ Plotly.newPlot('plot-pub', [
 </script>
 ```
 
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** Eigene Schätzung in Anlehnung an die NSF Science & Engineering Indicators sowie an Bornmann, Haunschild & Mutz (2021), *Growth rates of modern science: a latent piecewise growth curve approach to model publication numbers from established and new literature databases*. Humanities and Social Sciences Communications, 8, 224. <https://doi.org/10.1057/s41599-021-00903-w>. Aktuelle Originaldaten: NSF Science & Engineering Indicators <https://ncses.nsf.gov/indicators>. Für Forschungszwecke bitte aktuelle Originalquelle nutzen.
+:::
+
 **R-Code zum Übernehmen:**
 
 ````markdown
@@ -133,7 +141,7 @@ plot_ly(pub,
 
 #### Strang C — Transparent schreiben
 
-Frage: *Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt?* Antwort zeigt: Transparenz ist wachsende Praxis.
+Frage: *Wie hat sich die Zahl der Pre-Registrierungen auf OSF entwickelt?* Antwort zeigt: Transparenz ist wachsende Praxis.
 
 ```{=html}
 <div id="plot-prereg" style="width:100%; height:420px;"></div>
@@ -149,6 +157,10 @@ Plotly.newPlot('plot-prereg', [
 }, {responsive: true});
 </script>
 ```
+
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** Eigene Schätzung in Anlehnung an die OSF-Statistik des Center for Open Science. Aktuelle Werte und Methodologie: OSF Registries Browser <https://osf.io/registries> sowie der COS Annual Report unter <https://www.cos.io/about/annual-report>. Die Größenordnungen sind belastbar, exakte Jahreswerte vor Publikation eigener Arbeiten direkt prüfen.
+:::
 
 **R-Code zum Übernehmen:**
 
@@ -241,6 +253,12 @@ Vorschlag-Prompt für dieses Kapitel:
 
 > Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Bitte schreiben Sie mir sowohl die R+plotly-Variante als auch die reine HTML+Plotly.js-Variante, damit ich beides vergleichen kann.
 :::
+
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/end-test-kap04.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

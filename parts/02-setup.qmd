@@ -171,4 +171,10 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Fragen Sie mich zurück, wenn etwas unklar ist.
 :::
 
+## End-Test
+
+Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+
+<iframe src="../interactions/memory-spiel.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
 # Literatur {.unnumbered}
