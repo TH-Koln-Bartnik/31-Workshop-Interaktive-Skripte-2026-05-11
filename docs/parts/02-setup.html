@@ -55,27 +55,7 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -265,6 +245,11 @@ div.csl-indent {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../literatur.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Literatur</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -289,7 +274,6 @@ div.csl-indent {
   <li><a href="#schritt-6-github-pages-aktivieren" id="toc-schritt-6-github-pages-aktivieren" class="nav-link" data-scroll-target="#schritt-6-github-pages-aktivieren">Schritt 6 — GitHub Pages aktivieren</a></li>
   </ul></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/02-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -326,7 +310,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Du schreibst Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+<p>Du schreibst Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(Bryan, 2018)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(Allaire et al., 2024)</span>.</p>
 </section>
 <section id="die-sechs-bausteine-lay-erklärung-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-sechs-bausteine-lay-erklärung-zuerst">Die sechs Bausteine — Lay-Erklärung zuerst</h2>
@@ -348,7 +332,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Quarto</strong></td>
 <td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
-<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(Allaire et al., 2024)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>YAML</strong></td>
@@ -398,7 +382,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <pre><code>RStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
         ↑                                                                            │
         └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘</code></pre>
-<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass dein Skript jederzeit reproduzierbar gerendert werden kann und dass du ohne Angst Änderungen vornimmst — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
+<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass dein Skript jederzeit reproduzierbar gerendert werden kann und dass du ohne Angst Änderungen vornimmst — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(2018)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
 </section>
 <section id="rstudio-als-arbeitszentrale-vier-bereiche" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</h2>
@@ -510,7 +494,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 </section>
 <section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klickst du auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für deine späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klickst du auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für deine späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(2022)</span> in seinem Skript verwendet.</p>
 </section>
 <section id="schritt-5-github-desktop-verknüpfen" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</h3>
@@ -566,20 +550,6 @@ Tutor öffnen
 <blockquote class="blockquote">
 <p>Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Frag mich zurück, wenn etwas unklar ist.</p>
 </blockquote>
-</div>
-</div>
-</section>
-<section id="literatur" class="level1 unnumbered">
-<h1 class="unnumbered">Literatur</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-allaire2024" class="csl-entry" role="listitem">
-Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C. (2024). <em>Quarto: An Open-Source Scientific and Technical Publishing System</em>. <a href="https://quarto.org/">https://quarto.org/</a>
-</div>
-<div id="ref-bryan2018" class="csl-entry" role="listitem">
-Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
-</div>
-<div id="ref-lakens2022" class="csl-entry" role="listitem">
-Lakens, D. (2022). <em>Improving Your Statistical Inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
 </div>
 </div>
 

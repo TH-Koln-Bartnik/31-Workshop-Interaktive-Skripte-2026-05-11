@@ -1,5 +1,6 @@
 ---
 title: "3a — Inhaltsverzeichnis und Literatur"
+suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
@@ -85,9 +86,4 @@ Wähle aus deinem Strang **drei Quellen**, lege sie in Zotero an, exportiere und
 Vorschlag-Prompt für dieses Kapitel:
 
 > Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Frag, wo ich gerade stehe.
-:::
-
-# Literatur {.unnumbered}
-
-::: {#refs}
 :::

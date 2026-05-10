@@ -1,5 +1,6 @@
 ---
 title: "1 — Warum interaktiv?"
+suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
@@ -71,9 +72,4 @@ Drei Beispiele, drei Prinzipien, fünf Minuten. Ziehe jedes Beispiel auf das Pri
 Frag den Tutor nach passenden interaktiven Elementen für dein Kapitel. Vorschlag-Prompt:
 
 > Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Frag mich nach dem Lernziel des jeweiligen Kapitels und schlage dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründe in einem Satz, warum genau dieses Element passt.
-:::
-
-# Literatur {.unnumbered}
-
-::: {#refs}
 :::

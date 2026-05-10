@@ -1,5 +1,6 @@
 ---
 title: "5 — iFrames, Spiele und KI-Tutor"
+suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
@@ -119,9 +120,4 @@ Drei Situationen, in denen du es lassen solltest:
 Vorschlag-Prompt für dieses Kapitel:
 
 > Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlag mir den einfachsten ersten Schritt vor und schreib den Code-Schnipsel dazu. Erkläre vorher in zwei Sätzen, was ich da eigentlich tue.
-:::
-
-# Literatur {.unnumbered}
-
-::: {#refs}
 :::

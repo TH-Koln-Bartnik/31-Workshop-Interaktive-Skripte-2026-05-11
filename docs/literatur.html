@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5 — iFrames, Spiele und KI-Tutor – Interaktive Skripte mit KI erstellen</title>
+<title>Literatur – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,64 +20,48 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../parts/06-slides-optional.html" rel="next">
-<link href="../parts/04-charts.html" rel="prev">
-<link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6656fbe30be9f1601599c2c2789eaba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./appendix/tutor-prompt.html" rel="prev">
+<link href="./images/th-koeln-logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6656fbe30be9f1601599c2c2789eaba0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -119,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/05-iframes-tutor.html"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./literatur.html"><span class="chapter-title">Literatur</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -133,14 +117,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/th-koeln-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/th-koeln-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Interaktive Skripte mit KI erstellen</a> 
+      <a href="./">Interaktive Skripte mit KI erstellen</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -170,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Willkommen</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Willkommen</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -184,37 +168,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/01-didaktik.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 — Warum interaktiv?</span></a>
+  <a href="./parts/01-didaktik.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 — Warum interaktiv?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/02-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
+  <a href="./parts/02-setup.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2 — Bausteine und Workflow</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
+  <a href="./parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
+  <a href="./parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
+  <a href="./parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Interaktive Diagramme</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
+  <a href="./parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
+  <a href="./parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
   </div>
 </li>
       </ul>
@@ -230,24 +214,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/quickstart.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick-Starter Guide</span></a>
+  <a href="./appendix/quickstart.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Quick-Starter Guide</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/troubleshooting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Trouble-Shooting</span></a>
+  <a href="./appendix/troubleshooting.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Trouble-Shooting</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
+  <a href="./appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../literatur.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Literatur</span></a>
+  <a href="./literatur.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Literatur</span></a>
   </div>
 </li>
     </ul>
@@ -255,31 +239,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhalt</h2>
-   
-  <ul>
-  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
-  <li><a href="#iframe-in-einer-zeile" id="toc-iframe-in-einer-zeile" class="nav-link" data-scroll-target="#iframe-in-einer-zeile">iFrame in einer Zeile</a></li>
-  <li><a href="#drei-wege-ein-spiel-einzubauen" id="toc-drei-wege-ein-spiel-einzubauen" class="nav-link" data-scroll-target="#drei-wege-ein-spiel-einzubauen">Drei Wege, ein Spiel einzubauen</a></li>
-  <li><a href="#ki-tutor-als-link" id="toc-ki-tutor-als-link" class="nav-link" data-scroll-target="#ki-tutor-als-link">KI-Tutor als Link</a>
-  <ul class="collapse">
-  <li><a href="#option-1-custom-gpt-auf-chatgpt-heute-genutzt" id="toc-option-1-custom-gpt-auf-chatgpt-heute-genutzt" class="nav-link" data-scroll-target="#option-1-custom-gpt-auf-chatgpt-heute-genutzt">Option 1 — Custom GPT auf ChatGPT (heute genutzt)</a></li>
-  <li><a href="#option-2-custom-gpt-in-der-academiccloud" id="toc-option-2-custom-gpt-in-der-academiccloud" class="nav-link" data-scroll-target="#option-2-custom-gpt-in-der-academiccloud">Option 2 — Custom GPT in der AcademicCloud</a></li>
-  <li><a href="#option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" id="toc-option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" class="nav-link" data-scroll-target="#option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor">Option 3 — eigenes statisches Widget oder voll gehosteter Tutor</a></li>
-  </ul></li>
-  <li><a href="#wann-kein-ki-tutor" id="toc-wann-kein-ki-tutor" class="nav-link" data-scroll-target="#wann-kein-ki-tutor">Wann <strong>kein</strong> KI-Tutor?</a></li>
-  <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/05-iframes-tutor.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/05-iframes-tutor.html"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></h1>
+<h1 class="title"><span class="chapter-title">Literatur</span></h1>
 </div>
 
 
@@ -296,190 +264,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
-<ul>
-<li>ein <strong>interaktives Quiz oder Spiel</strong> als iFrame in dein Skript einbinden,</li>
-<li>den Unterschied zwischen statischem HTML, <strong>H5P</strong> und externer Einbettung benennen,</li>
-<li>einen <strong>KI-Tutor</strong> als Link einbauen, der die Lernenden begleitet — didaktisch begründet.</li>
-</ul>
-</section>
-<section id="worum-es-im-kern-geht" class="level2">
-<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser <span class="citation" data-cites="karpicke2011 fiorella2016">(Fiorella &amp; Mayer, 2016; Karpicke &amp; Blunt, 2011)</span>. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert <span class="citation" data-cites="mollick2023 kasneci2023">(Kasneci et al., 2023; Mollick &amp; Mollick, 2023)</span>.</p>
-</section>
-<section id="iframe-in-einer-zeile" class="level2">
-<h2 class="anchored" data-anchor-id="iframe-in-einer-zeile">iFrame in einer Zeile</h2>
-<p>Ein iFrame bettet eine fremde Seite in deine ein:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://h5p.org/h5p/embed/617"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"100%"</span><span class="ot"> height</span><span class="op">=</span><span class="st">"500"</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">"0"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Höhe nach Inhalt anpassen, Breite immer 100 %, <code>frameborder="0"</code> für ein sauberes Aussehen.</p>
-</section>
-<section id="drei-wege-ein-spiel-einzubauen" class="level2">
-<h2 class="anchored" data-anchor-id="drei-wege-ein-spiel-einzubauen">Drei Wege, ein Spiel einzubauen</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Variante</th>
-<th>Aufwand</th>
-<th>Vorteil</th>
-<th>Nachteil</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>A — Statisches HTML</strong> (eigenes Widget)</td>
-<td>hoch zur Erstellung, niedrig danach</td>
-<td>volle Kontrolle, kein Konto, läuft offline</td>
-<td>erfordert HTML/JS-Kenntnisse oder KI-Hilfe</td>
-</tr>
-<tr class="even">
-<td><strong>B — H5P</strong> (h5p.org / Moodle / WordPress)</td>
-<td>mittel</td>
-<td>viele fertige Vorlagen (Quiz, Drag-Drop, Memory)</td>
-<td>erfordert Konto, externe Abhängigkeit</td>
-</tr>
-<tr class="odd">
-<td><strong>C — externer Editor</strong> (Genially, Kahoot, Quizizz)</td>
-<td>niedrig</td>
-<td>schnell, hübsch, kollaborativ</td>
-<td>Werbung, externe Datenhaltung, oft Login nötig</td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Alle im Skript zitierten und zur Vertiefung empfohlenen Quellen, alphabetisch nach Erstautor, im <strong>APA-7-Format mit deutscher Lokalisierung</strong> (DGPs-konform). Die Liste wird automatisch aus <code>references.bib</code> generiert.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-allaire2024" class="csl-entry" role="listitem">
+Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C.
+(2024). <em>Quarto: An open-source scientific and technical publishing
+system</em>. <a href="https://quarto.org/">https://quarto.org/</a>
 </div>
-<div class="callout-title-container flex-fill">
-Mach mit (Variante A — statisches HTML)
+<div id="ref-bergstrom2024" class="csl-entry" role="listitem">
+Bergstrom, C. T., &amp; West, J. D. (2024). <em>Calling bullshit:
+Wissenschaftliches arbeiten und kritisches denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
 </div>
+<div id="ref-bryan2018" class="csl-entry" role="listitem">
+Bryan, J. (2018). Excuse me, do you have a moment to talk about version
+control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
 </div>
-<div class="callout-body-container callout-body">
-<p>Schau dir das <strong>Lernspiel aus Kapitel 1</strong> (<a href="../interactions/lernspiel-kapitel1.html" target="_blank">interactions/lernspiel-kapitel1.html</a>) im Browser an. Öffne die Datei in RStudio (im <strong>Files</strong>-Tab anklicken → Open in editor) — sie ist eine einzige HTML-Datei, ohne Backend. Diesen Bauplan kannst du selbst (oder dein KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.</p>
-<p><strong>Strang-Beispiele:</strong></p>
-<ul>
-<li>Strang A — Drag-and-Drop: „Welche Aussage ist eine Hypothese, welche eine Behauptung?”</li>
-<li>Strang B — Multiple Choice: „Welche der drei Quellen ist primärwissenschaftlich?”</li>
-<li>Strang C — Memory: „Methodenbegriff zu transparenter Beschreibung”</li>
-</ul>
+<div id="ref-fiorella2016" class="csl-entry" role="listitem">
+Fiorella, L., &amp; Mayer, R. E. (2016). Eight ways to promote
+generative learning. <em>Educational Psychology Review</em>,
+<em>28</em>(4), 717–741. <a href="https://doi.org/10.1007/s10648-015-9348-9">https://doi.org/10.1007/s10648-015-9348-9</a>
 </div>
+<div id="ref-healy2018" class="csl-entry" role="listitem">
+Healy, K. (2018). <em>Data visualization: A practical introduction</em>.
+Princeton University Press.
 </div>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="ref-karpicke2011" class="csl-entry" role="listitem">
+Karpicke, J. D., &amp; Blunt, J. R. (2011). Retrieval practice produces
+more learning than elaborative studying with concept mapping.
+<em>Science</em>, <em>331</em>(6018), 772–775. <a href="https://doi.org/10.1126/science.1199327">https://doi.org/10.1126/science.1199327</a>
 </div>
-<div class="callout-title-container flex-fill">
-Mach mit (Variante B — H5P, optional)
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D.,
+Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E.,
+Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J.,
+Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023).
+<span>ChatGPT</span> for good? On opportunities and challenges of large
+language models for education. <em>Learning and Individual
+Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
 </div>
+<div id="ref-lakens2022" class="csl-entry" role="listitem">
+Lakens, D. (2022). <em>Improving your statistical inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
 </div>
-<div class="callout-body-container callout-body">
-<p>Lege ein kostenloses Konto auf <a href="https://h5p.org" class="uri">https://h5p.org</a> an. Wähle <strong>Drag the Words</strong>, baue ein Mini-Quiz zu drei Begriffen aus deinem Strang. Klicke „Embed”, kopiere den iFrame-Code, füge ihn in dein Kapitel ein. Render.</p>
+<div id="ref-mayer2021" class="csl-entry" role="listitem">
+Mayer, R. E. (2021). <em>Multimedia learning</em> (3rd ed.). Cambridge
+University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
 </div>
+<div id="ref-mollick2023" class="csl-entry" role="listitem">
+Mollick, E. R., &amp; Mollick, L. (2023). Assigning <span>AI</span>:
+Seven approaches for students, with prompts. <em>SSRN Working
+Paper</em>. <a href="https://doi.org/10.2139/ssrn.4475995">https://doi.org/10.2139/ssrn.4475995</a>
 </div>
-</section>
-<section id="ki-tutor-als-link" class="level2">
-<h2 class="anchored" data-anchor-id="ki-tutor-als-link">KI-Tutor als Link</h2>
-<p>Der Tutor läuft <strong>nicht</strong> im iFrame, sondern in einem zweiten Tab. Du legst einen GPT (oder Custom GPT) mit System-Prompt an, holst dir den öffentlichen Link, baust ihn als Markdown-Link an passende Stellen im Skript ein. Drei Hosting-Varianten zur Auswahl:</p>
-<section id="option-1-custom-gpt-auf-chatgpt-heute-genutzt" class="level3">
-<h3 class="anchored" data-anchor-id="option-1-custom-gpt-auf-chatgpt-heute-genutzt">Option 1 — Custom GPT auf ChatGPT (heute genutzt)</h3>
-<p>Einfachste Variante, weltweit verfügbar, kein Hochschul-Login nötig. Im Skript einbauen:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Frag den Skript-Tutor →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Der vorbereitete Tutor für diesen Workshop liegt unter dem oben verlinkten URL — der System-Prompt steckt dort schon drin. Die Lernenden klicken, ChatGPT-Login öffnet sich (kostenlos), der Tutor antwortet sofort im Workshop-Kontext.</p>
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="ref-roediger2006" class="csl-entry" role="listitem">
+Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning:
+Taking memory tests improves long-term retention. <em>Psychological
+Science</em>, <em>17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">https://doi.org/10.1111/j.1467-9280.2006.01693.x</a>
 </div>
-<div class="callout-body-container">
-<p><strong>Datenschutz:</strong> ChatGPT speichert Konversationen auf US-Servern. Für offene Lehre ohne personenbezogene Daten unkritisch. Wenn du europäische Datenhaltung brauchst, nimm Option 2.</p>
+<div id="ref-owid2024" class="csl-entry" role="listitem">
+Roser, M., Ritchie, H., Mathieu, E., &amp; Ortiz-Ospina, E. (2024).
+<em>Our world in data</em>. <a href="https://ourworldindata.org/">https://ourworldindata.org/</a>
 </div>
+<div id="ref-tufte2001" class="csl-entry" role="listitem">
+Tufte, E. R. (2001). <em>The visual display of quantitative
+information</em> (2nd ed.). Graphics Press.
 </div>
-</div>
-</section>
-<section id="option-2-custom-gpt-in-der-academiccloud" class="level3">
-<h3 class="anchored" data-anchor-id="option-2-custom-gpt-in-der-academiccloud">Option 2 — Custom GPT in der AcademicCloud</h3>
-<p>Variante mit europäischer Datenhaltung und Hochschul-Login. Du legst einen GPT mit dem vorbereiteten System-Prompt an (siehe <a href="../appendix/tutor-prompt.html">Anhang Tutor-Prompt</a>) und verlinkst ihn:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Frag den Skript-Tutor →</span><span class="co">](https://chat.academiccloud.de/chat/DEIN-LINK)</span>{target="_blank"}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Lernende loggen sich mit Hochschul-Credentials ein.</p>
-</section>
-<section id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" class="level3">
-<h3 class="anchored" data-anchor-id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor">Option 3 — eigenes statisches Widget oder voll gehosteter Tutor</h3>
-<p>Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: <a href="https://main.difctumi6okdj.amplifyapp.com/" target="_blank">BWL1 Tutor-Chatbot</a>). Mollick und Mollick <span class="citation" data-cites="mollick2023">(2023)</span> geben einen Überblick über die didaktischen Designentscheidungen.</p>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Mach mit
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Wir nutzen heute den <strong>vorbereiteten Workshop-Tutor</strong> auf ChatGPT — du musst keinen eigenen GPT bauen, sondern nur den Link einbauen:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Frag den Skript-Tutor →</span><span class="co">](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte)</span>{target="_blank"}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Setze diesen Link an passende Stelle in dein Skript (z. B. in einen Callout-Tip am Kapitelende). Render und prüf den Klick.</p>
-<p>Wer einen <strong>eigenen</strong> Tutor mit eigenem System-Prompt bauen will, springt zum <a href="../appendix/tutor-prompt.html">Tutor-Prompt-Anhang</a> und legt sich Option 1 oder Option 2 selbst an.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="wann-kein-ki-tutor" class="level2">
-<h2 class="anchored" data-anchor-id="wann-kein-ki-tutor">Wann <strong>kein</strong> KI-Tutor?</h2>
-<p>Drei Situationen, in denen du es lassen solltest:</p>
-<ul>
-<li><strong>Klar definierte Faktenfragen</strong> — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.</li>
-<li><strong>Sensible persönliche Themen</strong> — der Tutor soll Lernen begleiten, keine Beratung ersetzen.</li>
-<li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(Kasneci et al., 2023)</span>.</li>
-</ul>
-<div class="callout callout-style-simple callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Was, wenn …
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>iFrame zeigt nichts an?</strong> → URL prüfen, oft fehlt <code>https://</code>. Manche Seiten erlauben kein Embedding (HTTP-Header <code>X-Frame-Options</code>) — dann nur als Link verwenden.</li>
-<li><strong>iFrame zu kurz, Inhalt abgeschnitten?</strong> → <code>height</code> höher setzen, oder <code>style="height: 90vh"</code> für 90 % der Bildschirmhöhe.</li>
-<li><strong>AcademicCloud-Link funktioniert für andere nicht?</strong> → Sharing aktivieren in den GPT-Einstellungen, „öffentlich” oder „mit Link”.</li>
-<li><strong>Tutor antwortet auf alles, auch außerhalb des Themas?</strong> → System-Prompt nachschärfen, explizit Grenzen setzen („Antworte nur zu Quarto-Workflow-Fragen”).</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="tutor" class="level2">
-<h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
-<div class="callout callout-style-simple callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tutor öffnen
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
-<p>Vorschlag-Prompt für dieses Kapitel:</p>
-<blockquote class="blockquote">
-<p>Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: […]. Schlag mir den einfachsten ersten Schritt vor und schreib den Code-Schnipsel dazu. Erkläre vorher in zwei Sätzen, was ich da eigentlich tue.</p>
-</blockquote>
+<div id="ref-wickham2019" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D.,
+François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M.,
+Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J.,
+Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to
+the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
+1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -888,14 +746,11 @@ Tutor öffnen
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../parts/04-charts.html" class="pagination-link" aria-label="4 — Interaktive Diagramme">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">4 — Interaktive Diagramme</span></span>
+      <a href="./appendix/tutor-prompt.html" class="pagination-link" aria-label="KI-Tutor: Link und System-Prompt">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../parts/06-slides-optional.html" class="pagination-link" aria-label="6 — Slides mit Quarto (optional)">
-        <span class="nav-page-text"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -906,7 +761,7 @@ Tutor öffnen
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/05-iframes-tutor.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/literatur.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>
@@ -916,5 +771,5 @@ Tutor öffnen
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

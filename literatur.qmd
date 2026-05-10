@@ -1,0 +1,10 @@
+---
+title: "Literatur"
+nocite: |
+  @*
+---
+
+Alle im Skript zitierten und zur Vertiefung empfohlenen Quellen, alphabetisch nach Erstautor, im **APA-7-Format mit deutscher Lokalisierung** (DGPs-konform). Die Liste wird automatisch aus `references.bib` generiert.
+
+::: {#refs}
+:::

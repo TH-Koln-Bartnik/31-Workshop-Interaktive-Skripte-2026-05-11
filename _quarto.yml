@@ -36,6 +36,7 @@ book:
         - appendix/quickstart.qmd
         - appendix/troubleshooting.qmd
         - appendix/tutor-prompt.qmd
+    - literatur.qmd
   page-footer:
     left: "© 2026 Roman Bartnik · CC BY-SA 4.0"
     right: "Erstellt mit [Quarto](https://quarto.org)"
