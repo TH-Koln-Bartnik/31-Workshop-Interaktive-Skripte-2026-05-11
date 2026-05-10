@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mini-Simulation: Kursdesigner unter Zeitdruck</title>
+<style>
+:root{
+  --th-red:#c81e0f;
+  --th-magenta:#b43092;
+  --th-orange:#ea5a00;
+  --charcoal:#2b2f36;
+  --muted:#6b7280;
+  --paper:#fffdf8;
+  --soft:#f7f3ee;
+  --line:#e6e6ea;
+  --ok:#1f7a4d;
+  --warn:#a85d00;
+  --bad:#a4161a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fffdf8,#faf7f2);color:var(--charcoal);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+.app{max-width:1100px;margin:0 auto;padding:22px}
+.hero{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:22px;padding:20px 22px;box-shadow:0 10px 28px rgba(43,47,54,.06);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,30,15,.06),rgba(180,48,146,.05),transparent 55%);pointer-events:none}
+h1{font-size:clamp(1.35rem,2.7vw,2.1rem);margin:.1rem 0 .4rem;letter-spacing:-.02em;position:relative}
+.subtitle{color:var(--muted);margin:0;max-width:78ch;position:relative}.tag{display:inline-block;border:1px solid rgba(180,48,146,.25);background:#fff;border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--th-magenta);font-weight:700;margin-bottom:8px;position:relative}
+.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 7px 20px rgba(43,47,54,.05)}
+.card h2,.card h3{margin-top:0}.small{font-size:.92rem;color:var(--muted)}
+button,.btn{border:0;background:var(--charcoal);color:#fff;border-radius:999px;padding:10px 14px;font-weight:750;cursor:pointer;transition:.15s ease;display:inline-flex;gap:8px;align-items:center;margin:3px 4px 3px 0}button:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(43,47,54,.15)}button.secondary{background:#fff;color:var(--charcoal);border:1px solid var(--line)}button.accent{background:var(--th-red)}button.magenta{background:var(--th-magenta)}button.orange{background:var(--th-orange)}button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;margin:8px 0;color:var(--charcoal);font-weight:650;cursor:pointer}.option:hover{border-color:var(--th-magenta);background:#fff9fd}.option.selected{border-color:var(--th-magenta);box-shadow:0 0 0 3px rgba(180,48,146,.12)}.option.correct{border-color:var(--ok);background:#eefaf3}.option.wrong{border-color:var(--bad);background:#fff1f1}
+.feedback{border-radius:14px;padding:12px 14px;margin-top:12px;border:1px solid var(--line);background:#fff}.feedback.ok{border-color:rgba(31,122,77,.35);background:#effaf3;color:#155538}.feedback.warn{border-color:rgba(168,93,0,.35);background:#fff8ed;color:#744000}.feedback.bad{border-color:rgba(164,22,26,.35);background:#fff1f1;color:#751014}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:#2b2f36;color:#f8fafc;border-radius:14px;padding:12px;white-space:pre-wrap;overflow:auto;font-size:.9rem}.pill{display:inline-block;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 9px;margin:2px;font-size:.82rem;font-weight:700}.progress{height:12px;background:#eee;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--th-red),var(--th-magenta));width:0%;transition:.25s ease}.score{font-weight:800;color:var(--th-magenta)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}label{font-weight:750;display:block;margin-top:10px;margin-bottom:4px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.muted{color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0}.check input{width:auto;margin-top:3px}.meter{height:14px;border-radius:999px;background:#eee;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--th-orange),var(--th-red),var(--th-magenta));transition:.25s ease}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid #ddd;border-bottom-width:2px;border-radius:6px;padding:1px 5px;background:#fff}.hidden{display:none!important}.center{text-align:center}.divider{height:1px;background:var(--line);margin:14px 0}.mini{font-size:.82rem}.callout{border-left:5px solid var(--th-red);background:#fff7f5;padding:12px 14px;border-radius:12px}.answer{background:#fafafa;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:8px}
+</style>
+</head>
+<body>
+<main class="app">
+  <section class="hero">
+    <span class="tag">Interaktives Skript · statisches HTML</span>
+    <h1>Mini-Simulation: Kursdesigner unter Zeitdruck</h1>
+    <p class="subtitle">Treffen Sie Designentscheidungen und beobachten Sie Zielkonflikte zwischen Aufwand, Datenschutz, Didaktik und Wartbarkeit.</p>
+  </section>
+  
+<section class="grid two" style="margin-top:16px">
+ <div class="card"><h2>Designentscheidung</h2><div id="scene"></div></div>
+ <div class="card"><h2>Projektwerte</h2><p class="small">Ziel: hoher didaktischer Wert und hohe Wartbarkeit, ohne Datenschutz und Aufwand aus dem Blick zu verlieren.</p><div id="meters"></div><div id="feedback" class="feedback warn">Treffen Sie eine Entscheidung im ersten Szenario.</div><button class="secondary" onclick="reset()">Neu starten</button></div>
+</section>
+
+</main>
+<script>
+const dims=['Aufwand niedrig','Datenschutz gut','Didaktischer Wert','Wartbarkeit'];
+const scenes=[
+ {s:'Sie brauchen bis morgen eine kurze Aktivierung zu drei Begriffen.', opts:[['H5P-Standardübung nutzen',[4,3,3,3],'Schnell und solide, falls H5P verfügbar ist.'],['Komplexe eigene Simulation bauen',[1,5,4,2],'Didaktisch interessant, aber für morgen zu aufwendig.'],['Nur langer Textabschnitt',[5,5,1,5],'Effizient, aber wenig aktivierend.']]},
+ {s:'Sie wollen ein offenes Skript ohne Login und ohne externe Datenhaltung veröffentlichen.', opts:[['Eigenes statisches HTML',[3,5,4,4],'Gute Balance aus Kontrolle und Datenschutz.'],['Externes Quiztool einbetten',[4,2,3,2],'Schnell, aber abhängig von externer Plattform.'],['Custom GPT in iFrame einbetten',[2,2,3,1],'Technisch und datenschutzbezogen problematisch; Link wäre eher sauber.']]},
+ {s:'Lernende sollen bei Fehlern in iFrames selbst Ursachen finden.', opts:[['Debugging-Spiel',[3,5,5,4],'Sehr passend, weil die Denkhandlung direkt geübt wird.'],['Multiple-Choice-Faktenquiz',[4,5,2,5],'Einfach, aber weniger transferstark.'],['Externe Präsentation verlinken',[5,4,1,4],'Informiert, trainiert aber kein Diagnosehandeln.']]},
+ {s:'Sie wollen die fertige Seite auf GitHub Pages veröffentlichen.', opts:[['Publish-Readiness-Check nutzen',[4,5,4,5],'Hilft, wiederkehrende Fehler vor Veröffentlichung zu vermeiden.'],['Alle Links manuell aus dem Gedächtnis prüfen',[2,5,2,2],'Kann funktionieren, ist aber fehleranfällig.'],['Gar nicht testen, nur rendern',[5,5,0,1],'Schnell, aber riskant.']]}
+];
+let i=0, vals=[0,0,0,0];
+function renderMeters(){document.getElementById('meters').innerHTML=dims.map((d,k)=>`<p><b>${d}</b> <span class="score">${vals[k]}</span>/20</p><div class="meter"><span style="width:${vals[k]/20*100}%"></span></div>`).join('');}
+function renderScene(){ if(i>=scenes.length){document.getElementById('scene').innerHTML='<div class="feedback ok"><b>Simulation beendet.</b> Nutzen Sie die Werte als Gesprächsanlass, nicht als objektive Bewertung.</div>'; return;} const sc=scenes[i]; document.getElementById('scene').innerHTML=`<p class="pill">Szenario ${i+1}/${scenes.length}</p><h3>${sc.s}</h3>${sc.opts.map((o,k)=>`<button class="option" onclick="choose(${k})">${o[0]}</button>`).join('')}`;}
+function choose(k){ const opt=scenes[i].opts[k]; vals=vals.map((v,j)=>v+opt[1][j]); const fb=document.getElementById('feedback'); fb.className='feedback ok'; fb.innerHTML='✅ '+opt[2]; i++; renderMeters(); setTimeout(renderScene,750);}
+function reset(){i=0; vals=[0,0,0,0]; renderMeters(); renderScene(); document.getElementById('feedback').className='feedback warn'; document.getElementById('feedback').textContent='Treffen Sie eine Entscheidung im ersten Szenario.';}
+reset();
+</script>
+</body>
+</html>

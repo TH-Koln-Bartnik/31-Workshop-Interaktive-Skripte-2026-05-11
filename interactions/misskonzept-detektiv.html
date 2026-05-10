@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Misskonzept-Detektiv</title>
+<style>
+:root{
+  --th-red:#c81e0f;
+  --th-magenta:#b43092;
+  --th-orange:#ea5a00;
+  --charcoal:#2b2f36;
+  --muted:#6b7280;
+  --paper:#fffdf8;
+  --soft:#f7f3ee;
+  --line:#e6e6ea;
+  --ok:#1f7a4d;
+  --warn:#a85d00;
+  --bad:#a4161a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fffdf8,#faf7f2);color:var(--charcoal);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+.app{max-width:1100px;margin:0 auto;padding:22px}
+.hero{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:22px;padding:20px 22px;box-shadow:0 10px 28px rgba(43,47,54,.06);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,30,15,.06),rgba(180,48,146,.05),transparent 55%);pointer-events:none}
+h1{font-size:clamp(1.35rem,2.7vw,2.1rem);margin:.1rem 0 .4rem;letter-spacing:-.02em;position:relative}
+.subtitle{color:var(--muted);margin:0;max-width:78ch;position:relative}.tag{display:inline-block;border:1px solid rgba(180,48,146,.25);background:#fff;border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--th-magenta);font-weight:700;margin-bottom:8px;position:relative}
+.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 7px 20px rgba(43,47,54,.05)}
+.card h2,.card h3{margin-top:0}.small{font-size:.92rem;color:var(--muted)}
+button,.btn{border:0;background:var(--charcoal);color:#fff;border-radius:999px;padding:10px 14px;font-weight:750;cursor:pointer;transition:.15s ease;display:inline-flex;gap:8px;align-items:center;margin:3px 4px 3px 0}button:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(43,47,54,.15)}button.secondary{background:#fff;color:var(--charcoal);border:1px solid var(--line)}button.accent{background:var(--th-red)}button.magenta{background:var(--th-magenta)}button.orange{background:var(--th-orange)}button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;margin:8px 0;color:var(--charcoal);font-weight:650;cursor:pointer}.option:hover{border-color:var(--th-magenta);background:#fff9fd}.option.selected{border-color:var(--th-magenta);box-shadow:0 0 0 3px rgba(180,48,146,.12)}.option.correct{border-color:var(--ok);background:#eefaf3}.option.wrong{border-color:var(--bad);background:#fff1f1}
+.feedback{border-radius:14px;padding:12px 14px;margin-top:12px;border:1px solid var(--line);background:#fff}.feedback.ok{border-color:rgba(31,122,77,.35);background:#effaf3;color:#155538}.feedback.warn{border-color:rgba(168,93,0,.35);background:#fff8ed;color:#744000}.feedback.bad{border-color:rgba(164,22,26,.35);background:#fff1f1;color:#751014}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:#2b2f36;color:#f8fafc;border-radius:14px;padding:12px;white-space:pre-wrap;overflow:auto;font-size:.9rem}.pill{display:inline-block;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 9px;margin:2px;font-size:.82rem;font-weight:700}.progress{height:12px;background:#eee;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--th-red),var(--th-magenta));width:0%;transition:.25s ease}.score{font-weight:800;color:var(--th-magenta)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}label{font-weight:750;display:block;margin-top:10px;margin-bottom:4px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.muted{color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0}.check input{width:auto;margin-top:3px}.meter{height:14px;border-radius:999px;background:#eee;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--th-orange),var(--th-red),var(--th-magenta));transition:.25s ease}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid #ddd;border-bottom-width:2px;border-radius:6px;padding:1px 5px;background:#fff}.hidden{display:none!important}.center{text-align:center}.divider{height:1px;background:var(--line);margin:14px 0}.mini{font-size:.82rem}.callout{border-left:5px solid var(--th-red);background:#fff7f5;padding:12px 14px;border-radius:12px}.answer{background:#fafafa;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:8px}
+</style>
+</head>
+<body>
+<main class="app">
+  <section class="hero">
+    <span class="tag">Interaktives Skript · statisches HTML</span>
+    <h1>Misskonzept-Detektiv</h1>
+    <p class="subtitle">Prüfen Sie typische Fehlannahmen zu iFrames, Embedding und KI-Tutor-Links.</p>
+  </section>
+  
+<section class="grid two" style="margin-top:16px">
+ <div class="card"><h2>Behauptung</h2><div id="claim"></div></div>
+ <div class="card"><h2>Detektiv-Protokoll</h2><p>Richtige Einschätzungen: <span class="score" id="score">0</span>/<span id="total"></span></p><div class="progress"><div class="bar" id="bar"></div></div><div id="feedback" class="feedback warn">Entscheiden Sie: wahr oder falsch?</div><button class="secondary" onclick="reset()">Neu starten</button></div>
+</section>
+
+</main>
+<script>
+const claims=[
+ {t:'Jede Website kann per iFrame eingebettet werden, wenn die URL korrekt ist.', a:false, why:'Falsch. Viele Websites blockieren Einbettung aus Sicherheitsgründen.'},
+ {t:'Bei einem Kapitel im Ordner parts/ zeigt ../interactions/datei.html eine Ebene hoch und dann in interactions/.', a:true, why:'Wahr. Genau so funktionieren relative Pfade aus Sicht der aktuellen Datei.'},
+ {t:'Wenn ein iFrame unten abgeschnitten ist, hilft oft eine größere height-Angabe.', a:true, why:'Wahr. iFrames passen ihre Höhe nicht automatisch an den Inhalt an.'},
+ {t:'Der resources-Eintrag in _quarto.yml ist nur für Bilder wichtig, nicht für HTML-Widgets.', a:false, why:'Falsch. Auch statische HTML-Dateien müssen beim Rendern in den Output kopiert werden.'},
+ {t:'Ein KI-Tutor-Link ist immer besser als ein Quiz.', a:false, why:'Falsch. Für klar definierte Wissensfragen ist ein Quiz oft effizienter.'},
+ {t:'Ein Link in einen zweiten Tab kann didaktisch sauberer sein als ein kaputter oder blockierter iFrame.', a:true, why:'Wahr. Technik sollte Lernziele unterstützen, nicht stören.'}
+];
+let i=0,score=0; document.getElementById('total').textContent=claims.length;
+function render(){ const c=claims[i]; document.getElementById('claim').innerHTML=`<p class="pill">Aussage ${i+1}/${claims.length}</p><h3>${c.t}</h3><button class="accent" onclick="choose(true)">Wahr</button><button class="magenta" onclick="choose(false)">Falsch</button>`; }
+function choose(v){ const c=claims[i], ok=v===c.a; if(ok) score++; const fb=document.getElementById('feedback'); fb.className='feedback '+(ok?'ok':'bad'); fb.innerHTML=(ok?'✅ ':'❌ ')+c.why; i++; update(); if(i<claims.length) setTimeout(render,850); else document.getElementById('claim').innerHTML='<div class="feedback ok"><b>Detektivarbeit abgeschlossen.</b> Besprechen Sie eine Aussage, bei der Sie unsicher waren.</div>'; }
+function update(){document.getElementById('score').textContent=score;document.getElementById('bar').style.width=(i/claims.length*100)+'%';}
+function reset(){i=0;score=0;update();document.getElementById('feedback').className='feedback warn';document.getElementById('feedback').textContent='Entscheiden Sie: wahr oder falsch?';render();}
+render();
+</script>
+</body>
+</html>

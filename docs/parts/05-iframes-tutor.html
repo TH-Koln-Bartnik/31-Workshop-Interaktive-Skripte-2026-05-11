@@ -328,6 +328,14 @@ div.csl-indent {
   <li><a href="#option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" id="toc-option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" class="nav-link" data-scroll-target="#option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor">Option 3 — eigenes statisches Widget oder voll gehosteter Tutor</a></li>
   </ul></li>
   <li><a href="#wann-kein-ki-tutor" id="toc-wann-kein-ki-tutor" class="nav-link" data-scroll-target="#wann-kein-ki-tutor">Wann <strong>kein</strong> KI-Tutor?</a></li>
+  <li><a href="#galerie-zehn-didaktische-ansätze-für-lernspiele" id="toc-galerie-zehn-didaktische-ansätze-für-lernspiele" class="nav-link" data-scroll-target="#galerie-zehn-didaktische-ansätze-für-lernspiele">Galerie: zehn didaktische Ansätze für Lernspiele</a>
+  <ul class="collapse">
+  <li><a href="#verstehen-grundprinzipien-aktivieren" id="toc-verstehen-grundprinzipien-aktivieren" class="nav-link" data-scroll-target="#verstehen-grundprinzipien-aktivieren">1 Verstehen — Grundprinzipien aktivieren</a></li>
+  <li><a href="#entscheiden-einbettungsformen-wählen" id="toc-entscheiden-einbettungsformen-wählen" class="nav-link" data-scroll-target="#entscheiden-einbettungsformen-wählen">2 Entscheiden — Einbettungsformen wählen</a></li>
+  <li><a href="#umsetzen-technische-grundlagen-üben" id="toc-umsetzen-technische-grundlagen-üben" class="nav-link" data-scroll-target="#umsetzen-technische-grundlagen-üben">3 Umsetzen — Technische Grundlagen üben</a></li>
+  <li><a href="#gestalten-ki-tutoren-didaktisch-entwerfen" id="toc-gestalten-ki-tutoren-didaktisch-entwerfen" class="nav-link" data-scroll-target="#gestalten-ki-tutoren-didaktisch-entwerfen">4 Gestalten — KI-Tutoren didaktisch entwerfen</a></li>
+  <li><a href="#prüfen-eigene-artefakte-entwickeln-und-veröffentlichen" id="toc-prüfen-eigene-artefakte-entwickeln-und-veröffentlichen" class="nav-link" data-scroll-target="#prüfen-eigene-artefakte-entwickeln-und-veröffentlichen">5 Prüfen — Eigene Artefakte entwickeln und veröffentlichen</a></li>
+  </ul></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
   <li><a href="#reaktivierung-aktiv-auslaufen-lassen" id="toc-reaktivierung-aktiv-auslaufen-lassen" class="nav-link" data-scroll-target="#reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
@@ -582,6 +590,98 @@ Mach mit
 <li><strong>Sensible persönliche Themen</strong> — der Tutor soll Lernen begleiten, keine Beratung ersetzen.</li>
 <li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(<a href="../index.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>)</span>.</li>
 </ul>
+</section>
+<section id="galerie-zehn-didaktische-ansätze-für-lernspiele" class="level2">
+<h2 class="anchored" data-anchor-id="galerie-zehn-didaktische-ansätze-für-lernspiele">Galerie: zehn didaktische Ansätze für Lernspiele</h2>
+<p>Bislang haben Sie zwei Beispiel-Spiele gesehen — Drag-and-Drop-Lernspiel und Zuordnungs-Übung. Beide bedienen denselben Lernmechanismus: Begriffe oder Beispiele werden auf Kategorien gezogen. Das ist ein Ansatz unter vielen.</p>
+<p>Die folgenden zehn Lernspiele zeigen die didaktische Bandbreite, die mit reiner HTML-und-JavaScript-Mechanik im iFrame möglich ist — alle ohne Backend, ohne Login, ohne externe Bibliotheken. Geordnet sind sie nach dem <strong>didaktischen Hauptziel</strong>: erst verstehen, dann entscheiden, dann technisch umsetzen, dann gestalten, zuletzt prüfen. Diese Progression („<strong>Verstehen → Entscheiden → Umsetzen → Gestalten → Prüfen</strong>”) ist gleichzeitig die Architektur, die Sie in jedem eigenen interaktiven Skript abbilden können.</p>
+<p>Jedes Spiel ist als iFrame eingebettet — Sie können sofort spielen. Der Quelltext liegt in <code>interactions/</code> im Projektordner und ist als Bauplan zum Übernehmen für eigene Spiele gedacht.</p>
+<section id="verstehen-grundprinzipien-aktivieren" class="level3">
+<h3 class="anchored" data-anchor-id="verstehen-grundprinzipien-aktivieren">1 Verstehen — Grundprinzipien aktivieren</h3>
+<section id="didaktik-bingo" class="level4">
+<h4 class="anchored" data-anchor-id="didaktik-bingo">Didaktik-Bingo</h4>
+<p><em>Welche Interaktionsform passt zu welchem Lernziel?</em> Eine Bingo-Karte mit Lehr-Methoden, die zusammen mit einem Lernziel kombiniert werden müssen.</p>
+<iframe src="../interactions/didaktik-bingo.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+<section id="misskonzept-detektiv" class="level4">
+<h4 class="anchored" data-anchor-id="misskonzept-detektiv">Misskonzept-Detektiv</h4>
+<p><em>Welche typischen Fehlannahmen über iFrames, Tools und Einbettungen gibt es?</em> Aussagen prüfen, die widersprüchlichen Common Sense und tatsächliche Funktionsweise gegenüberstellen.</p>
+<iframe src="../interactions/misskonzept-detektiv.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+</section>
+<section id="entscheiden-einbettungsformen-wählen" class="level3">
+<h3 class="anchored" data-anchor-id="entscheiden-einbettungsformen-wählen">2 Entscheiden — Einbettungsformen wählen</h3>
+<section id="embed-entscheidungsspiel" class="level4">
+<h4 class="anchored" data-anchor-id="embed-entscheidungsspiel">Embed-Entscheidungsspiel</h4>
+<p><em>Wann Link, wann iFrame, wann H5P, wann eigenes HTML?</em> Lehrszenarien werden eingeblendet, Sie wählen die jeweils passendste Einbettungsform.</p>
+<iframe src="../interactions/embed-entscheidungsspiel.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+<section id="kursdesigner-simulation" class="level4">
+<h4 class="anchored" data-anchor-id="kursdesigner-simulation">Kursdesigner-Simulation</h4>
+<p><em>Mehrere didaktische und technische Entscheidungen unter Zielkonflikten gleichzeitig.</em> Eine Mini-Simulation: Sie sind Kursdesignerin, die Zeit drängt, mehrere Constraints (Datenschutz, Aufwand, Wartbarkeit, Lerneffekt) müssen abgewogen werden.</p>
+<iframe src="../interactions/kursdesigner-simulation.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+</section>
+<section id="umsetzen-technische-grundlagen-üben" class="level3">
+<h3 class="anchored" data-anchor-id="umsetzen-technische-grundlagen-üben">3 Umsetzen — Technische Grundlagen üben</h3>
+<section id="quarto-pfad-puzzle" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-pfad-puzzle">Quarto-Pfad-Puzzle</h4>
+<p><em>Wie funktionieren relative Pfade und Ordner-Strukturen?</em> <code>../images/foo.png</code>, <code>interactions/spiel.html</code>, <code>parts/01-didaktik.qmd</code> — wo zeigt was hin? Eine Puzzle-Übung, die das Mental Model ausbaut.</p>
+<iframe src="../interactions/quarto-pfad-puzzle.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+<section id="iframe-debugging-escape-room" class="level4">
+<h4 class="anchored" data-anchor-id="iframe-debugging-escape-room">iFrame-Debugging-Escape-Room</h4>
+<p><em>Was tun, wenn die Einbettung nicht funktioniert?</em> Ein Escape-Room-Format mit typischen iFrame-Fehlern (404, X-Frame-Options, falscher Pfad, fehlende Resource), die Sie systematisch lösen müssen, statt nur „herumzuprobieren”.</p>
+<iframe src="../interactions/iframe-debug-escape-room.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+</section>
+<section id="gestalten-ki-tutoren-didaktisch-entwerfen" class="level3">
+<h3 class="anchored" data-anchor-id="gestalten-ki-tutoren-didaktisch-entwerfen">4 Gestalten — KI-Tutoren didaktisch entwerfen</h3>
+<section id="tutor-prompt-klinik" class="level4">
+<h4 class="anchored" data-anchor-id="tutor-prompt-klinik">Tutor-Prompt-Klinik</h4>
+<p><em>Wie macht man aus einem schlechten Tutor-Prompt einen guten?</em> Eine Sammlung von realen, problematischen Prompts wird vorgestellt; Sie identifizieren das Problem und wählen aus mehreren Verbesserungs-Optionen.</p>
+<iframe src="../interactions/tutor-prompt-klinik.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+<section id="feedback-qualitäts-spiel" class="level4">
+<h4 class="anchored" data-anchor-id="feedback-qualitäts-spiel">Feedback-Qualitäts-Spiel</h4>
+<p><em>Was macht lernförderliches Feedback aus?</em> Sie sehen Feedback-Texte und beurteilen ihre Qualität anhand von Kriterien aus der Feedback-Forschung — formativ, spezifisch, handlungsleitend.</p>
+<iframe src="../interactions/feedback-qualitaet-spiel.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+</section>
+<section id="prüfen-eigene-artefakte-entwickeln-und-veröffentlichen" class="level3">
+<h3 class="anchored" data-anchor-id="prüfen-eigene-artefakte-entwickeln-und-veröffentlichen">5 Prüfen — Eigene Artefakte entwickeln und veröffentlichen</h3>
+<section id="build-your-own-widget-generator" class="level4">
+<h4 class="anchored" data-anchor-id="build-your-own-widget-generator">Build-your-own-Widget-Generator</h4>
+<p><em>Eine eigene Idee für ein interaktives Lernartefakt systematisch entwickeln.</em> Ein Generator, der Sie Schritt für Schritt durch die Konzeption eines neuen Spiels für Ihr eigenes Lehrgebiet führt.</p>
+<iframe src="../interactions/widget-generator.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+</section>
+<section id="publish-readiness-check" class="level4">
+<h4 class="anchored" data-anchor-id="publish-readiness-check">Publish-Readiness-Check</h4>
+<p><em>Ist das interaktive Skript veröffentlichungsbereit?</em> Eine Checkliste in Spielform — technische, didaktische und organisatorische Aspekte vor dem Push prüfen.</p>
+<iframe src="../interactions/publish-readiness-check.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Mach mit — eines der zehn als Bauplan übernehmen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wählen Sie eines der zehn Spiele, das thematisch zu Ihrem Strang oder Ihrem eigenen Lehrgebiet passt. Öffnen Sie die zugehörige <code>.html</code>-Datei in <code>interactions/</code> in RStudio (im Files-Pane anklicken → Open in editor). Tauschen Sie die inhaltlichen Daten gegen Ihre eigenen — meistens sind das ein bis zwei Arrays in JavaScript am Anfang des <code>&lt;script&gt;</code>-Blocks. Render und prüfen.</p>
+</div>
+</div>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -601,6 +701,8 @@ Was, wenn …
 </ul>
 </div>
 </div>
+</section>
+</section>
 </section>
 <section id="tutor" class="level2">
 <h2 class="anchored" data-anchor-id="tutor">Tutor</h2>

@@ -1,0 +1,210 @@
+---
+title: "Erweiterung — 10 interaktive Artefakte für iFrames und KI-Tutor"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+## Worum es in dieser Erweiterung geht
+
+Diese Erweiterung ergänzt das Kapitel zu iFrames, Spielen und KI-Tutor um zehn kleine, statische HTML-Artefakte. Die Widgets sind so gebaut, dass sie in Quarto einfach per iFrame eingebunden werden können. Sie benötigen kein Backend, keine Datenbank und keine externen JavaScript-Bibliotheken.
+
+::: {.callout-tip}
+## Voraussetzung
+
+In `_quarto.yml` muss unter `project:` die Ressource `interactions/*` eingetragen sein:
+
+```yaml
+project:
+  type: website
+  output-dir: docs
+  resources: ["interactions/*"]
+```
+:::
+
+## Dateistruktur
+
+```text
+projektwurzel/
+├─ parts/
+│  └─ 05-iframes-tutor-erweiterung.qmd
+└─ interactions/
+   ├─ iframe-debug-escape-room.html
+   ├─ embed-entscheidungsspiel.html
+   ├─ quarto-pfad-puzzle.html
+   ├─ tutor-prompt-klinik.html
+   ├─ misskonzept-detektiv.html
+   ├─ widget-generator.html
+   ├─ didaktik-bingo.html
+   ├─ kursdesigner-simulation.html
+   ├─ feedback-qualitaet-spiel.html
+   └─ publish-readiness-check.html
+```
+
+## 1. iFrame-Debugging-Escape-Room
+
+**Didaktische Funktion:** Die Lernenden diagnostizieren typische Fehler beim Einbetten interaktiver Elemente. Dadurch wird Troubleshooting als Denkprozess geübt, nicht nur als Checkliste gelesen.
+
+```html
+<iframe src="../interactions/iframe-debug-escape-room.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/iframe-debug-escape-room.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 2. Embed-Entscheidungsspiel
+
+**Didaktische Funktion:** Die Lernenden wählen je nach Szenario zwischen eigenem HTML, H5P, externem Tool oder einfachem Link. Das trainiert begründete Technologieentscheidungen.
+
+```html
+<iframe src="../interactions/embed-entscheidungsspiel.html"
+        width="100%" height="720" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/embed-entscheidungsspiel.html"
+        width="100%" height="720" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 3. Quarto-Pfad-Puzzle
+
+**Didaktische Funktion:** Relative Pfade werden sichtbar gemacht. Die Lernenden üben, von der Position des `.qmd`-Kapitels aus zum Widget zu navigieren.
+
+```html
+<iframe src="../interactions/quarto-pfad-puzzle.html"
+        width="100%" height="700" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/quarto-pfad-puzzle.html"
+        width="100%" height="700" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 4. Tutor-Prompt-Klinik
+
+**Didaktische Funktion:** Die Lernenden verbessern schlechte Tutor-Prompts. Damit wird klar: Ein KI-Tutor braucht Rolle, Grenzen, Rückfrageverhalten und didaktisches Feedback.
+
+```html
+<iframe src="../interactions/tutor-prompt-klinik.html"
+        width="100%" height="860" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/tutor-prompt-klinik.html"
+        width="100%" height="860" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 5. Misskonzept-Detektiv
+
+**Didaktische Funktion:** Typische Fehlannahmen zu iFrames, Embedding und Tutor-Links werden explizit geprüft.
+
+```html
+<iframe src="../interactions/misskonzept-detektiv.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/misskonzept-detektiv.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 6. Build-your-own-Widget-Generator
+
+**Didaktische Funktion:** Das Widget hilft Lernenden, eine eigene Mini-Interaktion für ihr Lehrthema zu spezifizieren. Es erzeugt keine fertige App, sondern eine präzisere Spezifikation für KI oder Selbstprogrammierung.
+
+```html
+<iframe src="../interactions/widget-generator.html"
+        width="100%" height="820" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/widget-generator.html"
+        width="100%" height="820" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 7. Didaktik-Bingo
+
+**Didaktische Funktion:** Lernende verbinden Lernziele mit passenden Interaktionsformen. Das macht sichtbar, dass nicht jedes Spiel für jedes Ziel sinnvoll ist.
+
+```html
+<iframe src="../interactions/didaktik-bingo.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/didaktik-bingo.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 8. Mini-Simulation: Der Kursdesigner unter Zeitdruck
+
+**Didaktische Funktion:** Die Lernenden erleben Zielkonflikte zwischen Aufwand, Datenschutz, didaktischem Wert und Wartbarkeit.
+
+```html
+<iframe src="../interactions/kursdesigner-simulation.html"
+        width="100%" height="820" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/kursdesigner-simulation.html"
+        width="100%" height="820" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 9. Feedback-Qualitäts-Spiel
+
+**Didaktische Funktion:** Lernende unterscheiden oberflächliches, erklärendes und sokratisches Feedback. Das ist besonders wichtig, wenn KI-Tutoren oder Lernspiele Rückmeldungen geben sollen.
+
+```html
+<iframe src="../interactions/feedback-qualitaet-spiel.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/feedback-qualitaet-spiel.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## 10. Publish-Readiness-Check
+
+**Didaktische Funktion:** Vor der Veröffentlichung prüfen Lernende systematisch, ob Pfade, Ressourcen, Datenschutz, Layout und Links funktionieren.
+
+```html
+<iframe src="../interactions/publish-readiness-check.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+```
+
+<iframe src="../interactions/publish-readiness-check.html"
+        width="100%" height="760" frameborder="0"
+        style="border: 1px solid #e6e6ea; border-radius: 12px;">
+</iframe>
+
+## Anpassungshinweise
+
+- **Inhalte ändern:** Die Aufgaben, Szenarien und Lösungen stehen jeweils am Ende der HTML-Dateien im JavaScript-Bereich als Arrays oder Objekte.
+- **Farben ändern:** Die Farbwerte stehen oben im CSS-Block jeder HTML-Datei als CSS-Variablen.
+- **iFrame-Höhe ändern:** Wenn Inhalte abgeschnitten werden, erhöhen Sie den `height`-Wert oder verwenden Sie z. B. `style="height: 90vh; border: ..."`.
+- **Datenschutz:** Die Widgets laufen lokal/statisch. Erst externe Links oder eingebettete Drittanbieter-Tools erzeugen Datenschutzfragen.

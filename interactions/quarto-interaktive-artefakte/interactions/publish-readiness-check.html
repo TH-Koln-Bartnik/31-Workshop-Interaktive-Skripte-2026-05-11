@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publish-Readiness-Check</title>
+<style>
+:root{
+  --th-red:#c81e0f;
+  --th-magenta:#b43092;
+  --th-orange:#ea5a00;
+  --charcoal:#2b2f36;
+  --muted:#6b7280;
+  --paper:#fffdf8;
+  --soft:#f7f3ee;
+  --line:#e6e6ea;
+  --ok:#1f7a4d;
+  --warn:#a85d00;
+  --bad:#a4161a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fffdf8,#faf7f2);color:var(--charcoal);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+.app{max-width:1100px;margin:0 auto;padding:22px}
+.hero{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:22px;padding:20px 22px;box-shadow:0 10px 28px rgba(43,47,54,.06);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,30,15,.06),rgba(180,48,146,.05),transparent 55%);pointer-events:none}
+h1{font-size:clamp(1.35rem,2.7vw,2.1rem);margin:.1rem 0 .4rem;letter-spacing:-.02em;position:relative}
+.subtitle{color:var(--muted);margin:0;max-width:78ch;position:relative}.tag{display:inline-block;border:1px solid rgba(180,48,146,.25);background:#fff;border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--th-magenta);font-weight:700;margin-bottom:8px;position:relative}
+.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 7px 20px rgba(43,47,54,.05)}
+.card h2,.card h3{margin-top:0}.small{font-size:.92rem;color:var(--muted)}
+button,.btn{border:0;background:var(--charcoal);color:#fff;border-radius:999px;padding:10px 14px;font-weight:750;cursor:pointer;transition:.15s ease;display:inline-flex;gap:8px;align-items:center;margin:3px 4px 3px 0}button:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(43,47,54,.15)}button.secondary{background:#fff;color:var(--charcoal);border:1px solid var(--line)}button.accent{background:var(--th-red)}button.magenta{background:var(--th-magenta)}button.orange{background:var(--th-orange)}button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;margin:8px 0;color:var(--charcoal);font-weight:650;cursor:pointer}.option:hover{border-color:var(--th-magenta);background:#fff9fd}.option.selected{border-color:var(--th-magenta);box-shadow:0 0 0 3px rgba(180,48,146,.12)}.option.correct{border-color:var(--ok);background:#eefaf3}.option.wrong{border-color:var(--bad);background:#fff1f1}
+.feedback{border-radius:14px;padding:12px 14px;margin-top:12px;border:1px solid var(--line);background:#fff}.feedback.ok{border-color:rgba(31,122,77,.35);background:#effaf3;color:#155538}.feedback.warn{border-color:rgba(168,93,0,.35);background:#fff8ed;color:#744000}.feedback.bad{border-color:rgba(164,22,26,.35);background:#fff1f1;color:#751014}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:#2b2f36;color:#f8fafc;border-radius:14px;padding:12px;white-space:pre-wrap;overflow:auto;font-size:.9rem}.pill{display:inline-block;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 9px;margin:2px;font-size:.82rem;font-weight:700}.progress{height:12px;background:#eee;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--th-red),var(--th-magenta));width:0%;transition:.25s ease}.score{font-weight:800;color:var(--th-magenta)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}label{font-weight:750;display:block;margin-top:10px;margin-bottom:4px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.muted{color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0}.check input{width:auto;margin-top:3px}.meter{height:14px;border-radius:999px;background:#eee;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--th-orange),var(--th-red),var(--th-magenta));transition:.25s ease}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid #ddd;border-bottom-width:2px;border-radius:6px;padding:1px 5px;background:#fff}.hidden{display:none!important}.center{text-align:center}.divider{height:1px;background:var(--line);margin:14px 0}.mini{font-size:.82rem}.callout{border-left:5px solid var(--th-red);background:#fff7f5;padding:12px 14px;border-radius:12px}.answer{background:#fafafa;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:8px}
+</style>
+</head>
+<body>
+<main class="app">
+  <section class="hero">
+    <span class="tag">Interaktives Skript · statisches HTML</span>
+    <h1>Publish-Readiness-Check</h1>
+    <p class="subtitle">Prüfen Sie vor der Veröffentlichung, ob Einbettung, Ressourcen, Links und Feedback funktionieren.</p>
+  </section>
+  
+<section class="grid two" style="margin-top:16px">
+ <div class="card"><h2>Checkliste</h2><div id="checks"></div></div>
+ <div class="card"><h2>Readiness</h2><p>Status: <span class="score" id="status">0%</span></p><div class="progress"><div class="bar" id="bar"></div></div><div id="feedback" class="feedback warn">Haken Sie die Punkte ab, bevor Sie veröffentlichen.</div><label>Notizen für die letzte Kontrolle</label><textarea id="notes" rows="5" placeholder="z. B. iFrame-Höhe bei Smartphone prüfen ..."></textarea><button class="accent" onclick="summary()">Kurzprotokoll erzeugen</button><div id="summary" class="answer hidden"></div></div>
+</section>
+
+</main>
+<script>
+const items=[
+ ['Dateien','Die HTML-Widgets liegen im Ordner interactions/.'],
+ ['Quarto','In _quarto.yml steht resources: ["interactions/*"].'],
+ ['Pfade','Die src-Pfade sind aus Sicht des .qmd-Kapitels korrekt.'],
+ ['Layout','Die iFrame-Höhe ist groß genug; nichts wird abgeschnitten.'],
+ ['Links','Externe Seiten, die iFrames blockieren, sind als Link eingebunden.'],
+ ['Datenschutz','Externe Tools oder Tutor-Links sind didaktisch begründet und transparent.'],
+ ['Mobilansicht','Die Seite wurde schmal getestet.'],
+ ['Feedback','Die Aufgabe gibt nicht nur richtig/falsch, sondern eine kurze Begründung.'],
+ ['Barrierearmut','Buttons und Texte sind klar lesbar und nicht nur über Farbe verständlich.'],
+ ['Letzter Test','Nach dem Rendern wurde die Version im Output-Ordner oder auf GitHub Pages geprüft.']
+];
+function render(){document.getElementById('checks').innerHTML=items.map((it,k)=>`<label class="check"><input type="checkbox" onchange="update()" value="${k}"><span><b>${it[0]}:</b> ${it[1]}</span></label>`).join('');}
+function update(){ const n=document.querySelectorAll('#checks input:checked').length; const pct=Math.round(n/items.length*100); document.getElementById('status').textContent=pct+'%'; document.getElementById('bar').style.width=pct+'%'; const fb=document.getElementById('feedback'); if(pct<50){fb.className='feedback bad';fb.textContent='Noch riskant. Erst technische Grundlagen prüfen.';} else if(pct<90){fb.className='feedback warn';fb.textContent='Schon gut, aber vor Veröffentlichung fehlen noch wichtige Punkte.';} else {fb.className='feedback ok';fb.textContent='Sehr gut. Jetzt noch final im veröffentlichten Kontext prüfen.';} }
+function summary(){ const done=[...document.querySelectorAll('#checks input:checked')].map(x=>items[Number(x.value)][0]); const open=items.map((x,i)=>[x,i]).filter(([x,i])=>![...document.querySelectorAll('#checks input:checked')].some(c=>Number(c.value)===i)).map(([x])=>x[0]); const notes=document.getElementById('notes').value.trim(); const el=document.getElementById('summary'); el.classList.remove('hidden'); el.innerHTML=`<b>Kurzprotokoll</b><br>Erledigt: ${done.join(', ')||'nichts'}<br>Offen: ${open.join(', ')||'nichts'}<br>Notizen: ${notes||'keine'}`; }
+render(); update();
+</script>
+</body>
+</html>

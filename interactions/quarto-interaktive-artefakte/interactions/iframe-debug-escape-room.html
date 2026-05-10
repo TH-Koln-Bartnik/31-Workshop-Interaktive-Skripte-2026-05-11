@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>iFrame-Debugging-Escape-Room</title>
+<style>
+:root{
+  --th-red:#c81e0f;
+  --th-magenta:#b43092;
+  --th-orange:#ea5a00;
+  --charcoal:#2b2f36;
+  --muted:#6b7280;
+  --paper:#fffdf8;
+  --soft:#f7f3ee;
+  --line:#e6e6ea;
+  --ok:#1f7a4d;
+  --warn:#a85d00;
+  --bad:#a4161a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fffdf8,#faf7f2);color:var(--charcoal);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+.app{max-width:1100px;margin:0 auto;padding:22px}
+.hero{border:1px solid var(--line);background:rgba(255,255,255,.82);border-radius:22px;padding:20px 22px;box-shadow:0 10px 28px rgba(43,47,54,.06);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,30,15,.06),rgba(180,48,146,.05),transparent 55%);pointer-events:none}
+h1{font-size:clamp(1.35rem,2.7vw,2.1rem);margin:.1rem 0 .4rem;letter-spacing:-.02em;position:relative}
+.subtitle{color:var(--muted);margin:0;max-width:78ch;position:relative}.tag{display:inline-block;border:1px solid rgba(180,48,146,.25);background:#fff;border-radius:999px;padding:4px 10px;font-size:.82rem;color:var(--th-magenta);font-weight:700;margin-bottom:8px;position:relative}
+.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:760px){.grid.two,.grid.three{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 7px 20px rgba(43,47,54,.05)}
+.card h2,.card h3{margin-top:0}.small{font-size:.92rem;color:var(--muted)}
+button,.btn{border:0;background:var(--charcoal);color:#fff;border-radius:999px;padding:10px 14px;font-weight:750;cursor:pointer;transition:.15s ease;display:inline-flex;gap:8px;align-items:center;margin:3px 4px 3px 0}button:hover,.btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(43,47,54,.15)}button.secondary{background:#fff;color:var(--charcoal);border:1px solid var(--line)}button.accent{background:var(--th-red)}button.magenta{background:var(--th-magenta)}button.orange{background:var(--th-orange)}button:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.option{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px 14px;margin:8px 0;color:var(--charcoal);font-weight:650;cursor:pointer}.option:hover{border-color:var(--th-magenta);background:#fff9fd}.option.selected{border-color:var(--th-magenta);box-shadow:0 0 0 3px rgba(180,48,146,.12)}.option.correct{border-color:var(--ok);background:#eefaf3}.option.wrong{border-color:var(--bad);background:#fff1f1}
+.feedback{border-radius:14px;padding:12px 14px;margin-top:12px;border:1px solid var(--line);background:#fff}.feedback.ok{border-color:rgba(31,122,77,.35);background:#effaf3;color:#155538}.feedback.warn{border-color:rgba(168,93,0,.35);background:#fff8ed;color:#744000}.feedback.bad{border-color:rgba(164,22,26,.35);background:#fff1f1;color:#751014}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;background:#2b2f36;color:#f8fafc;border-radius:14px;padding:12px;white-space:pre-wrap;overflow:auto;font-size:.9rem}.pill{display:inline-block;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 9px;margin:2px;font-size:.82rem;font-weight:700}.progress{height:12px;background:#eee;border-radius:999px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,var(--th-red),var(--th-magenta));width:0%;transition:.25s ease}.score{font-weight:800;color:var(--th-magenta)}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}label{font-weight:750;display:block;margin-top:10px;margin-bottom:4px}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.muted{color:var(--muted)}
+.check{display:flex;gap:10px;align-items:flex-start;padding:9px 0}.check input{width:auto;margin-top:3px}.meter{height:14px;border-radius:999px;background:#eee;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--th-orange),var(--th-red),var(--th-magenta));transition:.25s ease}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;border:1px solid #ddd;border-bottom-width:2px;border-radius:6px;padding:1px 5px;background:#fff}.hidden{display:none!important}.center{text-align:center}.divider{height:1px;background:var(--line);margin:14px 0}.mini{font-size:.82rem}.callout{border-left:5px solid var(--th-red);background:#fff7f5;padding:12px 14px;border-radius:12px}.answer{background:#fafafa;border:1px dashed var(--line);border-radius:12px;padding:10px;margin-top:8px}
+</style>
+</head>
+<body>
+<main class="app">
+  <section class="hero">
+    <span class="tag">Interaktives Skript · statisches HTML</span>
+    <h1>iFrame-Debugging-Escape-Room</h1>
+    <p class="subtitle">Diagnostizieren Sie typische Einbettungsfehler und öffnen Sie Schritt für Schritt die fünf Türen.</p>
+  </section>
+  
+<section class="grid two" style="margin-top:16px">
+  <div class="card">
+    <h2>Fall <span id="caseNo">1</span>/5</h2>
+    <p class="small">Lesen Sie Symptom und Code. Wählen Sie Diagnose und Reparatur. Erst danach öffnet sich die nächste Tür.</p>
+    <div id="caseBox"></div>
+  </div>
+  <div class="card">
+    <h2>Escape-Status</h2>
+    <p>Gelöste Türen: <span class="score" id="score">0</span>/5</p>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <div id="status" class="feedback warn">Starten Sie mit Fall 1. Ziel ist nicht Raten, sondern Diagnose begründen.</div>
+    <div class="divider"></div>
+    <button class="secondary" onclick="resetGame()">Zurücksetzen</button>
+  </div>
+</section>
+
+</main>
+<script>
+const cases = [
+ {title:'Leerer iFrame nach dem Rendern', symptom:'Im lokalen Quarto-Preview erscheint das Spiel. In docs/ auf GitHub Pages bleibt der iFrame leer.', code:'project:\n  type: website\n  output-dir: docs\n\n<iframe src="../interactions/quiz.html">', diag:['Die Datei wird beim Rendern nicht als Ressource kopiert.','Der Browser unterstützt keine iFrames.','height ist zu niedrig.'], fix:['In _quarto.yml resources: ["interactions/*"] ergänzen.','frameborder auf 1 setzen.','Die HTML-Datei in .qmd umbenennen.'], d:0, f:0, why:'Quarto kopiert nicht automatisch beliebige HTML-Dateien in den Output. Der resources-Eintrag ist hier zentral.'},
+ {title:'404 im iFrame', symptom:'Der iFrame zeigt „Not found“. Das Kapitel liegt in parts/, die Datei liegt in interactions/.', code:'<iframe src="interactions/lernspiel.html" width="100%" height="700"></iframe>', diag:['Der relative Pfad startet vom Kapitel aus und ist deshalb falsch.','Die Farbe des Rahmens ist ungültig.','Der iFrame darf nur absolute URLs enthalten.'], fix:['src="../interactions/lernspiel.html" verwenden.','height="90" verwenden.','allowfullscreen ergänzen.'], d:0, f:0, why:'Von parts/ aus muss man eine Ebene nach oben: ../interactions/datei.html.'},
+ {title:'Abgeschnittener Inhalt', symptom:'Das Widget funktioniert, aber der untere Teil mit den Buttons ist nicht sichtbar.', code:'<iframe src="../interactions/game.html" width="100%" height="360"></iframe>', diag:['Die iFrame-Höhe ist zu niedrig.','X-Frame-Options blockiert die Datei.','Das Widget braucht einen Server.'], fix:['height erhöhen oder style="height:90vh" verwenden.','Die Datei löschen und neu rendern.','src auf http:// setzen.'], d:0, f:0, why:'iFrames wachsen nicht automatisch mit dem Inhalt. Man muss die Höhe passend setzen.'},
+ {title:'Externe Website lädt nicht', symptom:'Eine externe Seite erscheint nicht im iFrame, obwohl die URL korrekt ist.', code:'<iframe src="https://www.google.com" width="100%" height="600"></iframe>', diag:['Die Website verbietet Einbettung per Header wie X-Frame-Options oder CSP.','Der Ordner interactions fehlt.','Quarto kann keine externen Seiten einbetten.'], fix:['Statt iFrame einen normalen Link mit target="_blank" verwenden.','resources: ["https://*"] setzen.','Die URL in Markdown umwandeln.'], d:0, f:0, why:'Viele externe Seiten erlauben aus Sicherheitsgründen kein Embedding. Dann ist ein Link didaktisch und technisch sauberer.'},
+ {title:'Mixed-Content-Problem', symptom:'Auf der veröffentlichten HTTPS-Seite bleibt ein externer iFrame leer oder der Browser meldet unsicheren Inhalt.', code:'<iframe src="http://example.com/widget"></iframe>', diag:['HTTPS-Seiten blockieren oft unsichere HTTP-Inhalte.','Der iFrame ist zu breit.','Die Datei ist zu klein.'], fix:['Eine https://-Quelle verwenden oder nur verlinken.','width="80%" setzen.','frameborder="0" entfernen.'], d:0, f:0, why:'Eine HTTPS-Seite sollte keine unsicheren HTTP-Inhalte einbetten. Das ist ein Sicherheitsproblem.'}
+];
+let i=0, solved=0, sd=null, sf=null;
+function render(){ const c=cases[i]; document.getElementById('caseNo').textContent=i+1; document.getElementById('caseBox').innerHTML=`<h3>${c.title}</h3><p><b>Symptom:</b> ${c.symptom}</p><div class="code">${c.code}</div><h3>1. Diagnose</h3>${c.diag.map((x,k)=>`<button class="option" onclick="pick('d',${k},this)">${x}</button>`).join('')}<h3>2. Reparatur</h3>${c.fix.map((x,k)=>`<button class="option" onclick="pick('f',${k},this)">${x}</button>`).join('')}<button class="accent" onclick="check()">Tür prüfen</button>`; sd=sf=null; }
+function pick(type,k,el){ if(type==='d') sd=k; else sf=k; [...el.parentElement.querySelectorAll('.option')].filter(b=>b.textContent===el.textContent||b.onclick?.toString().includes(`'${type}'`)).forEach(()=>{}); const sectionButtons=[...document.querySelectorAll(`button.option`)]; if(type==='d'){ sectionButtons.slice(0,cases[i].diag.length).forEach(b=>b.classList.remove('selected')); } else { sectionButtons.slice(cases[i].diag.length).forEach(b=>b.classList.remove('selected')); } el.classList.add('selected'); }
+function check(){ const c=cases[i]; if(sd===null||sf===null){ msg('Bitte Diagnose und Reparatur wählen.','warn'); return;} const ok=sd===c.d && sf===c.f; if(ok){ solved++; msg(`✅ Tür geöffnet. ${c.why}`,'ok'); i++; update(); if(i<cases.length){ setTimeout(render,900);} else { document.getElementById('caseBox').innerHTML='<div class="feedback ok"><b>Geschafft!</b> Sie haben alle fünf Einbettungsfehler diagnostiziert.</div>'; } } else { msg(`Noch nicht. Hinweis: ${c.why}`,'bad'); } }
+function msg(t,cls){ const s=document.getElementById('status'); s.className='feedback '+cls; s.innerHTML=t; }
+function update(){ document.getElementById('score').textContent=solved; document.getElementById('bar').style.width=(solved/cases.length*100)+'%'; }
+function resetGame(){i=0;solved=0;update();msg('Starten Sie mit Fall 1. Ziel ist nicht Raten, sondern Diagnose begründen.','warn');render();}
+render();
+</script>
+</body>
+</html>

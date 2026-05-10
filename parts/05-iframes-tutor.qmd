@@ -160,6 +160,90 @@ Drei Situationen, in denen Sie es lassen sollten:
 - **Sensible persönliche Themen** — der Tutor soll Lernen begleiten, keine Beratung ersetzen.
 - **Zeitkritisches Pflichtwissen** — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch [@kasneci2023].
 
+## Galerie: zehn didaktische Ansätze für Lernspiele
+
+Bislang haben Sie zwei Beispiel-Spiele gesehen — Drag-and-Drop-Lernspiel und Zuordnungs-Übung. Beide bedienen denselben Lernmechanismus: Begriffe oder Beispiele werden auf Kategorien gezogen. Das ist ein Ansatz unter vielen.
+
+Die folgenden zehn Lernspiele zeigen die didaktische Bandbreite, die mit reiner HTML-und-JavaScript-Mechanik im iFrame möglich ist — alle ohne Backend, ohne Login, ohne externe Bibliotheken. Geordnet sind sie nach dem **didaktischen Hauptziel**: erst verstehen, dann entscheiden, dann technisch umsetzen, dann gestalten, zuletzt prüfen. Diese Progression („**Verstehen → Entscheiden → Umsetzen → Gestalten → Prüfen**") ist gleichzeitig die Architektur, die Sie in jedem eigenen interaktiven Skript abbilden können.
+
+Jedes Spiel ist als iFrame eingebettet — Sie können sofort spielen. Der Quelltext liegt in `interactions/` im Projektordner und ist als Bauplan zum Übernehmen für eigene Spiele gedacht.
+
+### 1 Verstehen — Grundprinzipien aktivieren
+
+#### Didaktik-Bingo
+
+*Welche Interaktionsform passt zu welchem Lernziel?* Eine Bingo-Karte mit Lehr-Methoden, die zusammen mit einem Lernziel kombiniert werden müssen.
+
+<iframe src="../interactions/didaktik-bingo.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+#### Misskonzept-Detektiv
+
+*Welche typischen Fehlannahmen über iFrames, Tools und Einbettungen gibt es?* Aussagen prüfen, die widersprüchlichen Common Sense und tatsächliche Funktionsweise gegenüberstellen.
+
+<iframe src="../interactions/misskonzept-detektiv.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+### 2 Entscheiden — Einbettungsformen wählen
+
+#### Embed-Entscheidungsspiel
+
+*Wann Link, wann iFrame, wann H5P, wann eigenes HTML?* Lehrszenarien werden eingeblendet, Sie wählen die jeweils passendste Einbettungsform.
+
+<iframe src="../interactions/embed-entscheidungsspiel.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+#### Kursdesigner-Simulation
+
+*Mehrere didaktische und technische Entscheidungen unter Zielkonflikten gleichzeitig.* Eine Mini-Simulation: Sie sind Kursdesignerin, die Zeit drängt, mehrere Constraints (Datenschutz, Aufwand, Wartbarkeit, Lerneffekt) müssen abgewogen werden.
+
+<iframe src="../interactions/kursdesigner-simulation.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+### 3 Umsetzen — Technische Grundlagen üben
+
+#### Quarto-Pfad-Puzzle
+
+*Wie funktionieren relative Pfade und Ordner-Strukturen?* `../images/foo.png`, `interactions/spiel.html`, `parts/01-didaktik.qmd` — wo zeigt was hin? Eine Puzzle-Übung, die das Mental Model ausbaut.
+
+<iframe src="../interactions/quarto-pfad-puzzle.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+#### iFrame-Debugging-Escape-Room
+
+*Was tun, wenn die Einbettung nicht funktioniert?* Ein Escape-Room-Format mit typischen iFrame-Fehlern (404, X-Frame-Options, falscher Pfad, fehlende Resource), die Sie systematisch lösen müssen, statt nur „herumzuprobieren".
+
+<iframe src="../interactions/iframe-debug-escape-room.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+### 4 Gestalten — KI-Tutoren didaktisch entwerfen
+
+#### Tutor-Prompt-Klinik
+
+*Wie macht man aus einem schlechten Tutor-Prompt einen guten?* Eine Sammlung von realen, problematischen Prompts wird vorgestellt; Sie identifizieren das Problem und wählen aus mehreren Verbesserungs-Optionen.
+
+<iframe src="../interactions/tutor-prompt-klinik.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+#### Feedback-Qualitäts-Spiel
+
+*Was macht lernförderliches Feedback aus?* Sie sehen Feedback-Texte und beurteilen ihre Qualität anhand von Kriterien aus der Feedback-Forschung — formativ, spezifisch, handlungsleitend.
+
+<iframe src="../interactions/feedback-qualitaet-spiel.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+### 5 Prüfen — Eigene Artefakte entwickeln und veröffentlichen
+
+#### Build-your-own-Widget-Generator
+
+*Eine eigene Idee für ein interaktives Lernartefakt systematisch entwickeln.* Ein Generator, der Sie Schritt für Schritt durch die Konzeption eines neuen Spiels für Ihr eigenes Lehrgebiet führt.
+
+<iframe src="../interactions/widget-generator.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+#### Publish-Readiness-Check
+
+*Ist das interaktive Skript veröffentlichungsbereit?* Eine Checkliste in Spielform — technische, didaktische und organisatorische Aspekte vor dem Push prüfen.
+
+<iframe src="../interactions/publish-readiness-check.html" width="100%" height="650" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+
+::: {.callout-tip}
+## Mach mit — eines der zehn als Bauplan übernehmen
+
+Wählen Sie eines der zehn Spiele, das thematisch zu Ihrem Strang oder Ihrem eigenen Lehrgebiet passt. Öffnen Sie die zugehörige `.html`-Datei in `interactions/` in RStudio (im Files-Pane anklicken → Open in editor). Tauschen Sie die inhaltlichen Daten gegen Ihre eigenen — meistens sind das ein bis zwei Arrays in JavaScript am Anfang des `<script>`-Blocks. Render und prüfen.
+:::
+
 ::: {.callout-warning}
 ## Was, wenn …
 
