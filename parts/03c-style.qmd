@@ -135,11 +135,11 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Erklärung in einfachen Worten zuerst, dann ein konkreter Code-Schnipsel.
 :::
 
-## End-Test
+## Reaktivierung: Aktiv auslaufen lassen
 
-Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+Schieber bewegen, Stil-Aspekte einzeln an- und abschalten. Links der TH-Köln-Stil, rechts der Quarto-Default. Welche der drei Stellschrauben (Farbe, Schrift, Kanten) verändert das Bild am stärksten?
 
-<iframe src="../interactions/end-test-kap03c.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/vorher-nachher-kap04.html" width="100%" height="780" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

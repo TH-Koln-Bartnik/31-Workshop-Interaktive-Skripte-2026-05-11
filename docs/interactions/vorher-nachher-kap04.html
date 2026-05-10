@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Vorher / Nachher — TH-Köln-Stil</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --reveal: 50%;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1.heading { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .options {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+    margin: 0.75rem 0;
+    padding: 0.75rem 1rem;
+    background: var(--gray-100);
+  }
+  .options label { font-size: 0.92rem; cursor: pointer; user-select: none; }
+  .options input { accent-color: var(--th-magenta); margin-right: 0.4rem; }
+  .slider-wrap {
+    display: grid; grid-template-columns: 5rem 1fr 5rem;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.6rem 0 1rem;
+    font-size: 0.85rem; color: var(--gray-500);
+  }
+  .slider-wrap input { width: 100%; accent-color: var(--th-magenta); }
+  .compare {
+    position: relative;
+    border: 1px solid var(--gray-200);
+    overflow: hidden;
+  }
+  .compare-layer {
+    position: relative;
+    width: 100%;
+  }
+  .compare-layer.top {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0 calc(100% - var(--reveal)) 0 0);
+  }
+  .divider {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: var(--reveal);
+    width: 2px;
+    background: var(--th-magenta);
+    pointer-events: none;
+    transform: translateX(-1px);
+  }
+  .divider::before, .divider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 0; height: 0;
+    border: 8px solid transparent;
+    transform: translateX(-50%);
+  }
+  .divider::before { top: 0.5rem; border-bottom-color: var(--th-magenta); border-top: 0; }
+  .divider::after { bottom: 0.5rem; border-top-color: var(--th-magenta); border-bottom: 0; }
+  .label {
+    position: absolute;
+    top: 0.5rem;
+    padding: 0.15rem 0.5rem;
+    background: var(--th-magenta);
+    color: var(--paper);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+  }
+  .label.left { left: 0.5rem; }
+  .label.right { right: 0.5rem; }
+
+  /* === Mock-Seite Default (Bootstrap cosmo-Anlehnung) === */
+  .mock {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background: #fff;
+    padding: 1.5rem 1.75rem;
+    min-height: 460px;
+  }
+  .mock h1 { font-size: 1.6rem; font-weight: 500; margin: 0 0 0.5rem; color: #2780e3; }
+  .mock h2 { font-size: 1.2rem; font-weight: 500; margin: 1.2rem 0 0.5rem; color: #333; border: none; padding-bottom: 0; border-radius: 0; }
+  .mock p { margin: 0 0 0.8rem; }
+  .mock a { color: #2780e3; }
+  .mock .callout {
+    border: 1px solid #d8e8f5;
+    border-left: 4px solid #2780e3;
+    background: #f0f6fb;
+    padding: 0.75rem 1rem;
+    margin: 0.8rem 0;
+    border-radius: 8px;
+  }
+  .mock .callout strong { color: #2780e3; }
+  .mock table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+  .mock thead { background: #f5f5f5; }
+  .mock th, .mock td { border: 1px solid #ddd; padding: 0.5rem 0.7rem; text-align: left; font-size: 0.95rem; border-radius: 0; }
+  .mock code { background: #f5f5f5; padding: 0.05rem 0.3rem; border-radius: 4px; font-family: Consolas, Monaco, monospace; font-size: 0.85em; color: #c7254e; }
+
+  /* === TH-Köln-Variante: nur aktiv, wenn data-attribute gesetzt === */
+  .mock[data-th-color="on"] h1 { color: var(--ink); }
+  .mock[data-th-color="on"] h2 { color: var(--ink); border-bottom: 2px solid rgba(180,48,146,0.35); padding-bottom: 0.2rem; }
+  .mock[data-th-color="on"] a { color: var(--th-red); text-decoration: underline; }
+  .mock[data-th-color="on"] .callout { border-color: var(--gray-200); border-left-color: var(--th-magenta); background: var(--gray-100); }
+  .mock[data-th-color="on"] .callout strong { color: var(--th-magenta); }
+  .mock[data-th-color="on"] thead { background: var(--gray-100); }
+  .mock[data-th-color="on"] th, .mock[data-th-color="on"] td { border-color: var(--gray-200); }
+  .mock[data-th-color="on"] code { color: var(--th-red); background: var(--gray-100); }
+
+  .mock[data-th-font="on"] { font-family: Arial, Helvetica, sans-serif; color: var(--ink); }
+  .mock[data-th-font="on"] h1, .mock[data-th-font="on"] h2 { font-weight: 600; }
+
+  .mock[data-th-edges="on"] .callout { border-radius: 0; }
+  .mock[data-th-edges="on"] th, .mock[data-th-edges="on"] td { border-radius: 0; }
+  .mock[data-th-edges="on"] code { border-radius: 0; }
+  .mock[data-th-edges="on"] .callout { border-left-width: 4px; }
+
+  .meta {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+  }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1 class="heading">Vorher / Nachher — was bewirkt der TH-Köln-Stil?</h1>
+<p class="lead">Schieber bewegen, Stil-Aspekte einzeln an- und abschalten. Links der TH-Köln-Stil, rechts der Quarto-Default — der vertikale magenta Strich ist die Grenze.</p>
+
+<div class="options">
+  <label><input type="checkbox" id="opt-color" checked> <strong>Farben</strong> aktivieren</label>
+  <label><input type="checkbox" id="opt-font" checked> <strong>Arial-Schrift</strong> aktivieren</label>
+  <label><input type="checkbox" id="opt-edges" checked> <strong>Scharfkantige Ecken &amp; Callout-Streifen</strong></label>
+</div>
+
+<div class="slider-wrap">
+  <span>← TH Köln</span>
+  <input type="range" id="reveal" min="0" max="100" value="50">
+  <span style="text-align:right;">Default →</span>
+</div>
+
+<div class="compare" id="compare">
+  <span class="label left">TH Köln</span>
+  <span class="label right">Default</span>
+  <div class="compare-layer" id="layer-bottom">
+    <div class="mock" id="mock-default"></div>
+  </div>
+  <div class="compare-layer top" id="layer-top">
+    <div class="mock" id="mock-th" data-th-color="on" data-th-font="on" data-th-edges="on"></div>
+  </div>
+  <div class="divider" id="divider"></div>
+</div>
+
+<div class="meta">
+  Schieber ganz nach links: nur Quarto-Default (rechts) sichtbar. Ganz nach rechts: nur TH-Köln-Stil sichtbar. Mittelstellung: direkter Side-by-Side-Vergleich.
+</div>
+
+<footer>
+  Vorher-Nachher-Vergleich zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const mockHTML = `
+    <h1>Wissenschaftliche Einstellung</h1>
+    <p>Wissenschaftliche Einstellung heißt, Aussagen nicht zu glauben, sondern zu prüfen — und sich selbst genauso zu prüfen wie andere.</p>
+    <h2>Die drei Haltungen</h2>
+    <p>Skepsis, intellektuelle Demut und Bereitschaft zur Korrektur sind die drei Säulen der wissenschaftlichen Praxis (vgl. <a href="#">Bartnik &amp; Palmer, 2024</a>).</p>
+    <table>
+      <thead><tr><th>Haltung</th><th>Was sie bedeutet</th></tr></thead>
+      <tbody>
+        <tr><td>Skepsis</td><td>Aussagen erst prüfen, dann übernehmen.</td></tr>
+        <tr><td>Demut</td><td>Eigene Position kann falsch sein.</td></tr>
+        <tr><td>Korrektur</td><td>Bei Belegen: Position ändern.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <strong>Mach mit:</strong> Notieren Sie sich eine Annahme, die Sie diese Woche überprüfen wollen. Beispiel: „Die Quote der Open-Access-Publikationen liegt bei <code>30 %</code>."
+    </div>
+  `;
+  document.getElementById('mock-default').innerHTML = mockHTML;
+  document.getElementById('mock-th').innerHTML = mockHTML;
+
+  const slider = document.getElementById('reveal');
+  const compare = document.getElementById('compare');
+  const divider = document.getElementById('divider');
+
+  function setReveal(v) {
+    compare.style.setProperty('--reveal', v + '%');
+  }
+  slider.addEventListener('input', () => setReveal(slider.value));
+  setReveal(slider.value);
+
+  const thMock = document.getElementById('mock-th');
+  function bind(id, attr) {
+    document.getElementById(id).addEventListener('change', e => {
+      thMock.setAttribute(attr, e.target.checked ? 'on' : 'off');
+    });
+  }
+  bind('opt-color', 'data-th-color');
+  bind('opt-font', 'data-th-font');
+  bind('opt-edges', 'data-th-edges');
+})();
+</script>
+
+</body>
+</html>

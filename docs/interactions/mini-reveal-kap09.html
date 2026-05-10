@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mini-Reveal — Folien-Techniken in Aktion</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --slide-bg: #fafafb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1.head { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .stage {
+    background: var(--slide-bg);
+    border: 1px solid var(--gray-200);
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    padding: 2.5rem 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .slide.active { display: flex; }
+  .slide h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    border-bottom: 2px solid rgba(180,48,146,0.35);
+    padding-bottom: 0.3rem;
+    color: var(--ink);
+  }
+  .slide.title h2 {
+    font-size: 2.3rem;
+    margin: 0 0 0.6rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .slide.title .sub {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+  }
+  .slide.title { justify-content: center; }
+  .slide ul {
+    margin: 0; padding-left: 1.4rem;
+    font-size: 1.15rem;
+    line-height: 1.65;
+  }
+  .slide li { margin-bottom: 0.4rem; }
+  .fragment {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s, transform 0.25s;
+  }
+  .fragment.visible { opacity: 1; transform: none; }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    flex: 1;
+  }
+  .columns ul { font-size: 1.05rem; }
+  .image-placeholder {
+    background: var(--gray-100);
+    border: 2px dashed var(--gray-200);
+    height: 100%;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  .notes {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--gray-100);
+    border-left: 3px solid var(--th-magenta);
+    font-size: 0.92rem;
+    color: var(--ink);
+    display: none;
+  }
+  .notes.visible { display: block; }
+  .notes strong { color: var(--th-magenta); }
+  .footer-note {
+    position: absolute;
+    bottom: 0.6rem; right: 1rem;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+  }
+  .controls {
+    margin-top: 0.75rem;
+    display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;
+  }
+  button.btn {
+    background: var(--th-red); color: var(--paper);
+    border: none; padding: 0.5rem 1rem;
+    font-family: inherit; font-size: 0.9rem; cursor: pointer;
+  }
+  button.btn:hover:not(:disabled) { background: var(--th-magenta); }
+  button.btn:disabled { background: var(--gray-200); color: var(--gray-500); cursor: default; }
+  button.btn-outline {
+    background: var(--paper); color: var(--th-red);
+    border: 1px solid var(--th-red);
+  }
+  button.btn-outline:hover { background: var(--th-magenta); color: var(--paper); border-color: var(--th-magenta); }
+  .progress {
+    flex: 1;
+    text-align: right;
+    color: var(--gray-500);
+    font-size: 0.9rem;
+  }
+  .progress strong { color: var(--th-red); }
+  .keys {
+    margin-top: 0.5rem;
+    color: var(--gray-500);
+    font-size: 0.85rem;
+  }
+  .keys code {
+    background: var(--gray-100);
+    padding: 0.05rem 0.35rem;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 0.85em;
+  }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1 class="head">Mini-Reveal — vier Folien zum Durchklicken</h1>
+<p class="lead">Eine selbst gebaute Mini-Slideshow. Klicken Sie sich durch — auf Folie 2 erscheinen die Punkte einzeln auf Klick (Reveal-„Fragment"-Effekt), Folie 3 zeigt das Spalten-Layout, Folie 4 demonstriert Speaker-Notes. Kein Quiz, sondern Erleben des Formats.</p>
+
+<div class="stage" id="stage">
+  <!-- Folie 1: Titel -->
+  <div class="slide title" data-i="0">
+    <h2>Drei Reveal.js-Techniken in Aktion</h2>
+    <div class="sub">Workshop „Interaktive Skripte mit KI erstellen" · TH Köln · Mai 2026</div>
+    <div class="footer-note">Folie 1 / 4 · Pfeil rechts oder Klick → weiter</div>
+  </div>
+
+  <!-- Folie 2: Incremental Fragments -->
+  <div class="slide" data-i="1">
+    <h2>Generatives Lernen — drei Hebel</h2>
+    <ul>
+      <li class="fragment">Selbst zusammenfassen (Schreiben statt nur Lesen)</li>
+      <li class="fragment">Selbst erklären (auch nur sich selbst gegenüber)</li>
+      <li class="fragment">Selbst anwenden (Aufgabe lösen, Fehler riskieren)</li>
+    </ul>
+    <div class="footer-note">Folie 2 / 4 · weiterer Klick blendet den nächsten Punkt ein</div>
+  </div>
+
+  <!-- Folie 3: Zwei Spalten -->
+  <div class="slide" data-i="2">
+    <h2>Bild und Text in zwei Spalten</h2>
+    <div class="columns">
+      <div>
+        <ul>
+          <li>Linke Spalte für Argumente</li>
+          <li>Rechte Spalte für die visuelle Repräsentation</li>
+          <li>Multimedia-Effekt nach Mayer (2021)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="image-placeholder">[Hier wäre Ihr Diagramm oder Foto]</div>
+      </div>
+    </div>
+    <div class="footer-note">Folie 3 / 4 · 50/50-Spalten via Quarto-Syntax <code>::: {.columns}</code></div>
+  </div>
+
+  <!-- Folie 4: Speaker-Notes -->
+  <div class="slide" data-i="3">
+    <h2>Speaker-Notes — sichtbar nur in der Sprecher-Ansicht</h2>
+    <p style="font-size:1.1rem; line-height:1.6;">Was Studierende sehen: nur die Folie. Was Sie sehen: zusätzlich Ihre Notizen, Vorschau der nächsten Folie, Stoppuhr.</p>
+    <p style="font-size:1.05rem;">In Reveal.js: Notizen in <code>::: notes</code>; Sprecher-Ansicht mit Taste <strong>S</strong>.</p>
+    <div class="notes" id="notes">
+      <strong>Speaker-Notes:</strong> Hier baue ich Spannung auf. Erst die Frage stellen
+      „Was würden Studierende verlieren, wenn alles nur als Skripttext da wäre?",
+      Antworten sammeln, dann das Schaubild aufdecken. Drei Klicker-Klicks bis Folienende.
+    </div>
+    <div class="controls">
+      <button class="btn btn-outline" id="toggle-notes">Notes ein/aus</button>
+    </div>
+    <div class="footer-note">Folie 4 / 4 · Notizen-Knopf simuliert die Sprecher-Ansicht</div>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="btn" id="prev">← Zurück</button>
+  <button class="btn" id="next">Weiter →</button>
+  <span class="progress">Folie <strong id="cur">1</strong> / 4 · Fragmente: <strong id="frag">0</strong></span>
+</div>
+<div class="keys">Tastatur: <code>←</code> / <code>→</code> für Folien, Leertaste für nächstes Fragment.</div>
+
+<footer>
+  Mini-Reveal zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const total = slides.length;
+  let idx = 0;
+  let frag = 0;
+  const cur = document.getElementById('cur');
+  const fragEl = document.getElementById('frag');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  const toggleNotes = document.getElementById('toggle-notes');
+  const notes = document.getElementById('notes');
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    cur.textContent = String(idx + 1);
+    const fragments = slides[idx].querySelectorAll('.fragment');
+    fragEl.textContent = String(Math.min(frag, fragments.length));
+    fragments.forEach((f, j) => f.classList.toggle('visible', j < frag));
+    prevBtn.disabled = idx === 0 && frag === 0;
+    nextBtn.disabled = false;
+  }
+
+  function next() {
+    const fragments = slides[idx].querySelectorAll('.fragment');
+    if (frag < fragments.length) {
+      frag++;
+    } else if (idx < total - 1) {
+      idx++; frag = 0;
+    }
+    render();
+  }
+  function prev() {
+    if (frag > 0) frag--;
+    else if (idx > 0) {
+      idx--;
+      const fragments = slides[idx].querySelectorAll('.fragment');
+      frag = fragments.length;
+    }
+    render();
+  }
+
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', ' '].includes(e.key)) { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+  });
+  toggleNotes.addEventListener('click', () => notes.classList.toggle('visible'));
+
+  // Klick auf Bühne weiterklicken (intuitiv)
+  document.getElementById('stage').addEventListener('click', e => {
+    if (e.target.closest('button')) return;
+    next();
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

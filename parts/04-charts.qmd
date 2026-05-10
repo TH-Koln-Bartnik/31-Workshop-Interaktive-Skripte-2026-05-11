@@ -492,11 +492,11 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Bitte schreiben Sie mir sowohl die R+plotly-Variante als auch die reine HTML+Plotly.js-Variante, damit ich beides vergleichen kann.
 :::
 
-## End-Test
+## Reaktivierung: Aktiv auslaufen lassen
 
-Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+Drei Vorhersage-Fragen aus den drei Strängen. Stellen Sie den Schieberegler auf den Wert, den Sie schätzen, dann auf **Auflösung anzeigen**. Vorhersage-vor-Auflösung erzeugt das stärkste Aha [@fiorella2016] — und sitzt entsprechend besser im Gedächtnis.
 
-<iframe src="../interactions/end-test-kap04.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/prediction-kap06.html" width="100%" height="780" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

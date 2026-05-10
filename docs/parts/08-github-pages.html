@@ -322,6 +322,7 @@ div.csl-indent {
   <li><a href="#schritt-5-erste-änderung-publizieren" id="toc-schritt-5-erste-änderung-publizieren" class="nav-link" data-scroll-target="#schritt-5-erste-änderung-publizieren">Schritt 5 — erste Änderung publizieren</a></li>
   </ul></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#reaktivierung-aktiv-auslaufen-lassen" id="toc-reaktivierung-aktiv-auslaufen-lassen" class="nav-link" data-scroll-target="#reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/08-github-pages.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -359,7 +360,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Bis hier lebt Ihr Skript nur auf Ihrem Computer. Damit andere — Studierende, Kollegen, der Browser auf Ihrem Tablet — es ansehen können, brauchen Sie drei zusätzliche Dinge: einen Mechanismus, der Versionen Ihrer Dateien festhält (Git), einen Online-Speicher dafür (GitHub) und einen Webserver, der die fertige Webseite auch ausliefert (GitHub Pages). Alle drei sind kostenlos für offene Projekte. Bryan <span class="citation" data-cites="bryan2018">(<a href="../index.html#ref-bryan2018" role="doc-biblioref">2018</a>)</span> beschreibt, warum Versionsverwaltung in der Forschung kein Nice-to-have ist; in der Lehre gilt das genauso.</p>
+<p>Bis hier lebt Ihr Skript nur auf Ihrem Computer. Damit andere — Studierende, Kollegen, der Browser auf Ihrem Tablet — es ansehen können, brauchen Sie drei zusätzliche Dinge: einen Mechanismus, der Versionen Ihrer Dateien festhält (Git), einen Online-Speicher dafür (GitHub) und einen Webserver, der die fertige Webseite auch ausliefert (GitHub Pages). Alle drei sind kostenlos für offene Projekte. Bryan <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">2018</a>)</span> beschreibt, warum Versionsverwaltung in der Forschung kein Nice-to-have ist; in der Lehre gilt das genauso.</p>
 </section>
 <section id="die-drei-werkzeuge-in-einfachen-worten-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-drei-werkzeuge-in-einfachen-worten-zuerst">Die drei Werkzeuge — in einfachen Worten zuerst</h2>
@@ -403,6 +404,21 @@ div.csl-indent {
 <div class="callout-body-container">
 <p><strong>Was die drei zusammen tun:</strong> Sie ändern eine Datei lokal in RStudio, render mit <code>quarto render</code> (Quarto schreibt das Ergebnis in <code>docs/</code>), in GitHub Desktop klicken Sie <strong>Commit → Push</strong>, und nach 30 bis 60 Sekunden ist die geänderte Webseite weltweit unter Ihrer URL sichtbar.</p>
 </div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Woher die Namen kommen — Eselsbrücken zum Merken
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Git</strong> schrieb Linus Torvalds 2005 in zwei Wochen für die Linux-Kernel-Entwicklung, nachdem das vorherige Werkzeug (BitKeeper) in einen Lizenzstreit geraten war. Den Namen erklärte Torvalds selbst trocken: <em>„I’m an egotistical bastard, and I name all my projects after myself. First Linux, now git.”</em> — <em>git</em> ist im britischen Slang ein eher unfreundliches Wort für „unangenehmer Mensch”. Heute ist git das mit Abstand verbreitetste Versionsverwaltungssystem der Welt — das selbstironische Naming hat ihm offenkundig nicht geschadet.</p>
+<p><strong>GitHub</strong> ist seit 2008 der Online-„Hub” (Knotenpunkt) für Git-Repositories: ein Speicherort, an dem viele Mitwirkende ihre Versionen zusammenführen. Microsoft hat die Plattform 2018 für 7,5 Milliarden Dollar gekauft, sie ist trotzdem für Open-Source-Projekte kostenlos geblieben. Konkurrenten heißen GitLab und Codeberg — alle nach dem gleichen Schema <em>„Git plus Ort”</em>.</p>
+<p><strong>GitHub Pages</strong> kam 2008 dazu, im selben Jahr wie GitHub selbst: ein in die Plattform eingebauter Webserver, der jede Webseite, die im <code>docs/</code>-Ordner eines Repositories liegt, kostenlos im Netz ausliefert. Ursprünglich gedacht als Projekt-Dokumentation („pages” = einzelne HTML-Seiten zur Erklärung des Codes), wird der Dienst heute auch für komplette Websites, Blogs und Lehr-Skripte wie dieses hier genutzt.</p>
 </div>
 </div>
 </section>
@@ -516,6 +532,12 @@ Tutor öffnen
 </blockquote>
 </div>
 </div>
+</section>
+<section id="reaktivierung-aktiv-auslaufen-lassen" class="level2">
+<h2 class="anchored" data-anchor-id="reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</h2>
+<p>Sechs Schritte vom Konto bis zur Live-URL — in zufälliger Reihenfolge. Ziehen Sie sie in die richtige Reihenfolge oder nutzen Sie die Pfeil-Knöpfe rechts an jeder Karte. Korrekte Position wird grün, noch nicht passende grau.</p>
+<iframe src="../interactions/sort-kap08.html" width="100%" height="780" frameborder="0" style="border: 1px solid #e6e6ea;">
+</iframe>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>

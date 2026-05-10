@@ -20,6 +20,18 @@ Das Inhaltsverzeichnis (`toc: true`) haben Sie schon in Kap. 2 in `_quarto.yml` 
 
 Zotero exportiert Ihre Bibliothek als `.bib`-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das **Better-BibTeX**-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. `mayer2021`) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas ändern.
 
+::: {.callout-note}
+## Woher die Namen kommen — Eselsbrücken zum Merken
+
+**Zotero** hat seinen Namen aus dem Albanischen: *zotëroj* heißt „beherrschen, sich aneignen". Die Erfinder am Roy Rosenzweig Center for History and New Media (George Mason University) haben das Programm 2006 veröffentlicht und damit ausgedrückt, was die Software den Forschenden in die Hand geben soll: die Beherrschung der eigenen Quellen.
+
+**BibTeX** ist die Bibliographie-Erweiterung von TeX (Donald Knuths legendärem Schriftsetzungssystem aus den späten 1970ern). Geschrieben hat sie Oren Patashnik 1985, der Name ist genau das, was er sagt: *Bib*liographie für *TeX*. Die `.bib`-Datei ist ein einfaches Textformat — Sie könnten sie zur Not mit einem Texteditor pflegen.
+
+**Better BibTeX** (das Zotero-Plugin) trägt seinen Namen mit Selbstvertrauen: es ist tatsächlich besser als der eingebaute BibTeX-Export, weil es stabile Citation-Keys liefert. Geschrieben und gepflegt seit etwa 2013 von Emiliano Heyns als Open-Source-Projekt — eine dieser unscheinbaren Tools, ohne die wissenschaftliches Schreiben mit Markdown deutlich zäher wäre.
+
+**CSL** steht für *Citation Style Language* — eine XML-basierte Sprache, die beschreibt, wie ein Zitierstil aussehen soll (APA, Chicago, Vancouver, DGPs, …). Bruce D'Arcus hat sie Anfang der 2000er angestoßen; heute pflegen Zotero, Mendeley und Pandoc gemeinsam einen Katalog von über 10 000 Stilen, austauschbar mit einem URL-Schalter.
+:::
+
 ### Mach mit — in fünf Schritten
 
 1. **Better BibTeX** in Zotero installieren: <https://retorque.re/zotero-better-bibtex/>.
@@ -84,11 +96,11 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit einer Erklärung in einfachen Worten vor dem Code. Fragen Sie, wo ich gerade stehe.
 :::
 
-## End-Test
+## Reaktivierung: Aktiv auslaufen lassen
 
-Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+Drei Lücken in einem wissenschaftlichen Beispielabsatz, sechs Citation-Token in der Bank — drei davon passen, drei sind Distraktoren. Token in die Lücke ziehen oder erst Token, dann Lücke antippen.
 
-<iframe src="../interactions/end-test-kap03a.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/cloze-kap05.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

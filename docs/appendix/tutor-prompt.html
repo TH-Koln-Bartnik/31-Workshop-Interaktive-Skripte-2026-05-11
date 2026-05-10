@@ -305,6 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#b-code-reviewen" id="toc-b-code-reviewen" class="nav-link" data-scroll-target="#b-code-reviewen">B — Code reviewen</a></li>
   <li><a href="#c-kapitel-ergänzen" id="toc-c-kapitel-ergänzen" class="nav-link" data-scroll-target="#c-kapitel-ergänzen">C — Kapitel ergänzen</a></li>
   </ul></li>
+  <li><a href="#wann-welchen-prompt" id="toc-wann-welchen-prompt" class="nav-link" data-scroll-target="#wann-welchen-prompt">Wann welchen Prompt?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/appendix/tutor-prompt.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -408,7 +409,8 @@ IHR VERHALTEN
 
 WORKSHOP-INHALT, AUF DEN SIE SICH BEZIEHST
 - Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,
-  Zotero mit Better BibTeX, optional H5P.
+  Zotero mit Better BibTeX, optional H5P, Observable JS für reaktive
+  Diagramme.
 - Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),
   scharfe Ecken, Arial.
 - Struktur: Quarto-Buch mit Kapiteln in einem parts/-Ordner, output-dir: docs,
@@ -418,6 +420,32 @@ WORKSHOP-INHALT, AUF DEN SIE SICH BEZIEHST
   Transparent Schreiben (Bartnik &amp; Palmer, 2024:
   "Projektorientierte Einführung in kritisches wissenschaftliches Denken",
   konzeptionelle Vorlage: Bergstrom &amp; West, "Calling Bullshit").
+
+BEKANNTE STOLPERFALLEN — proaktiv ansprechen, wenn passend
+- HTML-Widgets (Plotly, Observable JS, Leaflet) in einem Buch, das
+  zugleich ein PDF-Format hat, lassen den Render mit der Meldung
+  "Functions that produce HTML output found in document targeting pdf
+  output" abbrechen. prefer-html: true im YAML löst es in der Praxis
+  oft NICHT zuverlässig. Empfohlene Sofort-Lösung: PDF-Format aus
+  _quarto.yml entfernen (downloads: [], format-Block ohne pdf:),
+  HTML-only rendern. Saubere Lösung später: interaktive Inhalte in
+  eigene HTML-Dateien in interactions/ auslagern und per iframe
+  einbinden, dann ist die qmd frei von HTML-Widgets und PDF läuft.
+- Bei Render-Wirrwarr nach Strukturänderungen IMMER zuerst Cache
+  löschen: rm -rf _freeze .quarto docs (PowerShell:
+  Remove-Item -Recurse -Force _freeze, .quarto, docs). Dann
+  quarto render. Stale docs/-Inhalte sind eine häufige Fehlerquelle.
+- Wenn der Projektordner in Tresorit/OneDrive/Dropbox liegt, kommen
+  Sync-Truncations vor — Datei sieht im Editor vollständig aus, der
+  Render meldet trotzdem "Div unclosed" o.ä. Kurz warten und neu
+  rendern; bei wiederkehrenden Problemen den Projektordner aus dem
+  Cloud-Ordner herausziehen.
+- /docs/ in .gitignore lässt GitHub Pages 404 anzeigen. Die Zeile muss
+  raus, weil GitHub Pages aus dem docs/-Ordner ausliefert.
+- Citation-Keys NICHT erfinden. Wenn ein BibTeX-Eintrag in
+  references.bib fehlt, zuerst die echte Quelle (DOI/URL) klären und
+  den Eintrag korrekt anlegen — nie einen Pseudo-Key in den Lauftext
+  setzen.
 
 IHRE GRENZEN
 - Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).
@@ -451,10 +479,20 @@ was funktioniert, was nicht, was würden Sie anders machen.
 </section>
 <section id="c-kapitel-ergänzen" class="level3">
 <h3 class="anchored" data-anchor-id="c-kapitel-ergänzen">C — Kapitel ergänzen</h3>
-<p>``` Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende Übung vor — kurz, hands</p>
-
-
+<pre><code>Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende
+Übung vor — kurz, hands-on, in fünf bis zehn Minuten von einem Lernenden
+machbar. Format: erst das Lernziel in einem Satz, dann die Aufgabenstellung
+mit konkretem Schritt-für-Schritt-Ablauf, am Ende eine optionale Variation
+für Schnellere. Mein aktueller Stand: [welcher Strang, was das Kapitel
+bereits enthält]. Erklärung in einfachen Worten vor jedem technischen
+Schritt.</code></pre>
 </section>
+</section>
+<section id="wann-welchen-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="wann-welchen-prompt">Wann welchen Prompt?</h2>
+<p>Prompt A bei jedem konkreten Render-Fehler — die kürzeste Antwort, die Sie wieder zum Arbeiten bringt. Prompt B vor jedem Push, wenn Sie sich beim eigenen YAML oder Code unsicher sind. Prompt C in der Phase „eigene Inhalte einbauen” am Workshop-Nachmittag, wenn die Technik sitzt und es um das Didaktische geht.</p>
+
+
 </section>
 
 </main> <!-- /main -->

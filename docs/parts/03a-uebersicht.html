@@ -318,7 +318,7 @@ div.csl-indent {
   <li><a href="#zitieren" id="toc-zitieren" class="nav-link" data-scroll-target="#zitieren">Zitieren</a></li>
   </ul></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
+  <li><a href="#reaktivierung-aktiv-auslaufen-lassen" id="toc-reaktivierung-aktiv-auslaufen-lassen" class="nav-link" data-scroll-target="#reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/03a-uebersicht.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -361,6 +361,22 @@ div.csl-indent {
 <section id="zotero-anbinden" class="level2">
 <h2 class="anchored" data-anchor-id="zotero-anbinden">Zotero anbinden</h2>
 <p>Zotero exportiert Ihre Bibliothek als <code>.bib</code>-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das <strong>Better-BibTeX</strong>-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. <code>mayer2021</code>) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas ändern.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Woher die Namen kommen — Eselsbrücken zum Merken
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Zotero</strong> hat seinen Namen aus dem Albanischen: <em>zotëroj</em> heißt „beherrschen, sich aneignen”. Die Erfinder am Roy Rosenzweig Center for History and New Media (George Mason University) haben das Programm 2006 veröffentlicht und damit ausgedrückt, was die Software den Forschenden in die Hand geben soll: die Beherrschung der eigenen Quellen.</p>
+<p><strong>BibTeX</strong> ist die Bibliographie-Erweiterung von TeX (Donald Knuths legendärem Schriftsetzungssystem aus den späten 1970ern). Geschrieben hat sie Oren Patashnik 1985, der Name ist genau das, was er sagt: <em>Bib</em>liographie für <em>TeX</em>. Die <code>.bib</code>-Datei ist ein einfaches Textformat — Sie könnten sie zur Not mit einem Texteditor pflegen.</p>
+<p><strong>Better BibTeX</strong> (das Zotero-Plugin) trägt seinen Namen mit Selbstvertrauen: es ist tatsächlich besser als der eingebaute BibTeX-Export, weil es stabile Citation-Keys liefert. Geschrieben und gepflegt seit etwa 2013 von Emiliano Heyns als Open-Source-Projekt — eine dieser unscheinbaren Tools, ohne die wissenschaftliches Schreiben mit Markdown deutlich zäher wäre.</p>
+<p><strong>CSL</strong> steht für <em>Citation Style Language</em> — eine XML-basierte Sprache, die beschreibt, wie ein Zitierstil aussehen soll (APA, Chicago, Vancouver, DGPs, …). Bruce D’Arcus hat sie Anfang der 2000er angestoßen; heute pflegen Zotero, Mendeley und Pandoc gemeinsam einen Katalog von über 10 000 Stilen, austauschbar mit einem URL-Schalter.</p>
+</div>
+</div>
 <section id="mach-mit-in-fünf-schritten" class="level3">
 <h3 class="anchored" data-anchor-id="mach-mit-in-fünf-schritten">Mach mit — in fünf Schritten</h3>
 <ol type="1">
@@ -392,9 +408,9 @@ Mach mit — strangbezogen
 <div class="callout-body-container callout-body">
 <p>Wählen Sie aus Ihrem Strang <strong>drei Quellen</strong>, legen Sie sie in Zotero an, exportieren und zitieren Sie sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt haben, hier je eine Empfehlung:</p>
 <ul>
-<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="../index.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
-<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="../index.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
-<li><strong>Strang C — Transparent schreiben:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="../index.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
+<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
+<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
+<li><strong>Strang C — Transparent schreiben:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
 </ul>
 </div>
 </div>
@@ -456,10 +472,10 @@ Tutor öffnen
 </div>
 </div>
 </section>
-<section id="end-test" class="level2">
-<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
-<p>Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf <strong>„Auflösung anzeigen”</strong> klicken — Sie erhalten Feedback pro Eintrag.</p>
-<iframe src="../interactions/end-test-kap03a.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;">
+<section id="reaktivierung-aktiv-auslaufen-lassen" class="level2">
+<h2 class="anchored" data-anchor-id="reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</h2>
+<p>Drei Lücken in einem wissenschaftlichen Beispielabsatz, sechs Citation-Token in der Bank — drei davon passen, drei sind Distraktoren. Token in die Lücke ziehen oder erst Token, dann Lücke antippen.</p>
+<iframe src="../interactions/cloze-kap05.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
 </iframe>
 </section>
 <section id="literatur" class="level1 unnumbered">

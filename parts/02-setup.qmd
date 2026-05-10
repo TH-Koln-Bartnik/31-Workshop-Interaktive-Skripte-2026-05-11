@@ -29,6 +29,20 @@ Jeder Begriff klingt in der Fachsprache schwerer als nötig. Hier zuerst die ein
 
 JSON, iFrames und GitHub kommen später — heute brauchen wir sie noch nicht.
 
+::: {.callout-note}
+## Woher die Namen kommen — Eselsbrücken zum Merken
+
+Vier Namen, vier kleine Geschichten. Wer die Anekdote kennt, vergisst den Begriff nicht mehr.
+
+**Quarto** stammt aus dem Lateinischen *quartus* („vierter") und bezeichnet seit dem Buchdruck ein Papierformat, das durch zweimaliges Falten eines Bogens entsteht — ein Quartband ist ein Buch im Quartformat. Der Name nickt also der jahrhundertealten Tradition des Publizierens zu, in deren Linie sich dieses Werkzeug stellt.
+
+**YAML** ist ein selbstironisches rekursives Akronym: *„YAML Ain't Markup Language"* — „YAML ist keine Auszeichnungssprache". Ursprünglich hieß es *Yet Another Markup Language*; die Erfinder änderten den Sinn, um klarzustellen, dass YAML Daten beschreibt, nicht Dokumente. Solche selbstreferentiellen Wortspiele sind in der Open-Source-Welt eine Tradition (vgl. *GNU = GNU's Not Unix*).
+
+**RStudio** ist nach der Programmiersprache R benannt, die wiederum nach den Vornamen ihrer Erfinder Robert Gentleman und Ross Ihaka heißt — beide an der University of Auckland. Die Firma hinter RStudio nennt sich seit 2022 Posit (lateinisch *positum*, „gesetzt"), die Software behält den vertrauten Namen.
+
+**HTML** steht für *HyperText Markup Language*. „Hypertext" hat Ted Nelson 1965 geprägt — die Idee, dass Texte nicht mehr linear gelesen werden müssen, sondern über Verweise frei verbunden sind. HTML selbst entwickelte Tim Berners-Lee 1990 am CERN als Beilage zum World Wide Web; er wollte Physikern das Teilen von Forschungspapieren erleichtern.
+:::
+
 ::: {.callout-tip}
 ## Mach mit — Zuordnungsübung zu den Werkzeugen
 Drei Minuten, vier Paare. Ordnen Sie jeden Begriff der Definition in einfachen Worten zu — links Begriff anklicken, rechts Definition anklicken.
@@ -203,7 +217,7 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und mit `quarto preview` im Browser auf localhost zu sehen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Erklärung in einfachen Worten VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel für jetzt: lokal eine Vorschau meines Skripts im Browser haben — GitHub kommt später. Fragen Sie mich zurück, wenn etwas unklar ist.
 :::
 
-## End-Test
+## Reaktivierung: Aktiv auslaufen lassen
 
 Drei bis fünf Minuten. Klicken Sie links auf einen Begriff und rechts auf die passende Definition. Korrekte Paare werden grün markiert, falsche kurz rot.
 

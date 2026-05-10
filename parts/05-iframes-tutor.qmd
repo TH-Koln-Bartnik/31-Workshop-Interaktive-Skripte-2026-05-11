@@ -181,11 +181,11 @@ Vorschlag-Prompt für dieses Kapitel:
 > Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: [...]. Schlagen Sie mir den einfachsten ersten Schritt vor und schreiben Sie den Code-Schnipsel dazu. Erklären Sie vorher in zwei Sätzen, was ich da eigentlich tue.
 :::
 
-## End-Test
+## Reaktivierung: Aktiv auslaufen lassen
 
-Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+Fünf kurze Behauptungen zu iFrames, Embedding und KI-Tutor. Klicken Sie **Wahr** oder **Falsch** — die Begründung erscheint sofort. Ein Misskonzept-Check mehr als ein Wissenstest.
 
-<iframe src="../interactions/end-test-kap05.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/wahr-falsch-kap07.html" width="100%" height="850" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

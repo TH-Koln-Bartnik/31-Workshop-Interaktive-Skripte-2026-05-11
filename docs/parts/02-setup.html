@@ -324,7 +324,7 @@ div.csl-indent {
   </ul></li>
   <li><a href="#ki-tutor-als-ständiger-begleiter-drei-anlässe" id="toc-ki-tutor-als-ständiger-begleiter-drei-anlässe" class="nav-link" data-scroll-target="#ki-tutor-als-ständiger-begleiter-drei-anlässe">KI-Tutor als ständiger Begleiter — drei Anlässe</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
-  <li><a href="#end-test" id="toc-end-test" class="nav-link" data-scroll-target="#end-test">End-Test</a></li>
+  <li><a href="#reaktivierung-aktiv-auslaufen-lassen" id="toc-reaktivierung-aktiv-auslaufen-lassen" class="nav-link" data-scroll-target="#reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/02-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -362,7 +362,7 @@ div.csl-indent {
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
 <p>Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite, die in Ihrem Browser auf <code>localhost</code> lebt — also nur auf Ihrem Computer, ohne Internet, ohne Server. Eine zweite Datei legt fest, wie das Ergebnis aussieht. Bis zum Mittag bleiben wir in genau dieser lokalen Welt — kein GitHub, keine Veröffentlichung, kein Anmeldekonto. Das senkt die Stolperfallen auf eins: Quarto. So entsteht Routine in der Schreib-Render-Schleife, bevor wir später Versionsverwaltung und Web-Speicherung dazuschalten.</p>
-<p>Dass wissenschaftliches Arbeiten von einer reproduzierbaren Render-Logik profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="../index.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Hochschullehre <span class="citation" data-cites="allaire2024">(<a href="../index.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+<p>Dass wissenschaftliches Arbeiten von einer reproduzierbaren Render-Logik profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Hochschullehre <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
 </section>
 <section id="die-vier-werkzeuge-in-einfachen-worten-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-vier-werkzeuge-in-einfachen-worten-zuerst">Die vier Werkzeuge — in einfachen Worten zuerst</h2>
@@ -384,7 +384,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Quarto</strong></td>
 <td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
-<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="../index.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>YAML</strong></td>
@@ -404,6 +404,23 @@ div.csl-indent {
 </tbody>
 </table>
 <p>JSON, iFrames und GitHub kommen später — heute brauchen wir sie noch nicht.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Woher die Namen kommen — Eselsbrücken zum Merken
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vier Namen, vier kleine Geschichten. Wer die Anekdote kennt, vergisst den Begriff nicht mehr.</p>
+<p><strong>Quarto</strong> stammt aus dem Lateinischen <em>quartus</em> („vierter”) und bezeichnet seit dem Buchdruck ein Papierformat, das durch zweimaliges Falten eines Bogens entsteht — ein Quartband ist ein Buch im Quartformat. Der Name nickt also der jahrhundertealten Tradition des Publizierens zu, in deren Linie sich dieses Werkzeug stellt.</p>
+<p><strong>YAML</strong> ist ein selbstironisches rekursives Akronym: <em>„YAML Ain’t Markup Language”</em> — „YAML ist keine Auszeichnungssprache”. Ursprünglich hieß es <em>Yet Another Markup Language</em>; die Erfinder änderten den Sinn, um klarzustellen, dass YAML Daten beschreibt, nicht Dokumente. Solche selbstreferentiellen Wortspiele sind in der Open-Source-Welt eine Tradition (vgl. <em>GNU = GNU’s Not Unix</em>).</p>
+<p><strong>RStudio</strong> ist nach der Programmiersprache R benannt, die wiederum nach den Vornamen ihrer Erfinder Robert Gentleman und Ross Ihaka heißt — beide an der University of Auckland. Die Firma hinter RStudio nennt sich seit 2022 Posit (lateinisch <em>positum</em>, „gesetzt”), die Software behält den vertrauten Namen.</p>
+<p><strong>HTML</strong> steht für <em>HyperText Markup Language</em>. „Hypertext” hat Ted Nelson 1965 geprägt — die Idee, dass Texte nicht mehr linear gelesen werden müssen, sondern über Verweise frei verbunden sind. HTML selbst entwickelte Tim Berners-Lee 1990 am CERN als Beilage zum World Wide Web; er wollte Physikern das Teilen von Forschungspapieren erleichtern.</p>
+</div>
+</div>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -554,7 +571,7 @@ Variieren Sie
 </section>
 <section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legen nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="../index.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legen nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="01-didaktik.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -670,8 +687,8 @@ Tutor öffnen
 </div>
 </div>
 </section>
-<section id="end-test" class="level2">
-<h2 class="anchored" data-anchor-id="end-test">End-Test</h2>
+<section id="reaktivierung-aktiv-auslaufen-lassen" class="level2">
+<h2 class="anchored" data-anchor-id="reaktivierung-aktiv-auslaufen-lassen">Reaktivierung: Aktiv auslaufen lassen</h2>
 <p>Drei bis fünf Minuten. Klicken Sie links auf einen Begriff und rechts auf die passende Definition. Korrekte Paare werden grün markiert, falsche kurz rot.</p>
 <iframe src="../interactions/memory-spiel.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;">
 </iframe>
