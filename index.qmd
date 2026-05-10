@@ -20,9 +20,9 @@ Ihr eigenes interaktives Skript live im Netz.
 5.  **...**und **Hilfe durch KI** bereitzustellen (einen KI-Tutor verlinken, der die Lernenden im Skript begleitet).
 :::
 
-## Drei Referenzen
+## Vier Referenzen
 
-Bevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs.
+Bevor wir bauen, schauen wir, was möglich ist. Vier Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs, alle mit Quarto erstellt.
 
 :::::: benchmark-grid
 ::: benchmark-card
@@ -31,6 +31,14 @@ Bevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbrei
 Ein vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden".
 
 [Zum Skript →](https://lakens.github.io/statistical_inferences/){target="_blank"}
+:::
+
+::: benchmark-card
+### Healy — Data Visualization
+
+Lehrbuch zur Datenvisualisierung in R [@healy2018], als Web-Edition kostenlos lesbar und unabhängig vom gedruckten Princeton-Band gepflegt. Maßstab für „klassisches Lehrbuch im Web".
+
+[Zum Skript →](https://socviz.co/){target="_blank"}
 :::
 
 ::: benchmark-card
@@ -62,26 +70,19 @@ Damit Sie nicht auch noch Inhalte erfinden müssen, nutzen wir ein durchgehendes
 
 Sie können natürlich auch eigene Inhalte einfügen. Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang identisch.
 
-## Tagesablauf — drei Phasen 
+## Tagesablauf — drei Phasen
 
-Der Workshop ist so strukturiert, dass Sie nicht alle Werkzeuge gleichzeitig lernen müssen. **Phase 1** (Vormittag): nur RStudio plus KI-Tutor — alles lokal, kein Internet außer dem Tutor-Tab. **Phase 2** (früher Nachmittag): Zotero kommt dazu, immer noch lokal. **Phase 3** (später Nachmittag): GitHub und Pages — Ihr Skript geht ins Netz.
+Der Workshop ist so geschnitten, dass Sie nicht alle Werkzeuge gleichzeitig lernen müssen. Drei Phasen, in jeder kommt höchstens ein neues Werkzeug dazu.
 
-| Uhrzeit | Block | Phase | Was passiert |
-|-------------------|-------------------|----------------|-------------------|
-| 09:00–09:30 | Auftakt | — | Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl |
-| 09:30–10:15 | Kap. 1 — Didaktik | — | Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung |
-| 10:15–11:30 | Kap. 2 — RStudio + erstes Skript | **1** | RStudio-Cockpit, Quarto-Buch lokal anlegen, `quarto preview` im Browser, Tutor-Routine entwickeln |
-| 11:30–11:45 | Pause |  |  |
-| 11:45–12:30 | Kap. 3 — Bilder, Tabellen, Verweise | **1** | Bilder mit Caption, Tabellen, Cross-Refs mit Hover-Tooltip |
-| 12:30–13:15 | Mittagspause |  |  |
-| 13:15–14:00 | Kap. 5 — Quellen mit Zotero | **2** | Better-BibTeX, `references.bib`, `[@key]`-Zitate, automatische Literaturliste |
-| 14:00–15:00 | Kür: Kap. 4, 6 oder 7 nach Wahl | **2/3** | TH-Köln-Stil, interaktive Charts, iFrames + KI-Tutor — Sie wählen, was Ihr Skript braucht |
-| 15:00–15:45 | Kap. 8 — Veröffentlichen mit GitHub Pages | **3** | GitHub Desktop, Repository, Pages aktivieren, **Live-URL** |
-| 15:45–16:00 | Showcase | — | Reihum kurz die eigene Live-URL zeigen, offene Fragen klären |
+| Phase | Zeitrahmen | Inhalt |
+|---|---|---|
+| **Phase 1 — RStudio + KI-Tutor (lokal)** | Vormittag, ca. 09:00–12:30 (inkl. Pause) | Auftakt und Strangwahl, kurze didaktische Verortung, RStudio-Cockpit, erstes Quarto-Buch lokal anlegen und im Browser sehen, Bilder/Tabellen/Verweise einbauen |
+| **Phase 2 — Zotero hinzu (immer noch lokal)** | Früher Nachmittag, ca. 13:15–14:00 | Better-BibTeX, `references.bib`, automatische Zitate und Literaturliste |
+| **Phase 3 — Kür plus Veröffentlichung** | Nachmittag, ca. 14:00–16:00 | Auswahl aus TH-Köln-Stil, interaktiven Charts, iFrames + KI-Tutor; dann GitHub Pages live; Showcase |
 
 ## Wie Sie dieses Skript benutzen
 
-Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel kannst"), gefolgt von einem **„Mach mit"**-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …") und einen fertigen **Tutor-Prompt** zum Kopieren.
+Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel können"), gefolgt von einem **„Mach mit"**-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …") und einen fertigen **Tutor-Prompt** zum Kopieren.
 
 ::: callout-tip
 ## RStudio ist Ihre Arbeitszentrale
@@ -120,4 +121,13 @@ Wer den graduellen Aufbau überspringen oder absichern möchte, lädt sich die *
 Im ZIP enthalten: `_quarto.yml`, `_brand.yml`, `styles.scss`, `references.bib`, ein Beispielkapitel mit allen Element-Typen (Bild, Tabelle, Chart, iFrame, Zitat, Cross-Refs), ein leeres Kapitel zum Befüllen, ein Beispiel-Quiz als HTML-Widget, ein Beispieldatensatz und die Bibliographie. Eine `README.md` erklärt, was wo liegt und wie der Einstieg läuft.
 :::
 
-## 
+## Komplette Literaturliste
+
+Alle Quellen, die im Skript zitiert werden, plus Empfehlungen zur Vertiefung — APA-7-Format mit deutscher Lokalisierung. [Zur Literaturliste →](literatur.qmd)
+
+## Quellen
+
+Vier Vorbild-Skripte als Maßstab [@lakens2022; @healy2018; @bartnik2025; @bekes2025]; Constructive Alignment als didaktisches Rahmen [@biggs2011]; Multimedia-Lernen als Begründung für interaktive Elemente [@mayer2021].
+
+::: {#refs}
+:::

@@ -460,7 +460,7 @@ Plot.plot({
 
 ::: {.callout-tip}
 ## Mach mit
-Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Rendern Sie, schauen Sie das Ergebnis im Browser an, pushen Sie.
+Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Lokal rendern und im Browser ansehen. (Pushen folgt am Tagesende in Kap. 8.)
 :::
 
 ::: {.callout-tip}
