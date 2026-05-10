@@ -219,7 +219,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
+  <a href="../parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,6 +230,11 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3c — TH-Köln-Stil einbauen (optional)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -288,7 +293,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#schritt-1-neues-projekt-in-rstudio" id="toc-schritt-1-neues-projekt-in-rstudio" class="nav-link" data-scroll-target="#schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</a></li>
   <li><a href="#schritt-2-render-und-preview-in-rstudio" id="toc-schritt-2-render-und-preview-in-rstudio" class="nav-link" data-scroll-target="#schritt-2-render-und-preview-in-rstudio">Schritt 2 — Render und Preview (in RStudio)</a></li>
-  <li><a href="#schritt-3-beispielkapitel-auf-deinen-strang-anpassen" id="toc-schritt-3-beispielkapitel-auf-deinen-strang-anpassen" class="nav-link" data-scroll-target="#schritt-3-beispielkapitel-auf-deinen-strang-anpassen">Schritt 3 — Beispielkapitel auf deinen Strang anpassen</a></li>
+  <li><a href="#schritt-3-beispielkapitel-auf-ihren-strang-anpassen" id="toc-schritt-3-beispielkapitel-auf-ihren-strang-anpassen" class="nav-link" data-scroll-target="#schritt-3-beispielkapitel-auf-ihren-strang-anpassen">Schritt 3 — Beispielkapitel auf Ihren Strang anpassen</a></li>
   <li><a href="#schritt-4-ordnerstruktur-anlegen-in-rstudio" id="toc-schritt-4-ordnerstruktur-anlegen-in-rstudio" class="nav-link" data-scroll-target="#schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</a></li>
   <li><a href="#schritt-5-github-desktop-verknüpfen" id="toc-schritt-5-github-desktop-verknüpfen" class="nav-link" data-scroll-target="#schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</a></li>
   <li><a href="#schritt-6-github-pages-aktivieren" id="toc-schritt-6-github-pages-aktivieren" class="nav-link" data-scroll-target="#schritt-6-github-pages-aktivieren">Schritt 6 — GitHub Pages aktivieren</a></li>
@@ -320,8 +325,8 @@ div.csl-indent {
 </header>
 
 
-<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
+<section id="was-sie-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-kannst">Was Sie nach diesem Kapitel kannst</h4>
 <ul>
 <li>die sechs Bausteine <strong>Quarto, YAML, JSON, HTML, iFrame, GitHub</strong> in eigenen Worten erklären,</li>
 <li>ein leeres Quarto-Projekt <strong>lokal anlegen</strong> (RStudio + Terminal),</li>
@@ -331,7 +336,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Du schreibst Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+<p>Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
 </section>
 <section id="die-sechs-bausteine-lay-erklärung-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-sechs-bausteine-lay-erklärung-zuerst">Die sechs Bausteine — Lay-Erklärung zuerst</h2>
@@ -353,7 +358,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Quarto</strong></td>
 <td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
-<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>YAML</strong></td>
@@ -372,7 +377,7 @@ div.csl-indent {
 </tr>
 <tr class="odd">
 <td><strong>iFrame</strong></td>
-<td>Fenster im Fenster — bettet eine fremde Seite in deine ein.</td>
+<td>Fenster im Fenster — bettet eine fremde Seite in Ihre ein.</td>
 <td>HTML-Tag <code>&lt;iframe src="..."&gt;</code>, isoliert vom Rest der Seite.</td>
 </tr>
 <tr class="even">
@@ -403,11 +408,11 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <pre><code>RStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
         ↑                                                                            │
         └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘</code></pre>
-<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass dein Skript jederzeit reproduzierbar gerendert werden kann und dass du ohne Angst Änderungen vornimmst — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
+<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass Ihr Skript jederzeit reproduzierbar gerendert werden kann und dass Sie ohne Angst Änderungen vornehmen — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
 </section>
 <section id="rstudio-als-arbeitszentrale-vier-bereiche" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</h2>
-<p>Du arbeitest fast immer in RStudio. Vier Bereiche reichen für alles, was wir heute machen:</p>
+<p>Sie arbeiten fast immer in RStudio. Vier Bereiche reichen für alles, was wir heute machen:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -456,20 +461,20 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Falls dein Terminal-Tab fehlt:</strong> <strong>Tools → Terminal → New Terminal</strong>. Voreinstellung auf Windows ist PowerShell, einstellbar unter <strong>Tools → Global Options → Terminal</strong>. Quarto-Befehle funktionieren in jeder Shell.</p>
+<p><strong>Falls Ihr Terminal-Tab fehlt:</strong> <strong>Tools → Terminal → New Terminal</strong>. Voreinstellung auf Windows ist PowerShell, einstellbar unter <strong>Tools → Global Options → Terminal</strong>. Quarto-Befehle funktionieren in jeder Shell.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="mach-mit-die-ersten-30-minuten" class="level2">
 <h2 class="anchored" data-anchor-id="mach-mit-die-ersten-30-minuten">Mach mit — die ersten 30 Minuten</h2>
-<p>Halte dich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.</p>
+<p>Halte sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.</p>
 <section id="schritt-1-neues-projekt-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</h3>
 <ol type="1">
 <li>RStudio öffnen → <strong>File → New Project → New Directory → Quarto Book</strong>.</li>
 <li>Ordnernamen wählen, z. B. <code>mein-erstes-skript</code>.</li>
-<li>Speicherort wählen — am besten direkt in deinem GitHub-Ordner.</li>
+<li>Speicherort wählen — am besten direkt in Ihrem GitHub-Ordner.</li>
 <li><strong>Create Project</strong>.</li>
 </ol>
 <p>RStudio legt automatisch eine Mini-Buchstruktur an (<code>_quarto.yml</code>, <code>index.qmd</code>, ein paar Beispielkapitel).</p>
@@ -480,9 +485,9 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Im Browser öffnet sich <code>http://localhost:4XXX</code> mit einer Live-Vorschau. Jede Änderung an einer <code>.qmd</code>-Datei führt zu sofortigem Reload. Alternative ohne Tippen: <strong>Build-Pane</strong> oben rechts → Knopf „Render Book” (rendert das ganze Buch einmal, ohne Live-Reload).</p>
 </section>
-<section id="schritt-3-beispielkapitel-auf-deinen-strang-anpassen" class="level3">
-<h3 class="anchored" data-anchor-id="schritt-3-beispielkapitel-auf-deinen-strang-anpassen">Schritt 3 — Beispielkapitel auf deinen Strang anpassen</h3>
-<p>Öffne <code>intro.qmd</code> und ersetze den Beispielinhalt durch eine Mini-Einleitung zu deinem gewählten Strang. Drei Vorlagen, je nach Strangwahl:</p>
+<section id="schritt-3-beispielkapitel-auf-ihren-strang-anpassen" class="level3">
+<h3 class="anchored" data-anchor-id="schritt-3-beispielkapitel-auf-ihren-strang-anpassen">Schritt 3 — Beispielkapitel auf Ihren Strang anpassen</h3>
+<p>Öffnen Sie <code>intro.qmd</code> und ersetzen Sie den Beispielinhalt durch eine Mini-Einleitung zu Ihrem gewählten Strang. Drei Vorlagen, je nach Strangwahl:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Strang A — Wissenschaftliche Einstellung</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Strang B — Recherche und Quellenqualität</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Strang C — Transparent schreiben</a></li></ul>
 <div class="tab-content">
@@ -499,13 +504,13 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Quellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>mit denen du eine Quelle in 30 Sekunden grob einordnest.</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>mit denen Sie eine Quelle in 30 Sekunden grob einordnest.</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Quelle: Bartnik &amp; Palmer (2024).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Transparent schreiben</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Transparenz heißt, dass jeder Leser nachvollziehen kann, wie du zu deinen</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Transparenz heißt, dass jeder Leser nachvollziehen kann, wie Sie zu Ihren</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Ergebnissen gekommen bist — welche Daten, welche Methoden, welche</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Annahmen. In diesem Kapitel: drei Bausteine eines transparenten</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Methodenteils. Quelle: Bartnik &amp; Palmer (2024).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -515,7 +520,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 </section>
 <section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klickst du auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für deine späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="01-didaktik.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
 </section>
 <section id="schritt-5-github-desktop-verknüpfen" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</h3>
@@ -524,7 +529,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <li>Wenn noch kein Git-Repo: „Create a repository” akzeptieren.</li>
 <li><strong>Publish repository</strong> klicken → Name eingeben (z. B. <code>mein-erstes-skript</code>) → <strong>Public</strong> → <strong>Publish</strong>.</li>
 </ol>
-<p>Dein Code liegt jetzt auf GitHub.</p>
+<p>Ihr Code liegt jetzt auf GitHub.</p>
 </section>
 <section id="schritt-6-github-pages-aktivieren" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-6-github-pages-aktivieren">Schritt 6 — GitHub Pages aktivieren</h3>
@@ -532,7 +537,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <li>Auf github.com im Repository auf <strong>Settings → Pages</strong>.</li>
 <li><strong>Source: Deploy from a branch</strong>.</li>
 <li><strong>Branch: main → Folder: /docs → Save</strong>.</li>
-<li>Nach 1–2 Minuten: dein Skript liegt unter <code>https://DEIN-USERNAME.github.io/mein-erstes-skript/</code>.</li>
+<li>Nach 1–2 Minuten: Ihr Skript liegt unter <code>https://IHR-USERNAME.github.io/mein-erstes-skript/</code>.</li>
 </ol>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -545,7 +550,7 @@ Was, wenn …
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Render funktioniert lokal, aber GitHub Pages zeigt 404?</strong> → In <code>_quarto.yml</code> muss <code>output-dir: docs</code> stehen, und der Ordner <code>docs/</code> muss committet sein. Schau in <code>.gitignore</code>, ob <code>/docs/</code> ausgeschlossen wird, und nimm die Zeile heraus.</li>
+<li><strong>Render funktioniert lokal, aber GitHub Pages zeigt 404?</strong> → In <code>_quarto.yml</code> muss <code>output-dir: docs</code> stehen, und der Ordner <code>docs/</code> muss committet sein. Schauen Sie in <code>.gitignore</code>, ob <code>/docs/</code> ausgeschlossen wird, und nimm die Zeile heraus.</li>
 <li><strong>YAML-Fehler beim Rendern?</strong> → Einrückungen prüfen (zwei Leerzeichen, keine Tabs). Doppelpunkte und Anführungszeichen ebenfalls.</li>
 <li><strong>GitHub Desktop fragt nach Login?</strong> → Im Browser anmelden, dann in GitHub Desktop „Sign in”.</li>
 <li><strong><code>quarto: command not found</code>?</strong> → Quarto-Installation prüfen mit <code>quarto --version</code>. Wenn leer: neu installieren von <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>.</li>
@@ -569,14 +574,16 @@ Tutor öffnen
 <p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
 <p>Vorschlag-Prompt für dieses Kapitel:</p>
 <blockquote class="blockquote">
-<p>Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Frag mich zurück, wenn etwas unklar ist.</p>
+<p>Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Fragen Sie mich zurück, wenn etwas unklar ist.</p>
 </blockquote>
 </div>
 </div>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-allaire2024" class="csl-entry" role="listitem">
 Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C. (2024). <em>Quarto: An Open-Source Scientific and Technical Publishing System</em>. <a href="https://quarto.org/">https://quarto.org/</a>
 </div>
@@ -587,8 +594,6 @@ Bryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control?
 Lakens, D. (2022). <em>Improving Your Statistical Inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
 </div>
 </div>
-
-
 </section>
 
 </main> <!-- /main -->

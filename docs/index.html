@@ -164,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
+  <a href="./parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -175,6 +175,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./parts/05-iframes-tutor.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3c — TH-Köln-Stil einbauen (optional)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -225,14 +230,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#was-du-heute-baust" id="toc-was-du-heute-baust" class="nav-link active" data-scroll-target="#was-du-heute-baust">Was du heute baust</a>
+  <li><a href="#was-sie-heute-bauen" id="toc-was-sie-heute-bauen" class="nav-link active" data-scroll-target="#was-sie-heute-bauen">Was Sie heute bauen</a>
   <ul class="collapse">
   <li><a href="#drei-referenzen" id="toc-drei-referenzen" class="nav-link" data-scroll-target="#drei-referenzen">Drei Referenzen</a></li>
-  <li><a href="#wähle-deinen-beispielstrang" id="toc-wähle-deinen-beispielstrang" class="nav-link" data-scroll-target="#wähle-deinen-beispielstrang">Wähle deinen Beispielstrang</a></li>
+  <li><a href="#wählen-sie-ihren-beispielstrang" id="toc-wählen-sie-ihren-beispielstrang" class="nav-link" data-scroll-target="#wählen-sie-ihren-beispielstrang">Wählen Sie Ihren Beispielstrang</a></li>
   <li><a href="#tagesablauf" id="toc-tagesablauf" class="nav-link" data-scroll-target="#tagesablauf">Tagesablauf</a></li>
-  <li><a href="#wie-du-dieses-skript-benutzt" id="toc-wie-du-dieses-skript-benutzt" class="nav-link" data-scroll-target="#wie-du-dieses-skript-benutzt">Wie du dieses Skript benutzt</a></li>
-  <li><a href="#ordnerstruktur-deines-skripts" id="toc-ordnerstruktur-deines-skripts" class="nav-link" data-scroll-target="#ordnerstruktur-deines-skripts">Ordnerstruktur deines Skripts</a></li>
+  <li><a href="#wie-sie-dieses-skript-benutzen" id="toc-wie-sie-dieses-skript-benutzen" class="nav-link" data-scroll-target="#wie-sie-dieses-skript-benutzen">Wie Sie dieses Skript benutzen</a></li>
+  <li><a href="#ordnerstruktur-ihres-skripts" id="toc-ordnerstruktur-ihres-skripts" class="nav-link" data-scroll-target="#ordnerstruktur-ihres-skripts">Ordnerstruktur Ihres Skripts</a></li>
   <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
+  <li><a href="#vorlage-skript-zum-download" id="toc-vorlage-skript-zum-download" class="nav-link" data-scroll-target="#vorlage-skript-zum-download">Vorlage-Skript zum Download</a></li>
   <li><a href="#quellen" id="toc-quellen" class="nav-link" data-scroll-target="#quellen">Quellen</a></li>
   </ul></li>
   </ul>
@@ -276,15 +282,15 @@ ul.task-list li input[type="checkbox"] {
 <div class="th-color-bar">
 
 </div>
-<section id="was-du-heute-baust" class="level1">
-<h1>Was du heute baust</h1>
-<p>Am Ende des Tages steht ein eigenes interaktives Skript live im Netz, das Du selbst erzeugt hast.</p>
-<section id="am-ende-des-tages-kannst-du" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="am-ende-des-tages-kannst-du">Am Ende des Tages kannst du …</h4>
+<section id="was-sie-heute-bauen" class="level1">
+<h1>Was Sie heute bauen</h1>
+<p>Am Ende des Tages steht ein eigenes interaktives Skript live im Netz, das Sie selbst erzeugt haben.</p>
+<section id="am-ende-des-tages-können-sie" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="am-ende-des-tages-können-sie">Am Ende des Tages können Sie …</h4>
 <ol type="1">
 <li>Ein leicht pflegbares <strong>Online-Skript erstellen</strong> (ein Quarto-Projekt lokal in RStudio anlegen, rendern und über GitHub Pages veröffentlichen),</li>
 <li>…das verschiedene <strong>Formatierungen automatisch erzeugt</strong> (etwa ein automatisches Inhaltsverzeichnis erzeugen und Quellen aus Zotero zitieren),</li>
-<li>…<strong>Stilelemente</strong> an Deine Vorlieben <strong>anpasst</strong> (das Skript im TH-Köln-Stil formatieren (<code>_brand.yml</code>, CSS)),</li>
+<li>…<strong>Stilelemente</strong> an Ihre Vorlieben <strong>anpasst</strong> (das Skript im TH-Köln-Stil formatieren (<code>_brand.yml</code>, CSS)),</li>
 <li>…und den Lernenden erlaubt, mit den Inhalten zu <strong>interagieren</strong> (ein interaktives Diagramm und ein iFrame-Spiel einbauen),</li>
 <li><strong>…</strong>und <strong>Hilfe durch KI</strong> bereitzustellen (einen KI-Tutor verlinken, der die Lernenden im Skript begleitet).</li>
 </ol>
@@ -310,9 +316,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </section>
-<section id="wähle-deinen-beispielstrang" class="level2">
-<h2 class="anchored" data-anchor-id="wähle-deinen-beispielstrang">Wähle deinen Beispielstrang</h2>
-<p>Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine <strong>kurze Einführung ins wissenschaftliche Arbeiten</strong>. Wähle einen der drei Stränge und behalte ihn den ganzen Tag bei.</p>
+<section id="wählen-sie-ihren-beispielstrang" class="level2">
+<h2 class="anchored" data-anchor-id="wählen-sie-ihren-beispielstrang">Wählen Sie Ihren Beispielstrang</h2>
+<p>Damit Sie nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine <strong>kurze Einführung ins wissenschaftliche Arbeiten</strong>. Wählen Sie einen der drei Stränge und behalte ihn den ganzen Tag bei.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -405,27 +411,27 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="wie-du-dieses-skript-benutzt" class="level2">
-<h2 class="anchored" data-anchor-id="wie-du-dieses-skript-benutzt">Wie du dieses Skript benutzt</h2>
-<p>Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was du nach diesem Kapitel kannst”), gefolgt von einem <strong>„Mach mit”</strong>-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels findest du einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen <strong>Tutor-Prompt</strong> zum Kopieren.</p>
+<section id="wie-sie-dieses-skript-benutzen" class="level2">
+<h2 class="anchored" data-anchor-id="wie-sie-dieses-skript-benutzen">Wie Sie dieses Skript benutzen</h2>
+<p>Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel kannst”), gefolgt von einem <strong>„Mach mit”</strong>-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen <strong>Tutor-Prompt</strong> zum Kopieren.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-RStudio ist deine Arbeitszentrale
+RStudio ist Ihre Arbeitszentrale
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Innerhalb von RStudio hast du <strong>Editor</strong>, <strong>Terminal</strong> (für <code>quarto render</code> und <code>quarto preview</code>), <strong>Files-Pane</strong> (zum Anlegen von Ordnern und Dateien), <strong>Build-Pane</strong> (Knopf „Render Book”) und <strong>Console</strong> (für R-Pakete) auf einem Schirm. Daneben brauchst du nur <strong>GitHub Desktop</strong> zum Versionieren und einen Browser-Tab mit dem <strong>Tutor</strong>.</p>
+<p>Innerhalb von RStudio haben Sie <strong>Editor</strong>, <strong>Terminal</strong> (für <code>quarto render</code> und <code>quarto preview</code>), <strong>Files-Pane</strong> (zum Anlegen von Ordnern und Dateien), <strong>Build-Pane</strong> (Knopf „Render Book”) und <strong>Console</strong> (für R-Pakete) auf einem Schirm. Daneben brauchen Sie nur <strong>GitHub Desktop</strong> zum Versionieren und einen Browser-Tab mit dem <strong>Tutor</strong>.</p>
 <p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank"><strong>Tutor öffnen — „Interaktive Skripte”</strong> →</a></p>
 </div>
 </div>
 </section>
-<section id="ordnerstruktur-deines-skripts" class="level2">
-<h2 class="anchored" data-anchor-id="ordnerstruktur-deines-skripts">Ordnerstruktur deines Skripts</h2>
-<p>Damit du immer weißt, wo etwas hingehört (Lakens-Konvention):</p>
+<section id="ordnerstruktur-ihres-skripts" class="level2">
+<h2 class="anchored" data-anchor-id="ordnerstruktur-ihres-skripts">Ordnerstruktur Ihres Skripts</h2>
+<p>Damit Sie immer wissen, wo etwas hingehört (Lakens-Konvention):</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -440,7 +446,7 @@ RStudio ist deine Arbeitszentrale
 <tbody>
 <tr class="odd">
 <td><code>parts/</code></td>
-<td>Deine Kapiteldateien (<code>.qmd</code>)</td>
+<td>Ihre Kapiteldateien (<code>.qmd</code>)</td>
 </tr>
 <tr class="even">
 <td><code>images/</code></td>
@@ -467,11 +473,29 @@ RStudio ist deine Arbeitszentrale
 </section>
 <section id="voraussetzungen" class="level2">
 <h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
-<p>Wenn du noch nichts installiert hast, springe zuerst in den <a href="./appendix/quickstart.html">Quick-Starter Guide</a>. Dort steht, was du in welcher Reihenfolge installierst (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.</p>
+<p>Wenn Sie noch nichts installiert haben, springen Sie zuerst in den <a href="./appendix/quickstart.html">Quick-Starter Guide</a>. Dort steht, was Sie in welcher Reihenfolge installieren (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.</p>
+</section>
+<section id="vorlage-skript-zum-download" class="level2">
+<h2 class="anchored" data-anchor-id="vorlage-skript-zum-download">Vorlage-Skript zum Download</h2>
+<p>Wer den graduellen Aufbau überspringen oder absichern möchte, lädt sich die <strong>fertige Vorlage</strong> herunter — ein vollständiges Quarto-Buchprojekt mit Platzhaltern für alle wichtigen Elemente (Bilder mit Caption und Label, Tabellen mit Cross-Reference, interaktive Charts, iFrames, Zitate mit Hover-Tooltip, Tutor-Link). Im RStudio öffnen, Inhalte ersetzen, fertig.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Fertige Vorlage holen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="downloads/vorlage-skript.zip"><strong>vorlage-skript.zip herunterladen</strong> →</a></p>
+<p>Im ZIP enthalten: <code>_quarto.yml</code>, <code>_brand.yml</code>, <code>styles.scss</code>, <code>references.bib</code>, ein Beispielkapitel mit allen Element-Typen (Bild, Tabelle, Chart, iFrame, Zitat, Cross-Refs), ein leeres Kapitel zum Befüllen, ein Beispiel-Quiz als HTML-Widget, ein Beispieldatensatz und die Bibliographie. Eine <code>README.md</code> erklärt, was wo liegt und wie der Einstieg läuft.</p>
+</div>
+</div>
 </section>
 <section id="quellen" class="level2">
 <h2 class="anchored" data-anchor-id="quellen">Quellen</h2>
-<p>Lakens (2022); Bartnik (2025); Békés (2025); Biggs &amp; Tang (2011); Mayer (2021).</p>
+<p>Lakens (2022); Bartnik (2025); Békés (2025); Biggs &amp; Tang (2011); Mayer (2021). </p>
 
 
 </section>

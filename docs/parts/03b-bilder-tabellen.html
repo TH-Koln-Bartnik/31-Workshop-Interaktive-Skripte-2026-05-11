@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6 — Slides mit Quarto (optional) – Interaktive Skripte mit KI erstellen</title>
+<title>3b — Bilder, Tabellen und Cross-Refs – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,8 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appendix/quickstart.html" rel="next">
-<link href="../parts/05-iframes-tutor.html" rel="prev">
+<link href="../parts/04-charts.html" rel="next">
+<link href="../parts/03a-uebersicht.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -119,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/06-slides-optional.html"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03b-bilder-tabellen.html"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -199,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03b-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3b — TH-Köln-Stil einbauen</span></a>
+  <a href="../parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -214,7 +234,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
+  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3c — TH-Köln-Stil einbauen (optional)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
   </div>
 </li>
       </ul>
@@ -260,18 +285,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#schnellbau-in-vier-schritten" id="toc-schnellbau-in-vier-schritten" class="nav-link active" data-scroll-target="#schnellbau-in-vier-schritten">Schnellbau in vier Schritten</a></li>
-  <li><a href="#th-köln-brand-auf-slides" id="toc-th-köln-brand-auf-slides" class="nav-link" data-scroll-target="#th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</a></li>
+  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
+  <li><a href="#bilder-einbinden-zwei-wege" id="toc-bilder-einbinden-zwei-wege" class="nav-link" data-scroll-target="#bilder-einbinden-zwei-wege">Bilder einbinden — zwei Wege</a>
+  <ul class="collapse">
+  <li><a href="#weg-1-fertiges-bild-aus-images" id="toc-weg-1-fertiges-bild-aus-images" class="nav-link" data-scroll-target="#weg-1-fertiges-bild-aus-images">Weg 1 — fertiges Bild aus <code>images/</code></a></li>
+  <li><a href="#weg-2-bild-aus-einem-r-code-chunk" id="toc-weg-2-bild-aus-einem-r-code-chunk" class="nav-link" data-scroll-target="#weg-2-bild-aus-einem-r-code-chunk">Weg 2 — Bild aus einem R-Code-Chunk</a></li>
+  </ul></li>
+  <li><a href="#tabellen-einbinden-zwei-wege" id="toc-tabellen-einbinden-zwei-wege" class="nav-link" data-scroll-target="#tabellen-einbinden-zwei-wege">Tabellen einbinden — zwei Wege</a>
+  <ul class="collapse">
+  <li><a href="#weg-1-markdown-tabelle-mit-caption" id="toc-weg-1-markdown-tabelle-mit-caption" class="nav-link" data-scroll-target="#weg-1-markdown-tabelle-mit-caption">Weg 1 — Markdown-Tabelle mit Caption</a></li>
+  <li><a href="#weg-2-tabelle-aus-einem-r-chunk" id="toc-weg-2-tabelle-aus-einem-r-chunk" class="nav-link" data-scroll-target="#weg-2-tabelle-aus-einem-r-chunk">Weg 2 — Tabelle aus einem R-Chunk</a></li>
+  </ul></li>
+  <li><a href="#verweisen-mit-hover-fig--und-tbl-" id="toc-verweisen-mit-hover-fig--und-tbl-" class="nav-link" data-scroll-target="#verweisen-mit-hover-fig--und-tbl-">Verweisen mit Hover — <code>@fig-…</code> und <code>@tbl-…</code></a></li>
+  <li><a href="#wann-kein-cross-reference" id="toc-wann-kein-cross-reference" class="nav-link" data-scroll-target="#wann-kein-cross-reference">Wann <strong>kein</strong> Cross-Reference?</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/06-slides-optional.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/03b-bilder-tabellen.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/06-slides-optional.html"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/03b-bilder-tabellen.html"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></h1>
+<h1 class="title"><span class="chapter-title">3b — Bilder, Tabellen und Cross-Refs</span></h1>
 </div>
 
 
@@ -288,56 +325,172 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-simple callout-note callout-titled">
+<section id="was-sie-nach-diesem-kapitel-können" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-können">Was Sie nach diesem Kapitel können</h4>
+<ul>
+<li>ein <strong>Bild</strong> mit Bildunterschrift und stabiler Adresse (Label) einbinden,</li>
+<li>eine <strong>Tabelle</strong> mit Tabellenüberschrift und Label anlegen,</li>
+<li>mit <code>@fig-…</code> und <code>@tbl-…</code> auf Bilder und Tabellen verweisen — und über die Verweise erscheint beim Mauszeiger ein <strong>Vorschau-Tooltip</strong> (genauso wie bei Quellen­zitaten).</li>
+</ul>
+</section>
+<section id="worum-es-im-kern-geht" class="level2">
+<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
+<p>Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt <span class="citation" data-cites="mayer2021">(<a href="#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine <strong>stabile Adresse</strong> (Label). Ein Verweis wie „siehe <a href="#fig-co2" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-co2</span></a>” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.</p>
+<p>Das spart Pflege (Nummerierung passt sich an), reduziert Fehler (kein „siehe Abbildung 7”, die längst Abbildung 8 ist), und es macht das Skript für die Lesenden bequemer.</p>
+</section>
+<section id="bilder-einbinden-zwei-wege" class="level2">
+<h2 class="anchored" data-anchor-id="bilder-einbinden-zwei-wege">Bilder einbinden — zwei Wege</h2>
+<section id="weg-1-fertiges-bild-aus-images" class="level3">
+<h3 class="anchored" data-anchor-id="weg-1-fertiges-bild-aus-images">Weg 1 — fertiges Bild aus <code>images/</code></h3>
+<p>Die einfachste Form, in Markdown:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Aufbau einer typischen Versorgungskette. Eigene Darstellung.](../images/supply-chain.png)</span>{#fig-supply width=80%}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Drei Bestandteile, die zählen:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Teil</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>![Caption …]</code></td>
+<td>Bildunterschrift (erscheint unter dem Bild, automatisch nummeriert)</td>
+</tr>
+<tr class="even">
+<td><code>(../images/…)</code></td>
+<td>Pfad zum Bild im <code>images/</code>-Ordner</td>
+</tr>
+<tr class="odd">
+<td><code>{#fig-supply}</code></td>
+<td><strong>Label</strong> — die stabile Adresse für Verweise</td>
+</tr>
+</tbody>
+</table>
+<p>Wichtig: Das Label muss mit <code>fig-</code> beginnen, damit Quarto es als Abbildung erkennt.</p>
+</section>
+<section id="weg-2-bild-aus-einem-r-code-chunk" class="level3">
+<h3 class="anchored" data-anchor-id="weg-2-bild-aus-einem-r-code-chunk">Weg 2 — Bild aus einem R-Code-Chunk</h3>
+<p>Wenn Sie ein Diagramm in R erzeugen (kommt in Kapitel 4), nutzen Sie Chunk-Optionen statt Markdown:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-co2</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "CO₂-Emissionen pro Kopf, ausgewählte Länder. Daten: Our World in Data."</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># R-Code, der das Diagramm erzeugt</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Auch hier: das Label <code>fig-co2</code> ist die Adresse, <code>fig-cap</code> die Bildunterschrift.</p>
+</section>
+</section>
+<section id="tabellen-einbinden-zwei-wege" class="level2">
+<h2 class="anchored" data-anchor-id="tabellen-einbinden-zwei-wege">Tabellen einbinden — zwei Wege</h2>
+<section id="weg-1-markdown-tabelle-mit-caption" class="level3">
+<h3 class="anchored" data-anchor-id="weg-1-markdown-tabelle-mit-caption">Weg 1 — Markdown-Tabelle mit Caption</h3>
+<p>Die Caption kommt <strong>nach</strong> der Tabelle, eingeleitet mit Doppelpunkt:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quelle    <span class="pp">|</span> Typ       <span class="pp">|</span> Vertrauenswürdigkeit <span class="pp">|</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">|-----------|-----------|---------------------|</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Wikipedia <span class="pp">|</span> Tertiär   <span class="pp">|</span> Mittel              <span class="pp">|</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lehrbuch  <span class="pp">|</span> Sekundär  <span class="pp">|</span> Hoch                <span class="pp">|</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Studie    <span class="pp">|</span> Primär    <span class="pp">|</span> Sehr hoch           <span class="pp">|</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>: Quellenarten im Überblick. {#tbl-quellen}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>#tbl-quellen</code> ist das Label — alle Tabellen-Labels beginnen mit <code>tbl-</code>.</p>
+</section>
+<section id="weg-2-tabelle-aus-einem-r-chunk" class="level3">
+<h3 class="anchored" data-anchor-id="weg-2-tabelle-aus-einem-r-chunk">Weg 2 — Tabelle aus einem R-Chunk</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-quellen</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "Quellenarten im Überblick."</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>quellen <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Quelle =</span> <span class="fu">c</span>(<span class="st">"Wikipedia"</span>, <span class="st">"Lehrbuch"</span>, <span class="st">"Studie"</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Typ =</span> <span class="fu">c</span>(<span class="st">"Tertiär"</span>, <span class="st">"Sekundär"</span>, <span class="st">"Primär"</span>),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Vertrauen =</span> <span class="fu">c</span>(<span class="st">"Mittel"</span>, <span class="st">"Hoch"</span>, <span class="st">"Sehr hoch"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(quellen)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="verweisen-mit-hover-fig--und-tbl-" class="level2">
+<h2 class="anchored" data-anchor-id="verweisen-mit-hover-fig--und-tbl-">Verweisen mit Hover — <code>@fig-…</code> und <code>@tbl-…</code></h2>
+<p>Im Lauftext schreiben Sie:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Ein typisches Beispiel zeigt @fig-supply.</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Die Quellenarten unterscheiden sich systematisch (siehe @tbl-quellen).</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Quarto rendert daraus automatisch:</p>
+<blockquote class="blockquote">
+<p>Ein typisches Beispiel zeigt <strong>Abbildung 1</strong>. Die Quellenarten unterscheiden sich systematisch (siehe <strong>Tabelle 1</strong>).</p>
+</blockquote>
+<p>Klick auf den Verweis → Sie springen zur Abbildung oder Tabelle. Maus drüber halten → ein kleines Vorschau-Fenster zeigt das Bild oder den Tabellenkopf, ohne dass Sie wegnavigieren müssen. Genau derselbe Mechanismus, der bei <code>[@fiorella2016]</code> die Quellenangabe anzeigt.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Optional, für Fortgeschrittene
+Mach mit — strangbezogen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, kann hier weiterbauen. Vorlage und Inspiration: Békés (2025), <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" target="_blank">Course slides for “Data Analysis with AI”</a>.</p>
-</div>
-</div>
-<section id="was-du-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-du-nach-diesem-kapitel-kannst">Was du nach diesem Kapitel kannst</h4>
+<p>Bauen Sie in Ihr Kapitel <strong>ein Bild und eine Tabelle</strong> ein, beide mit Label und Caption, und verweisen Sie aus dem Fließtext darauf. Drei Vorlagen je nach Strang:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Strang A — Wissenschaftliche Einstellung</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Strang B — Recherche und Quellenqualität</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Strang C — Transparent schreiben</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ul>
-<li>aus einem <code>.qmd</code>-Kapitel einen <strong>Foliensatz</strong> mit Quarto Reveal.js erzeugen,</li>
-<li>die <strong>TH-Köln-Farben</strong> auf Slides übertragen,</li>
-<li>den Foliensatz neben das Skript auf GitHub Pages stellen.</li>
+<li><strong>Bild:</strong> Ein Diagramm „Wie wissenschaftliches Wissen entsteht” (Skizze als PNG in <code>images/</code>, Label <code>#fig-wissenszyklus</code>).</li>
+<li><strong>Tabelle:</strong> Drei Haltungen (Skepsis, intellektuelle Demut, Korrektur­bereitschaft), je mit Beispiel — Label <code>#tbl-haltungen</code>.</li>
+<li><strong>Verweis im Text:</strong> „<a href="#fig-wissenszyklus" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-wissenszyklus</span></a> zeigt den Kreislauf, <a href="#tbl-haltungen" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-haltungen</span></a> die drei Haltungen.”</li>
 </ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ul>
+<li><strong>Bild:</strong> Eine Pyramide der Quellenarten (primär/sekundär/tertiär) als PNG, Label <code>#fig-quellpyramide</code>.</li>
+<li><strong>Tabelle:</strong> Drei Filter zur 30-Sekunden-Quellenprüfung — Label <code>#tbl-filter</code>.</li>
+<li><strong>Verweis:</strong> „Die Hierarchie zeigt <a href="#fig-quellpyramide" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-quellpyramide</span></a>; die Schnellprüfung folgt <a href="#tbl-filter" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-filter</span></a>.”</li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ul>
+<li><strong>Bild:</strong> Ein Schema „Bestandteile eines transparenten Methodenteils” als PNG, Label <code>#fig-methodenteil</code>.</li>
+<li><strong>Tabelle:</strong> Vergleich „transparent” vs.&nbsp;„intransparent” für drei Methodenentscheidungen — Label <code>#tbl-vergleich</code>.</li>
+<li><strong>Verweis:</strong> „Den Aufbau zeigt <a href="#fig-methodenteil" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-methodenteil</span></a>, den Kontrast <a href="#tbl-vergleich" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-vergleich</span></a>.”</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="schnellbau-in-vier-schritten" class="level2">
-<h2 class="anchored" data-anchor-id="schnellbau-in-vier-schritten">Schnellbau in vier Schritten</h2>
-<ol type="1">
-<li>Neue Datei <code>slides/kapitel-1-slides.qmd</code> anlegen.</li>
-<li>YAML-Header:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Kapitel 1 — Didaktik"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Dein Name"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> ../styles.scss</span><span class="kw">]</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">chalkboard</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> ../images/th-koeln-logo.png</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="1">
-<li>Inhalt: <strong>eine H2-Überschrift = eine Folie</strong>, dazwischen Stichpunkte und Bilder. Speaker Notes mit <code>::: notes</code>.</li>
-<li><code>quarto render slides/kapitel-1-slides.qmd</code> → Slide-Deck als HTML.</li>
-</ol>
-</section>
-<section id="th-köln-brand-auf-slides" class="level2">
-<h2 class="anchored" data-anchor-id="th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</h2>
-<p>Die <code>_brand.yml</code> aus deinem Skript wird auch von Reveal.js gelesen. Zusätzlich einbinden:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">brand</span><span class="kw">:</span><span class="at"> ../_brand.yml</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> ../styles.scss</span><span class="kw">]</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="wann-kein-cross-reference" class="level2">
+<h2 class="anchored" data-anchor-id="wann-kein-cross-reference">Wann <strong>kein</strong> Cross-Reference?</h2>
+<p>Drei Fälle, in denen Sie es lassen können:</p>
+<ul>
+<li><strong>Einmaliger Verweis im selben Absatz</strong> — wenn das Bild direkt unter dem Text steht und Sie nur einmal darauf zeigen, reicht „siehe oben”.</li>
+<li><strong>Werbe-Bilder ohne Inhalt</strong> — Dekoration braucht weder Caption noch Label.</li>
+<li><strong>Sehr kurze Skripte</strong> — bei drei Bildern lohnt der Aufwand nicht. Ab fünf Bildern wird es spürbar.</li>
+</ul>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Was, wenn …
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong><code>?@fig-xyz</code> im gerenderten Text?</strong> → Das Label im Bild stimmt nicht mit dem Verweis überein. Tippfehler im Label oder Caption-Block prüfen.</li>
+<li><strong>„Could not resolve crossref” beim Rendern?</strong> → Label vergessen oder ohne <code>fig-</code>/<code>tbl-</code>-Präfix angelegt. Quarto erkennt nur Labels mit Präfix als Cross-Refs.</li>
+<li><strong>Tooltip beim Hover erscheint nicht?</strong> → Im <code>_quarto.yml</code> muss unter <code>format.html:</code> die Option <code>crossrefs-hover: true</code> (Default) aktiv sein. Prüfen, ob sie versehentlich auf <code>false</code> gesetzt ist.</li>
+<li><strong>Bild wird nicht angezeigt?</strong> → Pfad relativ zum Kapitel: aus <code>parts/03b-bilder-tabellen.qmd</code> zeigt <code>../images/supply-chain.png</code> ins richtige Verzeichnis.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="tutor" class="level2">
 <h2 class="anchored" data-anchor-id="tutor">Tutor</h2>
@@ -354,8 +507,16 @@ Tutor öffnen
 <p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
 <p>Vorschlag-Prompt für dieses Kapitel:</p>
 <blockquote class="blockquote">
-<p>Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlag mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Gib mir den YAML-Header.</p>
+<p>Ich will in mein Quarto-Skript ein Bild und eine Tabelle einbauen, jeweils mit Bildunterschrift, Label und Verweis aus dem Fließtext. Mein Stand: [Bild liegt in <code>images/</code> / muss noch erstellt werden]; [Tabelle als Markdown / aus R-Chunk]. Schreiben Sie mir den Code-Block für Bild und Tabelle plus den Verweis im Lauftext, mit Lay-Erklärung vor jedem Schritt.</p>
 </blockquote>
+</div>
+</div>
+</section>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-mayer2021" class="csl-entry" role="listitem">
+Mayer, R. E. (2021). <em>Multimedia Learning</em> (3. Aufl.). Cambridge University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
 </div>
 </div>
 
@@ -769,13 +930,13 @@ Tutor öffnen
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../parts/05-iframes-tutor.html" class="pagination-link" aria-label="5 — iFrames, Spiele und KI-Tutor">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">5 — iFrames, Spiele und KI-Tutor</span></span>
+      <a href="../parts/03a-uebersicht.html" class="pagination-link" aria-label="3a — Inhaltsverzeichnis und Literatur">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3a — Inhaltsverzeichnis und Literatur</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendix/quickstart.html" class="pagination-link" aria-label="Quick-Starter Guide">
-        <span class="nav-page-text"><span class="chapter-title">Quick-Starter Guide</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../parts/04-charts.html" class="pagination-link" aria-label="4 — Interaktive Diagramme">
+        <span class="nav-page-text"><span class="chapter-title">4 — Interaktive Diagramme</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -787,7 +948,7 @@ Tutor öffnen
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/06-slides-optional.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/03b-bilder-tabellen.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>
