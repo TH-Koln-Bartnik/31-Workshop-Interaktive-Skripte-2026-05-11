@@ -1,10 +1,12 @@
 ---
-title: "4 — Interaktive Diagramme"
+title: "6 — Interaktive Diagramme"
 ---
 
+::: {.content-visible when-format="html"}
 ```{=html}
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
 ```
+:::
 
 ::: {.lernziel-box}
 #### Was Sie nach diesem Kapitel können
@@ -22,12 +24,13 @@ Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie
 **Im Skript unten** sehen Sie alle Diagramme als **Plotly.js-Widget direkt im Browser** — die rendern ohne lokale R-Installation. **Der Code-Block darunter** zeigt jeweils die R-Variante (mit `plotly` + `tibble`), die Sie ins eigene Skript übernehmen können. Wer R lokal hat, schreibt die Charts in R; wer nicht, kopiert die HTML-Variante aus dem Quelltext dieses Kapitels.
 :::
 
-## Drei Wege, ein Diagramm einzubauen
+## Vier Wege, ein Diagramm einzubauen
 
 | Weg | Werkzeug | Wann passend? |
 |---|---|---|
 | **R + plotly** | R-Code-Chunk in Quarto | Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken [@wickham2019]. |
 | **Plotly.js direkt** | HTML + JavaScript | Sie haben kein R, aber wollen Plotly-Charts. Funktioniert in jedem Browser. |
+| **Observable JS + Plot** | `{ojs}`-Chunk in Quarto | Sie wollen **reaktive** Steuerelemente (Slider, Dropdown), die das Diagramm live verändern — ohne JavaScript-Schreiben. |
 | **iFrame mit Datawrapper / Flourish** | externer Editor, Embed-Code | Sie wollen gar nicht programmieren. |
 
 ## Mach mit — drei Beispiele, jeweils zuerst die Live-Grafik, dann der Code zum Übernehmen
@@ -38,6 +41,7 @@ Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie
 
 Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?*
 
+::: {.content-visible when-format="html"}
 ```{=html}
 <div id="plot-le" style="width:100%; height:420px;"></div>
 <script>
@@ -52,6 +56,11 @@ Plotly.newPlot('plot-le', [
 }, {responsive: true});
 </script>
 ```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Interaktives Diagramm — nur in der HTML-Version:** Lebenserwartung 1950–2022 für Deutschland, Japan und Welt. Die interaktive Variante mit Hover-Werten, Reihen-Auswahl und Zoom finden Sie online unter <https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/parts/04-charts.html>.
+:::
 
 ::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
 **Datenquelle:** Our World in Data, Serie „Life expectancy at birth (historical)" [@owid2024]. Stichprobe aus den Originaldaten (5 Jahre, 3 Entitäten); vollständiger Datensatz und Methodologie unter <https://ourworldindata.org/life-expectancy>. Zur didaktischen Nutzung im Unterricht; für Forschungszwecke aktuelle CSV direkt von OWID laden.
@@ -93,6 +102,7 @@ plot_ly(le,
 
 Frage: *Wie viele wissenschaftliche Publikationen erscheinen pro Jahr?* Antwort führt zur Notwendigkeit, Quellen zu filtern.
 
+::: {.content-visible when-format="html"}
 ```{=html}
 <div id="plot-pub" style="width:100%; height:420px;"></div>
 <script>
@@ -107,6 +117,11 @@ Plotly.newPlot('plot-pub', [
 }, {responsive: true});
 </script>
 ```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Interaktives Diagramm — nur in der HTML-Version:** Wissenschaftliche Publikationen pro Jahr 1990–2023 (in Mio.). Die interaktive Variante online unter <https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/parts/04-charts.html>.
+:::
 
 ::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
 **Datenquelle:** Eigene Schätzung in Anlehnung an die NSF Science & Engineering Indicators sowie an Bornmann, Haunschild & Mutz (2021), *Growth rates of modern science: a latent piecewise growth curve approach to model publication numbers from established and new literature databases*. Humanities and Social Sciences Communications, 8, 224. <https://doi.org/10.1057/s41599-021-00903-w>. Aktuelle Originaldaten: NSF Science & Engineering Indicators <https://ncses.nsf.gov/indicators>. Für Forschungszwecke bitte aktuelle Originalquelle nutzen.
@@ -143,6 +158,7 @@ plot_ly(pub,
 
 Frage: *Wie hat sich die Zahl der Pre-Registrierungen auf OSF entwickelt?* Antwort zeigt: Transparenz ist wachsende Praxis.
 
+::: {.content-visible when-format="html"}
 ```{=html}
 <div id="plot-prereg" style="width:100%; height:420px;"></div>
 <script>
@@ -157,6 +173,11 @@ Plotly.newPlot('plot-prereg', [
 }, {responsive: true});
 </script>
 ```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Interaktives Diagramm — nur in der HTML-Version:** Pre-Registrierungen auf OSF 2015–2023. Die interaktive Variante online unter <https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/parts/04-charts.html>.
+:::
 
 ::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
 **Datenquelle:** Eigene Schätzung in Anlehnung an die OSF-Statistik des Center for Open Science. Aktuelle Werte und Methodologie: OSF Registries Browser <https://osf.io/registries> sowie der COS Annual Report unter <https://www.cos.io/about/annual-report>. Die Größenordnungen sind belastbar, exakte Jahreswerte vor Publikation eigener Arbeiten direkt prüfen.
@@ -222,6 +243,214 @@ owid <- read_csv("https://ourworldindata.org/grapher/life-expectancy.csv")
 ````
 
 Wenn das Laden fehlschlägt: Datei manuell aus der Grapher-Seite herunterladen, in `data/` ablegen und lokal lesen.
+
+## Observable JS — Reaktivität ohne JavaScript-Schreiben
+
+Plotly liefert Interaktivität, die die Bibliothek vorgibt: Hover, Zoom, Reihen ein- und ausblenden. Was Plotly nicht liefert, sind **eigene Steuerelemente** — ein Slider, der den Datenausschnitt verändert, ein Dropdown, das die Farbgruppe wählt, eine Checkbox-Liste, die Reihen filtert. Genau dafür gibt es **Observable JS** (kurz **OJS**), eine Programmierumgebung im Browser, die Quarto direkt eingebaut hat. Lay erklärt: Sie schreiben in einen `{ojs}`-Block ein paar Zeilen, die Quarto in ein klickbares Bedienfeld plus reagierendes Diagramm verwandelt — ohne dass Sie JavaScript lernen müssen. Die Bibliothek **Observable Plot** ist mit dabei und macht Diagramme mit ähnlich wenig Code wie ggplot2.
+
+Mehr zur Idee von Observable [@observable2024]; dieselben Reaktivitäts-Prinzipien stecken hinter Shiny in R [@chang2023], nur ohne den R-Server.
+
+### Ein-Slider-Demo — die kleinste reaktive Geschichte
+
+Ein Schieberegler oben, ein Diagramm unten. Schieben Sie den Regler — die Balken passen sich live an.
+
+::: {.content-visible when-format="html"}
+```{ojs}
+viewof bis_jahr = Inputs.range([1990, 2023], {label: "Daten bis Jahr", step: 1, value: 2023})
+
+publikationen = [
+  {jahr: 1990, anzahl: 0.8},
+  {jahr: 1995, anzahl: 1.0},
+  {jahr: 2000, anzahl: 1.2},
+  {jahr: 2005, anzahl: 1.6},
+  {jahr: 2010, anzahl: 2.1},
+  {jahr: 2015, anzahl: 2.5},
+  {jahr: 2020, anzahl: 2.9},
+  {jahr: 2023, anzahl: 3.3}
+]
+
+gefiltert = publikationen.filter(d => d.jahr <= bis_jahr)
+
+Plot.plot({
+  marks: [
+    Plot.barY(gefiltert, {x: "jahr", y: "anzahl", fill: "#c81e0f"}),
+    Plot.ruleY([0])
+  ],
+  y: {label: "Publikationen (Mio. pro Jahr)"},
+  x: {label: "Jahr"},
+  marginLeft: 60,
+  height: 360
+})
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Reaktives Observable-Diagramm — nur in der HTML-Version:** Schieberegler oben, Balkendiagramm unten. Die Variante mit Live-Steuerung online unter <https://th-koln-bartnik.github.io/Workshop-Interaktive-Skripte-Bartnik/parts/04-charts.html>.
+:::
+
+**Was passiert hier?** Drei Bausteine: `Inputs.range(...)` baut den Schieberegler; `viewof bis_jahr = ...` macht aus dem Reglerwert eine Variable, auf die andere Blöcke reagieren; das `Plot.plot(...)`-Stück zeichnet das Diagramm immer neu, wenn `bis_jahr` sich ändert. Wenn Sie das verstanden haben, können Sie dieses Muster auf jeden Datensatz anwenden.
+
+### Drei Beispiele — eines pro Strang
+
+::: {.panel-tabset}
+
+#### Strang A — Wissenschaftliche Einstellung
+
+*Wählen Sie, welche Länder Sie sehen wollen — die Linien blenden sich live ein und aus.*
+
+::: {.content-visible when-format="html"}
+```{ojs}
+viewof laender = Inputs.checkbox(
+  ["Deutschland", "Japan", "Welt"],
+  {label: "Länder anzeigen", value: ["Deutschland", "Japan", "Welt"]}
+)
+
+le_daten = [
+  {jahr: 1950, land: "Deutschland", le: 67.5},
+  {jahr: 1970, land: "Deutschland", le: 70.6},
+  {jahr: 1990, land: "Deutschland", le: 75.3},
+  {jahr: 2010, land: "Deutschland", le: 80.0},
+  {jahr: 2022, land: "Deutschland", le: 80.7},
+  {jahr: 1950, land: "Japan",       le: 62.0},
+  {jahr: 1970, land: "Japan",       le: 72.0},
+  {jahr: 1990, land: "Japan",       le: 78.8},
+  {jahr: 2010, land: "Japan",       le: 82.9},
+  {jahr: 2022, land: "Japan",       le: 84.1},
+  {jahr: 1950, land: "Welt",        le: 47.0},
+  {jahr: 1970, land: "Welt",        le: 58.0},
+  {jahr: 1990, land: "Welt",        le: 64.5},
+  {jahr: 2010, land: "Welt",        le: 70.0},
+  {jahr: 2022, land: "Welt",        le: 72.6}
+]
+
+le_gefiltert = le_daten.filter(d => laender.includes(d.land))
+
+Plot.plot({
+  marks: [
+    Plot.line(le_gefiltert, {x: "jahr", y: "le", stroke: "land", strokeWidth: 2}),
+    Plot.dot(le_gefiltert, {x: "jahr", y: "le", fill: "land"})
+  ],
+  color: {legend: true, range: ["#c81e0f", "#b43092", "#ea5a00"]},
+  y: {label: "Lebenserwartung (Jahre)"},
+  x: {label: "Jahr"},
+  marginLeft: 60,
+  height: 380
+})
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Observable-Diagramm mit Land-Auswahl — online verfügbar.**
+:::
+
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** Our World in Data, Serie „Life expectancy at birth (historical)" [@owid2024].
+:::
+
+#### Strang B — Recherche und Quellenqualität
+
+*Schieben Sie die Schwelle — alle Jahre über der Schwelle erscheinen rot, darunter grau. Visualisiert die „Publikationsflut".*
+
+::: {.content-visible when-format="html"}
+```{ojs}
+viewof schwelle_pub = Inputs.range([0.5, 3.5], {label: "Schwelle (Mio.)", step: 0.1, value: 2.0})
+
+pub_daten = [
+  {jahr: 1990, anzahl: 0.8},
+  {jahr: 1995, anzahl: 1.0},
+  {jahr: 2000, anzahl: 1.2},
+  {jahr: 2005, anzahl: 1.6},
+  {jahr: 2010, anzahl: 2.1},
+  {jahr: 2015, anzahl: 2.5},
+  {jahr: 2020, anzahl: 2.9},
+  {jahr: 2023, anzahl: 3.3}
+]
+
+Plot.plot({
+  marks: [
+    Plot.barY(pub_daten, {
+      x: "jahr",
+      y: "anzahl",
+      fill: d => d.anzahl >= schwelle_pub ? "#c81e0f" : "#e6e6ea"
+    }),
+    Plot.ruleY([schwelle_pub], {stroke: "#b43092", strokeDasharray: "4 2"})
+  ],
+  y: {label: "Publikationen (Mio. pro Jahr)"},
+  x: {label: "Jahr"},
+  marginLeft: 60,
+  height: 360
+})
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Observable-Diagramm mit Schwellen-Schieberegler — online verfügbar.**
+:::
+
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** Schätzung in Anlehnung an Bornmann, Haunschild & Mutz [-@bornmann2021]; aktuelle Originaldaten unter <https://ncses.nsf.gov/indicators>.
+:::
+
+#### Strang C — Transparent schreiben
+
+*Wählen Sie über den Dropdown, ab welchem Jahr Sie die Daten sehen wollen.*
+
+::: {.content-visible when-format="html"}
+```{ojs}
+viewof startjahr = Inputs.select([2015, 2017, 2019, 2021, 2023], {label: "Ab Jahr", value: 2015})
+
+prereg_daten = [
+  {jahr: 2015, anzahl: 1500},
+  {jahr: 2017, anzahl: 4200},
+  {jahr: 2019, anzahl: 9800},
+  {jahr: 2021, anzahl: 16500},
+  {jahr: 2023, anzahl: 22000}
+]
+
+prereg_ab = prereg_daten.filter(d => d.jahr >= startjahr)
+
+Plot.plot({
+  marks: [
+    Plot.line(prereg_ab, {x: "jahr", y: "anzahl", stroke: "#b43092", strokeWidth: 3}),
+    Plot.dot(prereg_ab, {x: "jahr", y: "anzahl", fill: "#b43092", r: 5}),
+    Plot.text(prereg_ab, {x: "jahr", y: "anzahl", text: d => d.anzahl.toLocaleString("de-DE"), dy: -12, fontSize: 11})
+  ],
+  y: {label: "Pre-Registrierungen pro Jahr"},
+  x: {label: "Jahr"},
+  marginLeft: 70,
+  height: 360
+})
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+> **Observable-Diagramm mit Jahres-Dropdown — online verfügbar.**
+:::
+
+::: {style="font-size: 0.85em; color: #6b6b73; margin-top: 0.5rem;"}
+**Datenquelle:** OSF-Statistik des Center for Open Science; aktuelle Werte unter <https://osf.io/registries>.
+:::
+
+:::
+
+::: {.callout-tip}
+## Mach mit — eigenes Observable-Diagramm
+
+Übernehmen Sie den Code des Strangs Ihrer Wahl in Ihr eigenes Kapitel — kopieren Sie den ganzen `{ojs}`-Block samt umgebendem `content-visible`-Wrapper. Tauschen Sie die Daten in `le_daten`/`pub_daten`/`prereg_daten` gegen drei bis fünf Werte aus Ihrem Lehrgebiet. Render mit **Strg+Shift+B** und probieren Sie das Steuerelement im Browser.
+:::
+
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Steuerelement tauschen:** Ersetzen Sie `Inputs.range(...)` durch `Inputs.select([...], {label: "Wahl"})` (Dropdown) oder `Inputs.radio([...], {label: "Wahl"})` (Radio-Buttons). Welches Bedienelement passt zu welcher Wahl?
+2. **Zweites Steuerelement koppeln:** Bauen Sie einen zweiten `viewof`-Block mit einer zweiten Variable und kombinieren Sie beide im `filter`-Schritt — z. B. „Land" und „Jahr ab" gleichzeitig.
+3. **Plot-Typ wechseln:** Tauschen Sie `Plot.line(...)` gegen `Plot.barY(...)` oder umgekehrt. Wann wird die Botschaft klarer?
+4. **Aus CSV laden:** Statt die Daten im Code anzulegen, lesen Sie eine CSV ein — `daten = FileAttachment("meine-daten.csv").csv({typed: true})`. Datei in `data/` ablegen und im Quarto-YAML als Resource registrieren.
+:::
+
+::: {.callout-note}
+**Plot-Bibliothek-Spickzettel.** `Plot.line(...)`, `Plot.barY(...)`, `Plot.dot(...)`, `Plot.area(...)`, `Plot.text(...)`, `Plot.ruleY([...])` (horizontale Linie), `Plot.ruleX([...])` (vertikale Linie), `Plot.cell(...)` (Heatmap-Kachel). Vollständig: <https://observablehq.com/plot/marks/>.
+:::
 
 ## Wann **kein** interaktives Diagramm?
 

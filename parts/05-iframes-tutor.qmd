@@ -1,5 +1,5 @@
 ---
-title: "5 — iFrames, Spiele und KI-Tutor"
+title: "7 — iFrames, Spiele und KI-Tutor"
 ---
 
 ::: {.lernziel-box}
@@ -39,17 +39,17 @@ Hier zuerst, was am Ende dabei herauskommen kann. Probieren Sie es direkt aus �
 | `frameborder="0"` | kein hässlicher 3D-Rahmen |
 | `style="border: …"` | dezenter eigener Rahmen in TH-Grau |
 
-## Live-Beispiel 2 — Memory-Spiel als iFrame
+## Live-Beispiel 2 — Zuordnungs-Übung als iFrame
 
-Dasselbe Prinzip, anderer Spieltyp:
+Dasselbe iFrame-Prinzip, anderer Übungstyp — vier Begriffe links, vier Definitionen rechts, Klick-Paar-Mechanik:
 
-<iframe src="../interactions/memory-spiel.html" width="100%" height="850" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/memory-spiel.html" width="100%" height="600" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 **Code zum Übernehmen:**
 
 ```html
 <iframe src="../interactions/memory-spiel.html"
-        width="100%" height="850" frameborder="0"
+        width="100%" height="600" frameborder="0"
         style="border: 1px solid #e6e6ea;">
 </iframe>
 ```

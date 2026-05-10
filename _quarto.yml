@@ -10,7 +10,7 @@ project:
 
 book:
   title: "Interaktive Skripte mit KI erstellen"
-  subtitle: "Werkstatt-Skript zum Workshop am 11.05.2026, TH Köln"
+  subtitle: "Skript zum Workshop am 11.05.2026, TH Köln"
   author: "Prof. Dr. Roman Bartnik"
   date: "2026-05-11"
   date-format: "DD.MM.YYYY"
@@ -28,17 +28,22 @@ book:
     logo: images/th-koeln-logo.png
   chapters:
     - index.qmd
-    - part: "Teil 1 — Werkstatt"
+    - part: "Phase 1 — RStudio + KI-Tutor (lokal)"
       chapters:
         - parts/01-didaktik.qmd
         - parts/02-setup.qmd
-        - parts/03a-uebersicht.qmd
         - parts/03b-bilder-tabellen.qmd
+        - parts/03c-style.qmd
+    - part: "Phase 2 — Zotero hinzu (immer noch lokal)"
+      chapters:
+        - parts/03a-uebersicht.qmd
+    - part: "Phase 3 — Interaktivität und Veröffentlichung"
+      chapters:
         - parts/04-charts.qmd
         - parts/05-iframes-tutor.qmd
-        - parts/03c-style.qmd
+        - parts/08-github-pages.qmd
         - parts/06-slides-optional.qmd
-    - part: "Teil 2 — Quick-Starter"
+    - part: "Quick-Starter und Anhänge"
       chapters:
         - appendix/quickstart.qmd
         - appendix/troubleshooting.qmd
@@ -50,6 +55,11 @@ book:
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
+
+# Erlaubt HTML-Widgets (Plotly, Observable) auch in Nicht-HTML-Formaten (PDF):
+# sie werden im PDF einfach weggelassen (statische Hinweis-Blöcke springen ein
+# über content-visible: when-format="pdf" in den betroffenen Kapiteln).
+prefer-html: true
 
 format:
   html:
@@ -74,5 +84,12 @@ format:
     link-citations: true
     citation-location: document
     reference-location: document
+
+# PDF-Format ist absichtlich nicht definiert.
+# Plotly/Observable im selben Skript erzeugen einen knitr-Konflikt im PDF-Pfad
+# (auch mit prefer-html: true), der kurzfristig nicht
+# zuverlässig zu lösen ist. PDF wird nach dem Workshop sauber nachgezogen,
+# z.B. durch Auslagerung der interaktiven Kapitel in HTML-only-Dateien
+# und Generierung eines separaten Druck-PDFs aus den restlichen Kapiteln.
 
 lang: de

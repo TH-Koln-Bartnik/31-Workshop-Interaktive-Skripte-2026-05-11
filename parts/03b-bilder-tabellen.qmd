@@ -1,5 +1,5 @@
 ---
-title: "3b — Bilder, Tabellen und Cross-Refs"
+title: "3 — Bilder, Tabellen und Verweise"
 ---
 
 ::: {.lernziel-box}
@@ -38,7 +38,7 @@ Wichtig: Das Label muss mit `fig-` beginnen, damit Quarto es als Abbildung erken
 
 ### Weg 2 — Bild aus einem R-Code-Chunk
 
-Wenn Sie ein Diagramm in R erzeugen (kommt in Kapitel 4), nutzen Sie Chunk-Optionen statt Markdown:
+Wenn Sie ein Diagramm in R erzeugen (kommt in Kapitel 6), nutzen Sie Chunk-Optionen statt Markdown:
 
 ````markdown
 ```{{r}}
@@ -164,7 +164,7 @@ Drei Fälle, in denen Sie es lassen können:
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich will in mein Quarto-Skript ein Bild und eine Tabelle einbauen, jeweils mit Bildunterschrift, Label und Verweis aus dem Fließtext. Mein Stand: [Bild liegt in `images/` / muss noch erstellt werden]; [Tabelle als Markdown / aus R-Chunk]. Schreiben Sie mir den Code-Block für Bild und Tabelle plus den Verweis im Lauftext, mit Lay-Erklärung vor jedem Schritt.
+> Ich will in mein Quarto-Skript ein Bild und eine Tabelle einbauen, jeweils mit Bildunterschrift, Label und Verweis aus dem Fließtext. Mein Stand: [Bild liegt in `images/` / muss noch erstellt werden]; [Tabelle als Markdown / aus R-Chunk]. Schreiben Sie mir den Code-Block für Bild und Tabelle plus den Verweis im Lauftext, mit einer Erklärung in einfachen Worten vor jedem Schritt.
 :::
 
 ## End-Test
@@ -175,4 +175,5 @@ Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, da
 
 # Literatur {.unnumbered}
 
-::
+::: {#refs}
+:::

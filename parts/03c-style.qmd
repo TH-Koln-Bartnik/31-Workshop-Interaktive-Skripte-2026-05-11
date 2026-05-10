@@ -1,10 +1,10 @@
 ---
-title: "3c — TH-Köln-Stil einbauen (optional)"
+title: "4 — TH-Köln-Stil einbauen"
 ---
 
 ::: {.callout-note}
-## Optional, für die Feinarbeit
-Dieses Kapitel ist nicht zwingend für den Workshop-Erfolg. Wer mit Kapitel 1–3b und 4–5 noch nicht durch ist, überspringt es. Wer früh fertig ist, baut hier den TH-Köln-Stil ein.
+## Kür-Kapitel
+Dieses Kapitel ist nicht zwingend für den Workshop-Erfolg. Wer in Phase 1 mit den Kapiteln 1–3 noch nicht durch ist, überspringt es und springt direkt zu Kapitel 5 (Quellen mit Zotero). Wer früh fertig ist, baut hier den TH-Köln-Stil ein.
 :::
 
 ::: {.lernziel-box}
@@ -132,7 +132,7 @@ logo:
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.
+> Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Erklärung in einfachen Worten zuerst, dann ein konkreter Code-Schnipsel.
 :::
 
 ## End-Test

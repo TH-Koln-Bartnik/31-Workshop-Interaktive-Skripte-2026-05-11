@@ -24,7 +24,7 @@ Sich an etwas erinnern zu **müssen** verbessert das Behalten stärker als wiede
 
 ### Multimedia-Prinzip
 
-Worte plus passende Bilder schlagen Worte allein [@mayer2021]. „Passend" heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das **interaktive Diagramm**, das Sie in Kapitel 4 einbauen werden, hat einen lerntheoretischen Grund — keine Spielerei.
+Worte plus passende Bilder schlagen Worte allein [@mayer2021]. „Passend" heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das **interaktive Diagramm**, das Sie in Kapitel 6 einbauen werden, hat einen lerntheoretischen Grund — keine Spielerei.
 
 ## Was das für Ihr Skript heißt
 
@@ -32,9 +32,9 @@ Drei Bauteile, die Sie heute alle einbauen, lassen sich genau diesen drei Prinzi
 
 | Prinzip | Skript-Element | Wo im Workshop? |
 |---|---|---|
-| Generatives Lernen | KI-Tutor, eigene Übungsaufgabe | Kap. 5 |
-| Retrieval Practice | Lernspiel, Memory, Quiz (iFrame oder H5P) | Kap. 1, 2, 5 |
-| Multimedia | Interaktives Diagramm, Grafiken | Kap. 4 |
+| Generatives Lernen | KI-Tutor, eigene Übungsaufgabe | Kap. 2, 7 |
+| Retrieval Practice | Lernspiel, Memory, Quiz (iFrame oder H5P) | Kap. 1, 2, 7 |
+| Multimedia | Interaktives Diagramm, Grafiken | Kap. 6 |
 
 Das ist die didaktische Architektur Ihres Skripts — und gleichzeitig die Architektur dieses Workshops.
 

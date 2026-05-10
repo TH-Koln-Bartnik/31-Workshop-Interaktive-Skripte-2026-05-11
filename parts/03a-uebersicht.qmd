@@ -1,32 +1,20 @@
 ---
-title: "3a — Inhaltsverzeichnis und Literatur"
+title: "5 — Quellen mit Zotero"
 ---
 
 ::: {.lernziel-box}
 #### Was Sie nach diesem Kapitel können
 
-- ein **automatisches Inhaltsverzeichnis** in Ihrem Skript einschalten,
 - eine **Zotero-Bibliothek als BibTeX exportieren** und ins Projekt einbinden,
-- mit `[@key]` zitieren und ein **automatisches Literaturverzeichnis** am Kapitelende erzeugen.
+- mit `[@key]` zitieren und ein **automatisches Literaturverzeichnis** am Kapitelende erzeugen,
+- den **Hover-Tooltip** für Quellenangaben aktivieren — Lesende sehen die Vollangabe, ohne wegnavigieren zu müssen.
 :::
 
 ## Worum es im Kern geht
 
-Ein gutes Skript orientiert die Lesenden zwei Mal: oben durch das Inhaltsverzeichnis, unten durch die Literaturliste. Beides automatisch zu erzeugen ist mehr als Komfort — es vermeidet die typischen Fehlerquellen (vergessene Quellen, falsche Seitenzahlen, doppelte Einträge), die in Hand-pflege unweigerlich entstehen. Die Verbindung von Zotero und Quarto regelt das mit zwei Konfigurationszeilen.
+Mit Phase 2 startet das **zweite Werkzeug** des Workshops: Zotero kommt zu RStudio dazu. Die Idee: Sie pflegen Ihre Quellen einmal in Zotero, exportieren sie als `references.bib`, und im Skript schreiben Sie nur noch `[@mayer2021]` — Quarto rendert daraus automatisch die korrekte APA-Zitation und hängt am Kapitelende eine vollständige Literaturliste an. Das vermeidet die typischen Fehlerquellen der Handpflege (vergessene Quellen, falsche Seitenzahlen, doppelte Einträge) und macht spätere Anpassungen am Zitierstil zur Drei-Sekunden-Sache.
 
-## Inhaltsverzeichnis — drei Zeilen
-
-In `_quarto.yml`:
-
-```yaml
-format:
-  html:
-    toc: true
-    toc-depth: 3
-    toc-title: "Inhalt"
-```
-
-Quarto baut das TOC automatisch aus den Überschriften. Tiefe drei heißt: Kapitel, Abschnitt, Unterabschnitt — alles, was tiefer geschachtelt ist, taucht im TOC nicht auf.
+Das Inhaltsverzeichnis (`toc: true`) haben Sie schon in Kap. 2 in `_quarto.yml` eingeschaltet — es funktioniert unabhängig von Zotero und braucht hier keine Wiederholung.
 
 ## Zotero anbinden
 
@@ -93,7 +81,7 @@ Wählen Sie aus Ihrem Strang **drei Quellen**, legen Sie sie in Zotero an, expor
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.
+> Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit einer Erklärung in einfachen Worten vor dem Code. Fragen Sie, wo ich gerade stehe.
 :::
 
 ## End-Test

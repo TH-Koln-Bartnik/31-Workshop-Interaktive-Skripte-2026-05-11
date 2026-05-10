@@ -8,19 +8,49 @@ subtitle: "Von Null auf erstem Skript live im Netz — alles aus RStudio"
 Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. **RStudio ist Ihr einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.
 :::
 
-## Checkliste vor dem Workshop
+## Checkliste — gestaffelt nach Workshop-Phase
+
+Sie müssen **nicht alle Werkzeuge auf einmal** installieren. Der Workshop ist in drei Phasen gegliedert; jede Phase bringt ein neues Tool-Set dazu. Wer die Phase-1-Tools vor dem Workshop hat, kann sofort starten — Phase 2 und 3 lassen sich in der Mittagspause oder im laufenden Workshop nachholen.
+
+### Phase 1 — vor dem Workshop installieren (Pflicht für 09:00 Uhr)
+
+Das Minimal-Set für den Vormittag. Ohne diese vier Werkzeuge kommen Sie morgens nicht in die Schreib-Render-Schleife.
 
 | | Schritt | Wo? | Zeit |
 |---|---|---|---|
 | ☐ | Quarto installieren | <https://quarto.org/docs/get-started/> | 5 min |
 | ☐ | R installieren | <https://cran.r-project.org/> | 5 min |
 | ☐ | RStudio Desktop (kostenlos) | <https://posit.co/download/rstudio-desktop/> | 5 min |
-| ☐ | GitHub Desktop | <https://desktop.github.com/> | 5 min |
-| ☐ | GitHub-Konto erstellen | <https://github.com/signup> | 5 min |
-| ☐ | Zotero + Better BibTeX | <https://www.zotero.org/> | 10 min |
 | ☐ | ChatGPT-Konto und Tutor-Link testen | <https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte> | 2 min |
 
-Insgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.
+Summe: rund 20 Minuten. Mit dieser Ausrüstung absolvieren Sie Kap. 1 bis 4.
+
+### Phase 2 — vor dem frühen Nachmittag (für Kap. 5 — Zotero)
+
+Wenn Sie die Phase-1-Tools schon haben, installieren Sie diese vor dem Workshop oder spätestens in der Mittagspause.
+
+| | Schritt | Wo? | Zeit |
+|---|---|---|---|
+| ☐ | Zotero installieren | <https://www.zotero.org/download/> | 5 min |
+| ☐ | Better BibTeX Plugin | <https://retorque.re/zotero-better-bibtex/> | 5 min |
+
+Summe: rund 10 Minuten. Damit funktioniert Kap. 5.
+
+### Phase 3 — vor 15:00 Uhr (für Kap. 8 — GitHub Pages)
+
+Diese beiden Schritte stehen erst zum Tagesende an. Wer mag, installiert sie schon vorher; nötig ist es erst nachmittags.
+
+| | Schritt | Wo? | Zeit |
+|---|---|---|---|
+| ☐ | GitHub-Konto erstellen | <https://github.com/signup> | 5 min |
+| ☐ | GitHub Desktop installieren | <https://desktop.github.com/> | 5 min |
+
+Summe: rund 10 Minuten. Damit funktioniert Kap. 8.
+
+::: {.callout-tip}
+## Total
+40 Minuten Installationszeit insgesamt — verteilt auf drei Häppchen, nicht alles am Vorabend.
+:::
 
 ## RStudio-Cockpit auf einen Blick
 
@@ -36,11 +66,15 @@ Drei Shortcuts, die Sie sich merken sollten: **Strg+Shift+K** rendert die aktuel
 
 ## Schritt-für-Schritt: Ihr erstes Skript
 
-### 1. Neues Quarto-Buch anlegen
+Die Schritte 1 bis 6 entsprechen Phase 1 (lokales Skript), Schritte 7 bis 9 Phase 3 (Veröffentlichung). Phase 2 (Zotero) ist nicht in diesem Quickstart, weil sie ein eigenes Kapitel im Skript hat.
+
+### Phase 1 — lokal arbeiten
+
+#### 1. Neues Quarto-Buch anlegen
 
 In RStudio: **File → New Project → New Directory → Quarto Book → Create Project**.
 
-### 2. Erste Vorschau
+#### 2. Erste Vorschau
 
 Im **Terminal-Tab** (unten links, neben Console):
 
@@ -50,9 +84,9 @@ quarto preview
 
 Browser öffnet sich. Sie sehen die Beispielinhalte. **Strg+C** im Terminal beendet den Preview-Server.
 
-### 3. `_quarto.yml` minimal anpassen
+#### 3. `_quarto.yml` minimal anpassen
 
-Im **Editor** öffnen Sie `_quarto.yml` und ersetzt den Inhalt durch:
+Im **Editor** öffnen Sie `_quarto.yml` und ersetzen den Inhalt durch:
 
 ```yaml
 project:
@@ -73,11 +107,11 @@ format:
 
 `output-dir: docs` ist wichtig — GitHub Pages erwartet das später.
 
-### 4. Ordner für Bilder, Daten und Widgets anlegen
+#### 4. Ordner für Bilder, Daten und Widgets anlegen
 
-Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legst nacheinander an: `images/`, `interactions/`, `include/`, `data/`. So wissen Sie immer, wo etwas hingehört.
+Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legen nacheinander an: `images/`, `interactions/`, `include/`, `data/`. So wissen Sie immer, wo etwas hingehört.
 
-### 5. Erstes Kapitel schreiben
+#### 5. Erstes Kapitel schreiben
 
 Öffnen Sie `index.qmd` im Editor, ersetzen Sie den Beispielinhalt durch:
 
@@ -93,7 +127,7 @@ Mein erstes Skript zum Thema [Strang A/B/C].
 - Punkt 3
 ```
 
-### 6. Rendern
+#### 6. Rendern
 
 Im Terminal:
 
@@ -103,17 +137,19 @@ quarto render
 
 Oder Knopf **Build → Render Book** klicken. Im `docs/`-Ordner liegt jetzt die fertige Webseite.
 
-### 7. GitHub Desktop: Repo anlegen
+### Phase 3 — veröffentlichen
+
+#### 7. GitHub Desktop: Repo anlegen
 
 GitHub Desktop → **File → Add Local Repository** → Projektordner wählen → **Create a repository** zustimmen → Name: `mein-erstes-skript` → **Publish repository** (Public).
 
-### 8. GitHub Pages aktivieren
+#### 8. GitHub Pages aktivieren
 
 Auf <https://github.com> im Repo: **Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save**.
 
 Nach 1–2 Minuten ist Ihr Skript unter `https://IHR-USERNAME.github.io/mein-erstes-skript/` live.
 
-### 9. Erste Änderung publizieren
+#### 9. Erste Änderung publizieren
 
 Bearbeiten Sie `index.qmd`, rendern Sie lokal (Terminal: `quarto render` oder Knopf), in GitHub Desktop **Commit → Push origin**. Webseite aktualisiert sich automatisch in 30–60 Sekunden.
 
@@ -222,4 +258,4 @@ Der robusteste, datenschutzfreundliche Weg. In ILU oder Moodle ein **Material vo
 
 ## Was als Nächstes?
 
-Springen Sie zurück in [Kapitel 3a — Übersicht](../parts/03a-uebersicht.qmd) und bauen Sie Inhaltsverzeichnis und Literaturverwaltung ein. Dann zu [Kapitel 3b — Bilder, Tabellen, Cross-Refs](../parts/03b-bilder-tabellen.qmd).
+Springen Sie zurück in [Kapitel 2 — RStudio + erstes Skript](../parts/02-setup.qmd) für die Schreib-Render-Routine, dann zu [Kapitel 3 — Bilder, Tabellen, Verweise](../parts/03b-bilder-tabellen.qmd). Zotero kommt in [Kapitel 5](../parts/03a-uebersicht.qmd), GitHub und Pages am Tagesende in [Kapitel 8](../parts/08-github-pages.qmd).

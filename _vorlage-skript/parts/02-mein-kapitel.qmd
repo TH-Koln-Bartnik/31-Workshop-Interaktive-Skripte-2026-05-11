@@ -12,7 +12,7 @@ title: "2 — Mein Kapitel"
 
 ## Worum es im Kern geht
 
-Lay-Erklärung in zwei bis drei Sätzen. Wissenschaftliche Quelle hier zitieren [@mayer2021].
+Erklärung in einfachen Worten in zwei bis drei Sätzen. Wissenschaftliche Quelle hier zitieren [@mayer2021].
 
 ## Hauptinhalt
 

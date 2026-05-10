@@ -1,10 +1,10 @@
 ---
-title: "6 — Slides mit Quarto (optional)"
+title: "9 — Slides mit Quarto (optional)"
 ---
 
 ::: {.callout-note}
 ## Optional, für Fortgeschrittene
-Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, baut hier eigene Folien. Vorlage und Inspiration: Békés (2025), [Course slides for "Data Analysis with AI"](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html){target="_blank"}.
+Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–8 früher fertig ist, baut hier eigene Folien. Vorlage und Inspiration: Békés (2025), [Course slides for "Data Analysis with AI"](https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html){target="_blank"}.
 :::
 
 ::: {.lernziel-box}
@@ -134,7 +134,7 @@ Erst die Frage in den Raum stellen, dann das Schaubild aufdecken.
 ```markdown
 ::: notes
 Hier baue ich Spannung auf. Erst Punkt eins erklären, dann
-mit der Pfeiltaste den nächsten enthüllen. Beispiel aus Kapitel 4 nennen.
+mit der Pfeiltaste den nächsten enthüllen. Beispiel aus Kapitel 6 nennen.
 :::
 ```
 

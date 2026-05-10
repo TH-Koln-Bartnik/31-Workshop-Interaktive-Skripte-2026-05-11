@@ -1,63 +1,64 @@
 ---
-title: "2 — Bausteine und Workflow"
+title: "2 — RStudio + erstes Skript (lokal)"
 ---
 
 ::: {.lernziel-box}
-#### Was Sie nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
-- die sechs Bausteine **Quarto, YAML, JSON, HTML, iFrame, GitHub** in eigenen Worten erklären,
-- ein leeres Quarto-Projekt **lokal anlegen** (RStudio + Terminal),
-- es mit **GitHub Desktop** in ein neues Repository legen,
-- es einmal über **GitHub Pages** veröffentlichen — ein erster klickbarer Link.
+- die vier Werkzeuge **Quarto, YAML, RStudio, HTML** in eigenen Worten erklären,
+- ein leeres Quarto-Buch **lokal anlegen** und im Browser als Live-Vorschau ansehen,
+- den **KI-Tutor** als ständigen Begleiter im zweiten Browser-Tab nutzen — drei konkrete Anlässe sitzen am Ende dieses Kapitels.
 :::
 
 ## Worum es im Kern geht
 
-Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt [@bryan2018]; Quarto bringt diese Logik in die Lehre [@allaire2024].
+Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite, die in Ihrem Browser auf `localhost` lebt — also nur auf Ihrem Computer, ohne Internet, ohne Server. Eine zweite Datei legt fest, wie das Ergebnis aussieht. Bis zum Mittag bleiben wir in genau dieser lokalen Welt — kein GitHub, keine Veröffentlichung, kein Anmeldekonto. Das senkt die Stolperfallen auf eins: Quarto. So entsteht Routine in der Schreib-Render-Schleife, bevor wir später Versionsverwaltung und Web-Speicherung dazuschalten.
 
-## Die sechs Bausteine — Lay-Erklärung zuerst
+Dass wissenschaftliches Arbeiten von einer reproduzierbaren Render-Logik profitiert, ist seit langem belegt [@bryan2018]; Quarto bringt diese Logik in die Hochschullehre [@allaire2024].
 
-Jeder Begriff wird in der Fachsprache schwerer als nötig. Hier zuerst die einfache Idee, dann das Detail.
+## Die vier Werkzeuge — in einfachen Worten zuerst
 
-| Baustein | In einem Satz | Was es technisch ist |
+Jeder Begriff klingt in der Fachsprache schwerer als nötig. Hier zuerst die einfache Idee, dann das Detail.
+
+| Werkzeug | In einem Satz | Was es technisch ist |
 |---|---|---|
 | **Quarto** | Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht. | Open-Source-Publishing-System, Nachfolger von R Markdown [@allaire2024]. |
-| **YAML** | Einstellungsdatei am Anfang jedes Kapitels — sagt z. B., ob es ein Inhaltsverzeichnis gibt. | „YAML Ain't Markup Language", strukturiertes Format mit Einrückungen. |
-| **JSON** | Wie YAML, aber mit Klammern. Wird intern für Daten verwendet. | „JavaScript Object Notation", Standardformat zum Datenaustausch. |
+| **YAML** | Einstellungsdatei am Anfang jedes Kapitels — bestimmt Titel, Format, Inhaltsverzeichnis. | „YAML Ain't Markup Language", strukturiertes Format mit Einrückungen. |
+| **RStudio** | Schreibtisch für alles, was wir heute tun: Editor, Terminal, Files, Build — auf einem Schirm. | Integrated Development Environment für R und Quarto, gehört Posit. |
 | **HTML** | Sprache, in der Webseiten geschrieben sind. | „HyperText Markup Language", Tags wie `<h1>` oder `<p>`. |
-| **iFrame** | Fenster im Fenster — bettet eine fremde Seite in Ihre ein. | HTML-Tag `<iframe src="...">`, isoliert vom Rest der Seite. |
-| **GitHub** | Speicher für Code im Netz, mit eingebautem Webserver (Pages). | Hosting-Plattform auf Basis von Git, gehört Microsoft. |
+
+JSON, iFrames und GitHub kommen später — heute brauchen wir sie noch nicht.
 
 ::: {.callout-tip}
-## Mach mit — Memory-Spiel zu den Bausteinen
-Drei Minuten, sechs Paare. Versuchen Sie, alle Begriffe ihrer Lay-Definition zuzuordnen.
+## Mach mit — Zuordnungsübung zu den Werkzeugen
+Drei Minuten, vier Paare. Ordnen Sie jeden Begriff der Definition in einfachen Worten zu — links Begriff anklicken, rechts Definition anklicken.
 
-[Memory-Spiel öffnen →](../interactions/memory-spiel.html){target="_blank"}
+[Zuordnungsübung öffnen →](../interactions/memory-spiel.html){target="_blank"}
 :::
 
 ::: {.callout-tip}
 ## Variieren Sie
 
-1. **Siebter Baustein:** Öffnen Sie `interactions/memory-spiel.html` in RStudio, ergänzen Sie ein siebtes Begriffspaar (Vorschläge: „CSS", „SCSS", „Markdown" oder „CDN") inklusive Lay-Definition.
-2. **Selbst-Test:** Spielen Sie das Memory zu zweit auf Zeit — wer schafft alle Paare in unter zehn Zügen? Optimum sind sechs.
-3. **Reihenfolge:** Schreiben Sie die sechs Bausteine in der Reihenfolge auf, in der ein Skript-Autor sie tatsächlich nutzt — von „Idee" bis „Live im Netz".
+1. **Fünftes Paar:** Öffnen Sie `interactions/memory-spiel.html` in RStudio, ergänzen Sie ein fünftes Begriffspaar (Vorschläge: „Markdown", „Render", „Theme") inklusive Definition in einfachen Worten.
+2. **Selbst-Test:** Spielen Sie die Übung zu zweit auf Zeit — wer ordnet alle vier Paare beim ersten Versuch korrekt zu?
+3. **Reihenfolge:** Schreiben Sie die vier Werkzeuge in der Reihenfolge auf, in der Sie ihnen heute begegnen — von „RStudio öffnen" bis „lokale Webseite im Browser sehen".
 :::
 
-## Der Workflow in einem Bild
+## Der Vormittags-Workflow in einem Bild
 
-Drei Werkzeuge, ein Kreislauf:
+Zwei Werkzeuge, ein Kreislauf:
 
 ```
-RStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
-        ↑                                                                            │
-        └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘
+RStudio (schreiben + rendern)  →  Browser-Vorschau auf localhost (ansehen)
+        ↑                                                            │
+        └──────────────────  Tutor im zweiten Tab (helfen)  ─────────┘
 ```
 
-Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass Ihr Skript jederzeit reproduzierbar gerendert werden kann und dass Sie ohne Angst Änderungen vornehmen — ein Punkt, den Bryan [-@bryan2018] für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.
+Versionsverwaltung und Web-Veröffentlichung kommen am Nachmittag in Kapitel 8 dazu. Jetzt geht es um die Schreib-Render-Schleife.
 
 ## RStudio als Arbeitszentrale — vier Bereiche
 
-Sie arbeiten fast immer in RStudio. Vier Bereiche reichen für alles, was wir heute machen:
+Sie arbeiten fast ausschließlich in RStudio. Vier Bereiche reichen für den Vormittag:
 
 | Bereich | Wo? | Wofür? |
 |---|---|---|
@@ -78,13 +79,13 @@ Drei nützliche Shortcuts:
 
 ## Mach mit — die ersten 30 Minuten
 
-Halte sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.
+Halten Sie sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.
 
 ### Schritt 1 — neues Projekt in RStudio
 
 1. RStudio öffnen → **File → New Project → New Directory → Quarto Book**.
 2. Ordnernamen wählen, z. B. `mein-erstes-skript`.
-3. Speicherort wählen — am besten direkt in Ihrem GitHub-Ordner.
+3. Speicherort wählen — irgendwo in Ihrem Documents-Ordner.
 4. **Create Project**.
 
 RStudio legt automatisch eine Mini-Buchstruktur an (`_quarto.yml`, `index.qmd`, ein paar Beispielkapitel).
@@ -123,7 +124,7 @@ Quelle: Bartnik & Palmer (2024).
 
 Quellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,
 sondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,
-mit denen Sie eine Quelle in 30 Sekunden grob einordnest.
+mit denen Sie eine Quelle in 30 Sekunden grob einordnen.
 Quelle: Bartnik & Palmer (2024).
 ```
 
@@ -133,7 +134,7 @@ Quelle: Bartnik & Palmer (2024).
 # Transparent schreiben
 
 Transparenz heißt, dass jeder Leser nachvollziehen kann, wie Sie zu Ihren
-Ergebnissen gekommen bist — welche Daten, welche Methoden, welche
+Ergebnissen gekommen sind — welche Daten, welche Methoden, welche
 Annahmen. In diesem Kapitel: drei Bausteine eines transparenten
 Methodenteils. Quelle: Bartnik & Palmer (2024).
 ```
@@ -142,39 +143,53 @@ Methodenteils. Quelle: Bartnik & Palmer (2024).
 
 ### Schritt 4 — Ordnerstruktur anlegen (in RStudio)
 
-Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legst nacheinander an: `images/`, `interactions/`, `include/`, `data/`. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens [-@lakens2022] in seinem Skript verwendet.
+Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legen nacheinander an: `images/`, `interactions/`, `include/`, `data/`. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens [-@lakens2022] in seinem Skript verwendet.
 
-### Schritt 5 — GitHub Desktop verknüpfen
+::: {.callout-note}
+## Was nicht heute Vormittag passiert
+Versionsverwaltung mit Git, GitHub-Konto, GitHub Desktop, GitHub Pages — das alles kommt in **Kapitel 8 — Veröffentlichen mit GitHub Pages** ganz am Ende des Tages dran. Bis dahin lebt Ihr Skript zufrieden auf Ihrem Computer.
+:::
 
-1. GitHub Desktop öffnen → **File → Add Local Repository** → Ordner wählen.
-2. Wenn noch kein Git-Repo: „Create a repository" akzeptieren.
-3. **Publish repository** klicken → Name eingeben (z. B. `mein-erstes-skript`) → **Public** → **Publish**.
+## KI-Tutor als ständiger Begleiter — drei Anlässe
 
-Ihr Code liegt jetzt auf GitHub.
+Der Tutor lebt in einem zweiten Browser-Tab und antwortet auf alles, was im Workshop-Kontext steckt. Damit aus dem „könnte ich mal fragen" Routine wird, drei konkrete Anlässe für die nächsten 30 Minuten:
 
-### Schritt 6 — GitHub Pages aktivieren
+::: {.callout-tip}
+## Tutor-Anlass 1 — YAML-Fehler verstehen
 
-1. Auf github.com im Repository auf **Settings → Pages**.
-2. **Source: Deploy from a branch**.
-3. **Branch: main → Folder: /docs → Save**.
-4. Nach 1–2 Minuten: Ihr Skript liegt unter `https://IHR-USERNAME.github.io/mein-erstes-skript/`.
+Provozieren Sie absichtlich einen YAML-Fehler in `_quarto.yml`: löschen Sie einen Doppelpunkt oder ändern Sie die Einrückung von zwei auf drei Leerzeichen. Render mit **Strg+Shift+B**. Kopieren Sie die Fehlermeldung in den Tutor-Tab und fragen Sie: *„Was bedeutet diese Quarto-Fehlermeldung in einfachen Worten? [Meldung einfügen]"*. Korrigieren Sie nach der Antwort, render erneut.
+
+[Tutor öffnen →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+:::
+
+::: {.callout-tip}
+## Tutor-Anlass 2 — Beispielinhalt erfinden lassen
+
+Im Tutor: *„Ich schreibe ein Quarto-Skript zum Strang [A/B/C]. Schlagen Sie mir drei kurze Sätze vor, die ich als Einstieg in mein erstes Kapitel verwenden kann. Erklärung in einfachen Worten zuerst, dann der konkrete Text."*. Übernehmen Sie die Sätze in `intro.qmd` und render.
+:::
+
+::: {.callout-tip}
+## Tutor-Anlass 3 — Render-Output prüfen lassen
+
+Kopieren Sie das Quarto-Render-Log (alle Zeilen, die im Build-Pane oder Terminal beim Rendern erscheinen) in den Tutor: *„Hier mein Render-Log. Sehen Sie Warnungen, die ich beheben sollte? Erklärung pro Warnung in einem Satz."*. Wenn der Tutor Warnungen identifiziert, beheben Sie eine.
+:::
 
 ::: {.callout-tip}
 ## Variieren Sie weiter
 
 1. **Titel ändern:** Öffnen Sie `_quarto.yml` und ändern Sie den Buchtitel. Render — wo erscheint der neue Titel überall (Sidebar, Browser-Tab, Footer)?
 2. **Eigenes Kapitel anlegen:** Legen Sie eine zweite `.qmd`-Datei an (z. B. `parts/02-eigenes.qmd`) mit zwei Sätzen Inhalt. Tragen Sie sie in `_quarto.yml` unter `chapters:` ein. Render und prüfen.
-3. **YAML-Fehler provozieren:** Ändern Sie absichtlich die Einrückung in `_quarto.yml` von 2 auf 3 Leerzeichen oder vergessen Sie einen Doppelpunkt. Was meldet Quarto? Lerneffekt: YAML-Fehlermeldungen entschlüsseln.
-4. **Footer anpassen:** Ergänzen Sie unter `book.page-footer` Ihren eigenen Namen und das aktuelle Jahr. Render.
+3. **Footer anpassen:** Ergänzen Sie unter `book.page-footer` Ihren eigenen Namen und das aktuelle Jahr. Render.
+4. **Theme tauschen:** Ersetzen Sie unter `format.html.theme` `cosmo` durch ein anderes Bootstrap-Theme (z. B. `flatly` oder `journal`). Render und vergleichen.
 :::
 
 ::: {.callout-warning}
 ## Was, wenn …
 
-- **Render funktioniert lokal, aber GitHub Pages zeigt 404?** → In `_quarto.yml` muss `output-dir: docs` stehen, und der Ordner `docs/` muss committet sein. Schauen Sie in `.gitignore`, ob `/docs/` ausgeschlossen wird, und nimm die Zeile heraus.
 - **YAML-Fehler beim Rendern?** → Einrückungen prüfen (zwei Leerzeichen, keine Tabs). Doppelpunkte und Anführungszeichen ebenfalls.
-- **GitHub Desktop fragt nach Login?** → Im Browser anmelden, dann in GitHub Desktop „Sign in".
 - **`quarto: command not found`?** → Quarto-Installation prüfen mit `quarto --version`. Wenn leer: neu installieren von <https://quarto.org/docs/get-started/>.
+- **`http://localhost:4XXX` lädt nicht?** → Im Terminal `quarto preview` erneut starten; manchmal hängt der vorherige Prozess. **Strg+C** im Terminal beendet ihn sauber.
+- **RStudio findet kein Terminal?** → **Tools → Terminal → New Terminal**, oder Shortcut **Alt+Shift+R**.
 :::
 
 ## Tutor
@@ -185,13 +200,16 @@ Ihr Code liegt jetzt auf GitHub.
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Fragen Sie mich zurück, wenn etwas unklar ist.
+> Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und mit `quarto preview` im Browser auf localhost zu sehen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Erklärung in einfachen Worten VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel für jetzt: lokal eine Vorschau meines Skripts im Browser haben — GitHub kommt später. Fragen Sie mich zurück, wenn etwas unklar ist.
 :::
 
 ## End-Test
 
-Drei bis fünf Minuten. Ziehen Sie jeden Begriff auf die passende Definition, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
+Drei bis fünf Minuten. Klicken Sie links auf einen Begriff und rechts auf die passende Definition. Korrekte Paare werden grün markiert, falsche kurz rot.
 
-<iframe src="../interactions/memory-spiel.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/memory-spiel.html" width="100%" height="700" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
+
+::: {#refs}
+:::

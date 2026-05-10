@@ -1,0 +1,113 @@
+---
+title: "8 — Veröffentlichen mit GitHub und Pages"
+---
+
+::: {.lernziel-box}
+#### Was Sie nach diesem Kapitel können
+
+- die drei Werkzeuge **Git, GitHub, GitHub Pages** in eigenen Worten erklären,
+- Ihren lokalen Projektordner mit **GitHub Desktop** in ein Online-Repository legen,
+- **GitHub Pages** aktivieren und Ihr Skript unter einer **eigenen Live-URL** im Netz öffentlich machen,
+- eine **erste Änderung publizieren** und im Browser nach einer Minute aktualisiert sehen.
+:::
+
+## Worum es im Kern geht
+
+Bis hier lebt Ihr Skript nur auf Ihrem Computer. Damit andere — Studierende, Kollegen, der Browser auf Ihrem Tablet — es ansehen können, brauchen Sie drei zusätzliche Dinge: einen Mechanismus, der Versionen Ihrer Dateien festhält (Git), einen Online-Speicher dafür (GitHub) und einen Webserver, der die fertige Webseite auch ausliefert (GitHub Pages). Alle drei sind kostenlos für offene Projekte. Bryan [-@bryan2018] beschreibt, warum Versionsverwaltung in der Forschung kein Nice-to-have ist; in der Lehre gilt das genauso.
+
+## Die drei Werkzeuge — in einfachen Worten zuerst
+
+| Werkzeug | In einem Satz | Was es technisch ist |
+|---|---|---|
+| **Git** | „Word Track-Changes" für ganze Ordner — speichert jeden Bearbeitungsstand. | Verteiltes Versionsverwaltungssystem, gehört zur Linux-Welt. |
+| **GitHub** | Online-Speicher für Git-Ordner, mit kostenlosem Webserver. | Hosting-Plattform auf Basis von Git, gehört Microsoft. |
+| **GitHub Pages** | Der Webserver-Teil von GitHub — macht aus dem `docs/`-Ordner eine öffentliche Webseite. | Statisches Hosting direkt aus einem Repository, kein Build-System nötig. |
+
+Sie brauchen kein Kommandozeilen-Git zu lernen. **GitHub Desktop** legt eine grafische Oberfläche darüber — Klick statt Tippen.
+
+::: {.callout-note}
+**Was die drei zusammen tun:** Sie ändern eine Datei lokal in RStudio, render mit `quarto render` (Quarto schreibt das Ergebnis in `docs/`), in GitHub Desktop klicken Sie **Commit → Push**, und nach 30 bis 60 Sekunden ist die geänderte Webseite weltweit unter Ihrer URL sichtbar.
+:::
+
+## Mach mit — der Weg zur ersten Live-URL
+
+### Schritt 1 — GitHub-Konto (falls noch nicht vorhanden)
+
+Auf <https://github.com/signup> ein kostenloses Konto anlegen. Username wird Teil Ihrer späteren URL — wählen Sie etwas, das Sie auch in fünf Jahren noch tragen wollen.
+
+### Schritt 2 — `output-dir: docs` in `_quarto.yml` prüfen
+
+Öffnen Sie `_quarto.yml` und vergewissern Sie sich, dass dort steht:
+
+```yaml
+project:
+  type: book
+  output-dir: docs
+```
+
+Diese Zeile sagt Quarto: „Schreib die fertige Webseite in den Ordner `docs/`". GitHub Pages erwartet genau diesen Ordnernamen.
+
+Render einmal komplett: **Strg+Shift+B** oder im Terminal `quarto render`. Im Files-Pane sehen Sie jetzt einen `docs/`-Ordner mit `index.html` und Unterordnern.
+
+### Schritt 3 — GitHub Desktop verknüpfen
+
+1. **GitHub Desktop** öffnen → **File → Add Local Repository** → Ihren Projektordner wählen.
+2. Wenn noch kein Git-Repo: „Create a repository" akzeptieren.
+3. **Publish repository** klicken → Name eingeben (z. B. `mein-erstes-skript`) → **Public** → **Publish**.
+
+Ihr Code liegt jetzt auf GitHub.
+
+::: {.callout-warning}
+**Achten Sie auf `.gitignore`.** Wenn dort `/docs/` steht, würde GitHub Desktop den `docs/`-Ordner ignorieren und nicht hochladen — und GitHub Pages hätte nichts auszuliefern. Öffnen Sie `.gitignore` im Editor und entfernen Sie die Zeile, falls sie da ist.
+:::
+
+### Schritt 4 — GitHub Pages aktivieren
+
+1. Auf <https://github.com> in Ihrem Repository auf **Settings → Pages**.
+2. **Source: Deploy from a branch**.
+3. **Branch: main → Folder: /docs → Save**.
+4. Nach 1–2 Minuten: Ihr Skript liegt unter `https://IHR-USERNAME.github.io/mein-erstes-skript/`.
+
+Diese URL teilen Sie mit anderen — sie funktioniert öffentlich, ohne Login.
+
+### Schritt 5 — erste Änderung publizieren
+
+1. In RStudio: in einer beliebigen `.qmd`-Datei einen Satz ergänzen.
+2. **Strg+Shift+B** rendern.
+3. In GitHub Desktop: links sehen Sie die geänderten Dateien (alle, auch in `docs/`). **Commit summary** schreiben (z. B. „Erster Live-Test"), **Commit to main** klicken, dann **Push origin**.
+4. Browser-Tab mit Ihrer Pages-URL öffnen, **Strg+F5** (Hard-Reload), nach 30–60 Sekunden ist die Änderung sichtbar.
+
+::: {.callout-tip}
+## Variieren Sie
+
+1. **Repo-Beschreibung setzen:** Auf github.com → Repository → **About → Edit (Zahnrad)**. Beschreibung und Themen hinzufügen, damit der Repo-Eintrag aussagekräftig ist.
+2. **README ergänzen:** Schreiben Sie eine Mini-`README.md` im Projektroot mit „Worum geht's" und „Live-URL". Render ist nicht nötig — GitHub zeigt READMEs automatisch unter dem Code.
+3. **Eigenes Domain-Mapping (für Fortgeschrittene):** Wenn Sie eine eigene Domain haben (z. B. `meinname.de`), unter **Settings → Pages → Custom domain** eintragen und beim Domain-Anbieter einen DNS-Eintrag hinzufügen.
+4. **Privater Modus:** Bei sensiblen Inhalten Repository auf **Private** setzen — GitHub Pages bleibt öffentlich, oder Sie nutzen die Pro-Funktion „Private Pages" (kostenpflichtig).
+:::
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **GitHub Pages zeigt 404?** → In `_quarto.yml` muss `output-dir: docs` stehen, und der Ordner `docs/` muss committet sein. Schauen Sie in `.gitignore`, ob `/docs/` ausgeschlossen wird, und nehmen Sie die Zeile heraus.
+- **Push fragt nach Login bei jedem Versuch?** → In GitHub Desktop **File → Options → Accounts → Sign Out**, dann neu anmelden via Browser. Ein Personal Access Token ist meistens schon abgelaufen.
+- **Render funktioniert lokal, aber Pages bleibt leer?** → 60 Sekunden warten und Hard-Reload (**Strg+F5**). Wenn nichts: auf github.com unter **Actions** prüfen, ob ein Build-Fehler steht.
+- **Repository hochgeladen, aber **Settings → Pages** taucht nicht auf?** → Repository ist privat und Sie haben kein Pro-Konto. Auf **Public** umstellen.
+- **Fehlermeldung "fatal: not a git repository"?** → In GitHub Desktop **File → Add Local Repository** → Ordner neu hinzufügen.
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Mein Quarto-Skript läuft lokal mit `quarto preview` einwandfrei, jetzt will ich es über GitHub Pages live bringen. Mein Stand: [GitHub-Konto vorhanden / fehlt noch]; [GitHub Desktop installiert / fehlt]; [Repository angelegt / nicht]; [Pages aktiviert / nicht]. Erklären Sie mir den nächsten konkreten Klick, mit einer Erklärung in einfachen Worten vor jedem Schritt. Sagen Sie mir auch, wie ich nach dem Push erkennen kann, dass es geklappt hat.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
+:::

@@ -16,7 +16,7 @@ title: "1 — Beispielkapitel mit allen Elementen"
 
 ## Worum es im Kern geht
 
-Dieser Block ist ein Platz für die Lay-Erklärung Ihres Themas. Zwei bis drei Sätze. Wenn Sie eine wissenschaftliche Quelle nennen, geht das so [@fiorella2016] — der Hover zeigt die volle APA-Angabe.
+Dieser Block ist ein Platz für die Erklärung in einfachen Worten zu Ihrem Thema. Zwei bis drei Sätze. Wenn Sie eine wissenschaftliche Quelle nennen, geht das so [@fiorella2016] — der Hover zeigt die volle APA-Angabe.
 
 ## Bild mit Caption und Label
 
