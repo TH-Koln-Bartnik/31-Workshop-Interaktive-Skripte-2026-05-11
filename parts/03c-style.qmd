@@ -1,10 +1,10 @@
 ---
-title: "4 — TH-Köln-Stil einbauen"
+title: "5 — TH-Köln-Stil einbauen"
 ---
 
 ::: {.callout-note}
-## Kür-Kapitel
-Dieses Kapitel ist nicht zwingend für den Workshop-Erfolg. Wer in Phase 1 mit den Kapiteln 1–3 noch nicht durch ist, überspringt es und springt direkt zu Kapitel 5 (Quellen mit Zotero). Wer früh fertig ist, baut hier den TH-Köln-Stil ein.
+## Kür-Kapitel der Phase 3
+Dieses Kapitel ist Auftakt der Kür. Wer eher zur Veröffentlichung will, springt direkt zu Kapitel 8 (GitHub Pages); Stil ist auch im Nachgang einbaubar, sobald Ihr Skript einmal live ist.
 :::
 
 ::: {.lernziel-box}

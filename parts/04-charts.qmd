@@ -21,7 +21,7 @@ title: "6 — Interaktive Diagramme"
 Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte [-@tufte2001] formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy [-@healy2018] ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.
 
 ::: {.callout-note}
-**Im Skript unten** sehen Sie alle Diagramme als **Plotly.js-Widget direkt im Browser** — die rendern ohne lokale R-Installation. **Der Code-Block darunter** zeigt jeweils die R-Variante (mit `plotly` + `tibble`), die Sie ins eigene Skript übernehmen können. Wer R lokal hat, schreibt die Charts in R; wer nicht, kopiert die HTML-Variante aus dem Quelltext dieses Kapitels.
+**Im Skript unten** sehen Sie zwei Familien interaktiver Diagramme nebeneinander: **Plotly.js-Widgets** (oben, mit Hover, Zoom, Reihen ein- und ausblenden) und **Observable JS** (weiter unten, mit eigenen reaktiven Steuerelementen wie Slider und Dropdown). Beide rendern ohne lokale R-Installation. Wer R lokal hat, schreibt die Plotly-Charts auch in R; wer nicht, kopiert die HTML-Variante eins zu eins aus dem Quelltext.
 :::
 
 ## Vier Wege, ein Diagramm einzubauen
@@ -85,8 +85,14 @@ le <- tribble(
   2010,  "Deutschland", 80.0,
   2022,  "Deutschland", 80.7,
   1950,  "Japan",       62.0,
+  1970,  "Japan",       72.0,
+  1990,  "Japan",       78.8,
+  2010,  "Japan",       82.9,
   2022,  "Japan",       84.1,
   1950,  "Welt",        47.0,
+  1970,  "Welt",        58.0,
+  1990,  "Welt",        64.5,
+  2010,  "Welt",        70.0,
   2022,  "Welt",        72.6
 )
 
@@ -141,8 +147,11 @@ library(tibble)
 pub <- tribble(
   ~Year, ~Publikationen_Mio,
   1990,  0.8,
+  1995,  1.0,
   2000,  1.2,
+  2005,  1.6,
   2010,  2.1,
+  2015,  2.5,
   2020,  2.9,
   2023,  3.3
 )
@@ -246,7 +255,7 @@ Wenn das Laden fehlschlägt: Datei manuell aus der Grapher-Seite herunterladen, 
 
 ## Observable JS — Reaktivität ohne JavaScript-Schreiben
 
-Plotly liefert Interaktivität, die die Bibliothek vorgibt: Hover, Zoom, Reihen ein- und ausblenden. Was Plotly nicht liefert, sind **eigene Steuerelemente** — ein Slider, der den Datenausschnitt verändert, ein Dropdown, das die Farbgruppe wählt, eine Checkbox-Liste, die Reihen filtert. Genau dafür gibt es **Observable JS** (kurz **OJS**), eine Programmierumgebung im Browser, die Quarto direkt eingebaut hat. Lay erklärt: Sie schreiben in einen `{ojs}`-Block ein paar Zeilen, die Quarto in ein klickbares Bedienfeld plus reagierendes Diagramm verwandelt — ohne dass Sie JavaScript lernen müssen. Die Bibliothek **Observable Plot** ist mit dabei und macht Diagramme mit ähnlich wenig Code wie ggplot2.
+Plotly liefert Interaktivität, die die Bibliothek vorgibt: Hover, Zoom, Reihen ein- und ausblenden. Was Plotly nicht liefert, sind **eigene Steuerelemente** — ein Slider, der den Datenausschnitt verändert, ein Dropdown, das die Farbgruppe wählt, eine Checkbox-Liste, die Reihen filtert. Genau dafür gibt es **Observable JS** (kurz **OJS**), eine Programmierumgebung im Browser, die Quarto direkt eingebaut hat. In einfachen Worten: Sie schreiben in einen `{ojs}`-Block ein paar Zeilen, die Quarto in ein klickbares Bedienfeld plus reagierendes Diagramm verwandelt — ohne dass Sie JavaScript lernen müssen. Die Bibliothek **Observable Plot** ist mit dabei und macht Diagramme mit ähnlich wenig Code wie ggplot2.
 
 Mehr zur Idee von Observable [@observable2024]; dieselben Reaktivitäts-Prinzipien stecken hinter Shiny in R [@chang2023], nur ohne den R-Server.
 

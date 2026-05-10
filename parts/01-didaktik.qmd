@@ -20,7 +20,7 @@ Auch beim Lernen gilt eine Form von „wer schreibt, der bleibt". Wenn wir einen
 
 ### Retrieval Practice
 
-Sich an etwas erinnern zu **müssen** verbessert das Behalten stärker als wiederholtes Lesen [@roediger2006]. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein **kurzes Quiz** oder eine **Drag-and-Drop-Aufgabe** in Ihrem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.
+Sich an etwas erinnern zu **müssen** verbessert das Behalten stärker als wiederholtes Lesen [@roediger2006; @karpicke2011]. In Experimenten von Karpicke und Mitarbeitern lasen Studierende dasselbe Material wiederholt oder kombinierten Lesen mit aktiven Abrufphasen — die Abruf-Gruppen schlugen die reinen Leser eine Woche später deutlich. Übersetzt: ein **kurzes Quiz** oder eine **Drag-and-Drop-Aufgabe** in Ihrem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.
 
 ### Multimedia-Prinzip
 
@@ -85,7 +85,7 @@ Fragen Sie den Tutor nach passenden interaktiven Elementen für Ihr Kapitel. Vor
 
 Drei bis fünf Minuten. Ziehen Sie jedes Beispiel auf das Lernprinzip, das es illustriert, dann auf **„Auflösung anzeigen"** klicken — Sie erhalten Feedback pro Eintrag.
 
-<iframe src="../interactions/lernspiel-kapitel1.html" width="100%" height="900" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
+<iframe src="../interactions/lernspiel-kapitel1.html" width="100%" height="780" frameborder="0" style="border: 1px solid #e6e6ea;"></iframe>
 
 # Literatur {.unnumbered}
 

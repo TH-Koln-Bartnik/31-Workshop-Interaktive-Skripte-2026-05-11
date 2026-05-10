@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -161,11 +181,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3 — Bilder, Tabellen und Verweise</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — TH-Köln-Stil einbauen</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -179,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — Quellen mit Zotero</span></a>
+  <a href="./parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Quellen mit Zotero</span></a>
   </div>
 </li>
       </ul>
@@ -187,12 +202,17 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Phase 3 — Interaktivität und Veröffentlichung</span></a>
+ <span class="menu-text">Phase 3 — Kür plus Veröffentlichung</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — TH-Köln-Stil einbauen</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Interaktive Diagramme</span></a>
@@ -239,6 +259,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="./appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix/reviewer-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reviewer-Prompt: KI als kritische Erstleserin</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -258,14 +283,15 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#was-sie-heute-bauen" id="toc-was-sie-heute-bauen" class="nav-link active" data-scroll-target="#was-sie-heute-bauen">Was Sie heute bauen</a>
   <ul class="collapse">
-  <li><a href="#drei-referenzen" id="toc-drei-referenzen" class="nav-link" data-scroll-target="#drei-referenzen">Drei Referenzen</a></li>
+  <li><a href="#vier-referenzen" id="toc-vier-referenzen" class="nav-link" data-scroll-target="#vier-referenzen">Vier Referenzen</a></li>
   <li><a href="#wählen-sie-ihren-beispielstrang" id="toc-wählen-sie-ihren-beispielstrang" class="nav-link" data-scroll-target="#wählen-sie-ihren-beispielstrang">Wählen Sie Ihren Beispielstrang</a></li>
   <li><a href="#tagesablauf-drei-phasen" id="toc-tagesablauf-drei-phasen" class="nav-link" data-scroll-target="#tagesablauf-drei-phasen">Tagesablauf — drei Phasen</a></li>
   <li><a href="#wie-sie-dieses-skript-benutzen" id="toc-wie-sie-dieses-skript-benutzen" class="nav-link" data-scroll-target="#wie-sie-dieses-skript-benutzen">Wie Sie dieses Skript benutzen</a></li>
   <li><a href="#ordnerstruktur-ihres-skripts" id="toc-ordnerstruktur-ihres-skripts" class="nav-link" data-scroll-target="#ordnerstruktur-ihres-skripts">Ordnerstruktur Ihres Skripts</a></li>
   <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
   <li><a href="#vorlage-skript-zum-download" id="toc-vorlage-skript-zum-download" class="nav-link" data-scroll-target="#vorlage-skript-zum-download">Vorlage-Skript zum Download</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#komplette-literaturliste" id="toc-komplette-literaturliste" class="nav-link" data-scroll-target="#komplette-literaturliste">Komplette Literaturliste</a></li>
+  <li><a href="#quellen" id="toc-quellen" class="nav-link" data-scroll-target="#quellen">Quellen</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
@@ -321,25 +347,33 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>…</strong>und <strong>Hilfe durch KI</strong> bereitzustellen (einen KI-Tutor verlinken, der die Lernenden im Skript begleitet).</li>
 </ol>
 </section>
-<section id="drei-referenzen" class="level2">
-<h2 class="anchored" data-anchor-id="drei-referenzen">Drei Referenzen</h2>
-<p>Bevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs.</p>
+<section id="vier-referenzen" class="level2">
+<h2 class="anchored" data-anchor-id="vier-referenzen">Vier Referenzen</h2>
+<p>Bevor wir bauen, schauen wir, was möglich ist. Vier Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs, alle mit Quarto erstellt.</p>
 <div class="benchmark-grid">
 <section id="lakens-statistical-inferences" class="level3 benchmark-card">
 <h3 class="anchored" data-anchor-id="lakens-statistical-inferences">Lakens — Statistical Inferences</h3>
-<p>Ein vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden”.</p>
-<p><a href="https://lakens.github.io/statistical_inferences/" target="_blank">Zum Skript →</a></p>
+<p>Ein vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden”. Daniel Lakens ist Professor an der Eindhoven University of Technology, Experte für statistische Methoden und ein führender Vertreter der Open Science Bewegung und Bemühungen methodischer Neuorientierung in der Wissenschaft.</p>
+<p><a href="https://lakens.github.io/statistical_inferences/" target="_blank">Zum Lehrbuch →</a></p>
 </section>
-<section id="bartnik-ki-als-hilfe-zum-lehren-und-lernen" class="level3 benchmark-card">
-<h3 class="anchored" data-anchor-id="bartnik-ki-als-hilfe-zum-lehren-und-lernen">Bartnik — KI als Hilfe zum Lehren und Lernen</h3>
-<p>Mein eigenes Skript, mit interaktiven Widgets, eingebetteten Tutor-Bots und H5P-Quizzen.</p>
-<p><a href="https://th-koln-bartnik.github.io/genai4teaching/" target="_blank">Zum Skript →</a></p>
+<section id="healy-data-visualization" class="level3 benchmark-card">
+<h3 class="anchored" data-anchor-id="healy-data-visualization">Healy — Data Visualization</h3>
+<p>Lehrbuch zur Datenvisualisierung in R <span class="citation" data-cites="healy2018">(<a href="index.html#ref-healy2018" role="doc-biblioref">Healy, 2018</a>)</span>, als Web-Edition kostenlos lesbar und unabhängig vom gedruckten Princeton-Band gepflegt. Maßstab für „klassisches Lehrbuch im Web”. (Kieran Healy, ein Professor an der Duke University, hat eine Gabe für knackige Titel, wie er 2017 mit seinem Artikel “Fuck Nuance” <span class="citation" data-cites="healy2017">(<a href="index.html#ref-healy2017" role="doc-biblioref">Healy, 2017</a>)</span> im Journal of Sociological Theory bewies.)</p>
+<p><a href="https://socviz.co/" target="_blank">Zum Lehrbuch →</a></p>
 </section>
 <section id="békés-data-analysis-with-ai" class="level3 benchmark-card">
 <h3 class="anchored" data-anchor-id="békés-data-analysis-with-ai">Békés — Data Analysis with AI</h3>
-<p>Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Skript plus Slides plus Code”.</p>
-<p><a href="https://gabors-data-analysis.com/ai-course/" target="_blank">Zum Skript →</a></p>
+<p>Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Skript plus Slides plus Code”. Schön ist hier die starke Verbindung von Datenanalyse mit GenAI Methoden.</p>
+<p><a href="https://gabors-data-analysis.com/ai-course/" target="_blank">Zum Kurs →</a></p>
 </section>
+<section id="bartnik-ki-als-hilfe-zum-lehren-und-lernen" class="level3 benchmark-card">
+<h3 class="anchored" data-anchor-id="bartnik-ki-als-hilfe-zum-lehren-und-lernen">Bartnik — KI als Hilfe zum Lehren und Lernen</h3>
+<p>Mein eigenes Skript, im Vergleich zu den schon publizierten Werken noch etwas unfertig, mit interaktiven Widgets, eingebetteten Tutor-Bots und kleinen Lernspielen.</p>
+<p><a href="https://th-koln-bartnik.github.io/genai4teaching/" target="_blank">Zum Skript →</a></p>
+</section>
+<div class="benchmark-card">
+
+</div>
 </div>
 </section>
 <section id="wählen-sie-ihren-beispielstrang" class="level2">
@@ -375,89 +409,42 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tagesablauf-drei-phasen" class="level2">
 <h2 class="anchored" data-anchor-id="tagesablauf-drei-phasen">Tagesablauf — drei Phasen</h2>
-<p>Der Workshop ist so strukturiert, dass Sie nicht alle Werkzeuge gleichzeitig lernen müssen. <strong>Phase 1</strong> (Vormittag): nur RStudio plus KI-Tutor — alles lokal, kein Internet außer dem Tutor-Tab. <strong>Phase 2</strong> (früher Nachmittag): Zotero kommt dazu, immer noch lokal. <strong>Phase 3</strong> (später Nachmittag): GitHub und Pages — Ihr Skript geht ins Netz.</p>
+<p>Der Workshop ist so geschnitten, dass Sie nicht alle Werkzeuge gleichzeitig lernen müssen. Drei Phasen, in jeder kommt höchstens ein neues Werkzeug dazu.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 21%">
-<col style="width: 26%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Uhrzeit</th>
-<th>Block</th>
 <th>Phase</th>
-<th>Was passiert</th>
+<th>Zeitrahmen</th>
+<th>Inhalt</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>09:00–09:30</td>
-<td>Auftakt</td>
-<td>—</td>
-<td>Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl</td>
+<td><strong>Phase 1 — RStudio + KI-Tutor (lokal)</strong></td>
+<td>Vormittag, ca. 09:00–12:30 (inkl. Pause)</td>
+<td>Auftakt und Strangwahl, kurze didaktische Verortung, RStudio-Cockpit, erstes Quarto-Buch lokal anlegen und im Browser sehen, Bilder/Tabellen/Verweise einbauen</td>
 </tr>
 <tr class="even">
-<td>09:30–10:15</td>
-<td>Kap. 1 — Didaktik</td>
-<td>—</td>
-<td>Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung</td>
+<td><strong>Phase 2 — Zotero hinzu (immer noch lokal)</strong></td>
+<td>Früher Nachmittag, ca. 13:15–14:00</td>
+<td>Better-BibTeX, <code>references.bib</code>, automatische Zitate und Literaturliste</td>
 </tr>
 <tr class="odd">
-<td>10:15–11:30</td>
-<td>Kap. 2 — RStudio + erstes Skript</td>
-<td><strong>1</strong></td>
-<td>RStudio-Cockpit, Quarto-Buch lokal anlegen, <code>quarto preview</code> im Browser, Tutor-Routine entwickeln</td>
-</tr>
-<tr class="even">
-<td>11:30–11:45</td>
-<td>Pause</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>11:45–12:30</td>
-<td>Kap. 3 — Bilder, Tabellen, Verweise</td>
-<td><strong>1</strong></td>
-<td>Bilder mit Caption, Tabellen, Cross-Refs mit Hover-Tooltip</td>
-</tr>
-<tr class="even">
-<td>12:30–13:15</td>
-<td>Mittagspause</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>13:15–14:00</td>
-<td>Kap. 5 — Quellen mit Zotero</td>
-<td><strong>2</strong></td>
-<td>Better-BibTeX, <code>references.bib</code>, <code>[@key]</code>-Zitate, automatische Literaturliste</td>
-</tr>
-<tr class="even">
-<td>14:00–15:00</td>
-<td>Kür: Kap. 4, 6 oder 7 nach Wahl</td>
-<td><strong>2/3</strong></td>
-<td>TH-Köln-Stil, interaktive Charts, iFrames + KI-Tutor — Sie wählen, was Ihr Skript braucht</td>
-</tr>
-<tr class="odd">
-<td>15:00–15:45</td>
-<td>Kap. 8 — Veröffentlichen mit GitHub Pages</td>
-<td><strong>3</strong></td>
-<td>GitHub Desktop, Repository, Pages aktivieren, <strong>Live-URL</strong></td>
-</tr>
-<tr class="even">
-<td>15:45–16:00</td>
-<td>Showcase</td>
-<td>—</td>
-<td>Reihum kurz die eigene Live-URL zeigen, offene Fragen klären</td>
+<td><strong>Phase 3 — Kür plus Veröffentlichung</strong></td>
+<td>Nachmittag, ca. 14:00–16:00</td>
+<td>Auswahl aus TH-Köln-Stil, interaktiven Charts, iFrames + KI-Tutor; dann GitHub Pages live; Showcase</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="wie-sie-dieses-skript-benutzen" class="level2">
 <h2 class="anchored" data-anchor-id="wie-sie-dieses-skript-benutzen">Wie Sie dieses Skript benutzen</h2>
-<p>Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel kannst”), gefolgt von einem <strong>„Mach mit”</strong>-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen <strong>Tutor-Prompt</strong> zum Kopieren.</p>
+<p>Jedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel können”), gefolgt von einem <strong>„Mach mit”</strong>-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen <strong>Tutor-Prompt</strong> zum Kopieren.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -478,8 +465,8 @@ RStudio ist Ihre Arbeitszentrale
 <p>Damit Sie immer wissen, wo etwas hingehört (folgt dem Aufbau bei Daniel Lakens):</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
+<col style="width: 31%">
+<col style="width: 68%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -517,7 +504,7 @@ RStudio ist Ihre Arbeitszentrale
 </section>
 <section id="voraussetzungen" class="level2">
 <h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
-<p>Wenn Sie noch nichts installiert haben, springen Sie zuerst in den <a href="./appendix/quickstart.html">Quick-Starter Guide</a>. Dort steht, was Sie in welcher Reihenfolge installieren (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.</p>
+<p>Wenn Sie noch nichts installiert haben, springen Sie zuerst in den <a href="./appendix/quickstart.html">Quick-Starter Guide</a>. Dort steht, welche Werkzeuge Sie pro Phase brauchen — Phase 1 fordert nur Quarto, R, RStudio und einen ChatGPT-Tutor-Tab; Zotero und GitHub kommen erst später.</p>
 </section>
 <section id="vorlage-skript-zum-download" class="level2">
 <h2 class="anchored" data-anchor-id="vorlage-skript-zum-download">Vorlage-Skript zum Download</h2>
@@ -537,8 +524,129 @@ Fertige Vorlage holen
 </div>
 </div>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="komplette-literaturliste" class="level2">
+<h2 class="anchored" data-anchor-id="komplette-literaturliste">Komplette Literaturliste</h2>
+<p>Alle Quellen, die im Skript zitiert werden, plus Empfehlungen zur Vertiefung — APA-7-Format mit deutscher Lokalisierung. <a href="./literatur.html">Zur Literaturliste →</a></p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Transparenzhinweis zur KI-Nutzung
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei der Erstellung dieses Skriptes wurde Claude 4.7/Cowork zur Aufwertung der Inhalte (speziell für Beispiele und Interaktionen), als Reviewer (speziell Sprach- und Konsistenzchecks) und zur Gestaltung des Layouts genutzt. Alle Inhalte wurden von Roman Bartnik geprüft, überarbeitet und verantwortet.</p>
+</div>
+</div>
+</section>
+<section id="quellen" class="level2">
+<h2 class="anchored" data-anchor-id="quellen">Quellen</h2>
+<p>Vier Vorbild-Skripte als Maßstab <span class="citation" data-cites="lakens2022 healy2018 bartnik2025 bekes2025">(<a href="index.html#ref-bartnik2025" role="doc-biblioref">Bartnik, 2025</a>; <a href="index.html#ref-bekes2025" role="doc-biblioref">Békés, 2025</a>; <a href="index.html#ref-healy2018" role="doc-biblioref">Healy, 2018</a>; <a href="index.html#ref-lakens2022" role="doc-biblioref">Lakens, 2022</a>)</span>; Constructive Alignment als didaktisches Rahmen <span class="citation" data-cites="biggs2011">(<a href="index.html#ref-biggs2011" role="doc-biblioref">Biggs &amp; Tang, 2011</a>)</span>; Multimedia-Lernen als Begründung für interaktive Elemente <span class="citation" data-cites="mayer2021">(<a href="index.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-allaire2024" class="csl-entry" role="listitem">
+Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C.
+(2024). <em>Quarto: An open-source scientific and technical publishing
+system</em>. <a href="https://quarto.org/">https://quarto.org/</a>
+</div>
+<div id="ref-bartnik2025" class="csl-entry" role="listitem">
+Bartnik, R. (2025). <em>Generative <span>KI</span> als hilfe zum lehren
+und lernen</em>. <a href="https://th-koln-bartnik.github.io/genai4teaching/">https://th-koln-bartnik.github.io/genai4teaching/</a>
+</div>
+<div id="ref-bartnik2024" class="csl-entry" role="listitem">
+Bartnik, R., &amp; Palmer, C. (2024). <em>Projektorientierte einführung
+in kritisches wissenschaftliches denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
+</div>
+<div id="ref-bekes2025" class="csl-entry" role="listitem">
+Békés, G. (2025). <em>Data analysis with <span>AI</span></em>. <a href="https://gabors-data-analysis.com/ai-course/">https://gabors-data-analysis.com/ai-course/</a>
+</div>
+<div id="ref-biggs2011" class="csl-entry" role="listitem">
+Biggs, J., &amp; Tang, C. (2011). <em>Teaching for quality learning at
+university</em> (4th ed.). Open University Press.
+</div>
+<div id="ref-bornmann2021" class="csl-entry" role="listitem">
+Bornmann, L., Haunschild, R., &amp; Mutz, R. (2021). Growth rates of
+modern science: A latent piecewise growth curve approach to model
+publication numbers from established and new literature databases.
+<em>Humanities and Social Sciences Communications</em>, <em>8</em>, 224.
+<a href="https://doi.org/10.1057/s41599-021-00903-w">https://doi.org/10.1057/s41599-021-00903-w</a>
+</div>
+<div id="ref-bryan2018" class="csl-entry" role="listitem">
+Bryan, J. (2018). Excuse me, do you have a moment to talk about version
+control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
+</div>
+<div id="ref-chang2023" class="csl-entry" role="listitem">
+Chang, W., Cheng, J., Allaire, J. J., Sievert, C., Schloerke, B., Xie,
+Y., Allen, J., McPherson, J., Dipert, A., &amp; Borges, B. (2023).
+<em>Shiny: Web application framework for <span>R</span></em>. <a href="https://shiny.posit.co/">https://shiny.posit.co/</a>
+</div>
+<div id="ref-fiorella2016" class="csl-entry" role="listitem">
+Fiorella, L., &amp; Mayer, R. E. (2016). Eight ways to promote
+generative learning. <em>Educational Psychology Review</em>,
+<em>28</em>(4), 717–741. <a href="https://doi.org/10.1007/s10648-015-9348-9">https://doi.org/10.1007/s10648-015-9348-9</a>
+</div>
+<div id="ref-healy2017" class="csl-entry" role="listitem">
+Healy, K. (2017). Fuck nuance. <em>Sociological Theory</em>,
+<em>35</em>(2), 118127. <a href="https://doi.org/10.1177/0735275117709046">https://doi.org/10.1177/0735275117709046</a>
+</div>
+<div id="ref-healy2018" class="csl-entry" role="listitem">
+Healy, K. (2018). <em>Data visualization: A practical introduction</em>.
+Princeton University Press. <a href="https://socviz.co/">https://socviz.co/</a>
+</div>
+<div id="ref-karpicke2011" class="csl-entry" role="listitem">
+Karpicke, J. D., &amp; Blunt, J. R. (2011). Retrieval practice produces
+more learning than elaborative studying with concept mapping.
+<em>Science</em>, <em>331</em>(6018), 772–775. <a href="https://doi.org/10.1126/science.1199327">https://doi.org/10.1126/science.1199327</a>
+</div>
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D.,
+Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E.,
+Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J.,
+Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023).
+<span>ChatGPT</span> for good? On opportunities and challenges of large
+language models for education. <em>Learning and Individual
+Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
+</div>
+<div id="ref-lakens2022" class="csl-entry" role="listitem">
+Lakens, D. (2022). <em>Improving your statistical inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
+</div>
+<div id="ref-mayer2021" class="csl-entry" role="listitem">
+Mayer, R. E. (2021). <em>Multimedia learning</em> (3rd ed.). Cambridge
+University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
+</div>
+<div id="ref-mollick2023" class="csl-entry" role="listitem">
+Mollick, E. R., &amp; Mollick, L. (2023). Assigning <span>AI</span>:
+Seven approaches for students, with prompts. <em>SSRN Working
+Paper</em>. <a href="https://doi.org/10.2139/ssrn.4475995">https://doi.org/10.2139/ssrn.4475995</a>
+</div>
+<div id="ref-observable2024" class="csl-entry" role="listitem">
+Observable, Inc. (2024). <em>Observable plot — a <span>JavaScript</span>
+library for exploratory data visualization</em>. Software-Dokumentation.
+<a href="https://observablehq.com/plot/">https://observablehq.com/plot/</a>
+</div>
+<div id="ref-roediger2006" class="csl-entry" role="listitem">
+Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning:
+Taking memory tests improves long-term retention. <em>Psychological
+Science</em>, <em>17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">https://doi.org/10.1111/j.1467-9280.2006.01693.x</a>
+</div>
+<div id="ref-owid2024" class="csl-entry" role="listitem">
+Roser, M., Ritchie, H., Mathieu, E., &amp; Ortiz-Ospina, E. (2024).
+<em>Our world in data</em>. <a href="https://ourworldindata.org/">https://ourworldindata.org/</a>
+</div>
+<div id="ref-tufte2001" class="csl-entry" role="listitem">
+Tufte, E. R. (2001). <em>The visual display of quantitative
+information</em> (2nd ed.). Graphics Press.
+</div>
+<div id="ref-wickham2019" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D.,
+François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M.,
+Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J.,
+Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to
+the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
+1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+</div>
 
 
 </section>

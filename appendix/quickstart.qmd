@@ -5,7 +5,7 @@ subtitle: "Von Null auf erstem Skript live im Netz — alles aus RStudio"
 
 ::: {.lernziel-box}
 #### Was dieser Anhang leistet
-Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. **RStudio ist Ihr einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.
+Eine **Schritt-für-Schritt-Anleitung für komplette Anfänger**, parallel zum Workshop nutzbar. **RStudio ist Ihr einziges Editor-Programm** — Terminal, Files-Pane, Build-Pane und Console liegen alle dort. Daneben brauchen Sie nur einen Browser-Tab mit dem KI-Tutor und (für Phase 3) GitHub Desktop.
 :::
 
 ## Checkliste — gestaffelt nach Workshop-Phase
@@ -16,41 +16,36 @@ Sie müssen **nicht alle Werkzeuge auf einmal** installieren. Der Workshop ist i
 
 Das Minimal-Set für den Vormittag. Ohne diese vier Werkzeuge kommen Sie morgens nicht in die Schreib-Render-Schleife.
 
-| | Schritt | Wo? | Zeit |
-|---|---|---|---|
-| ☐ | Quarto installieren | <https://quarto.org/docs/get-started/> | 5 min |
-| ☐ | R installieren | <https://cran.r-project.org/> | 5 min |
-| ☐ | RStudio Desktop (kostenlos) | <https://posit.co/download/rstudio-desktop/> | 5 min |
-| ☐ | ChatGPT-Konto und Tutor-Link testen | <https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte> | 2 min |
+| | Schritt | Wo? |
+|---|---|---|
+| ☐ | Quarto installieren | <https://quarto.org/docs/get-started/> |
+| ☐ | R installieren | <https://cran.r-project.org/> |
+| ☐ | RStudio Desktop (kostenlos) | <https://posit.co/download/rstudio-desktop/> |
+| ☐ | ChatGPT-Konto und Tutor-Link testen | <https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte> |
 
-Summe: rund 20 Minuten. Mit dieser Ausrüstung absolvieren Sie Kap. 1 bis 4.
+Mit dieser Ausrüstung absolvieren Sie Phase 1 (Kap. 1 bis 3).
 
-### Phase 2 — vor dem frühen Nachmittag (für Kap. 5 — Zotero)
+### Phase 2 — vor dem frühen Nachmittag (für Kap. 4 — Zotero)
 
 Wenn Sie die Phase-1-Tools schon haben, installieren Sie diese vor dem Workshop oder spätestens in der Mittagspause.
 
-| | Schritt | Wo? | Zeit |
-|---|---|---|---|
-| ☐ | Zotero installieren | <https://www.zotero.org/download/> | 5 min |
-| ☐ | Better BibTeX Plugin | <https://retorque.re/zotero-better-bibtex/> | 5 min |
+| | Schritt | Wo? |
+|---|---|---|
+| ☐ | Zotero installieren | <https://www.zotero.org/download/> |
+| ☐ | Better BibTeX Plugin | <https://retorque.re/zotero-better-bibtex/> |
 
-Summe: rund 10 Minuten. Damit funktioniert Kap. 5.
+Damit funktioniert Kap. 4.
 
-### Phase 3 — vor 15:00 Uhr (für Kap. 8 — GitHub Pages)
+### Phase 3 — Nachmittag (für Kap. 5 — TH-Köln-Stil bis Kap. 8 — GitHub Pages)
 
 Diese beiden Schritte stehen erst zum Tagesende an. Wer mag, installiert sie schon vorher; nötig ist es erst nachmittags.
 
-| | Schritt | Wo? | Zeit |
-|---|---|---|---|
-| ☐ | GitHub-Konto erstellen | <https://github.com/signup> | 5 min |
-| ☐ | GitHub Desktop installieren | <https://desktop.github.com/> | 5 min |
+| | Schritt | Wo? |
+|---|---|---|
+| ☐ | GitHub-Konto erstellen | <https://github.com/signup> |
+| ☐ | GitHub Desktop installieren | <https://desktop.github.com/> |
 
-Summe: rund 10 Minuten. Damit funktioniert Kap. 8.
-
-::: {.callout-tip}
-## Total
-40 Minuten Installationszeit insgesamt — verteilt auf drei Häppchen, nicht alles am Vorabend.
-:::
+Damit funktioniert Kap. 8.
 
 ## RStudio-Cockpit auf einen Blick
 
@@ -120,7 +115,7 @@ Im **Files-Pane** (unten rechts) klicken Sie auf **New Folder** und legen nachei
 
 Mein erstes Skript zum Thema [Strang A/B/C].
 
-## Was ich hier behandele
+## Was ich hier behandle
 
 - Punkt 1
 - Punkt 2
@@ -258,4 +253,4 @@ Der robusteste, datenschutzfreundliche Weg. In ILU oder Moodle ein **Material vo
 
 ## Was als Nächstes?
 
-Springen Sie zurück in [Kapitel 2 — RStudio + erstes Skript](../parts/02-setup.qmd) für die Schreib-Render-Routine, dann zu [Kapitel 3 — Bilder, Tabellen, Verweise](../parts/03b-bilder-tabellen.qmd). Zotero kommt in [Kapitel 5](../parts/03a-uebersicht.qmd), GitHub und Pages am Tagesende in [Kapitel 8](../parts/08-github-pages.qmd).
+Springen Sie zurück in [Kapitel 2 — RStudio + erstes Skript](../parts/02-setup.qmd) für die Schreib-Render-Routine, dann zu [Kapitel 3 — Bilder, Tabellen, Verweise](../parts/03b-bilder-tabellen.qmd). Zotero kommt in [Kapitel 4](../parts/03a-uebersicht.qmd), TH-Köln-Stil in [Kapitel 5](../parts/03c-style.qmd), GitHub und Pages am Tagesende in [Kapitel 8](../parts/08-github-pages.qmd).

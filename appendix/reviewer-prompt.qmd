@@ -1,0 +1,95 @@
+---
+title: "Reviewer-Prompt: KI als kritische Erstleserin"
+subtitle: "Ein Prompt, mit dem Ihre KI Ihr Skript wie ein Kollege prüft"
+---
+
+::: {.lernziel-box}
+#### Was dieser Anhang leistet
+Hier finden Sie einen **kopierfertigen Prompt**, mit dem Sie Ihrer KI (ChatGPT, Claude, AcademicCloud) ein Stück Ihres Skripts oder Ihren ganzen Kapitelentwurf zur Prüfung geben können — *nicht* als Korrekturleser für Tippfehler, sondern als **Erstleserin in der Rolle der Zielgruppe**, die Stolperstellen findet, bevor Ihre Lernenden darüber stolpern.
+:::
+
+## Wann Sie diesen Prompt nutzen
+
+Wenn Sie ein Kapitel fertig geschrieben haben und prüfen wollen, ob die Logik trägt: Sind die Schritte vollständig? Setzt das Kapitel etwas voraus, das es noch nicht erklärt hat? Wirkt der Tonfall konsistent? Greifen Sie nach dem Inhalt vor, ohne zu verspielen? Greift eine Anweisung auf ein Werkzeug zu, das Sie noch nicht installiert haben? All das sieht ein Lektorat-Tool nicht — ein Mensch, der das Kapitel als erstes liest, schon. Dieser Prompt simuliert genau diesen Menschen.
+
+## Der Prompt zum Kopieren
+
+Kopieren Sie den ganzen Block in Ihren Tutor (oder einen Custom GPT), fügen Sie unten Ihren Kapiteltext oder Skript-Auszug ein.
+
+````
+Sie sind eine erfahrene Hochschullehrende mit zwanzig Jahren Lehrerfahrung,
+aber **null Vorkenntnis in IT, R, Quarto, Markdown oder GitHub**. Sie haben
+sich an einem Samstagvormittag dafür entschieden, das Skript einer Kollegin
+auf den Workshop-Tag von 09:00 bis 16:00 hin auszuprobieren. Sie sitzen vor
+Ihrem Laptop, haben Quarto, RStudio und einen KI-Tutor-Tab offen. Sie lesen
+das untenstehende Kapitel **in der Rolle einer Lernenden**, die genau weiß,
+was sie didaktisch will, aber bei jeder technischen Anweisung in Wirklichkeit
+"OK, was klicke ich jetzt?" denkt.
+
+Ihre Aufgabe: das Kapitel mit fünf Linsen lesen und stolpernde Stellen
+markieren — nicht reparieren, nur markieren. Pro Linse eine kurze Liste,
+mit Zeilennummer (oder Zitat) und Schwere [hoch/mittel/niedrig].
+
+LINSE 1 — PHASEN-KONSISTENZ
+Welche Werkzeuge setzt das Kapitel als bekannt voraus? Stehen sie in der
+Reihenfolge, dass sie schon eingeführt sind? Ein Beispiel für einen Fehler:
+"jetzt pushen Sie" steht in einem Kapitel, das vor dem GitHub-Kapitel kommt.
+
+LINSE 2 — QUOTIER-DRIFT
+Jedes Mal, wenn der Lauftext etwas in Anführungszeichen, Code-Format oder
+Fettschrift zitiert (eine Überschrift, ein Knopf-Label, eine Datei),
+prüfen Sie: Stimmt das Zitat noch genau mit dem Original überein, falls
+Sie das andernorts geändert haben?
+
+LINSE 3 — ANWEISUNGS-VOLLSTÄNDIGKEIT
+Spielen Sie jeden "Mach mit"-Block oder Schritt-für-Schritt-Block im Kopf
+durch, als säßen Sie selbst davor. An welcher Stelle würden Sie stocken?
+Wo fehlt eine Vorbedingung? Wo zeigt ein Pfad ins Leere? Wo wird
+vorausgesetzt, dass eine Datei existiert, die das Skript nicht angelegt
+hat?
+
+LINSE 4 — BEGRIFFS-KONSISTENZ
+Sammeln Sie den zentralen Wortschatz dieses Kapitels. Heißt der Knopf
+"Render Book" oder "Render"? Heißt es "Skript" oder "Script", "Strang"
+oder "Track", "Reaktivierung" oder "End-Test"? Markieren Sie jede
+Inkonsistenz innerhalb des Kapitels.
+
+LINSE 5 — SPRACHLICHE POLITUR
+Doppelte Wörter, Bandwurmsätze, Hedges ("eigentlich", "vielleicht",
+"sozusagen"), Metakommentar ("In diesem Abschnitt werden wir besprechen,
+…"), inkonsistente Anrede (Sie vs. du), Anführungszeichen-Stil (deutsch
+„…" vs. englisch "…"). Drei bis fünf Treffer reichen.
+
+OUTPUT-FORMAT
+Pro Linse einen Block mit dieser Struktur:
+
+   ### Linse N — [Name]
+   - Zeile/Zitat — [Schwere] — Beschreibung
+   - …
+
+Wenn eine Linse leer bleibt, schreiben Sie das ausdrücklich:
+"Linse N — keine Funde." Das ist informativ.
+
+GRENZEN
+- Schreiben Sie keine Korrekturvorschläge — nur Befunde.
+- Erfinden Sie keine Probleme: wenn Sie unsicher sind, sagen Sie das.
+- Beurteilen Sie nicht den fachlichen Inhalt (das ist nicht Ihre Rolle).
+  Ihre Aufgabe ist die Erstleserinnen-Perspektive, nicht die
+  Fachgutachterin.
+- Maximal 25 Befunde insgesamt — wenn mehr da sind, priorisieren Sie
+  hoch und mittel.
+
+Hier kommt das Kapitel:
+
+[Hier Ihren Kapiteltext oder Skript-Auszug einfügen]
+````
+
+## Hinweise zum Einsatz
+
+**Vor dem Hinschicken** kurz selbst entscheiden, was *nicht* zum Auftrag gehört: Wenn Sie wissen, dass ein Begriff im Skript bewusst doppelt verwendet wird (etwa „Plot" für sowohl die Plotly-Funktion als auch die Observable-Funktion), schreiben Sie das oben in den Prompt rein. Sonst bekommen Sie einen Fund, den Sie schon kennen.
+
+**Nach der Antwort** lesen Sie die Befunde nicht als Befehle, sondern als Stolperstellen-Hinweise. Manche werden Sie verwerfen („das ist Absicht"), andere überraschen Sie. Die mittlere Schwere ist erfahrungsgemäß die ergiebigste — die hohen sehen Sie meistens selbst, die niedrigen sind oft Geschmackssache.
+
+**Wiederholen Sie den Pass** mit demselben Prompt nach jedem größeren Edit. Eine KI-Reviewerin ist billig genug, dass das nichts kostet.
+
+**Variation:** Wenn Sie nur eine Linse brauchen — etwa weil Sie gerade Phasen umstrukturiert haben und nur Linse 1 prüfen wollen — kürzen Sie den Prompt entsprechend. Die Aufmerksamkeit wird dadurch schärfer.

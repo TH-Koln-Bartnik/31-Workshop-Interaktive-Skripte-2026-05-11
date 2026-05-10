@@ -33,12 +33,12 @@ book:
         - parts/01-didaktik.qmd
         - parts/02-setup.qmd
         - parts/03b-bilder-tabellen.qmd
-        - parts/03c-style.qmd
     - part: "Phase 2 — Zotero hinzu (immer noch lokal)"
       chapters:
         - parts/03a-uebersicht.qmd
-    - part: "Phase 3 — Interaktivität und Veröffentlichung"
+    - part: "Phase 3 — Kür plus Veröffentlichung"
       chapters:
+        - parts/03c-style.qmd
         - parts/04-charts.qmd
         - parts/05-iframes-tutor.qmd
         - parts/08-github-pages.qmd
@@ -48,6 +48,7 @@ book:
         - appendix/quickstart.qmd
         - appendix/troubleshooting.qmd
         - appendix/tutor-prompt.qmd
+        - appendix/reviewer-prompt.qmd
     - literatur.qmd
   page-footer:
     left: "© 2026 Roman Bartnik · CC BY-SA 4.0"

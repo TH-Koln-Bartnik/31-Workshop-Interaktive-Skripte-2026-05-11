@@ -216,11 +216,6 @@ div.csl-indent {
   <a href="../parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3 — Bilder, Tabellen und Verweise</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — TH-Köln-Stil einbauen</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -234,7 +229,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — Quellen mit Zotero</span></a>
+  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Quellen mit Zotero</span></a>
   </div>
 </li>
       </ul>
@@ -242,12 +237,17 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Phase 3 — Interaktivität und Veröffentlichung</span></a>
+ <span class="menu-text">Phase 3 — Kür plus Veröffentlichung</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — TH-Köln-Stil einbauen</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Interaktive Diagramme</span></a>
@@ -294,6 +294,11 @@ div.csl-indent {
   <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/reviewer-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reviewer-Prompt: KI als kritische Erstleserin</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -315,7 +320,7 @@ div.csl-indent {
   <li><a href="#die-vier-werkzeuge-in-einfachen-worten-zuerst" id="toc-die-vier-werkzeuge-in-einfachen-worten-zuerst" class="nav-link" data-scroll-target="#die-vier-werkzeuge-in-einfachen-worten-zuerst">Die vier Werkzeuge — in einfachen Worten zuerst</a></li>
   <li><a href="#der-vormittags-workflow-in-einem-bild" id="toc-der-vormittags-workflow-in-einem-bild" class="nav-link" data-scroll-target="#der-vormittags-workflow-in-einem-bild">Der Vormittags-Workflow in einem Bild</a></li>
   <li><a href="#rstudio-als-arbeitszentrale-vier-bereiche" id="toc-rstudio-als-arbeitszentrale-vier-bereiche" class="nav-link" data-scroll-target="#rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</a></li>
-  <li><a href="#mach-mit-die-ersten-30-minuten" id="toc-mach-mit-die-ersten-30-minuten" class="nav-link" data-scroll-target="#mach-mit-die-ersten-30-minuten">Mach mit — die ersten 30 Minuten</a>
+  <li><a href="#mach-mit-vom-leeren-ordner-zur-ersten-vorschau" id="toc-mach-mit-vom-leeren-ordner-zur-ersten-vorschau" class="nav-link" data-scroll-target="#mach-mit-vom-leeren-ordner-zur-ersten-vorschau">Mach mit — vom leeren Ordner zur ersten Vorschau</a>
   <ul class="collapse">
   <li><a href="#schritt-1-neues-projekt-in-rstudio" id="toc-schritt-1-neues-projekt-in-rstudio" class="nav-link" data-scroll-target="#schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</a></li>
   <li><a href="#schritt-2-render-und-preview-in-rstudio" id="toc-schritt-2-render-und-preview-in-rstudio" class="nav-link" data-scroll-target="#schritt-2-render-und-preview-in-rstudio">Schritt 2 — Render und Preview (in RStudio)</a></li>
@@ -362,7 +367,7 @@ div.csl-indent {
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
 <p>Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite, die in Ihrem Browser auf <code>localhost</code> lebt — also nur auf Ihrem Computer, ohne Internet, ohne Server. Eine zweite Datei legt fest, wie das Ergebnis aussieht. Bis zum Mittag bleiben wir in genau dieser lokalen Welt — kein GitHub, keine Veröffentlichung, kein Anmeldekonto. Das senkt die Stolperfallen auf eins: Quarto. So entsteht Routine in der Schreib-Render-Schleife, bevor wir später Versionsverwaltung und Web-Speicherung dazuschalten.</p>
-<p>Dass wissenschaftliches Arbeiten von einer reproduzierbaren Render-Logik profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Hochschullehre <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+<p>Dass wissenschaftliches Arbeiten von einer reproduzierbaren Render-Logik profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="../index.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Hochschullehre <span class="citation" data-cites="allaire2024">(<a href="../index.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
 </section>
 <section id="die-vier-werkzeuge-in-einfachen-worten-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-vier-werkzeuge-in-einfachen-worten-zuerst">Die vier Werkzeuge — in einfachen Worten zuerst</h2>
@@ -384,7 +389,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Quarto</strong></td>
 <td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
-<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="../index.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>YAML</strong></td>
@@ -517,8 +522,8 @@ Variieren Sie
 </div>
 </div>
 </section>
-<section id="mach-mit-die-ersten-30-minuten" class="level2">
-<h2 class="anchored" data-anchor-id="mach-mit-die-ersten-30-minuten">Mach mit — die ersten 30 Minuten</h2>
+<section id="mach-mit-vom-leeren-ordner-zur-ersten-vorschau" class="level2">
+<h2 class="anchored" data-anchor-id="mach-mit-vom-leeren-ordner-zur-ersten-vorschau">Mach mit — vom leeren Ordner zur ersten Vorschau</h2>
 <p>Halten Sie sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.</p>
 <section id="schritt-1-neues-projekt-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-1-neues-projekt-in-rstudio">Schritt 1 — neues Projekt in RStudio</h3>
@@ -571,7 +576,7 @@ Variieren Sie
 </section>
 <section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legen nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="01-didaktik.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legen nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="../index.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -589,7 +594,7 @@ Was nicht heute Vormittag passiert
 </section>
 <section id="ki-tutor-als-ständiger-begleiter-drei-anlässe" class="level2">
 <h2 class="anchored" data-anchor-id="ki-tutor-als-ständiger-begleiter-drei-anlässe">KI-Tutor als ständiger Begleiter — drei Anlässe</h2>
-<p>Der Tutor lebt in einem zweiten Browser-Tab und antwortet auf alles, was im Workshop-Kontext steckt. Damit aus dem „könnte ich mal fragen” Routine wird, drei konkrete Anlässe für die nächsten 30 Minuten:</p>
+<p>Der Tutor lebt in einem zweiten Browser-Tab und antwortet auf alles, was im Workshop-Kontext steckt. Damit aus dem „könnte ich mal fragen” Routine wird, drei konkrete Anlässe:</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -642,7 +647,7 @@ Variieren Sie weiter
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><strong>Titel ändern:</strong> Öffnen Sie <code>_quarto.yml</code> und ändern Sie den Buchtitel. Render — wo erscheint der neue Titel überall (Sidebar, Browser-Tab, Footer)?</li>
-<li><strong>Eigenes Kapitel anlegen:</strong> Legen Sie eine zweite <code>.qmd</code>-Datei an (z. B. <code>parts/02-eigenes.qmd</code>) mit zwei Sätzen Inhalt. Tragen Sie sie in <code>_quarto.yml</code> unter <code>chapters:</code> ein. Render und prüfen.</li>
+<li><strong>Eigenes Kapitel anlegen:</strong> Legen Sie eine zweite <code>.qmd</code>-Datei an (z. B. <code>parts/mein-thema.qmd</code>) mit zwei Sätzen Inhalt. Tragen Sie sie in <code>_quarto.yml</code> unter <code>chapters:</code> ein. Render und prüfen.</li>
 <li><strong>Footer anpassen:</strong> Ergänzen Sie unter <code>book.page-footer</code> Ihren eigenen Namen und das aktuelle Jahr. Render.</li>
 <li><strong>Theme tauschen:</strong> Ersetzen Sie unter <code>format.html.theme</code> <code>cosmo</code> durch ein anderes Bootstrap-Theme (z. B. <code>flatly</code> oder <code>journal</code>). Render und vergleichen.</li>
 </ol>

@@ -85,7 +85,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../parts/03c-style.html" rel="next">
+<link href="../parts/03a-uebersicht.html" rel="next">
 <link href="../parts/02-setup.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -216,11 +216,6 @@ div.csl-indent {
   <a href="../parts/03b-bilder-tabellen.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">3 — Bilder, Tabellen und Verweise</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — TH-Köln-Stil einbauen</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -234,7 +229,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — Quellen mit Zotero</span></a>
+  <a href="../parts/03a-uebersicht.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 — Quellen mit Zotero</span></a>
   </div>
 </li>
       </ul>
@@ -242,12 +237,17 @@ div.csl-indent {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Phase 3 — Interaktivität und Veröffentlichung</span></a>
+ <span class="menu-text">Phase 3 — Kür plus Veröffentlichung</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../parts/03c-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 — TH-Köln-Stil einbauen</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../parts/04-charts.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Interaktive Diagramme</span></a>
@@ -292,6 +292,11 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendix/tutor-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">KI-Tutor: Link und System-Prompt</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendix/reviewer-prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reviewer-Prompt: KI als kritische Erstleserin</span></a>
   </div>
 </li>
       </ul>
@@ -362,7 +367,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine <strong>stabile Adresse</strong> (Label). Ein Verweis wie „siehe <code>@fig-co2</code>” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.</p>
+<p>Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt <span class="citation" data-cites="mayer2021">(<a href="../index.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine <strong>stabile Adresse</strong> (Label). Ein Verweis wie „siehe <code>@fig-co2</code>” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.</p>
 <p>Das spart Pflege (Nummerierung passt sich an), reduziert Fehler (kein „siehe Abbildung 7”, die längst Abbildung 8 ist), und es macht das Skript für die Lesenden bequemer.</p>
 </section>
 <section id="bilder-einbinden-zwei-wege" class="level2">
@@ -986,8 +991,8 @@ Mayer, R. E. (2021). <em>Multimedia Learning</em> (3. Aufl.). Cambridge Universi
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../parts/03c-style.html" class="pagination-link" aria-label="4 — TH-Köln-Stil einbauen">
-        <span class="nav-page-text"><span class="chapter-title">4 — TH-Köln-Stil einbauen</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../parts/03a-uebersicht.html" class="pagination-link" aria-label="4 — Quellen mit Zotero">
+        <span class="nav-page-text"><span class="chapter-title">4 — Quellen mit Zotero</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

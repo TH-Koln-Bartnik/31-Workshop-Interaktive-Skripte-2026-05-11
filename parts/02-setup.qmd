@@ -91,7 +91,7 @@ Drei nützliche Shortcuts:
 **Falls Ihr Terminal-Tab fehlt:** **Tools → Terminal → New Terminal**. Voreinstellung auf Windows ist PowerShell, einstellbar unter **Tools → Global Options → Terminal**. Quarto-Befehle funktionieren in jeder Shell.
 :::
 
-## Mach mit — die ersten 30 Minuten
+## Mach mit — vom leeren Ordner zur ersten Vorschau
 
 Halten Sie sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.
 
@@ -166,7 +166,7 @@ Versionsverwaltung mit Git, GitHub-Konto, GitHub Desktop, GitHub Pages — das a
 
 ## KI-Tutor als ständiger Begleiter — drei Anlässe
 
-Der Tutor lebt in einem zweiten Browser-Tab und antwortet auf alles, was im Workshop-Kontext steckt. Damit aus dem „könnte ich mal fragen" Routine wird, drei konkrete Anlässe für die nächsten 30 Minuten:
+Der Tutor lebt in einem zweiten Browser-Tab und antwortet auf alles, was im Workshop-Kontext steckt. Damit aus dem „könnte ich mal fragen" Routine wird, drei konkrete Anlässe:
 
 ::: {.callout-tip}
 ## Tutor-Anlass 1 — YAML-Fehler verstehen
@@ -192,7 +192,7 @@ Kopieren Sie das Quarto-Render-Log (alle Zeilen, die im Build-Pane oder Terminal
 ## Variieren Sie weiter
 
 1. **Titel ändern:** Öffnen Sie `_quarto.yml` und ändern Sie den Buchtitel. Render — wo erscheint der neue Titel überall (Sidebar, Browser-Tab, Footer)?
-2. **Eigenes Kapitel anlegen:** Legen Sie eine zweite `.qmd`-Datei an (z. B. `parts/02-eigenes.qmd`) mit zwei Sätzen Inhalt. Tragen Sie sie in `_quarto.yml` unter `chapters:` ein. Render und prüfen.
+2. **Eigenes Kapitel anlegen:** Legen Sie eine zweite `.qmd`-Datei an (z. B. `parts/mein-thema.qmd`) mit zwei Sätzen Inhalt. Tragen Sie sie in `_quarto.yml` unter `chapters:` ein. Render und prüfen.
 3. **Footer anpassen:** Ergänzen Sie unter `book.page-footer` Ihren eigenen Namen und das aktuelle Jahr. Render.
 4. **Theme tauschen:** Ersetzen Sie unter `format.html.theme` `cosmo` durch ein anderes Bootstrap-Theme (z. B. `flatly` oder `journal`). Render und vergleichen.
 :::

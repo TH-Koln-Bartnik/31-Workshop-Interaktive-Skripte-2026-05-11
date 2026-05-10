@@ -102,7 +102,7 @@ Diese URL teilen Sie mit anderen — sie funktioniert öffentlich, ohne Login.
 - **GitHub Pages zeigt 404?** → In `_quarto.yml` muss `output-dir: docs` stehen, und der Ordner `docs/` muss committet sein. Schauen Sie in `.gitignore`, ob `/docs/` ausgeschlossen wird, und nehmen Sie die Zeile heraus.
 - **Push fragt nach Login bei jedem Versuch?** → In GitHub Desktop **File → Options → Accounts → Sign Out**, dann neu anmelden via Browser. Ein Personal Access Token ist meistens schon abgelaufen.
 - **Render funktioniert lokal, aber Pages bleibt leer?** → 60 Sekunden warten und Hard-Reload (**Strg+F5**). Wenn nichts: auf github.com unter **Actions** prüfen, ob ein Build-Fehler steht.
-- **Repository hochgeladen, aber **Settings → Pages** taucht nicht auf?** → Repository ist privat und Sie haben kein Pro-Konto. Auf **Public** umstellen.
+- **Repository hochgeladen, aber `Settings → Pages` taucht nicht auf?** → Repository ist privat und Sie haben kein Pro-Konto. Auf **Public** umstellen.
 - **Fehlermeldung "fatal: not a git repository"?** → In GitHub Desktop **File → Add Local Repository** → Ordner neu hinzufügen.
 :::
 
