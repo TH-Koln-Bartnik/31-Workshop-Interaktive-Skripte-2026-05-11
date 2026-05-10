@@ -1,6 +1,5 @@
 ---
 title: "4 — Interaktive Diagramme"
-suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
@@ -142,4 +141,9 @@ Tausche im Code zwei Länder gegen welche aus, die für deinen Strang interessan
 Vorschlag-Prompt für dieses Kapitel:
 
 > Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Ich bin R-Anfänger. Schreibe mir einen kommentierten Code-Chunk, in dem jede Zeile mit einer Lay-Erklärung versehen ist. Falls die Daten nicht ladbar sind, schlag einen Workaround vor.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
 :::

@@ -1,6 +1,5 @@
 ---
 title: "2 — Bausteine und Workflow"
-suppress-bibliography: true
 ---
 
 ::: {.lernziel-box}
@@ -170,4 +169,9 @@ Dein Code liegt jetzt auf GitHub.
 Vorschlag-Prompt für dieses Kapitel:
 
 > Ich versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Frag mich zurück, wenn etwas unklar ist.
+:::
+
+# Literatur {.unnumbered}
+
+::: {#refs}
 :::

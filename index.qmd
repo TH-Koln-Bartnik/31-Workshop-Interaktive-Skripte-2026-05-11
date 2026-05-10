@@ -8,7 +8,7 @@ subtitle: "Skript zum Workshop am 11.05.2026"
 
 # Was du heute baust
 
-Am Ende des Tages steht ein eigenes interaktives Skript live im Netz. Du hast es selbst gerendert, gepusht und veröffentlicht. Das ist das Ziel — alles andere ist Mittel zum Zweck.
+Am Ende des Tages steht ein eigenes interaktives Skript live im Netz, das Du selbst erzeugt hast.
 
 ::: lernziel-box
 #### Am Ende des Tages kannst du …
@@ -55,7 +55,7 @@ Ein vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Sk
 Damit du nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine **kurze Einführung ins wissenschaftliche Arbeiten**. Wähle einen der drei Stränge und behalte ihn den ganzen Tag bei.
 
 | Strang | Worum es geht | Quelle |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **A — Wissenschaftliche Einstellung** | Skepsis, Belege, intellektuelle Demut | [Bartnik & Palmer (2024), Kap. „Wissenschaftliche Einstellung"](https://publish.obsidian.md/wagp-calling-bullshit/wissenschaftliche+Einstellung){target="_blank"} |
 | **B — Recherche und Quellenqualität** | Suchen, prüfen, Quellen einordnen | [Bartnik & Palmer (2024), Kap. „Kritische Informationssuche"](https://publish.obsidian.md/wagp-calling-bullshit/Kritische+Informationssuche){target="_blank"} |
 | **C — Transparent schreiben** | Methoden offenlegen, Reproduzierbarkeit | [Bartnik & Palmer (2024), Kap. „Transparent schreiben"](https://publish.obsidian.md/wagp-calling-bullshit/Transparent+schreiben){target="_blank"} |
@@ -65,7 +65,7 @@ Die Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang iden
 ## Tagesablauf
 
 | Uhrzeit | Block | Was passiert |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | 09:00–09:45 | Auftakt | Vorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl |
 | 09:45–10:30 | Kap. 1 — Didaktik | Drei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung |
 | 10:30–11:45 | Kap. 2 — Setup | Bausteine, Memory-Spiel, lokale Grundstruktur, **erster Push live** |
@@ -93,7 +93,7 @@ Innerhalb von RStudio hast du **Editor**, **Terminal** (für `quarto render` und
 Damit du immer weißt, wo etwas hingehört (Lakens-Konvention):
 
 | Ordner          | Was kommt rein?                                         |
-|-----------------|---------------------------------------------------------|
+|------------------|------------------------------------------------------|
 | `parts/`        | Deine Kapiteldateien (`.qmd`)                           |
 | `images/`       | Logos, Screenshots, statische Grafiken (PNG, JPG, SVG)  |
 | `interactions/` | HTML-Widgets ohne Backend (Lernspiel, Memory, Quiz)     |

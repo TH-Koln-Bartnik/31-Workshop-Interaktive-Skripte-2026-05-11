@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -268,6 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#zitieren" id="toc-zitieren" class="nav-link" data-scroll-target="#zitieren">Zitieren</a></li>
   </ul></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/03a-uebersicht.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -349,9 +370,9 @@ Mach mit — strangbezogen
 <div class="callout-body-container callout-body">
 <p>Wähle aus deinem Strang <strong>drei Quellen</strong>, lege sie in Zotero an, exportiere und zitiere sie in deinem Kapitel. Wenn du keinen passenden Startpunkt hast, hier je eine Empfehlung:</p>
 <ul>
-<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(2024)</span>, dazu zwei eigene Ergänzungen.</li>
-<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(2024)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
-<li><strong>Strang C — Transparent schreiben:</strong> Bergstrom &amp; West <span class="citation" data-cites="bergstrom2024">(2024)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
+<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
+<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
+<li><strong>Strang C — Transparent schreiben:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
 </ul>
 </div>
 </div>
@@ -392,6 +413,14 @@ Tutor öffnen
 <blockquote class="blockquote">
 <p>Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Frag, wo ich gerade stehe.</p>
 </blockquote>
+</div>
+</div>
+</section>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-bartnik2024" class="csl-entry" role="listitem">
+Bartnik, R., &amp; Palmer, C. (2024). <em>Projektorientierte Einführung in kritisches wissenschaftliches Denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
 </div>
 </div>
 

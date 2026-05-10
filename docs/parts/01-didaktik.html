@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -235,6 +255,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#wann-kein-interaktives-element" id="toc-wann-kein-interaktives-element" class="nav-link" data-scroll-target="#wann-kein-interaktives-element">Wann <strong>kein</strong> interaktives Element?</a></li>
   <li><a href="#mach-mit-lernspiel-zur-selbstprüfung" id="toc-mach-mit-lernspiel-zur-selbstprüfung" class="nav-link" data-scroll-target="#mach-mit-lernspiel-zur-selbstprüfung">Mach mit — Lernspiel zur Selbstprüfung</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/01-didaktik.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -273,15 +294,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Lehrforschung sagt es seit Jahren — aber selten so kompakt: Lernen klappt besser, wenn Lernende <strong>selbst etwas tun</strong>, <strong>regelmäßig abrufen</strong> und <strong>Bilder neben Worten</strong> bekommen. Drei Prinzipien, drei Belege, drei Konsequenzen für dein Skript.</p>
 <section id="generatives-lernen" class="level3">
 <h3 class="anchored" data-anchor-id="generatives-lernen">Generatives Lernen</h3>
-<p>Wer den Stoff selbst zusammenfasst, erklärt oder anwendet, behält ihn besser, als wer ihn nur liest <span class="citation" data-cites="fiorella2016">(Fiorella &amp; Mayer, 2016)</span>. Das ist kein Geschmack, das ist eine Meta-Analyse über acht Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in deinem Skript braucht jedes Kapitel <strong>eine Aufgabe, die der Lernende selbst tut</strong>, nicht nur einen Text, den er liest.</p>
+<p>Wer den Stoff selbst zusammenfasst, erklärt oder anwendet, behält ihn besser, als wer ihn nur liest <span class="citation" data-cites="fiorella2016">(<a href="01-didaktik.html#ref-fiorella2016" role="doc-biblioref">Fiorella &amp; Mayer, 2016</a>)</span>. Das ist kein Geschmack, das ist eine Meta-Analyse über acht Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in deinem Skript braucht jedes Kapitel <strong>eine Aufgabe, die der Lernende selbst tut</strong>, nicht nur einen Text, den er liest.</p>
 </section>
 <section id="retrieval-practice" class="level3">
 <h3 class="anchored" data-anchor-id="retrieval-practice">Retrieval Practice</h3>
-<p>Sich an etwas erinnern zu <strong>müssen</strong> verbessert das Behalten stärker als wiederholtes Lesen <span class="citation" data-cites="roediger2006">(Roediger &amp; Karpicke, 2006)</span>. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein <strong>kurzes Quiz</strong> oder eine <strong>Drag-and-Drop-Aufgabe</strong> in deinem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.</p>
+<p>Sich an etwas erinnern zu <strong>müssen</strong> verbessert das Behalten stärker als wiederholtes Lesen <span class="citation" data-cites="roediger2006">(<a href="01-didaktik.html#ref-roediger2006" role="doc-biblioref">Roediger &amp; Karpicke, 2006</a>)</span>. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein <strong>kurzes Quiz</strong> oder eine <strong>Drag-and-Drop-Aufgabe</strong> in deinem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.</p>
 </section>
 <section id="multimedia-prinzip" class="level3">
 <h3 class="anchored" data-anchor-id="multimedia-prinzip">Multimedia-Prinzip</h3>
-<p>Worte plus passende Bilder schlagen Worte allein <span class="citation" data-cites="mayer2021">(Mayer, 2021)</span>. „Passend” heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das <strong>interaktive Diagramm</strong>, das du in Kapitel 4 einbauen wirst, hat einen lerntheoretischen Grund — keine Spielerei.</p>
+<p>Worte plus passende Bilder schlagen Worte allein <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. „Passend” heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das <strong>interaktive Diagramm</strong>, das du in Kapitel 4 einbauen wirst, hat einen lerntheoretischen Grund — keine Spielerei.</p>
 </section>
 </section>
 <section id="was-das-für-dein-skript-heißt" class="level2">
@@ -324,7 +345,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="wann-kein-interaktives-element">Wann <strong>kein</strong> interaktives Element?</h2>
 <p>Drei Situationen, in denen Interaktivität schadet:</p>
 <ul>
-<li><strong>Kognitive Überforderung.</strong> Wenn die Lernenden gleichzeitig neuen Stoff verarbeiten <em>und</em> die Bedienung des Widgets lernen müssen, kostet das Aufmerksamkeit, die für den Inhalt fehlt <span class="citation" data-cites="mayer2021">(Mayer, 2021)</span>. Lieber erst Stoff, dann Übung.</li>
+<li><strong>Kognitive Überforderung.</strong> Wenn die Lernenden gleichzeitig neuen Stoff verarbeiten <em>und</em> die Bedienung des Widgets lernen müssen, kostet das Aufmerksamkeit, die für den Inhalt fehlt <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Lieber erst Stoff, dann Übung.</li>
 <li><strong>Reine Illustration.</strong> Wenn das Diagramm keine Variation erlaubt, die didaktisch interessant ist, reicht ein PNG. Interaktivität sollte einen Lernzweck haben, nicht nur „können wir technisch”.</li>
 <li><strong>Ablenkung durch Kontrolle.</strong> Wenn ein Spiel die Lernenden in den Spielmodus zieht („wie viele Punkte krieg ich?“), kann das vom Inhalt wegführen. Faustregel: Belohnung für <strong>richtige Inhalte</strong>, nicht für Schnelligkeit.</li>
 </ul>
@@ -379,6 +400,80 @@ Tutor öffnen
 <blockquote class="blockquote">
 <p>Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Frag mich nach dem Lernziel des jeweiligen Kapitels und schlage dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründe in einem Satz, warum genau dieses Element passt.</p>
 </blockquote>
+</div>
+</div>
+</section>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-allaire2024" class="csl-entry" role="listitem">
+Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C.
+(2024). <em>Quarto: An open-source scientific and technical publishing
+system</em>. <a href="https://quarto.org/">https://quarto.org/</a>
+</div>
+<div id="ref-bartnik2024" class="csl-entry" role="listitem">
+Bartnik, R., &amp; Palmer, C. (2024). <em>Projektorientierte einführung
+in kritisches wissenschaftliches denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
+</div>
+<div id="ref-bryan2018" class="csl-entry" role="listitem">
+Bryan, J. (2018). Excuse me, do you have a moment to talk about version
+control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
+</div>
+<div id="ref-fiorella2016" class="csl-entry" role="listitem">
+Fiorella, L., &amp; Mayer, R. E. (2016). Eight ways to promote
+generative learning. <em>Educational Psychology Review</em>,
+<em>28</em>(4), 717–741. <a href="https://doi.org/10.1007/s10648-015-9348-9">https://doi.org/10.1007/s10648-015-9348-9</a>
+</div>
+<div id="ref-healy2018" class="csl-entry" role="listitem">
+Healy, K. (2018). <em>Data visualization: A practical introduction</em>.
+Princeton University Press.
+</div>
+<div id="ref-karpicke2011" class="csl-entry" role="listitem">
+Karpicke, J. D., &amp; Blunt, J. R. (2011). Retrieval practice produces
+more learning than elaborative studying with concept mapping.
+<em>Science</em>, <em>331</em>(6018), 772–775. <a href="https://doi.org/10.1126/science.1199327">https://doi.org/10.1126/science.1199327</a>
+</div>
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D.,
+Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E.,
+Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J.,
+Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023).
+<span>ChatGPT</span> for good? On opportunities and challenges of large
+language models for education. <em>Learning and Individual
+Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
+</div>
+<div id="ref-lakens2022" class="csl-entry" role="listitem">
+Lakens, D. (2022). <em>Improving your statistical inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
+</div>
+<div id="ref-mayer2021" class="csl-entry" role="listitem">
+Mayer, R. E. (2021). <em>Multimedia learning</em> (3rd ed.). Cambridge
+University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
+</div>
+<div id="ref-mollick2023" class="csl-entry" role="listitem">
+Mollick, E. R., &amp; Mollick, L. (2023). Assigning <span>AI</span>:
+Seven approaches for students, with prompts. <em>SSRN Working
+Paper</em>. <a href="https://doi.org/10.2139/ssrn.4475995">https://doi.org/10.2139/ssrn.4475995</a>
+</div>
+<div id="ref-roediger2006" class="csl-entry" role="listitem">
+Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning:
+Taking memory tests improves long-term retention. <em>Psychological
+Science</em>, <em>17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">https://doi.org/10.1111/j.1467-9280.2006.01693.x</a>
+</div>
+<div id="ref-owid2024" class="csl-entry" role="listitem">
+Roser, M., Ritchie, H., Mathieu, E., &amp; Ortiz-Ospina, E. (2024).
+<em>Our world in data</em>. <a href="https://ourworldindata.org/">https://ourworldindata.org/</a>
+</div>
+<div id="ref-tufte2001" class="csl-entry" role="listitem">
+Tufte, E. R. (2001). <em>The visual display of quantitative
+information</em> (2nd ed.). Graphics Press.
+</div>
+<div id="ref-wickham2019" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D.,
+François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M.,
+Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J.,
+Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to
+the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
+1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
 </div>
 </div>
 

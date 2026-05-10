@@ -55,7 +55,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -271,6 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#wann-kein-ki-tutor" id="toc-wann-kein-ki-tutor" class="nav-link" data-scroll-target="#wann-kein-ki-tutor">Wann <strong>kein</strong> KI-Tutor?</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/05-iframes-tutor.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
@@ -306,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser <span class="citation" data-cites="karpicke2011 fiorella2016">(Fiorella &amp; Mayer, 2016; Karpicke &amp; Blunt, 2011)</span>. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert <span class="citation" data-cites="mollick2023 kasneci2023">(Kasneci et al., 2023; Mollick &amp; Mollick, 2023)</span>.</p>
+<p>Aktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser <span class="citation" data-cites="karpicke2011 fiorella2016">(<a href="01-didaktik.html#ref-fiorella2016" role="doc-biblioref">Fiorella &amp; Mayer, 2016</a>; <a href="01-didaktik.html#ref-karpicke2011" role="doc-biblioref">Karpicke &amp; Blunt, 2011</a>)</span>. Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert <span class="citation" data-cites="mollick2023 kasneci2023">(<a href="01-didaktik.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>; <a href="01-didaktik.html#ref-mollick2023" role="doc-biblioref">Mollick &amp; Mollick, 2023</a>)</span>.</p>
 </section>
 <section id="iframe-in-einer-zeile" class="level2">
 <h2 class="anchored" data-anchor-id="iframe-in-einer-zeile">iFrame in einer Zeile</h2>
@@ -412,7 +433,7 @@ Mach mit (Variante B — H5P, optional)
 </section>
 <section id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor" class="level3">
 <h3 class="anchored" data-anchor-id="option-3-eigenes-statisches-widget-oder-voll-gehosteter-tutor">Option 3 — eigenes statisches Widget oder voll gehosteter Tutor</h3>
-<p>Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: <a href="https://main.difctumi6okdj.amplifyapp.com/" target="_blank">BWL1 Tutor-Chatbot</a>). Mollick und Mollick <span class="citation" data-cites="mollick2023">(2023)</span> geben einen Überblick über die didaktischen Designentscheidungen.</p>
+<p>Für Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: <code>_relevance-widget.qmd</code> in <a href="https://github.com/TH-Koln-Bartnik/genai4teaching" class="uri">https://github.com/TH-Koln-Bartnik/genai4teaching</a>), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: <a href="https://main.difctumi6okdj.amplifyapp.com/" target="_blank">BWL1 Tutor-Chatbot</a>). Mollick und Mollick <span class="citation" data-cites="mollick2023">(<a href="01-didaktik.html#ref-mollick2023" role="doc-biblioref">2023</a>)</span> geben einen Überblick über die didaktischen Designentscheidungen.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -437,7 +458,7 @@ Mach mit
 <ul>
 <li><strong>Klar definierte Faktenfragen</strong> — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.</li>
 <li><strong>Sensible persönliche Themen</strong> — der Tutor soll Lernen begleiten, keine Beratung ersetzen.</li>
-<li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(Kasneci et al., 2023)</span>.</li>
+<li><strong>Zeitkritisches Pflichtwissen</strong> — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch <span class="citation" data-cites="kasneci2023">(<a href="01-didaktik.html#ref-kasneci2023" role="doc-biblioref">Kasneci et al., 2023</a>)</span>.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -475,6 +496,23 @@ Tutor öffnen
 <blockquote class="blockquote">
 <p>Ich will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: […]. Schlag mir den einfachsten ersten Schritt vor und schreib den Code-Schnipsel dazu. Erkläre vorher in zwei Sätzen, was ich da eigentlich tue.</p>
 </blockquote>
+</div>
+</div>
+</section>
+<section id="literatur" class="level1 unnumbered">
+<h1 class="unnumbered">Literatur</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-fiorella2016" class="csl-entry" role="listitem">
+Fiorella, L., &amp; Mayer, R. E. (2016). Eight Ways to Promote Generative Learning. <em>Educational Psychology Review</em>, <em>28</em>(4), 717–741. <a href="https://doi.org/10.1007/s10648-015-9348-9">https://doi.org/10.1007/s10648-015-9348-9</a>
+</div>
+<div id="ref-karpicke2011" class="csl-entry" role="listitem">
+Karpicke, J. D., &amp; Blunt, J. R. (2011). Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping. <em>Science</em>, <em>331</em>(6018), 772–775. <a href="https://doi.org/10.1126/science.1199327">https://doi.org/10.1126/science.1199327</a>
+</div>
+<div id="ref-kasneci2023" class="csl-entry" role="listitem">
+Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D., Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E., Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J., Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023). <span>ChatGPT</span> for Good? On Opportunities and Challenges of Large Language Models for Education. <em>Learning and Individual Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
+</div>
+<div id="ref-mollick2023" class="csl-entry" role="listitem">
+Mollick, E. R., &amp; Mollick, L. (2023). Assigning <span>AI</span>: Seven Approaches for Students, with Prompts. <em>SSRN Working Paper</em>. <a href="https://doi.org/10.2139/ssrn.4475995">https://doi.org/10.2139/ssrn.4475995</a>
 </div>
 </div>
 

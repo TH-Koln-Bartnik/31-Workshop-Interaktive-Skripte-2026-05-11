@@ -43,9 +43,6 @@ book:
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
-citations-hover: true
-citation-location: document
-link-citations: true
 
 format:
   html:
@@ -65,6 +62,11 @@ format:
     anchor-sections: true
     number-sections: false
     df-print: paged
+    citations-hover: true
+    footnotes-hover: true
+    link-citations: true
+    citation-location: document
+    reference-location: document
   pdf:
     documentclass: scrreprt
     papersize: a4
