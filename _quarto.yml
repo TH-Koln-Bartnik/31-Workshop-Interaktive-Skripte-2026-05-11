@@ -17,7 +17,7 @@ book:
   search: true
   repo-url: "https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik"
   repo-actions: [edit, issue]
-  downloads: [pdf]
+  downloads: []
   sharing: [twitter, linkedin]
   page-navigation: true
   back-to-top-navigation: true
@@ -74,12 +74,5 @@ format:
     link-citations: true
     citation-location: document
     reference-location: document
-  pdf:
-    documentclass: scrreprt
-    papersize: a4
-    geometry: margin=2.5cm
-    toc: true
-    number-sections: true
-    colorlinks: true
 
 lang: de

@@ -1,0 +1,971 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "",
+    "text": "Was Sie heute bauen\nAm Ende des Tages steht ein eigenes interaktives Skript live im Netz, das Sie selbst erzeugt haben.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#drei-referenzen",
+    "href": "index.html#drei-referenzen",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Drei Referenzen",
+    "text": "Drei Referenzen\nBevor wir bauen, schauen wir, was möglich ist. Drei Skripte zeigen die Bandbreite — vom Kapitel zum Buch zum Kurs.\n\n\nLakens — Statistical Inferences\nEin vollständiges Open-Access-Lehrbuch zur Statistik mit Quizzen, Code-Demos und Videos. Maßstab für „so gut kann ein Skript werden”.\nZum Skript →\n\n\nBartnik — KI als Hilfe zum Lehren und Lernen\nMein eigenes Skript, mit interaktiven Widgets, eingebetteten Tutor-Bots und H5P-Quizzen.\nZum Skript →\n\n\nBékés — Data Analysis with AI\nEin vollständiger Kurs samt Folien, Notebooks und Übungen. Maßstab für „Skript plus Slides plus Code”.\nZum Skript →",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#wählen-sie-ihren-beispielstrang",
+    "href": "index.html#wählen-sie-ihren-beispielstrang",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Wählen Sie Ihren Beispielstrang",
+    "text": "Wählen Sie Ihren Beispielstrang\nDamit Sie nicht auch noch Inhalte erfinden musst, nutzen wir ein durchgehendes Mini-Thema: eine kurze Einführung ins wissenschaftliche Arbeiten. Wählen Sie einen der drei Stränge und behalte ihn den ganzen Tag bei.\n\n\n\nStrang\nWorum es geht\nQuelle\n\n\n\n\nA — Wissenschaftliche Einstellung\nSkepsis, Belege, intellektuelle Demut\nBartnik & Palmer (2024), Kap. „Wissenschaftliche Einstellung”\n\n\nB — Recherche und Quellenqualität\nSuchen, prüfen, Quellen einordnen\nBartnik & Palmer (2024), Kap. „Kritische Informationssuche”\n\n\nC — Transparent schreiben\nMethoden offenlegen, Reproduzierbarkeit\nBartnik & Palmer (2024), Kap. „Transparent schreiben”\n\n\n\nDie Wahl ist Geschmackssache. Die technischen Schritte sind in jedem Strang identisch.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#tagesablauf",
+    "href": "index.html#tagesablauf",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Tagesablauf",
+    "text": "Tagesablauf\n\n\n\n\n\n\n\n\nUhrzeit\nBlock\nWas passiert\n\n\n\n\n09:00–09:45\nAuftakt\nVorstellung, Vorerfahrung, Ziele, Tour durch die drei Vorbilder, Strangwahl\n\n\n09:45–10:30\nKap. 1 — Didaktik\nDrei Lerntheorie-Argumente, Lernspiel zur Selbstprüfung\n\n\n10:30–11:45\nKap. 2 — Setup\nBausteine, Memory-Spiel, lokale Grundstruktur, erster Push live\n\n\n11:45–12:30\nPause\n\n\n\n12:30–13:15\nKap. 3a — Übersicht\nInhaltsverzeichnis, Zotero-Bibliothek, automatische Zitate\n\n\n13:15–14:00\nKap. 3b — Stil\nTH-Köln-Brand einbauen\n\n\n14:00–14:45\nKap. 4 — Charts\nInteraktives Diagramm mit echten Daten\n\n\n14:45–15:30\nKap. 5 — iFrames + Tutor\nH5P-/iFrame-Einbettung, Link zum KI-Tutor\n\n\n15:30–16:00\nShowcase + Puffer\nWer früh durch ist, baut Slides (Kap. 6); alle anderen holen auf",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#wie-sie-dieses-skript-benutzen",
+    "href": "index.html#wie-sie-dieses-skript-benutzen",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Wie Sie dieses Skript benutzen",
+    "text": "Wie Sie dieses Skript benutzen\nJedes Kapitel öffnet mit einem Lernziel-Kasten („Was Sie nach diesem Kapitel kannst”), gefolgt von einem „Mach mit”-Block — das ist die eigentliche Übung. Dazwischen steht so wenig Text wie möglich. Am Ende jedes Kapitels finden Sie einen Trouble-Shooting-Kasten („Was, wenn …“) und einen fertigen Tutor-Prompt zum Kopieren.\n\n\n\n\n\n\nRStudio ist Ihre Arbeitszentrale\n\n\n\nInnerhalb von RStudio haben Sie Editor, Terminal (für quarto render und quarto preview), Files-Pane (zum Anlegen von Ordnern und Dateien), Build-Pane (Knopf „Render Book”) und Console (für R-Pakete) auf einem Schirm. Daneben brauchen Sie nur GitHub Desktop zum Versionieren und einen Browser-Tab mit dem Tutor.\nTutor öffnen — „Interaktive Skripte” →",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#ordnerstruktur-ihres-skripts",
+    "href": "index.html#ordnerstruktur-ihres-skripts",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Ordnerstruktur Ihres Skripts",
+    "text": "Ordnerstruktur Ihres Skripts\nDamit Sie immer wissen, wo etwas hingehört (Lakens-Konvention):\n\n\n\n\n\n\n\nOrdner\nWas kommt rein?\n\n\n\n\nparts/\nIhre Kapiteldateien (.qmd)\n\n\nimages/\nLogos, Screenshots, statische Grafiken (PNG, JPG, SVG)\n\n\ninteractions/\nHTML-Widgets ohne Backend (Lernspiel, Memory, Quiz)\n\n\ninclude/\nWiederverwendbare qmd-Schnipsel (per {{&lt; include &gt;}})\n\n\ndata/\nCSV/JSON-Daten für interaktive Charts\n\n\nappendix/\nQuickstart, Troubleshooting, Tutor-Prompt",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#voraussetzungen",
+    "href": "index.html#voraussetzungen",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Voraussetzungen",
+    "text": "Voraussetzungen\nWenn Sie noch nichts installiert haben, springen Sie zuerst in den Quick-Starter Guide. Dort steht, was Sie in welcher Reihenfolge installieren (Quarto, R, RStudio, GitHub Desktop, Zotero) — mit Screenshots.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#vorlage-skript-zum-download",
+    "href": "index.html#vorlage-skript-zum-download",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Vorlage-Skript zum Download",
+    "text": "Vorlage-Skript zum Download\nWer den graduellen Aufbau überspringen oder absichern möchte, lädt sich die fertige Vorlage herunter — ein vollständiges Quarto-Buchprojekt mit Platzhaltern für alle wichtigen Elemente (Bilder mit Caption und Label, Tabellen mit Cross-Reference, interaktive Charts, iFrames, Zitate mit Hover-Tooltip, Tutor-Link). Im RStudio öffnen, Inhalte ersetzen, fertig.\n\n\n\n\n\n\nFertige Vorlage holen\n\n\n\nvorlage-skript.zip herunterladen →\nIm ZIP enthalten: _quarto.yml, _brand.yml, styles.scss, references.bib, ein Beispielkapitel mit allen Element-Typen (Bild, Tabelle, Chart, iFrame, Zitat, Cross-Refs), ein leeres Kapitel zum Befüllen, ein Beispiel-Quiz als HTML-Widget, ein Beispieldatensatz und die Bibliographie. Eine README.md erklärt, was wo liegt und wie der Einstieg läuft.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#quellen",
+    "href": "index.html#quellen",
+    "title": "Interaktive Skripte mit KI erstellen",
+    "section": "Quellen",
+    "text": "Quellen\nLakens (2022); Bartnik (2025); Békés (2025); Biggs & Tang (2011); Mayer (2021).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Willkommen</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html",
+    "href": "parts/01-didaktik.html",
+    "title": "1 — Warum interaktiv?",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html#drei-argumente-in-drei-sätzen",
+    "href": "parts/01-didaktik.html#drei-argumente-in-drei-sätzen",
+    "title": "1 — Warum interaktiv?",
+    "section": "Drei Argumente in drei Sätzen",
+    "text": "Drei Argumente in drei Sätzen\nLehrforschung sagt es seit Jahren — aber selten so kompakt: Lernen klappt besser, wenn Lernende selbst etwas tun, regelmäßig abrufen und Bilder neben Worten bekommen. Drei Prinzipien, drei Belege, drei Konsequenzen für Ihr Skript.\n\nGeneratives Lernen\nAuch beim Lernen gilt eine Form von „wer schreibt, der bleibt”. Wenn wir einen Lerninhalt selbst zusammenfassen, erklären oder anwenden, behalten wir ihn besser, als wenn wir einen Text nur lesen (Fiorella & Mayer, 2016). Das beinhaltet verschiedene Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in Ihrem Skript braucht jedes Kapitel eine Aufgabe, die der Lernende selbst tut, nicht nur einen Text, den er liest.\n\n\nRetrieval Practice\nSich an etwas erinnern zu müssen verbessert das Behalten stärker als wiederholtes Lesen (Roediger & Karpicke, 2006). Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein kurzes Quiz oder eine Drag-and-Drop-Aufgabe in Ihrem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.\n\n\nMultimedia-Prinzip\nWorte plus passende Bilder schlagen Worte allein (Mayer, 2021). „Passend” heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das interaktive Diagramm, das Sie in Kapitel 4 einbauen werden, hat einen lerntheoretischen Grund — keine Spielerei.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html#was-das-für-ihr-skript-heißt",
+    "href": "parts/01-didaktik.html#was-das-für-ihr-skript-heißt",
+    "title": "1 — Warum interaktiv?",
+    "section": "Was das für Ihr Skript heißt",
+    "text": "Was das für Ihr Skript heißt\nDrei Bauteile, die Sie heute alle einbauen, lassen sich genau diesen drei Prinzipien zuordnen:\n\n\n\n\n\n\n\n\nPrinzip\nSkript-Element\nWo im Workshop?\n\n\n\n\nGeneratives Lernen\nKI-Tutor, eigene Übungsaufgabe\nKap. 5\n\n\nRetrieval Practice\nLernspiel, Memory, Quiz (iFrame oder H5P)\nKap. 1, 2, 5\n\n\nMultimedia\nInteraktives Diagramm, Grafiken\nKap. 4\n\n\n\nDas ist die didaktische Architektur Ihres Skripts — und gleichzeitig die Architektur dieses Workshops.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html#wann-kein-interaktives-element",
+    "href": "parts/01-didaktik.html#wann-kein-interaktives-element",
+    "title": "1 — Warum interaktiv?",
+    "section": "Wann kein interaktives Element?",
+    "text": "Wann kein interaktives Element?\nDrei Situationen, in denen Interaktivität schadet:\n\nKognitive Überforderung. Wenn die Lernenden gleichzeitig neuen Stoff verarbeiten und die Bedienung des Widgets lernen müssen, kostet das Aufmerksamkeit, die für den Inhalt fehlt (Mayer, 2021). Lieber erst Stoff, dann Übung.\nReine Illustration. Wenn das Diagramm keine Variation erlaubt, die didaktisch interessant ist, reicht ein PNG. Interaktivität sollte einen Lernzweck haben, nicht nur „können wir technisch”.\nAblenkung durch Kontrolle. Wenn ein Spiel die Lernenden in den Spielmodus zieht („wie viele Punkte krieg ich?“), kann das vom Inhalt wegführen. Faustregel: Belohnung für richtige Inhalte, nicht für Schnelligkeit.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html#mach-mit-lernspiel-zur-selbstprüfung",
+    "href": "parts/01-didaktik.html#mach-mit-lernspiel-zur-selbstprüfung",
+    "title": "1 — Warum interaktiv?",
+    "section": "Mach mit — Lernspiel zur Selbstprüfung",
+    "text": "Mach mit — Lernspiel zur Selbstprüfung\nDrei Beispiele, drei Prinzipien, fünf Minuten. Ziehen Sie jedes Beispiel auf das Prinzip, das es illustriert.\n\n\n\n\n\n\nLernspiel öffnen\n\n\n\nLernspiel: Welches Prinzip steckt hinter welchem Beispiel? →\n\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\nDas Spiel öffnet sich nicht? → Direkt im Browser über die Datei interactions/lernspiel-kapitel1.html öffnen. Die Datei ist eine einzige HTML-Datei, ohne Backend.\nDie Lösungen scheinen mehrdeutig? → Stimmt — in der Praxis überschneiden sich die Prinzipien. Schauen Sie in die Erklärung am Ende des Spiels, dort steht, warum die jeweilige Zuordnung am stärksten passt.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/01-didaktik.html#tutor",
+    "href": "parts/01-didaktik.html#tutor",
+    "title": "1 — Warum interaktiv?",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nFragen Sie den Tutor nach passenden interaktiven Elementen für Ihr Kapitel. Vorschlag-Prompt:\n\nIch überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Fragen Sie mich nach dem Lernziel des jeweiligen Kapitels und schlagen Sie dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründen Sie in einem Satz, warum genau dieses Element passt.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 — Warum interaktiv?</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html",
+    "href": "parts/02-setup.html",
+    "title": "2 — Bausteine und Workflow",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel kannst",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#worum-es-im-kern-geht",
+    "href": "parts/02-setup.html#worum-es-im-kern-geht",
+    "title": "2 — Bausteine und Workflow",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nSie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt (Bryan, 2018); Quarto bringt diese Logik in die Lehre (Allaire et al., 2024).",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#die-sechs-bausteine-lay-erklärung-zuerst",
+    "href": "parts/02-setup.html#die-sechs-bausteine-lay-erklärung-zuerst",
+    "title": "2 — Bausteine und Workflow",
+    "section": "Die sechs Bausteine — Lay-Erklärung zuerst",
+    "text": "Die sechs Bausteine — Lay-Erklärung zuerst\nJeder Begriff wird in der Fachsprache schwerer als nötig. Hier zuerst die einfache Idee, dann das Detail.\n\n\n\n\n\n\n\n\nBaustein\nIn einem Satz\nWas es technisch ist\n\n\n\n\nQuarto\nProgramm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.\nOpen-Source-Publishing-System, Nachfolger von R Markdown (Allaire et al., 2024).\n\n\nYAML\nEinstellungsdatei am Anfang jedes Kapitels — sagt z. B., ob es ein Inhaltsverzeichnis gibt.\n„YAML Ain’t Markup Language”, strukturiertes Format mit Einrückungen.\n\n\nJSON\nWie YAML, aber mit Klammern. Wird intern für Daten verwendet.\n„JavaScript Object Notation”, Standardformat zum Datenaustausch.\n\n\nHTML\nSprache, in der Webseiten geschrieben sind.\n„HyperText Markup Language”, Tags wie &lt;h1&gt; oder &lt;p&gt;.\n\n\niFrame\nFenster im Fenster — bettet eine fremde Seite in Ihre ein.\nHTML-Tag &lt;iframe src=\"...\"&gt;, isoliert vom Rest der Seite.\n\n\nGitHub\nSpeicher für Code im Netz, mit eingebautem Webserver (Pages).\nHosting-Plattform auf Basis von Git, gehört Microsoft.\n\n\n\n\n\n\n\n\n\nMach mit — Memory-Spiel zu den Bausteinen\n\n\n\nDrei Minuten, sechs Paare. Versuche, alle Begriffe ihrer Lay-Definition zuzuordnen.\nMemory-Spiel öffnen →",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#der-workflow-in-einem-bild",
+    "href": "parts/02-setup.html#der-workflow-in-einem-bild",
+    "title": "2 — Bausteine und Workflow",
+    "section": "Der Workflow in einem Bild",
+    "text": "Der Workflow in einem Bild\nDrei Werkzeuge, ein Kreislauf:\nRStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)\n        ↑                                                                            │\n        └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘\nVersionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass Ihr Skript jederzeit reproduzierbar gerendert werden kann und dass Sie ohne Angst Änderungen vornehmen — ein Punkt, den Bryan (2018) für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#rstudio-als-arbeitszentrale-vier-bereiche",
+    "href": "parts/02-setup.html#rstudio-als-arbeitszentrale-vier-bereiche",
+    "title": "2 — Bausteine und Workflow",
+    "section": "RStudio als Arbeitszentrale — vier Bereiche",
+    "text": "RStudio als Arbeitszentrale — vier Bereiche\nSie arbeiten fast immer in RStudio. Vier Bereiche reichen für alles, was wir heute machen:\n\n\n\n\n\n\n\n\nBereich\nWo?\nWofür?\n\n\n\n\nEditor\noben links\n.qmd-Dateien schreiben\n\n\nTerminal\nunten links, Tab neben Console\nquarto render, quarto preview\n\n\nFiles\nunten rechts\nneue Ordner und Dateien anlegen, Dateien öffnen\n\n\nBuild\noben rechts\nKnopf „Render Book” als Klick-Alternative\n\n\n\nDrei nützliche Shortcuts:\n\nStrg+Shift+K — die aktuell geöffnete .qmd-Datei einzeln rendern (für schnelles Vorschauen einzelner Kapitel).\nStrg+Shift+B — komplettes Buch rendern (entspricht dem Build-Knopf).\nAlt+Shift+R — neuen Terminal-Tab öffnen, falls keiner sichtbar ist.\n\n\n\n\n\n\n\nFalls Ihr Terminal-Tab fehlt: Tools → Terminal → New Terminal. Voreinstellung auf Windows ist PowerShell, einstellbar unter Tools → Global Options → Terminal. Quarto-Befehle funktionieren in jeder Shell.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#mach-mit-die-ersten-30-minuten",
+    "href": "parts/02-setup.html#mach-mit-die-ersten-30-minuten",
+    "title": "2 — Bausteine und Workflow",
+    "section": "Mach mit — die ersten 30 Minuten",
+    "text": "Mach mit — die ersten 30 Minuten\nHalte sich an diese Reihenfolge. Bei Problemen: Tutor fragen oder zur Trouble-Shooting-Box am Ende springen.\n\nSchritt 1 — neues Projekt in RStudio\n\nRStudio öffnen → File → New Project → New Directory → Quarto Book.\nOrdnernamen wählen, z. B. mein-erstes-skript.\nSpeicherort wählen — am besten direkt in Ihrem GitHub-Ordner.\nCreate Project.\n\nRStudio legt automatisch eine Mini-Buchstruktur an (_quarto.yml, index.qmd, ein paar Beispielkapitel).\n\n\nSchritt 2 — Render und Preview (in RStudio)\nIm Terminal-Tab (unten neben Console):\nquarto preview\nIm Browser öffnet sich http://localhost:4XXX mit einer Live-Vorschau. Jede Änderung an einer .qmd-Datei führt zu sofortigem Reload. Alternative ohne Tippen: Build-Pane oben rechts → Knopf „Render Book” (rendert das ganze Buch einmal, ohne Live-Reload).\n\n\nSchritt 3 — Beispielkapitel auf Ihren Strang anpassen\nÖffnen Sie intro.qmd und ersetzen Sie den Beispielinhalt durch eine Mini-Einleitung zu Ihrem gewählten Strang. Drei Vorlagen, je nach Strangwahl:\n\nStrang A — Wissenschaftliche EinstellungStrang B — Recherche und QuellenqualitätStrang C — Transparent schreiben\n\n\n# Wissenschaftliche Einstellung\n\nWissenschaftliche Einstellung heißt, Aussagen nicht zu glauben, sondern\nzu prüfen — und sich selbst genauso zu prüfen wie andere. Drei Haltungen\ngehören dazu: Skepsis, intellektuelle Demut, Bereitschaft zur Korrektur.\nQuelle: Bartnik & Palmer (2024).\n\n\n# Recherche und Quellenqualität\n\nQuellen unterscheiden sich nicht nur darin, ob sie wahr oder falsch sind,\nsondern darin, wie nachprüfbar sie sind. In diesem Kapitel: drei Filter,\nmit denen Sie eine Quelle in 30 Sekunden grob einordnest.\nQuelle: Bartnik & Palmer (2024).\n\n\n# Transparent schreiben\n\nTransparenz heißt, dass jeder Leser nachvollziehen kann, wie Sie zu Ihren\nErgebnissen gekommen bist — welche Daten, welche Methoden, welche\nAnnahmen. In diesem Kapitel: drei Bausteine eines transparenten\nMethodenteils. Quelle: Bartnik & Palmer (2024).\n\n\n\n\n\nSchritt 4 — Ordnerstruktur anlegen (in RStudio)\nIm Files-Pane (unten rechts) klicken Sie auf New Folder und legst nacheinander an: images/, interactions/, include/, data/. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens (2022) in seinem Skript verwendet.\n\n\nSchritt 5 — GitHub Desktop verknüpfen\n\nGitHub Desktop öffnen → File → Add Local Repository → Ordner wählen.\nWenn noch kein Git-Repo: „Create a repository” akzeptieren.\nPublish repository klicken → Name eingeben (z. B. mein-erstes-skript) → Public → Publish.\n\nIhr Code liegt jetzt auf GitHub.\n\n\nSchritt 6 — GitHub Pages aktivieren\n\nAuf github.com im Repository auf Settings → Pages.\nSource: Deploy from a branch.\nBranch: main → Folder: /docs → Save.\nNach 1–2 Minuten: Ihr Skript liegt unter https://IHR-USERNAME.github.io/mein-erstes-skript/.\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\nRender funktioniert lokal, aber GitHub Pages zeigt 404? → In _quarto.yml muss output-dir: docs stehen, und der Ordner docs/ muss committet sein. Schauen Sie in .gitignore, ob /docs/ ausgeschlossen wird, und nimm die Zeile heraus.\nYAML-Fehler beim Rendern? → Einrückungen prüfen (zwei Leerzeichen, keine Tabs). Doppelpunkte und Anführungszeichen ebenfalls.\nGitHub Desktop fragt nach Login? → Im Browser anmelden, dann in GitHub Desktop „Sign in”.\nquarto: command not found? → Quarto-Installation prüfen mit quarto --version. Wenn leer: neu installieren von https://quarto.org/docs/get-started/.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/02-setup.html#tutor",
+    "href": "parts/02-setup.html#tutor",
+    "title": "2 — Bausteine und Workflow",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch versuche gerade, ein Quarto-Buch lokal in RStudio anzulegen und über GitHub Pages zu veröffentlichen. Ich bin Anfänger, kein IT-Experte. Erkläre mir Schritt für Schritt, was ich als Nächstes tun muss, immer mit einer Lay-Erklärung VOR dem Code-Schnipsel. Mein aktueller Stand: [hier kurz beschreiben]. Mein Ziel: einen klickbaren Link auf mein Skript. Fragen Sie mich zurück, wenn etwas unklar ist.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 — Bausteine und Workflow</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03a-uebersicht.html",
+    "href": "parts/03a-uebersicht.html",
+    "title": "3a — Inhaltsverzeichnis und Literatur",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3a — Inhaltsverzeichnis und Literatur</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03a-uebersicht.html#worum-es-im-kern-geht",
+    "href": "parts/03a-uebersicht.html#worum-es-im-kern-geht",
+    "title": "3a — Inhaltsverzeichnis und Literatur",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nEin gutes Skript orientiert die Lesenden zwei Mal: oben durch das Inhaltsverzeichnis, unten durch die Literaturliste. Beides automatisch zu erzeugen ist mehr als Komfort — es vermeidet die typischen Fehlerquellen (vergessene Quellen, falsche Seitenzahlen, doppelte Einträge), die in Hand-pflege unweigerlich entstehen. Die Verbindung von Zotero und Quarto regelt das mit zwei Konfigurationszeilen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3a — Inhaltsverzeichnis und Literatur</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03a-uebersicht.html#inhaltsverzeichnis-drei-zeilen",
+    "href": "parts/03a-uebersicht.html#inhaltsverzeichnis-drei-zeilen",
+    "title": "3a — Inhaltsverzeichnis und Literatur",
+    "section": "Inhaltsverzeichnis — drei Zeilen",
+    "text": "Inhaltsverzeichnis — drei Zeilen\nIn _quarto.yml:\nformat:\n  html:\n    toc: true\n    toc-depth: 3\n    toc-title: \"Inhalt\"\nQuarto baut das TOC automatisch aus den Überschriften. Tiefe drei heißt: Kapitel, Abschnitt, Unterabschnitt — alles, was tiefer geschachtelt ist, taucht im TOC nicht auf.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3a — Inhaltsverzeichnis und Literatur</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03a-uebersicht.html#zotero-anbinden",
+    "href": "parts/03a-uebersicht.html#zotero-anbinden",
+    "title": "3a — Inhaltsverzeichnis und Literatur",
+    "section": "Zotero anbinden",
+    "text": "Zotero anbinden\nZotero exportiert Ihre Bibliothek als .bib-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das Better-BibTeX-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. mayer2021) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas ändern.\n\nMach mit — in fünf Schritten\n\nBetter BibTeX in Zotero installieren: https://retorque.re/zotero-better-bibtex/.\nEine kleine Zotero-Sammlung anlegen mit zwei oder drei Quellen aus Ihrem Strang.\nSammlung rechtsklicken → Export Collection → Better BibTeX → Keep updated.\nDatei speichern als references.bib im Projektordner.\nIn _quarto.yml:\n\nbibliography: references.bib\ncsl: https://www.zotero.org/styles/apa\nlink-citations: true\n\n\nZitieren\nIm Text:\nGenerative Lernaktivitäten verbessern das Behalten [@fiorella2016].\nDie zugrundeliegende Theorie geht auf Mayer [-@mayer2021] zurück.\nQuarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern Sie dort einen # Literatur-Heading mit ::: {#refs} setzen — wie in diesem Skript.\n\n\n\n\n\n\nMach mit — strangbezogen\n\n\n\nWählen Sie aus Ihrem Strang drei Quellen, legen Sie sie in Zotero an, exportieren und zitieren Sie sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt haben, hier je eine Empfehlung:\n\nStrang A — Wissenschaftliche Einstellung: Bartnik & Palmer (2024), dazu zwei eigene Ergänzungen.\nStrang B — Recherche und Quellenqualität: Bartnik & Palmer (2024), dazu eine Quelle zu Open-Access-Datenbanken (z. B. https://doaj.org) und eine zu Pre-Print-Servern.\nStrang C — Transparent schreiben: Bartnik & Palmer (2024), dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.\n\n\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\n„Citation key not found”? → BibTeX-Schlüssel im .bib prüfen, oder Better BibTeX neu auto-exportieren.\nListe erscheint nicht? → Am Kapitelende # Literatur und darunter ::: {#refs} mit ::: einfügen. Quarto füllt diesen Block.\nStil falsch? → CSL-URL prüfen oder eine eigene CSL-Datei aus https://www.zotero.org/styles herunterladen und lokal einbinden (csl: my-style.csl).\nMehrere Schlüssel zugleich? → [@fiorella2016; @mayer2021] mit Semikolon trennen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3a — Inhaltsverzeichnis und Literatur</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03a-uebersicht.html#tutor",
+    "href": "parts/03a-uebersicht.html#tutor",
+    "title": "3a — Inhaltsverzeichnis und Literatur",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3a — Inhaltsverzeichnis und Literatur</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html",
+    "href": "parts/03b-bilder-tabellen.html",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#worum-es-im-kern-geht",
+    "href": "parts/03b-bilder-tabellen.html#worum-es-im-kern-geht",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nBilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt (Mayer, 2021). Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine stabile Adresse (Label). Ein Verweis wie „siehe ?fig-co2” tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3”), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.\nDas spart Pflege (Nummerierung passt sich an), reduziert Fehler (kein „siehe Abbildung 7”, die längst Abbildung 8 ist), und es macht das Skript für die Lesenden bequemer.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#bilder-einbinden-zwei-wege",
+    "href": "parts/03b-bilder-tabellen.html#bilder-einbinden-zwei-wege",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Bilder einbinden — zwei Wege",
+    "text": "Bilder einbinden — zwei Wege\n\nWeg 1 — fertiges Bild aus images/\nDie einfachste Form, in Markdown:\n![Aufbau einer typischen Versorgungskette. Eigene Darstellung.](../images/supply-chain.png){#fig-supply width=80%}\nDrei Bestandteile, die zählen:\n\n\n\n\n\n\n\nTeil\nFunktion\n\n\n\n\n![Caption …]\nBildunterschrift (erscheint unter dem Bild, automatisch nummeriert)\n\n\n(../images/…)\nPfad zum Bild im images/-Ordner\n\n\n{#fig-supply}\nLabel — die stabile Adresse für Verweise\n\n\n\nWichtig: Das Label muss mit fig- beginnen, damit Quarto es als Abbildung erkennt.\n\n\nWeg 2 — Bild aus einem R-Code-Chunk\nWenn Sie ein Diagramm in R erzeugen (kommt in Kapitel 4), nutzen Sie Chunk-Optionen statt Markdown:\n```{r}\n#| label: fig-co2\n#| fig-cap: \"CO₂-Emissionen pro Kopf, ausgewählte Länder. Daten: Our World in Data.\"\n\n# R-Code, der das Diagramm erzeugt\n```\nAuch hier: das Label fig-co2 ist die Adresse, fig-cap die Bildunterschrift.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#tabellen-einbinden-zwei-wege",
+    "href": "parts/03b-bilder-tabellen.html#tabellen-einbinden-zwei-wege",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Tabellen einbinden — zwei Wege",
+    "text": "Tabellen einbinden — zwei Wege\n\nWeg 1 — Markdown-Tabelle mit Caption\nDie Caption kommt nach der Tabelle, eingeleitet mit Doppelpunkt:\n| Quelle    | Typ       | Vertrauenswürdigkeit |\n|-----------|-----------|---------------------|\n| Wikipedia | Tertiär   | Mittel              |\n| Lehrbuch  | Sekundär  | Hoch                |\n| Studie    | Primär    | Sehr hoch           |\n\n: Quellenarten im Überblick. {#tbl-quellen}\n#tbl-quellen ist das Label — alle Tabellen-Labels beginnen mit tbl-.\n\n\nWeg 2 — Tabelle aus einem R-Chunk\n```{r}\n#| label: tbl-quellen\n#| tbl-cap: \"Quellenarten im Überblick.\"\n\nlibrary(knitr)\nquellen &lt;- data.frame(\n  Quelle = c(\"Wikipedia\", \"Lehrbuch\", \"Studie\"),\n  Typ = c(\"Tertiär\", \"Sekundär\", \"Primär\"),\n  Vertrauen = c(\"Mittel\", \"Hoch\", \"Sehr hoch\")\n)\nkable(quellen)\n```",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#verweisen-mit-hover-fig--und-tbl-",
+    "href": "parts/03b-bilder-tabellen.html#verweisen-mit-hover-fig--und-tbl-",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Verweisen mit Hover — @fig-… und @tbl-…",
+    "text": "Verweisen mit Hover — @fig-… und @tbl-…\nIm Lauftext schreiben Sie:\nEin typisches Beispiel zeigt @fig-supply.\nDie Quellenarten unterscheiden sich systematisch (siehe @tbl-quellen).\nQuarto rendert daraus automatisch:\n\nEin typisches Beispiel zeigt Abbildung 1. Die Quellenarten unterscheiden sich systematisch (siehe Tabelle 1).\n\nKlick auf den Verweis → Sie springen zur Abbildung oder Tabelle. Maus drüber halten → ein kleines Vorschau-Fenster zeigt das Bild oder den Tabellenkopf, ohne dass Sie wegnavigieren müssen. Genau derselbe Mechanismus, der bei [@fiorella2016] die Quellenangabe anzeigt.\n\n\n\n\n\n\nMach mit — strangbezogen\n\n\n\nBauen Sie in Ihr Kapitel ein Bild und eine Tabelle ein, beide mit Label und Caption, und verweisen Sie aus dem Fließtext darauf. Drei Vorlagen je nach Strang:\n\nStrang A — Wissenschaftliche EinstellungStrang B — Recherche und QuellenqualitätStrang C — Transparent schreiben\n\n\n\nBild: Ein Diagramm „Wie wissenschaftliches Wissen entsteht” (Skizze als PNG in images/, Label #fig-wissenszyklus).\nTabelle: Drei Haltungen (Skepsis, intellektuelle Demut, Korrektur­bereitschaft), je mit Beispiel — Label #tbl-haltungen.\nVerweis im Text: „?fig-wissenszyklus zeigt den Kreislauf, ?tbl-haltungen die drei Haltungen.”\n\n\n\n\nBild: Eine Pyramide der Quellenarten (primär/sekundär/tertiär) als PNG, Label #fig-quellpyramide.\nTabelle: Drei Filter zur 30-Sekunden-Quellenprüfung — Label #tbl-filter.\nVerweis: „Die Hierarchie zeigt ?fig-quellpyramide; die Schnellprüfung folgt ?tbl-filter.”\n\n\n\n\nBild: Ein Schema „Bestandteile eines transparenten Methodenteils” als PNG, Label #fig-methodenteil.\nTabelle: Vergleich „transparent” vs. „intransparent” für drei Methodenentscheidungen — Label #tbl-vergleich.\nVerweis: „Den Aufbau zeigt ?fig-methodenteil, den Kontrast ?tbl-vergleich.”",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#wann-kein-cross-reference",
+    "href": "parts/03b-bilder-tabellen.html#wann-kein-cross-reference",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Wann kein Cross-Reference?",
+    "text": "Wann kein Cross-Reference?\nDrei Fälle, in denen Sie es lassen können:\n\nEinmaliger Verweis im selben Absatz — wenn das Bild direkt unter dem Text steht und Sie nur einmal darauf zeigen, reicht „siehe oben”.\nWerbe-Bilder ohne Inhalt — Dekoration braucht weder Caption noch Label.\nSehr kurze Skripte — bei drei Bildern lohnt der Aufwand nicht. Ab fünf Bildern wird es spürbar.\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\n?@fig-xyz im gerenderten Text? → Das Label im Bild stimmt nicht mit dem Verweis überein. Tippfehler im Label oder Caption-Block prüfen.\n„Could not resolve crossref” beim Rendern? → Label vergessen oder ohne fig-/tbl--Präfix angelegt. Quarto erkennt nur Labels mit Präfix als Cross-Refs.\nTooltip beim Hover erscheint nicht? → Im _quarto.yml muss unter format.html: die Option crossrefs-hover: true (Default) aktiv sein. Prüfen, ob sie versehentlich auf false gesetzt ist.\nBild wird nicht angezeigt? → Pfad relativ zum Kapitel: aus parts/03b-bilder-tabellen.qmd zeigt ../images/supply-chain.png ins richtige Verzeichnis.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03b-bilder-tabellen.html#tutor",
+    "href": "parts/03b-bilder-tabellen.html#tutor",
+    "title": "3b — Bilder, Tabellen und Cross-Refs",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch will in mein Quarto-Skript ein Bild und eine Tabelle einbauen, jeweils mit Bildunterschrift, Label und Verweis aus dem Fließtext. Mein Stand: [Bild liegt in images/ / muss noch erstellt werden]; [Tabelle als Markdown / aus R-Chunk]. Schreiben Sie mir den Code-Block für Bild und Tabelle plus den Verweis im Lauftext, mit Lay-Erklärung vor jedem Schritt.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3b — Bilder, Tabellen und Cross-Refs</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html",
+    "href": "parts/04-charts.html",
+    "title": "4 — Interaktive Diagramme",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#worum-es-im-kern-geht",
+    "href": "parts/04-charts.html#worum-es-im-kern-geht",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nDiagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte (2001) formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy (2018) ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.\n\n\n\n\n\n\nIm Skript unten sehen Sie alle Diagramme als Plotly.js-Widget direkt im Browser — die rendern ohne lokale R-Installation. Der Code-Block darunter zeigt jeweils die R-Variante (mit plotly + tibble), die Sie ins eigene Skript übernehmen können. Wer R lokal hat, schreibt die Charts in R; wer nicht, kopiert die HTML-Variante aus dem Quelltext dieses Kapitels.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#drei-wege-ein-diagramm-einzubauen",
+    "href": "parts/04-charts.html#drei-wege-ein-diagramm-einzubauen",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Drei Wege, ein Diagramm einzubauen",
+    "text": "Drei Wege, ein Diagramm einzubauen\n\n\n\n\n\n\n\n\nWeg\nWerkzeug\nWann passend?\n\n\n\n\nR + plotly\nR-Code-Chunk in Quarto\nSie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken (Wickham et al., 2019).\n\n\nPlotly.js direkt\nHTML + JavaScript\nSie haben kein R, aber wollen Plotly-Charts. Funktioniert in jedem Browser.\n\n\niFrame mit Datawrapper / Flourish\nexterner Editor, Embed-Code\nSie wollen gar nicht programmieren.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#mach-mit-drei-beispiele-jeweils-zuerst-die-live-grafik-dann-der-code-zum-übernehmen",
+    "href": "parts/04-charts.html#mach-mit-drei-beispiele-jeweils-zuerst-die-live-grafik-dann-der-code-zum-übernehmen",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Mach mit — drei Beispiele, jeweils zuerst die Live-Grafik, dann der Code zum Übernehmen",
+    "text": "Mach mit — drei Beispiele, jeweils zuerst die Live-Grafik, dann der Code zum Übernehmen\n\nStrang A — Wissenschaftliche EinstellungStrang B — Recherche und QuellenqualitätStrang C — Transparent schreiben\n\n\nFrage: Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt? Daten: vereinfacht aus Our World in Data (Roser et al., 2024).\n\n\nR-Code zum Übernehmen (wenn Sie R + plotly + tibble installiert haben):\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(plotly)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Paket 'plotly' wurde unter R Version 4.5.3 erstellt\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Paket 'ggplot2' wurde unter R Version 4.5.3 erstellt\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(tibble)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Paket 'tibble' wurde unter R Version 4.5.3 erstellt\n```\n\n\n:::\n\n```{.r .cell-code}\nle &lt;- tribble(\n  ~Year, ~Land,         ~Lebenserwartung,\n  1950,  \"Deutschland\", 67.5,\n  1970,  \"Deutschland\", 70.6,\n  1990,  \"Deutschland\", 75.3,\n  2010,  \"Deutschland\", 80.0,\n  2022,  \"Deutschland\", 80.7,\n  1950,  \"Japan\",       62.0,\n  2022,  \"Japan\",       84.1,\n  1950,  \"Welt\",        47.0,\n  2022,  \"Welt\",        72.6\n)\n\nplot_ly(le,\n        x = ~Year, y = ~Lebenserwartung,\n        color = ~Land, type = \"scatter\", mode = \"lines+markers\",\n        colors = c(\"#c81e0f\", \"#b43092\", \"#ea5a00\")) |&gt;\n  layout(yaxis = list(title = \"Lebenserwartung (Jahre)\"))\n```\n\n::: {#fig-le .cell-output-display}\n\n```{=html}\n&lt;div class=\"plotly html-widget html-fill-item\" id=\"htmlwidget-f4dfbe7886a41d50c154\" style=\"width:100%;height:464px;\"&gt;&lt;/div&gt;\n&lt;script type=\"application/json\" data-for=\"htmlwidget-f4dfbe7886a41d50c154\"&gt;{\"x\":{\"visdat\":{\"93e02f4b63c3\":[\"function () \",\"plotlyVisDat\"]},\"cur_data\":\"93e02f4b63c3\",\"attrs\":{\"93e02f4b63c3\":{\"x\":{},\"y\":{},\"mode\":\"lines+markers\",\"color\":{},\"colors\":[\"#c81e0f\",\"#b43092\",\"#ea5a00\"],\"alpha_stroke\":1,\"sizes\":[10,100],\"spans\":[1,20],\"type\":\"scatter\"}},\"layout\":{\"margin\":{\"b\":40,\"l\":60,\"t\":25,\"r\":10},\"yaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Lebenserwartung (Jahre)\"},\"xaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Year\"},\"hovermode\":\"closest\",\"showlegend\":true},\"source\":\"A\",\"config\":{\"modeBarButtonsToAdd\":[\"hoverclosest\",\"hovercompare\"],\"showSendToCloud\":false},\"data\":[{\"x\":[1950,1970,1990,2010,2022],\"y\":[67.5,70.599999999999994,75.299999999999997,80,80.700000000000003],\"mode\":\"lines+markers\",\"type\":\"scatter\",\"name\":\"Deutschland\",\"marker\":{\"color\":\"rgba(200,30,15,1)\",\"line\":{\"color\":\"rgba(200,30,15,1)\"}},\"textfont\":{\"color\":\"rgba(200,30,15,1)\"},\"error_y\":{\"color\":\"rgba(200,30,15,1)\"},\"error_x\":{\"color\":\"rgba(200,30,15,1)\"},\"line\":{\"color\":\"rgba(200,30,15,1)\"},\"xaxis\":\"x\",\"yaxis\":\"y\",\"frame\":null},{\"x\":[1950,2022],\"y\":[62,84.099999999999994],\"mode\":\"lines+markers\",\"type\":\"scatter\",\"name\":\"Japan\",\"marker\":{\"color\":\"rgba(180,48,146,1)\",\"line\":{\"color\":\"rgba(180,48,146,1)\"}},\"textfont\":{\"color\":\"rgba(180,48,146,1)\"},\"error_y\":{\"color\":\"rgba(180,48,146,1)\"},\"error_x\":{\"color\":\"rgba(180,48,146,1)\"},\"line\":{\"color\":\"rgba(180,48,146,1)\"},\"xaxis\":\"x\",\"yaxis\":\"y\",\"frame\":null},{\"x\":[1950,2022],\"y\":[47,72.599999999999994],\"mode\":\"lines+markers\",\"type\":\"scatter\",\"name\":\"Welt\",\"marker\":{\"color\":\"rgba(234,90,0,1)\",\"line\":{\"color\":\"rgba(234,90,0,1)\"}},\"textfont\":{\"color\":\"rgba(234,90,0,1)\"},\"error_y\":{\"color\":\"rgba(234,90,0,1)\"},\"error_x\":{\"color\":\"rgba(234,90,0,1)\"},\"line\":{\"color\":\"rgba(234,90,0,1)\"},\"xaxis\":\"x\",\"yaxis\":\"y\",\"frame\":null}],\"highlight\":{\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.20000000000000001,\"selected\":{\"opacity\":1},\"debounce\":0},\"shinyEvents\":[\"plotly_hover\",\"plotly_click\",\"plotly_selected\",\"plotly_relayout\",\"plotly_brushed\",\"plotly_brushing\",\"plotly_clickannotation\",\"plotly_doubleclick\",\"plotly_deselect\",\"plotly_afterplot\",\"plotly_sunburstclick\"],\"base_url\":\"https://plot.ly\"},\"evals\":[],\"jsHooks\":[]}&lt;/script&gt;\n```\n\n\nLebenserwartung bei Geburt, ausgewählte Länder. Quelle: Our World in Data.\n:::\n:::\n\n\nFrage: Wie viele wissenschaftliche Publikationen erscheinen pro Jahr? Antwort führt zur Notwendigkeit, Quellen zu filtern.\n\n\nR-Code zum Übernehmen:\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(plotly)\nlibrary(tibble)\n\npub &lt;- tribble(\n  ~Year, ~Publikationen_Mio,\n  1990,  0.8,\n  2000,  1.2,\n  2010,  2.1,\n  2020,  2.9,\n  2023,  3.3\n)\n\nplot_ly(pub,\n        x = ~Year, y = ~Publikationen_Mio, type = \"bar\",\n        marker = list(color = \"#c81e0f\")) |&gt;\n  layout(yaxis = list(title = \"Publikationen (Mio. pro Jahr)\"))\n```\n\n::: {#fig-pub .cell-output-display}\n\n```{=html}\n&lt;div class=\"plotly html-widget html-fill-item\" id=\"htmlwidget-3b056a951b5bd7a2891f\" style=\"width:100%;height:464px;\"&gt;&lt;/div&gt;\n&lt;script type=\"application/json\" data-for=\"htmlwidget-3b056a951b5bd7a2891f\"&gt;{\"x\":{\"visdat\":{\"93e07aa1192c\":[\"function () \",\"plotlyVisDat\"]},\"cur_data\":\"93e07aa1192c\",\"attrs\":{\"93e07aa1192c\":{\"x\":{},\"y\":{},\"marker\":{\"color\":\"#c81e0f\"},\"alpha_stroke\":1,\"sizes\":[10,100],\"spans\":[1,20],\"type\":\"bar\"}},\"layout\":{\"margin\":{\"b\":40,\"l\":60,\"t\":25,\"r\":10},\"yaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Publikationen (Mio. pro Jahr)\"},\"xaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Year\"},\"hovermode\":\"closest\",\"showlegend\":false},\"source\":\"A\",\"config\":{\"modeBarButtonsToAdd\":[\"hoverclosest\",\"hovercompare\"],\"showSendToCloud\":false},\"data\":[{\"x\":[1990,2000,2010,2020,2023],\"y\":[0.80000000000000004,1.2,2.1000000000000001,2.8999999999999999,3.2999999999999998],\"marker\":{\"color\":\"#c81e0f\",\"line\":{\"color\":\"rgba(31,119,180,1)\"}},\"type\":\"bar\",\"error_y\":{\"color\":\"rgba(31,119,180,1)\"},\"error_x\":{\"color\":\"rgba(31,119,180,1)\"},\"xaxis\":\"x\",\"yaxis\":\"y\",\"frame\":null}],\"highlight\":{\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.20000000000000001,\"selected\":{\"opacity\":1},\"debounce\":0},\"shinyEvents\":[\"plotly_hover\",\"plotly_click\",\"plotly_selected\",\"plotly_relayout\",\"plotly_brushed\",\"plotly_brushing\",\"plotly_clickannotation\",\"plotly_doubleclick\",\"plotly_deselect\",\"plotly_afterplot\",\"plotly_sunburstclick\"],\"base_url\":\"https://plot.ly\"},\"evals\":[],\"jsHooks\":[]}&lt;/script&gt;\n```\n\n\nWissenschaftliche Publikationen weltweit (in Mio.).\n:::\n:::\n\n\nFrage: Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt? Antwort zeigt: Transparenz ist wachsende Praxis.\n\n\nR-Code zum Übernehmen:\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(plotly)\nlibrary(tibble)\n\nprereg &lt;- tribble(\n  ~Jahr, ~Anzahl,\n  2015,  1500,\n  2017,  4200,\n  2019,  9800,\n  2021,  16500,\n  2023,  22000\n)\n\nplot_ly(prereg,\n        x = ~Jahr, y = ~Anzahl, type = \"bar\",\n        marker = list(color = \"#b43092\")) |&gt;\n  layout(yaxis = list(title = \"Pre-Registrierungen pro Jahr\"))\n```\n\n::: {#fig-prereg .cell-output-display}\n\n```{=html}\n&lt;div class=\"plotly html-widget html-fill-item\" id=\"htmlwidget-5d2ca4aa586ca741a64a\" style=\"width:100%;height:464px;\"&gt;&lt;/div&gt;\n&lt;script type=\"application/json\" data-for=\"htmlwidget-5d2ca4aa586ca741a64a\"&gt;{\"x\":{\"visdat\":{\"93e07064549a\":[\"function () \",\"plotlyVisDat\"]},\"cur_data\":\"93e07064549a\",\"attrs\":{\"93e07064549a\":{\"x\":{},\"y\":{},\"marker\":{\"color\":\"#b43092\"},\"alpha_stroke\":1,\"sizes\":[10,100],\"spans\":[1,20],\"type\":\"bar\"}},\"layout\":{\"margin\":{\"b\":40,\"l\":60,\"t\":25,\"r\":10},\"yaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Pre-Registrierungen pro Jahr\"},\"xaxis\":{\"domain\":[0,1],\"automargin\":true,\"title\":\"Jahr\"},\"hovermode\":\"closest\",\"showlegend\":false},\"source\":\"A\",\"config\":{\"modeBarButtonsToAdd\":[\"hoverclosest\",\"hovercompare\"],\"showSendToCloud\":false},\"data\":[{\"x\":[2015,2017,2019,2021,2023],\"y\":[1500,4200,9800,16500,22000],\"marker\":{\"color\":\"#b43092\",\"line\":{\"color\":\"rgba(31,119,180,1)\"}},\"type\":\"bar\",\"error_y\":{\"color\":\"rgba(31,119,180,1)\"},\"error_x\":{\"color\":\"rgba(31,119,180,1)\"},\"xaxis\":\"x\",\"yaxis\":\"y\",\"frame\":null}],\"highlight\":{\"on\":\"plotly_click\",\"persistent\":false,\"dynamic\":false,\"selectize\":false,\"opacityDim\":0.20000000000000001,\"selected\":{\"opacity\":1},\"debounce\":0},\"shinyEvents\":[\"plotly_hover\",\"plotly_click\",\"plotly_selected\",\"plotly_relayout\",\"plotly_brushed\",\"plotly_brushing\",\"plotly_clickannotation\",\"plotly_doubleclick\",\"plotly_deselect\",\"plotly_afterplot\",\"plotly_sunburstclick\"],\"base_url\":\"https://plot.ly\"},\"evals\":[],\"jsHooks\":[]}&lt;/script&gt;\n```\n\n\nPre-registrierte Studien auf OSF, jährliche Neuanmeldungen.\n:::\n:::\n\n\n\nIm Browser können Sie jetzt mit der Maus über die Datenpunkte fahren, Reihen ein- und ausblenden, in Bereiche zoomen. Das Bild im Skript ist live — und der Code darunter ist zum Übernehmen ins eigene Skript gedacht.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#plotly.js-direkt-wenn-sie-kein-r-wollen",
+    "href": "parts/04-charts.html#plotly.js-direkt-wenn-sie-kein-r-wollen",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Plotly.js direkt — wenn Sie kein R wollen",
+    "text": "Plotly.js direkt — wenn Sie kein R wollen\nDie HTML-Variante oben ist auch eine Vorlage. Im Quelltext dieses Kapitels (parts/04-charts.qmd) sehen Sie den &lt;div&gt;+&lt;script&gt;-Block. Diesen können Sie eins zu eins in eigene Kapitel kopieren — die einzige Voraussetzung: einmal pro Kapitel den Plotly-Loader einbinden:\n&lt;script src=\"https://cdn.plot.ly/plotly-2.35.2.min.js\" charset=\"utf-8\"&gt;&lt;/script&gt;\nDiesen Block packen Sie ans Anfang des .qmd-Kapitels in einen {=html}-Block:\n```{=html}\n&lt;script src=\"https://cdn.plot.ly/plotly-2.35.2.min.js\" charset=\"utf-8\"&gt;&lt;/script&gt;\n```",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#daten-direkt-aus-dem-netz-für-fortgeschrittene-mit-r",
+    "href": "parts/04-charts.html#daten-direkt-aus-dem-netz-für-fortgeschrittene-mit-r",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Daten direkt aus dem Netz (für Fortgeschrittene mit R)",
+    "text": "Daten direkt aus dem Netz (für Fortgeschrittene mit R)\nStatt Daten im Code anzulegen, lassen sich CSVs direkt von Our World in Data laden:\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(readr)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: Paket 'readr' wurde unter R Version 4.5.3 erstellt\n```\n\n\n:::\n\n```{.r .cell-code}\nowid &lt;- read_csv(\"https://ourworldindata.org/grapher/life-expectancy.csv\")\n```\n:::\nWenn das Laden fehlschlägt: Datei manuell aus der Grapher-Seite herunterladen, in data/ ablegen und lokal lesen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#wann-kein-interaktives-diagramm",
+    "href": "parts/04-charts.html#wann-kein-interaktives-diagramm",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Wann kein interaktives Diagramm?",
+    "text": "Wann kein interaktives Diagramm?\n\nReine Illustration — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen”, reicht ein Bild (Tufte, 2001).\nPrint-Version wichtig — interaktive Plots werden im PDF zu statischen Screenshots.\nPerformance — sehr große Datensätze (&gt;100.000 Punkte) machen plotly träge.\n\n\n\n\n\n\n\nMach mit\n\n\n\nTauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang interessant sind. Rendern Sie, schauen Sie das Ergebnis im Browser an, pushen Sie.\n\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\nR-Render bricht ab mit there is no package called 'plotly' → entweder install.packages(c(\"plotly\", \"tibble\")) in der R-Konsole, oder die HTML-Variante aus diesem Kapitel kopieren — kein R nötig.\nPlotly-Chart erscheint nicht im Browser? → Prüfen, ob der CDN-Loader (&lt;script src=\"https://cdn.plot.ly/...\"&gt;) am Anfang des Kapitels eingebunden ist.\nCSV lässt sich nicht laden → lokal in data/ speichern und von dort lesen (CORS).\nDiagramm zu klein → height im &lt;div style=\"...\"&gt; höher setzen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/04-charts.html#tutor",
+    "href": "parts/04-charts.html#tutor",
+    "title": "4 — Interaktive Diagramme",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Bitte schreiben Sie mir sowohl die R+plotly-Variante als auch die reine HTML+Plotly.js-Variante, damit ich beides vergleichen kann.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>4 — Interaktive Diagramme</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html",
+    "href": "parts/05-iframes-tutor.html",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#worum-es-im-kern-geht",
+    "href": "parts/05-iframes-tutor.html#worum-es-im-kern-geht",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nAktivität schlägt Konsum. Lernende, die zwischendurch etwas tun — antworten, ziehen, ausprobieren — behalten mehr und verstehen besser (Fiorella & Mayer, 2016; Karpicke & Blunt, 2011). Interaktive Elemente sind das Werkzeug, das diese Aktivität in einem statischen Skript ermöglicht. Bei generativer KI als Tutor kommt eine zweite Chance hinzu: ein adaptiver Gesprächspartner, der auf die jeweilige Verständnisstufe reagiert (Kasneci et al., 2023; Mollick & Mollick, 2023).",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#live-beispiel-1-drag-and-drop-lernspiel-als-iframe",
+    "href": "parts/05-iframes-tutor.html#live-beispiel-1-drag-and-drop-lernspiel-als-iframe",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Live-Beispiel 1 — Drag-and-Drop-Lernspiel als iFrame",
+    "text": "Live-Beispiel 1 — Drag-and-Drop-Lernspiel als iFrame\nHier zuerst, was am Ende dabei herauskommen kann. Probieren Sie es direkt aus — drei Prinzipien auf drei Beispiele ziehen, dann „Auflösung anzeigen”:\n\n\nCode zum Übernehmen (an gewünschter Stelle in Ihr .qmd-Kapitel einfügen):\n&lt;iframe src=\"../interactions/lernspiel-kapitel1.html\"\n        width=\"100%\" height=\"900\" frameborder=\"0\"\n        style=\"border: 1px solid #e6e6ea;\"&gt;\n&lt;/iframe&gt;\nWas die Attribute bedeuten:\n\n\n\n\n\n\n\nAttribut\nWozu?\n\n\n\n\nsrc\nPfad zur HTML-Datei, relativ zum Kapitel (../ geht eine Ebene hoch)\n\n\nwidth=\"100%\"\nfüllt die Spaltenbreite\n\n\nheight=\"900\"\nfeste Höhe in Pixeln — anpassen, bis nichts abgeschnitten ist\n\n\nframeborder=\"0\"\nkein hässlicher 3D-Rahmen\n\n\nstyle=\"border: …\"\ndezenter eigener Rahmen in TH-Grau",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#live-beispiel-2-memory-spiel-als-iframe",
+    "href": "parts/05-iframes-tutor.html#live-beispiel-2-memory-spiel-als-iframe",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Live-Beispiel 2 — Memory-Spiel als iFrame",
+    "text": "Live-Beispiel 2 — Memory-Spiel als iFrame\nDasselbe Prinzip, anderer Spieltyp:\n\n\nCode zum Übernehmen:\n&lt;iframe src=\"../interactions/memory-spiel.html\"\n        width=\"100%\" height=\"850\" frameborder=\"0\"\n        style=\"border: 1px solid #e6e6ea;\"&gt;\n&lt;/iframe&gt;\n\n\n\n\n\n\nDamit das funktioniert, müssen die HTML-Dateien tatsächlich im Ordner interactions/ liegen — und in _quarto.yml muss unter project: die Zeile resources: [\"interactions/*\"] stehen, sonst kopiert Quarto die Dateien beim Render nicht in den docs/-Ordner mit.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#drei-wege-ein-spiel-einzubauen",
+    "href": "parts/05-iframes-tutor.html#drei-wege-ein-spiel-einzubauen",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Drei Wege, ein Spiel einzubauen",
+    "text": "Drei Wege, ein Spiel einzubauen\n\n\n\n\n\n\n\n\n\nVariante\nAufwand\nVorteil\nNachteil\n\n\n\n\nA — Statisches HTML (eigenes Widget, wie oben)\nhoch zur Erstellung, niedrig danach\nvolle Kontrolle, kein Konto, läuft offline\nerfordert HTML/JS-Kenntnisse oder KI-Hilfe\n\n\nB — H5P (h5p.org / Moodle / WordPress)\nmittel\nviele fertige Vorlagen (Quiz, Drag-Drop, Memory)\nerfordert Konto, externe Abhängigkeit\n\n\nC — externer Editor (Genially, Kahoot, Quizizz)\nniedrig\nschnell, hübsch, kollaborativ\nWerbung, externe Datenhaltung, oft Login nötig\n\n\n\n\n\n\n\n\n\nMach mit (Variante A — eigenes Spiel)\n\n\n\nSchauen Sie sich interactions/lernspiel-kapitel1.html in RStudio an (im Files-Tab anklicken → Open in editor). Es ist eine einzige HTML-Datei mit eingebetteten Styles und JavaScript — kein Backend, kein Build-Schritt. Diesen Bauplan können Sie selbst (oder Ihr KI-Tutor) für ein eigenes Spiel im gewählten Strang nutzen.\nStrang-Beispiele:\n\nStrang A — Drag-and-Drop: „Welche Aussage ist eine Hypothese, welche eine Behauptung?”\nStrang B — Multiple Choice: „Welche der drei Quellen ist primärwissenschaftlich?”\nStrang C — Memory: „Methodenbegriff zu transparenter Beschreibung”",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#h5p-embed-variante-b-optional",
+    "href": "parts/05-iframes-tutor.html#h5p-embed-variante-b-optional",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "H5P-Embed (Variante B, optional)",
+    "text": "H5P-Embed (Variante B, optional)\nH5P liefert fertige interaktive Vorlagen, die Sie ohne Programmierung im Browser konfigurieren. Workflow:\n\nKonto auf https://h5p.org oder https://h5p.com anlegen.\n„New Content” → Drag the Words (oder eine andere Vorlage) wählen.\nMini-Quiz zu drei Begriffen aus Ihrem Strang bauen.\nAuf Embed klicken, den iFrame-Code kopieren.\nIn Ihr .qmd-Kapitel einfügen — fertig.\n\nEin H5P-Embed sieht typischerweise so aus:\n&lt;iframe src=\"https://h5p.org/h5p/embed/617\"\n        width=\"100%\" height=\"500\" frameborder=\"0\"\n        allowfullscreen=\"allowfullscreen\"&gt;\n&lt;/iframe&gt;\nVorteil: H5P kümmert sich um die Speicherung der Antworten, falls Sie LRS-Anbindung haben. Nachteil: externe Abhängigkeit, Konto nötig, Werbung in der Free-Variante.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#ki-tutor-als-link",
+    "href": "parts/05-iframes-tutor.html#ki-tutor-als-link",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "KI-Tutor als Link",
+    "text": "KI-Tutor als Link\nDer Tutor läuft nicht im iFrame, sondern in einem zweiten Tab. Sie legen einen GPT (oder Custom GPT) mit System-Prompt an, holen sich den öffentlichen Link, bauen ihn als Markdown-Link an passende Stellen im Skript ein. Drei Hosting-Varianten zur Auswahl:\n\nOption 1 — Custom GPT auf ChatGPT (heute genutzt)\nEinfachste Variante, weltweit verfügbar, kein Hochschul-Login nötig. Im Skript einbauen:\n[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target=\"_blank\"}\nDer vorbereitete Tutor für diesen Workshop liegt unter dem oben verlinkten URL — der System-Prompt steckt dort schon drin. Die Lernenden klicken, ChatGPT-Login öffnet sich (kostenlos), der Tutor antwortet sofort im Workshop-Kontext.\n\n\n\n\n\n\nDatenschutz: ChatGPT speichert Konversationen auf US-Servern. Für offene Lehre ohne personenbezogene Daten unkritisch. Wenn Sie europäische Datenhaltung brauchen, nehmen Sie Option 2.\n\n\n\n\n\nOption 2 — Custom GPT in der AcademicCloud\nVariante mit europäischer Datenhaltung und Hochschul-Login. Sie legen einen GPT mit dem vorbereiteten System-Prompt an (siehe Anhang Tutor-Prompt) und verlinken ihn:\n[Fragen Sie den Skript-Tutor →](https://chat.academiccloud.de/chat/IHR-LINK){target=\"_blank\"}\nLernende loggen sich mit Hochschul-Credentials ein.\n\n\nOption 3 — eigenes statisches Widget oder voll gehosteter Tutor\nFür Fortgeschrittene: ein HTML-Widget, das eine OpenAI-kompatible API direkt anspricht (Vorbild: _relevance-widget.qmd in https://github.com/TH-Koln-Bartnik/genai4teaching), oder eine eigene Web-App auf AWS Amplify mit RAG über Skriptinhalte (Vorbild: BWL1 Tutor-Chatbot). Mollick und Mollick (2023) geben einen Überblick über die didaktischen Designentscheidungen.\n\n\n\n\n\n\nMach mit\n\n\n\nWir nutzen heute den vorbereiteten Workshop-Tutor auf ChatGPT — Sie müssen keinen eigenen GPT bauen, sondern nur den Link einbauen:\n[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target=\"_blank\"}\nSetzen Sie diesen Link an passende Stelle in Ihr Skript (z. B. in einen Callout-Tip am Kapitelende). Rendern Sie und prüfen Sie den Klick.\nWer einen eigenen Tutor mit eigenem System-Prompt bauen will, springt zum Tutor-Prompt-Anhang und legt sich Option 1 oder Option 2 selbst an.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#wann-kein-ki-tutor",
+    "href": "parts/05-iframes-tutor.html#wann-kein-ki-tutor",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Wann kein KI-Tutor?",
+    "text": "Wann kein KI-Tutor?\nDrei Situationen, in denen Sie es lassen sollten:\n\nKlar definierte Faktenfragen — wenn die Antwort eindeutig ist und in einem Lehrbuch steht, ist ein Quiz besser.\nSensible persönliche Themen — der Tutor soll Lernen begleiten, keine Beratung ersetzen.\nZeitkritisches Pflichtwissen — wenn die Lernenden in zehn Minuten etwas können müssen, ist Frontalanleitung effizienter als ein Gespräch (Kasneci et al., 2023).\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\niFrame zeigt nichts an? → Pfad prüfen: aus parts/05-iframes-tutor.qmd zeigt ../interactions/datei.html ins richtige Verzeichnis. Externe URLs immer mit https:// beginnen. Manche Seiten erlauben kein Embedding (HTTP-Header X-Frame-Options) — dann nur als Link verwenden.\niFrame leer im gerenderten docs/-Ordner? → In _quarto.yml muss resources: [\"interactions/*\"] unter project: stehen, damit Quarto die HTML-Dateien beim Render mitkopiert.\niFrame zu kurz, Inhalt abgeschnitten? → height höher setzen, oder style=\"height: 90vh\" für 90 % der Bildschirmhöhe.\nAcademicCloud-Link funktioniert für andere nicht? → Sharing aktivieren in den GPT-Einstellungen, „öffentlich” oder „mit Link”.\nTutor antwortet auf alles, auch außerhalb des Themas? → System-Prompt nachschärfen, explizit Grenzen setzen („Antworten Sie nur zu Quarto-Workflow-Fragen”).",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/05-iframes-tutor.html#tutor",
+    "href": "parts/05-iframes-tutor.html#tutor",
+    "title": "5 — iFrames, Spiele und KI-Tutor",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch will [ein iFrame-Quiz / einen KI-Tutor-Link / ein eigenes HTML-Widget] in mein Quarto-Skript einbauen. Mein Stand: […]. Schlagen Sie mir den einfachsten ersten Schritt vor und schreiben Sie den Code-Schnipsel dazu. Erklären Sie vorher in zwei Sätzen, was ich da eigentlich tue.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>5 — iFrames, Spiele und KI-Tutor</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html",
+    "href": "parts/03c-style.html",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#worum-es-im-kern-geht",
+    "href": "parts/03c-style.html#worum-es-im-kern-geht",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nGestaltung ist nicht Dekoration, sondern Lese-Hilfe. Ein konsistentes Layout reduziert kognitive Last (Mayer, 2021) — die Lernenden müssen nicht für jedes neue Element wieder verstehen, was wo wichtig ist. Tufte (2001) formuliert dasselbe Prinzip für Datenvisualisierung: maximaler Informationsgehalt bei minimalem Tinte-zu-Daten-Verhältnis. Beides spricht für Zurückhaltung im Stil — wenige Farben, klare Hierarchien, kein Schmuck.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#wie-quarto-aussehen-handhabt",
+    "href": "parts/03c-style.html#wie-quarto-aussehen-handhabt",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Wie Quarto Aussehen handhabt",
+    "text": "Wie Quarto Aussehen handhabt\nDrei Stellschrauben, in dieser Reihenfolge:\n\n_brand.yml — die Hochschulfarben und -schriften an einem Ort.\nstyles.scss — alles, was _brand.yml nicht abdeckt (Layout, Akzente, eigene Boxen).\nformat.html.theme in _quarto.yml — wählt das Bootstrap-Basistheme.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#die-th-köln-palette-in-stichworten",
+    "href": "parts/03c-style.html#die-th-köln-palette-in-stichworten",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Die TH-Köln-Palette in Stichworten",
+    "text": "Die TH-Köln-Palette in Stichworten\nDrei Farben, sonst nur Grautöne. Alles andere ist Verstoß gegen das Corporate Design.\n\n\n\nRolle\nHex\nWo?\n\n\n\n\nTH Red\n#c81e0f\nLinks, Akzente, wichtige Hervorhebungen\n\n\nTH Magenta\n#b43092\nStrukturlinien, Callout-Ränder\n\n\nTH Orange\n#ea5a00\nSehr sparsam — Warnungen, Verlauf\n\n\nInk\n#111111\nFließtext (weicheres Schwarz)\n\n\nPaper\n#ffffff\nHintergründe, immer",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#mach-mit-_brand.yml-kopieren",
+    "href": "parts/03c-style.html#mach-mit-_brand.yml-kopieren",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Mach mit — _brand.yml kopieren",
+    "text": "Mach mit — _brand.yml kopieren\nIm Repository des Workshops liegt eine fertige _brand.yml mit der TH-Köln-Palette. Kopieren Sie sie in Ihr Projektverzeichnis. Beim nächsten quarto render sind Links rot, Überschriften schwarz, Akzente magenta.\ncolor:\n  palette:\n    th-red: \"#c81e0f\"\n    th-magenta: \"#b43092\"\n    th-orange: \"#ea5a00\"\n  primary: th-red\n  secondary: th-magenta",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#scss-ergänzungen",
+    "href": "parts/03c-style.html#scss-ergänzungen",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "SCSS-Ergänzungen",
+    "text": "SCSS-Ergänzungen\nDrei Dinge, die _brand.yml nicht regelt: scharfe Ecken („kantig”), die magenta H2-Unterstreichung und die TH-Farbleiste am Seitenanfang. Quarto verarbeitet eigene Stile als SCSS (Sass) — eine Erweiterung von CSS, die mit Bootstrap zusammenarbeitet. Sie brauchen dafür kein Sass-Wissen: jede gültige CSS-Regel ist auch gültiges SCSS.\n\n\n\n\n\n\nDie Datei muss styles.scss heißen (nicht .css) und am Anfang einen Layer-Marker enthalten — sonst bricht quarto render mit einer Fehlermeldung „doesn’t contain at least one layer boundary” ab.\n\n\n\nLegen Sie styles.scss an und binden Sie sie in _quarto.yml ein:\nformat:\n  html:\n    theme:\n      - cosmo\n      - styles.scss\nIn styles.scss (Auszug — Layer-Marker am Anfang ist Pflicht):\n/*-- scss:rules --*/\n\n:root {\n  --th-red: #c81e0f;\n  --th-magenta: #b43092;\n}\n\nh1, h2, h3 { border-radius: 0 !important; font-weight: 600; }\nh2 { border-bottom: 2px solid rgba(180, 48, 146, 0.35); padding-bottom: 0.3rem; }\n.callout { border-radius: 0 !important; }\npre, code { border-radius: 0 !important; }\n\n\n\n\n\n\nMach mit — Vorher/Nachher\n\n\n\nRendern Sie Ihr Skript einmal vor und einmal nach dem Einbau von _brand.yml. Vergleichen Sie beide Versionen nebeneinander. Was ändert sich? Was nicht? Schreiben Sie sich drei Beobachtungen auf — wir nutzen sie im Showcase am Ende.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#logo-einbinden",
+    "href": "parts/03c-style.html#logo-einbinden",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Logo einbinden",
+    "text": "Logo einbinden\n\nLaden Sie das TH-Köln-Logo (PNG, transparent) in images/th-koeln-logo.png.\nIn _brand.yml:\n\nlogo:\n  small: images/th-koeln-logo.png\n  medium: images/th-koeln-logo.png\n\nRendern und prüfen.\n\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\nFarben tauchen nicht auf? → Cache leeren (quarto render --cache-refresh) oder den Ordner _freeze/ löschen.\nCSS wird nicht geladen? → Pfad in _quarto.yml prüfen, relative Pfade ohne führenden Slash.\nLogo wird nicht angezeigt? → PNG-Datei muss tatsächlich im images/-Ordner liegen, nicht nur in _brand.yml referenziert sein.\nFarben sehen ausgewaschen aus? → Eventuell ein Bootstrap-Theme aktiv, das die Variablen überschreibt. theme: [cosmo, styles.scss] in dieser Reihenfolge halten — die SCSS-Datei muss zuletzt geladen werden.\n„doesn’t contain at least one layer boundary” beim Render? → Am Anfang von styles.scss muss /*-- scss:rules --*/ stehen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/03c-style.html#tutor",
+    "href": "parts/03c-style.html#tutor",
+    "title": "3c — TH-Köln-Stil einbauen (optional)",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3c — TH-Köln-Stil einbauen (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html",
+    "href": "parts/06-slides-optional.html",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "",
+    "text": "Was Sie nach diesem Kapitel können",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#worum-es-im-kern-geht",
+    "href": "parts/06-slides-optional.html#worum-es-im-kern-geht",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "Worum es im Kern geht",
+    "text": "Worum es im Kern geht\nFolien sind nicht der bessere Skripttext, sondern ein eigener Modus — sie unterstützen die mündliche Erläuterung. Mayer (2021) zeigt: Folien wirken am stärksten, wenn sie Bild plus wenig Text kombinieren und Inhalte schrittweise enthüllen. Genau das liefert Quarto Reveal.js mit zwei Konstrukten: incremental (Listen punktweise) und ::: {.fragment} (beliebige Blöcke einzeln).",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#schnellbau-in-vier-schritten",
+    "href": "parts/06-slides-optional.html#schnellbau-in-vier-schritten",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "Schnellbau in vier Schritten",
+    "text": "Schnellbau in vier Schritten\n\nNeue Datei slides/template-vorlesungsfolien.qmd anlegen — oder die vorhandene Vorlage kopieren.\nYAML-Header ergänzen (siehe unten).\nInhalt strukturieren: eine ##-Überschrift = eine Folie.\nIm RStudio-Terminal rendern: quarto render slides/template-vorlesungsfolien.qmd oder Knopf Render im Editor.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#yaml-header-für-reveal.js",
+    "href": "parts/06-slides-optional.html#yaml-header-für-reveal.js",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "YAML-Header für Reveal.js",
+    "text": "YAML-Header für Reveal.js\n---\ntitle: \"Vorlesungsfolien — Vorlage\"\nauthor: \"Ihr Name\"\nformat:\n  revealjs:\n    theme: [default, ../styles.scss]\n    slide-number: true\n    chalkboard: true\n    incremental: false\n    logo: ../images/th-koeln-logo.png\n    footer: \"Workshop · TH Köln\"\n    transition: fade\n---\nWichtig: theme: [default, ../styles.scss] zieht Ihre TH-Köln-Farben auch auf die Folien.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#bausteine-sieben-techniken-zum-übernehmen",
+    "href": "parts/06-slides-optional.html#bausteine-sieben-techniken-zum-übernehmen",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "Bausteine — sieben Techniken zum Übernehmen",
+    "text": "Bausteine — sieben Techniken zum Übernehmen\n\n1. Eine Folie pro ##-Überschrift\n## Eine Folie pro Überschrift\n\nStichpunkte direkt darunter, Bilder, Code — was Sie wollen.\n\n\n2. Section-Divider (großer Trenner zwischen Themenblöcken)\n# Block 2 — Stichpunkte\nEin einfaches # (statt ##) erzeugt eine Übersichts-/Trennfolie.\n\n\n3. Stichpunkte mit Appear-Effekt — einer nach dem anderen\n::: incremental\n- Punkt eins\n- Punkt zwei\n- Punkt drei\n:::\nIm Vortrag: erst der erste Punkt, dann auf Klick (Pfeiltaste, Leertaste oder Klicker) der zweite, der dritte.\n\n\n4. Beliebige Blöcke einzeln einblenden\n::: {.fragment}\n**Beobachtung:** Lernende vergessen 70 % innerhalb einer Woche.\n:::\n\n::: {.fragment}\n**Konsequenz:** Spaced Repetition statt Frontalvortrag.\n:::\n\n::: {.fragment}\n**Konkret heute:** Mini-Quizze in jedem Skriptkapitel.\n:::\nDrei Klicks, drei Erkenntnis­schritte — perfekt für Argumentationsketten.\n\n\n5. Bild mit Appear-Effekt\nWas ist Generatives Lernen?\n\n::: {.fragment}\n![](../images/wissens-zyklus.png){fig-align=\"center\" width=\"60%\"}\n:::\nErst die Frage in den Raum stellen, dann das Schaubild aufdecken.\n\n\n6. Zwei Spalten — Text links, Bild rechts\n:::: {.columns}\n\n::: {.column width=\"50%\"}\n**Drei Hebel:**\n\n::: incremental\n- Selbst zusammenfassen\n- Selbst erklären\n- Selbst anwenden\n:::\n:::\n\n::: {.column width=\"50%\"}\n![](../images/skizze.png){fig-align=\"center\" width=\"80%\"}\n:::\n\n::::\n\n\n7. Speaker-Notes (sichtbar nur in der Sprecher­ansicht, Taste „S”)\n::: notes\nHier baue ich Spannung auf. Erst Punkt eins erklären, dann\nmit der Pfeiltaste den nächsten enthüllen. Beispiel aus Kapitel 4 nennen.\n:::",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#die-komplette-vorlage-zum-kopieren",
+    "href": "parts/06-slides-optional.html#die-komplette-vorlage-zum-kopieren",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "Die komplette Vorlage zum Kopieren",
+    "text": "Die komplette Vorlage zum Kopieren\nAcht Beispielfolien — Titel, Section-Divider, Bullets statisch und mit Appear, Bild ganzseitig, Bild mit Fragment, zwei Spalten, Code-Folie mit Zeilen-Highlighting, Schlussfolie. Liegt im Projekt unter:\nslides/template-vorlesungsfolien.qmd\nIm RStudio-Files-Pane öffnen, ansehen, einzelne Folien herauspicken und in eigene Foliensätze übernehmen.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#th-köln-brand-auf-slides",
+    "href": "parts/06-slides-optional.html#th-köln-brand-auf-slides",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "TH-Köln-Brand auf Slides",
+    "text": "TH-Köln-Brand auf Slides\nDie _brand.yml aus Ihrem Skript wird auch von Reveal.js gelesen, sobald Sie sie in den Reveal-YAML einbauen:\nformat:\n  revealjs:\n    brand: ../_brand.yml\n    theme: [default, ../styles.scss]\n\n\n\n\n\n\nWas, wenn …\n\n\n\n\nPfeiltaste blättert über Fragmente weg statt sie einzeln zu zeigen? → incremental: true im YAML setzen oder einzelne Listen mit ::: incremental umhüllen.\nBild wird nicht angezeigt? → Pfad relativ zur Slides-Datei: aus slides/foo.qmd zeigt ../images/bild.png ins richtige Verzeichnis.\nDiagramm aus R-Chunk erscheint nicht? → Pakete prüfen (install.packages(\"plotly\")), und am Chunk #| echo: false setzen, sonst stört der Code-Block die Folienaufteilung.\nFolien zu textreich? → Faustregel: max. 6 Zeilen pro Folie, eine Idee pro Folie.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "parts/06-slides-optional.html#tutor",
+    "href": "parts/06-slides-optional.html#tutor",
+    "title": "6 — Slides mit Quarto (optional)",
+    "section": "Tutor",
+    "text": "Tutor\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt für dieses Kapitel:\n\nIch will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlagen Sie mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Welche Stichpunkte sollen mit Appear-Effekt erscheinen? Geben Sie mir den YAML-Header und ein bis zwei Beispielfolien.",
+    "crumbs": [
+      "Teil 1 — Werkstatt",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>6 — Slides mit Quarto (optional)</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/quickstart.html",
+    "href": "appendix/quickstart.html",
+    "title": "Quick-Starter Guide",
+    "section": "",
+    "text": "Was dieser Anhang leistet\nEine Schritt-für-Schritt-Anleitung für komplette Anfänger, parallel zum Workshop nutzbar. Wer alles installiert hat und einmal pushen will: 30 Minuten reine Klickarbeit. RStudio ist Ihr einziges Editor-Programm — Terminal, Files-Pane, Build-Pane und Console liegen alle dort.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Quick-Starter Guide</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/quickstart.html#checkliste-vor-dem-workshop",
+    "href": "appendix/quickstart.html#checkliste-vor-dem-workshop",
+    "title": "Quick-Starter Guide",
+    "section": "Checkliste vor dem Workshop",
+    "text": "Checkliste vor dem Workshop\n\n\n\n\nSchritt\nWo?\nZeit\n\n\n\n\n☐\nQuarto installieren\nhttps://quarto.org/docs/get-started/\n5 min\n\n\n☐\nR installieren\nhttps://cran.r-project.org/\n5 min\n\n\n☐\nRStudio Desktop (kostenlos)\nhttps://posit.co/download/rstudio-desktop/\n5 min\n\n\n☐\nGitHub Desktop\nhttps://desktop.github.com/\n5 min\n\n\n☐\nGitHub-Konto erstellen\nhttps://github.com/signup\n5 min\n\n\n☐\nZotero + Better BibTeX\nhttps://www.zotero.org/\n10 min\n\n\n☐\nChatGPT-Konto und Tutor-Link testen\nhttps://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte\n2 min\n\n\n\nInsgesamt rund 40 Minuten. Wer schon hat, was er braucht, springt weiter.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Quick-Starter Guide</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/quickstart.html#rstudio-cockpit-auf-einen-blick",
+    "href": "appendix/quickstart.html#rstudio-cockpit-auf-einen-blick",
+    "title": "Quick-Starter Guide",
+    "section": "RStudio-Cockpit auf einen Blick",
+    "text": "RStudio-Cockpit auf einen Blick\n\n\n\n\n\n\n\n\nBereich\nPosition\nWofür im Workshop?\n\n\n\n\nEditor\noben links\n.qmd-Dateien schreiben\n\n\nConsole\nunten links, Tab 1\nR-Pakete installieren (install.packages(...))\n\n\nTerminal\nunten links, Tab 2\nquarto render, quarto preview\n\n\nFiles\nunten rechts, Tab 1\nOrdner und Dateien anlegen, Dateien öffnen\n\n\nBuild\noben rechts, Tab 5\nKnopf „Render Book” als Klick-Alternative\n\n\n\nDrei Shortcuts, die Sie sich merken sollten: Strg+Shift+K rendert die aktuelle Datei, Strg+Shift+B rendert das ganze Buch, Alt+Shift+R öffnet einen neuen Terminal-Tab.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Quick-Starter Guide</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/quickstart.html#schritt-für-schritt-ihr-erstes-skript",
+    "href": "appendix/quickstart.html#schritt-für-schritt-ihr-erstes-skript",
+    "title": "Quick-Starter Guide",
+    "section": "Schritt-für-Schritt: Ihr erstes Skript",
+    "text": "Schritt-für-Schritt: Ihr erstes Skript\n\n1. Neues Quarto-Buch anlegen\nIn RStudio: File → New Project → New Directory → Quarto Book → Create Project.\n\n\n2. Erste Vorschau\nIm Terminal-Tab (unten links, neben Console):\nquarto preview\nBrowser öffnet sich. Sie sehen die Beispielinhalte. Strg+C im Terminal beendet den Preview-Server.\n\n\n3. _quarto.yml minimal anpassen\nIm Editor öffnen Sie _quarto.yml und ersetzt den Inhalt durch:\nproject:\n  type: book\n  output-dir: docs\n\nbook:\n  title: \"Mein erstes Skript\"\n  chapters:\n    - index.qmd\n    - intro.qmd\n\nformat:\n  html:\n    theme: cosmo\n    toc: true\noutput-dir: docs ist wichtig — GitHub Pages erwartet das später.\n\n\n4. Ordner für Bilder, Daten und Widgets anlegen\nIm Files-Pane (unten rechts) klicken Sie auf New Folder und legst nacheinander an: images/, interactions/, include/, data/. So wissen Sie immer, wo etwas hingehört.\n\n\n5. Erstes Kapitel schreiben\nÖffnen Sie index.qmd im Editor, ersetzen Sie den Beispielinhalt durch:\n# Willkommen\n\nMein erstes Skript zum Thema [Strang A/B/C].\n\n## Was ich hier behandele\n\n- Punkt 1\n- Punkt 2\n- Punkt 3\n\n\n6. Rendern\nIm Terminal:\nquarto render\nOder Knopf Build → Render Book klicken. Im docs/-Ordner liegt jetzt die fertige Webseite.\n\n\n7. GitHub Desktop: Repo anlegen\nGitHub Desktop → File → Add Local Repository → Projektordner wählen → Create a repository zustimmen → Name: mein-erstes-skript → Publish repository (Public).\n\n\n8. GitHub Pages aktivieren\nAuf https://github.com im Repo: Settings → Pages → Source: Deploy from a branch → Branch: main, Folder: /docs → Save.\nNach 1–2 Minuten ist Ihr Skript unter https://IHR-USERNAME.github.io/mein-erstes-skript/ live.\n\n\n9. Erste Änderung publizieren\nBearbeiten Sie index.qmd, rendern Sie lokal (Terminal: quarto render oder Knopf), in GitHub Desktop Commit → Push origin. Webseite aktualisiert sich automatisch in 30–60 Sekunden.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Quick-Starter Guide</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/quickstart.html#was-als-nächstes",
+    "href": "appendix/quickstart.html#was-als-nächstes",
+    "title": "Quick-Starter Guide",
+    "section": "Was als Nächstes?",
+    "text": "Was als Nächstes?\nSpringen Sie zurück in Kapitel 3a — Übersicht und bauen Sie Inhaltsverzeichnis und Literaturverwaltung ein. Dann zu Kapitel 3b — Stil.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Quick-Starter Guide</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html",
+    "href": "appendix/troubleshooting.html",
+    "title": "Trouble-Shooting",
+    "section": "",
+    "text": "1. YAML-Fehler beim Rendern\nJeder Punkt: Symptom → Ursache → Lösung. Wenn nichts hilft: Tutor fragen mit dem Prompt am Ende.\nSymptom: Error: Failed to load YAML metadata. Ursache: Einrückung mit Tabs statt Leerzeichen, oder fehlender Doppelpunkt. Lösung: YAML-Block prüfen, immer zwei Leerzeichen einrücken, keine Tabs. Online-Validator: https://www.yamllint.com.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#github-pages-zeigt-404",
+    "href": "appendix/troubleshooting.html#github-pages-zeigt-404",
+    "title": "Trouble-Shooting",
+    "section": "2. GitHub Pages zeigt 404",
+    "text": "2. GitHub Pages zeigt 404\nSymptom: Ihr Skript ist online, aber die URL liefert „404 — File not found”. Ursache: output-dir: docs fehlt in _quarto.yml, oder der Pages-Branch ist falsch eingestellt. Lösung: In _quarto.yml output-dir: docs setzen, render, push. In Settings → Pages: Branch main, Folder /docs.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#docs-wird-nicht-committet",
+    "href": "appendix/troubleshooting.html#docs-wird-nicht-committet",
+    "title": "Trouble-Shooting",
+    "section": "3. docs/ wird nicht committet",
+    "text": "3. docs/ wird nicht committet\nSymptom: Nach Push fehlt der docs/-Ordner auf GitHub. Ursache: .gitignore schließt /docs/ aus. Lösung: Zeile /docs/ aus .gitignore entfernen, dann commit und push.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#zotero-zitat-erscheint-als",
+    "href": "appendix/troubleshooting.html#zotero-zitat-erscheint-als",
+    "title": "Trouble-Shooting",
+    "section": "4. Zotero-Zitat erscheint als [?]",
+    "text": "4. Zotero-Zitat erscheint als [?]\nSymptom: Zitate werden mit Fragezeichen statt Autor und Jahr gerendert. Ursache: Citation Key in der .bib-Datei stimmt nicht mit dem Key im Text überein. Lösung: references.bib öffnen, Schlüssel nachsehen, im Text exakt so verwenden. Better BibTeX in Zotero exportiert stabile Keys (z. B. mayer2021).",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#iframe-ist-leer",
+    "href": "appendix/troubleshooting.html#iframe-ist-leer",
+    "title": "Trouble-Shooting",
+    "section": "5. iFrame ist leer",
+    "text": "5. iFrame ist leer\nSymptom: Der iFrame-Bereich ist sichtbar, aber leer oder zeigt eine Fehlermeldung. Ursache: Die externe Seite verbietet Einbettung (HTTP-Header X-Frame-Options). Lösung: Statt iFrame einen normalen Markdown-Link verwenden, oder eine andere Quelle wählen.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#csv-lässt-sich-nicht-laden",
+    "href": "appendix/troubleshooting.html#csv-lässt-sich-nicht-laden",
+    "title": "Trouble-Shooting",
+    "section": "6. CSV lässt sich nicht laden",
+    "text": "6. CSV lässt sich nicht laden\nSymptom: read_csv() wirft CORS error oder Forbidden. Ursache: Der Server der Datenquelle erlaubt keinen Cross-Origin-Zugriff aus dem Browser. Lösung: Datei lokal in data/ speichern und von dort laden.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#r-paket-fehlt",
+    "href": "appendix/troubleshooting.html#r-paket-fehlt",
+    "title": "Trouble-Shooting",
+    "section": "7. R-Paket fehlt",
+    "text": "7. R-Paket fehlt\nSymptom: Error in library(plotly): there is no package called 'plotly'. Ursache: Paket nicht installiert. Lösung: In der R-Konsole install.packages(\"plotly\"). Bei mehreren: install.packages(c(\"plotly\", \"dplyr\", \"readr\")).",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#quarto-version-zu-alt",
+    "href": "appendix/troubleshooting.html#quarto-version-zu-alt",
+    "title": "Trouble-Shooting",
+    "section": "8. Quarto-Version zu alt",
+    "text": "8. Quarto-Version zu alt\nSymptom: Neue Features (z. B. _brand.yml) funktionieren nicht. Ursache: Lokale Quarto-Installation ist älter als 1.5. Lösung: quarto --version prüfen, von https://quarto.org/docs/get-started/ aktualisieren.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#github-desktop-fragt-immer-nach-anmeldung",
+    "href": "appendix/troubleshooting.html#github-desktop-fragt-immer-nach-anmeldung",
+    "title": "Trouble-Shooting",
+    "section": "9. GitHub Desktop fragt immer nach Anmeldung",
+    "text": "9. GitHub Desktop fragt immer nach Anmeldung\nSymptom: Bei jedem Push wird das Passwort erneut verlangt. Ursache: Personal Access Token läuft ab oder Kontostatus inkonsistent. Lösung: In GitHub Desktop File → Options → Accounts → Sign Out, dann neu anmelden via Browser.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#logo-wird-nicht-angezeigt",
+    "href": "appendix/troubleshooting.html#logo-wird-nicht-angezeigt",
+    "title": "Trouble-Shooting",
+    "section": "10. Logo wird nicht angezeigt",
+    "text": "10. Logo wird nicht angezeigt\nSymptom: Im gerenderten Skript erscheint kein Logo. Ursache: Pfad in _brand.yml stimmt nicht, oder Datei fehlt im images/-Ordner. Lösung: Pfad relativ zur Projektwurzel (images/th-koeln-logo.png), Datei dort tatsächlich ablegen.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/troubleshooting.html#wenn-nichts-hilft-tutor-fragen",
+    "href": "appendix/troubleshooting.html#wenn-nichts-hilft-tutor-fragen",
+    "title": "Trouble-Shooting",
+    "section": "Wenn nichts hilft — Tutor fragen",
+    "text": "Wenn nichts hilft — Tutor fragen\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nVorschlag-Prompt:\n\nIch versuche, ein Quarto-Skript zu rendern. Folgender Fehler tritt auf:\n[Fehlermeldung kopieren]\nMein Setup: [Betriebssystem], Quarto-Version [X.X.X], R-Version [X.X.X], RStudio-Version [X.X.X]. Ich habe schon versucht: […].\nSchreiben Sie mir die wahrscheinlichste Ursache in einem Satz, dann den nächsten Schritt zum Beheben. Wenn Sie mehr wissen müssen, fragen Sie nach.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Trouble-Shooting</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/tutor-prompt.html",
+    "href": "appendix/tutor-prompt.html",
+    "title": "KI-Tutor: Link und System-Prompt",
+    "section": "",
+    "text": "Was dieser Anhang leistet\nSie finden hier den fertigen Tutor für diesen Workshop (ein Klick) und den vollständigen System-Prompt, mit dem Sie sich denselben Tutor in der AcademicCloud, im eigenen ChatGPT-Account oder als statisches Widget nachbauen können.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>KI-Tutor: Link und System-Prompt</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/tutor-prompt.html#der-vorbereitete-workshop-tutor-sofort-nutzbar",
+    "href": "appendix/tutor-prompt.html#der-vorbereitete-workshop-tutor-sofort-nutzbar",
+    "title": "KI-Tutor: Link und System-Prompt",
+    "section": "Der vorbereitete Workshop-Tutor (sofort nutzbar)",
+    "text": "Der vorbereitete Workshop-Tutor (sofort nutzbar)\n\n\n\n\n\n\nTutor öffnen\n\n\n\nTutor „Interaktive Skripte” →\nEin Klick — der GPT öffnet sich in ChatGPT. Login mit kostenlosem ChatGPT-Konto. Der System-Prompt ist eingebaut.\n\n\nSo bauen Sie den Link in Ihr eigenes Skript ein:\n[Fragen Sie den Skript-Tutor →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target=\"_blank\"}\nIn jedem Kapitel als Callout am Ende:\n::: {.callout-tip}\n## Tutor öffnen\n[Tutor „Interaktive Skripte\" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target=\"_blank\"}\n:::",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>KI-Tutor: Link und System-Prompt</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/tutor-prompt.html#eigenen-tutor-anlegen-drei-hosting-wege",
+    "href": "appendix/tutor-prompt.html#eigenen-tutor-anlegen-drei-hosting-wege",
+    "title": "KI-Tutor: Link und System-Prompt",
+    "section": "Eigenen Tutor anlegen — drei Hosting-Wege",
+    "text": "Eigenen Tutor anlegen — drei Hosting-Wege\n\nWeg 1 — eigenes Custom GPT auf ChatGPT\n\nhttps://chatgpt.com öffnen, oben links „Explore GPTs” → „+ Create”.\nConfigure-Tab öffnen, Name vergeben, System-Prompt unten kopieren und einfügen.\nSave → Share → „Anyone with the link” oder „Public”.\nSharing-Link in Ihr Skript einbauen (siehe oben).\n\n\n\nWeg 2 — AcademicCloud (Hochschul-Login, EU-Datenhaltung)\n\nhttps://chat.academiccloud.de öffnen, einloggen.\nNeuen Custom GPT anlegen (Modell: aktuelles Top-Modell).\nSystem-Prompt einfügen.\nSharing aktivieren (öffentlich oder „mit Link”).\nLink einbauen.\n\n\n\nWeg 3 — statisches Widget (nur für Fortgeschrittene)\nEine HTML-Datei mit eingebautem Prompt, die direkt eine OpenAI-kompatible API anspricht — Vorbild: _relevance-widget.qmd in https://github.com/TH-Koln-Bartnik/genai4teaching. Setzt Server-Proxy oder Tagesschlüssel voraus, deshalb hier nicht im Detail.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>KI-Tutor: Link und System-Prompt</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/tutor-prompt.html#system-prompt-copy-paste",
+    "href": "appendix/tutor-prompt.html#system-prompt-copy-paste",
+    "title": "KI-Tutor: Link und System-Prompt",
+    "section": "System-Prompt (Copy-Paste)",
+    "text": "System-Prompt (Copy-Paste)\nSie sind ein geduldiger Quarto-Coach für Hochschullehrende ohne IT-Vorkenntnisse.\nSie begleiten Teilnehmende eines eintägigen Workshops, in dem sie ein\neigenes interaktives Skript mit Quarto, RStudio, GitHub Desktop und\nGitHub Pages erstellen. Beispielthema ihres Skripts: eine kurze\nEinführung ins wissenschaftliche Arbeiten (Wissenschaftliche Einstellung,\nRecherche und Quellenqualität, oder Transparent Schreiben).\n\nIHR VERHALTEN\n- Beginne jede Antwort mit einer Lay-Erklärung in ein bis zwei Sätzen.\n  Was ist das, warum gerade jetzt? Erst danach kommt der technische Schritt.\n- Frage zu Beginn: \"Wo stehen Sie gerade?\" Wenn Sie keinen Stand kennen,\n  frage nach einer kurzen Beschreibung.\n- Gib nie mehr als ZEHN Zeilen Code auf einmal. Lieber kleinere Schritte.\n- Erkläre alle Pfade explizit (relativer Pfad, absoluter Pfad, was bedeutet das).\n- Verwende deutsche Sprache. Bei Fachbegriffen: einmalig auf Englisch\n  in Klammern, dann auf Deutsch weiter.\n- Lasse Fehler nicht klein erscheinen. Wenn etwas typisch falsch läuft,\n  benenne es offen und erkläre warum.\n\nWORKSHOP-INHALT, AUF DEN SIE SICH BEZIEHST\n- Werkzeuge: Quarto (Version 1.5+), RStudio Desktop, GitHub Desktop,\n  Zotero mit Better BibTeX, optional H5P.\n- Stil: TH-Köln-Brand (rot #c81e0f, magenta #b43092, orange #ea5a00),\n  scharfe Ecken, Arial.\n- Struktur: Quarto-Buch mit Kapiteln in einem parts/-Ordner, output-dir: docs,\n  Veröffentlichung über GitHub Pages aus dem main-Branch, Folder /docs.\n- Inhaltsbeispiel: Einführung wissenschaftliches Arbeiten, drei Stränge:\n  Wissenschaftliche Einstellung / Recherche und Quellenqualität /\n  Transparent Schreiben (Bartnik & Palmer, 2024:\n  \"Projektorientierte Einführung in kritisches wissenschaftliches Denken\",\n  konzeptionelle Vorlage: Bergstrom & West, \"Calling Bullshit\").\n\nIHRE GRENZEN\n- Wechsle nicht auf andere Statische-Seiten-Generatoren (Hugo, Jekyll).\n  Bleib bei Quarto.\n- Antworte nicht zu allgemeinen IT-Fragen außerhalb des Skript-Workflows.\n- Behaupten Sie nichts, was Sie nicht sicher wissen. Bei Unsicherheit: sag das.\n- Erfinde keine Quellen, keine Pakete, keine API-Endpunkte.\n\nZIEL\nAm Ende des Workshops haben die Teilnehmenden ein eigenes, im Netz\nveröffentlichtes Skript mit Inhaltsverzeichnis, Zotero-Zitaten,\nTH-Köln-Stil, einem interaktiven Diagramm und einem iFrame-Element.\nHilf ihnen, dorthin zu kommen — Schritt für Schritt.",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>KI-Tutor: Link und System-Prompt</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/tutor-prompt.html#drei-kurz-prompts-für-typische-aufgaben",
+    "href": "appendix/tutor-prompt.html#drei-kurz-prompts-für-typische-aufgaben",
+    "title": "KI-Tutor: Link und System-Prompt",
+    "section": "Drei Kurz-Prompts für typische Aufgaben",
+    "text": "Drei Kurz-Prompts für typische Aufgaben\n\nA — Fehler erklären\nErkläre mir diesen Fehler aus dem Quarto-Render-Log in einem Satz,\ndann den wahrscheinlichsten nächsten Schritt:\n\n[Fehlermeldung einfügen]\n\n\nB — Code reviewen\nIch habe folgenden YAML/Code in meinem Quarto-Skript. Schauen Sie, ob\nFehler oder Stolperfallen drin sind. Antworte mit drei kurzen Punkten:\nwas funktioniert, was nicht, was würden Sie anders machen.\n\n[Code einfügen]\n\n\nC — Kapitel ergänzen\n``` Schlage mir für mein Kapitel zum Thema [Strang A/B/C] eine ergänzende Übung vor — kurz, hands",
+    "crumbs": [
+      "Teil 2 — Quick-Starter",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>KI-Tutor: Link und System-Prompt</span>"
+    ]
+  },
+  {
+    "objectID": "literatur.html",
+    "href": "literatur.html",
+    "title": "Literatur",
+    "section": "",
+    "text": "Alle im Skript zitierten und zur Vertiefung empfohlenen Quellen, alphabetisch nach Erstautor, im APA-7-Format mit deutscher Lokalisierung (DGPs-konform). Die Liste wird automatisch aus references.bib generiert.\n\n\nAhrens, S. (2017). How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking for Students, Academics and Nonfiction Book Writers. CreateSpace.\n\n\nAllaire, J. J., Teague, C., Scheidegger, C., Xie, Y., & Dervieux, C. (2024). Quarto: An Open-Source Scientific and Technical Publishing System. https://quarto.org/\n\n\nBartnik, R. (2025). KI als Hilfe zum Lehren und Lernen. https://th-koln-bartnik.github.io/genai4teaching/\n\n\nBartnik, R., & Palmer, C. (2024). Projektorientierte Einführung in kritisches wissenschaftliches Denken. https://publish.obsidian.md/wagp-calling-bullshit/\n\n\nBékés, G. (2025). Data Analysis with AI. https://gabors-data-analysis.com/ai-course/\n\n\nBiggs, J., & Tang, C. (2011). Teaching for Quality Learning at University (4. Aufl.). Open University Press.\n\n\nBryan, J. (2018). Excuse Me, Do You Have a Moment to Talk About Version Control? The American Statistician, 72(1), 20–27. https://doi.org/10.1080/00031305.2017.1399928\n\n\nFiorella, L., & Mayer, R. E. (2016). Eight Ways to Promote Generative Learning. Educational Psychology Review, 28(4), 717–741. https://doi.org/10.1007/s10648-015-9348-9\n\n\nHealy, K. (2018). Data Visualization: A Practical Introduction. Princeton University Press.\n\n\nKarpicke, J. D., & Blunt, J. R. (2011). Retrieval Practice Produces More Learning than Elaborative Studying with Concept Mapping. Science, 331(6018), 772–775. https://doi.org/10.1126/science.1199327\n\n\nKasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D., Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E., Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J., Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023). ChatGPT for Good? On Opportunities and Challenges of Large Language Models for Education. Learning and Individual Differences, 103, 102274. https://doi.org/10.1016/j.lindif.2023.102274\n\n\nLakens, D. (2022). Improving Your Statistical Inferences. https://doi.org/10.5281/zenodo.6409077\n\n\nMayer, R. E. (2021). Multimedia Learning (3. Aufl.). Cambridge University Press. https://doi.org/10.1017/9781316941355\n\n\nMollick, E. R., & Mollick, L. (2023). Assigning AI: Seven Approaches for Students, with Prompts. SSRN Working Paper. https://doi.org/10.2139/ssrn.4475995\n\n\nRoediger, H. L., & Karpicke, J. D. (2006). Test-Enhanced Learning: Taking Memory Tests Improves Long-Term Retention. Psychological Science, 17(3), 249–255. https://doi.org/10.1111/j.1467-9280.2006.01693.x\n\n\nRoser, M., Ritchie, H., Mathieu, E., & Ortiz-Ospina, E. (2024). Our World in Data. https://ourworldindata.org/\n\n\nSweller, J., Merrienboer, J. J. G. van, & Paas, F. G. W. C. (1998). Cognitive Architecture and Instructional Design. Educational Psychology Review, 10(3), 251–296. https://doi.org/10.1023/A:1022193728205\n\n\nTufte, E. R. (2001). The Visual Display of Quantitative Information (2. Aufl.). Graphics Press.\n\n\nWickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the Tidyverse. Journal of Open Source Software, 4(43), 1686. https://doi.org/10.21105/joss.01686\n\n\nWillingham, D. T. (2009). Why Don’t Students Like School? A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom. Jossey-Bass.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Literatur</span>"
+    ]
+  }
+]

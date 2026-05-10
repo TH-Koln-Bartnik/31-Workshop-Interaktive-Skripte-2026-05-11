@@ -2,6 +2,10 @@
 title: "4 — Interaktive Diagramme"
 ---
 
+```{=html}
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+```
+
 ::: {.lernziel-box}
 #### Was Sie nach diesem Kapitel können
 
@@ -15,68 +19,41 @@ title: "4 — Interaktive Diagramme"
 Diagramme tun in einem Skript zwei Dinge auf einmal — sie zeigen Daten und sie laden zur Interpretation ein. Tufte [-@tufte2001] formuliert die Maxime: maximale Information bei minimalem Schmuck. Healy [-@healy2018] ergänzt für die digitale Lehre: Interaktivität rechtfertigt sich nur, wenn die Lernenden tatsächlich etwas mit ihr anfangen — verschieben, ein- und ausblenden, vergleichen. Andernfalls reicht ein PNG.
 
 ::: {.callout-note}
-**Pakete benötigt:** `plotly`, `dplyr`, `tibble`. In der R-Konsole einmalig:
-`install.packages(c("plotly", "dplyr", "tibble"))`
+**Im Skript unten** sehen Sie alle Diagramme als **Plotly.js-Widget direkt im Browser** — die rendern ohne lokale R-Installation. **Der Code-Block darunter** zeigt jeweils die R-Variante (mit `plotly` + `tibble`), die Sie ins eigene Skript übernehmen können. Wer R lokal hat, schreibt die Charts in R; wer nicht, kopiert die HTML-Variante aus dem Quelltext dieses Kapitels.
 :::
 
 ## Drei Wege, ein Diagramm einzubauen
 
 | Weg | Werkzeug | Wann passend? |
 |---|---|---|
-| **R + ggplot2 + plotly** | R-Code-Chunk | Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken [@wickham2019]. |
-| **Observable JS** | OJS-Chunk in Quarto | Sie wollen sich auf JavaScript einlassen. Sehr schnell, modern. |
+| **R + plotly** | R-Code-Chunk in Quarto | Sie kennen R oder wollen es lernen. Volle Kontrolle, schöne Grafiken [@wickham2019]. |
+| **Plotly.js direkt** | HTML + JavaScript | Sie haben kein R, aber wollen Plotly-Charts. Funktioniert in jedem Browser. |
 | **iFrame mit Datawrapper / Flourish** | externer Editor, Embed-Code | Sie wollen gar nicht programmieren. |
 
-Wir gehen heute den ersten Weg — er ist mit RStudio am robustesten und nutzt die R-Pakete, die Sie wahrscheinlich ohnehin im Werkzeugkasten haben.
-
-## Mach mit — drei Beispiele, jeweils erst die Live-Grafik, dann der Code zum Übernehmen
-
-Drei Strang-Varianten — wählen Sie die, die zu Ihrem Stoffgebiet passt. In jedem Beispiel erscheint zuerst die fertige interaktive Grafik (Maus drüber, Linien aus- und einblenden, zoomen), darunter folgt der Code zum Kopieren.
+## Mach mit — drei Beispiele, jeweils zuerst die Live-Grafik, dann der Code zum Übernehmen
 
 ::: {.panel-tabset}
 
 #### Strang A — Wissenschaftliche Einstellung
 
-Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?* Daten: Our World in Data [@owid2024], hier vereinfacht als Mini-Datensatz im Code.
+Frage: *Wie hat sich die Lebenserwartung in ausgewählten Ländern entwickelt?* Daten: vereinfacht aus Our World in Data [@owid2024].
 
-```{r}
-#| label: fig-le
-#| fig-cap: "Lebenserwartung bei Geburt, ausgewählte Länder. Quelle: Our World in Data."
-#| echo: false
-#| message: false
-#| warning: false
-
-library(plotly)
-library(tibble)
-
-le <- tribble(
-  ~Year, ~Land,        ~Lebenserwartung,
-  1950,  "Deutschland", 67.5,
-  1970,  "Deutschland", 70.6,
-  1990,  "Deutschland", 75.3,
-  2010,  "Deutschland", 80.0,
-  2022,  "Deutschland", 80.7,
-  1950,  "Japan",       62.0,
-  1970,  "Japan",       72.0,
-  1990,  "Japan",       78.8,
-  2010,  "Japan",       82.9,
-  2022,  "Japan",       84.1,
-  1950,  "Welt",        47.0,
-  1970,  "Welt",        58.0,
-  1990,  "Welt",        64.5,
-  2010,  "Welt",        70.0,
-  2022,  "Welt",        72.6
-)
-
-plot_ly(le,
-        x = ~Year, y = ~Lebenserwartung,
-        color = ~Land, type = "scatter", mode = "lines+markers",
-        colors = c("#c81e0f", "#b43092", "#ea5a00")) |>
-  layout(yaxis = list(title = "Lebenserwartung (Jahre)"),
-         xaxis = list(title = ""))
+```{=html}
+<div id="plot-le" style="width:100%; height:420px;"></div>
+<script>
+Plotly.newPlot('plot-le', [
+  { x: [1950,1970,1990,2010,2022], y: [67.5,70.6,75.3,80.0,80.7], name: 'Deutschland', type: 'scatter', mode: 'lines+markers', line: {color: '#c81e0f'} },
+  { x: [1950,1970,1990,2010,2022], y: [62.0,72.0,78.8,82.9,84.1], name: 'Japan',       type: 'scatter', mode: 'lines+markers', line: {color: '#b43092'} },
+  { x: [1950,1970,1990,2010,2022], y: [47.0,58.0,64.5,70.0,72.6], name: 'Welt',         type: 'scatter', mode: 'lines+markers', line: {color: '#ea5a00'} }
+], {
+  yaxis: {title: 'Lebenserwartung (Jahre)'},
+  xaxis: {title: ''},
+  margin: {t: 30, r: 30, b: 50, l: 60}
+}, {responsive: true});
+</script>
 ```
 
-**Code zum Übernehmen:**
+**R-Code zum Übernehmen** (wenn Sie R + `plotly` + `tibble` installiert haben):
 
 ````markdown
 ```{r}
@@ -88,7 +65,7 @@ library(plotly)
 library(tibble)
 
 le <- tribble(
-  ~Year, ~Land,        ~Lebenserwartung,
+  ~Year, ~Land,         ~Lebenserwartung,
   1950,  "Deutschland", 67.5,
   1970,  "Deutschland", 70.6,
   1990,  "Deutschland", 75.3,
@@ -98,15 +75,13 @@ le <- tribble(
   2022,  "Japan",       84.1,
   1950,  "Welt",        47.0,
   2022,  "Welt",        72.6
-  # ... weitere Zeilen ergänzen
 )
 
 plot_ly(le,
         x = ~Year, y = ~Lebenserwartung,
         color = ~Land, type = "scatter", mode = "lines+markers",
         colors = c("#c81e0f", "#b43092", "#ea5a00")) |>
-  layout(yaxis = list(title = "Lebenserwartung (Jahre)"),
-         xaxis = list(title = ""))
+  layout(yaxis = list(title = "Lebenserwartung (Jahre)"))
 ```
 ````
 
@@ -114,36 +89,22 @@ plot_ly(le,
 
 Frage: *Wie viele wissenschaftliche Publikationen erscheinen pro Jahr?* Antwort führt zur Notwendigkeit, Quellen zu filtern.
 
-```{r}
-#| label: fig-pub
-#| fig-cap: "Wissenschaftliche Publikationen weltweit (in Mio.). Quelle: Our World in Data, vereinfachte Schätzung."
-#| echo: false
-#| message: false
-#| warning: false
-
-library(plotly)
-library(tibble)
-
-pub <- tribble(
-  ~Year, ~Publikationen_Mio,
-  1990,  0.8,
-  1995,  1.0,
-  2000,  1.2,
-  2005,  1.6,
-  2010,  2.1,
-  2015,  2.5,
-  2020,  2.9,
-  2023,  3.3
-)
-
-plot_ly(pub,
-        x = ~Year, y = ~Publikationen_Mio, type = "bar",
-        marker = list(color = "#c81e0f")) |>
-  layout(yaxis = list(title = "Publikationen (Mio. pro Jahr)"),
-         xaxis = list(title = ""))
+```{=html}
+<div id="plot-pub" style="width:100%; height:420px;"></div>
+<script>
+Plotly.newPlot('plot-pub', [
+  { x: [1990,1995,2000,2005,2010,2015,2020,2023],
+    y: [0.8,1.0,1.2,1.6,2.1,2.5,2.9,3.3],
+    type: 'bar', marker: {color: '#c81e0f'}, name: 'Publikationen' }
+], {
+  yaxis: {title: 'Publikationen (Mio. pro Jahr)'},
+  xaxis: {title: ''},
+  margin: {t: 30, r: 30, b: 50, l: 60}
+}, {responsive: true});
+</script>
 ```
 
-**Code zum Übernehmen:**
+**R-Code zum Übernehmen:**
 
 ````markdown
 ```{r}
@@ -166,42 +127,30 @@ pub <- tribble(
 plot_ly(pub,
         x = ~Year, y = ~Publikationen_Mio, type = "bar",
         marker = list(color = "#c81e0f")) |>
-  layout(yaxis = list(title = "Publikationen (Mio. pro Jahr)"),
-         xaxis = list(title = ""))
+  layout(yaxis = list(title = "Publikationen (Mio. pro Jahr)"))
 ```
 ````
 
 #### Strang C — Transparent schreiben
 
-Frage: *Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt?* Antwort zeigt, dass Transparenz keine Selbstverständlichkeit ist, sondern wachsende Praxis.
+Frage: *Wie hat sich der Anteil pre-registrierter Studien auf OSF entwickelt?* Antwort zeigt: Transparenz ist wachsende Praxis.
 
-```{r}
-#| label: fig-prereg
-#| fig-cap: "Pre-registrierte Studien auf OSF, jährliche Neuanmeldungen. Vereinfachte Schätzung."
-#| echo: false
-#| message: false
-#| warning: false
-
-library(plotly)
-library(tibble)
-
-prereg <- tribble(
-  ~Jahr, ~Anzahl,
-  2015,  1500,
-  2017,  4200,
-  2019,  9800,
-  2021,  16500,
-  2023,  22000
-)
-
-plot_ly(prereg,
-        x = ~Jahr, y = ~Anzahl, type = "bar",
-        marker = list(color = "#b43092")) |>
-  layout(yaxis = list(title = "Pre-Registrierungen pro Jahr"),
-         xaxis = list(title = ""))
+```{=html}
+<div id="plot-prereg" style="width:100%; height:420px;"></div>
+<script>
+Plotly.newPlot('plot-prereg', [
+  { x: [2015,2017,2019,2021,2023],
+    y: [1500,4200,9800,16500,22000],
+    type: 'bar', marker: {color: '#b43092'}, name: 'Pre-Registrierungen' }
+], {
+  yaxis: {title: 'Pre-Registrierungen pro Jahr'},
+  xaxis: {title: ''},
+  margin: {t: 30, r: 30, b: 50, l: 60}
+}, {responsive: true});
+</script>
 ```
 
-**Code zum Übernehmen:**
+**R-Code zum Übernehmen:**
 
 ````markdown
 ```{r}
@@ -224,18 +173,33 @@ prereg <- tribble(
 plot_ly(prereg,
         x = ~Jahr, y = ~Anzahl, type = "bar",
         marker = list(color = "#b43092")) |>
-  layout(yaxis = list(title = "Pre-Registrierungen pro Jahr"),
-         xaxis = list(title = ""))
+  layout(yaxis = list(title = "Pre-Registrierungen pro Jahr"))
 ```
 ````
 
 :::
 
-Im Browser können Sie jetzt mit der Maus über die Linien fahren, Länder ein- und ausschalten, in Bereiche zoomen. Das Bild im Skript ist live — und der Code darunter ist zum Übernehmen ins eigene Skript gedacht.
+Im Browser können Sie jetzt mit der Maus über die Datenpunkte fahren, Reihen ein- und ausblenden, in Bereiche zoomen. Das Bild im Skript ist live — und der Code darunter ist zum Übernehmen ins eigene Skript gedacht.
 
-## Daten direkt aus dem Netz (für Fortgeschrittene)
+## Plotly.js direkt — wenn Sie kein R wollen
 
-Statt Daten im Code anzulegen, lassen sich CSVs direkt von Our World in Data laden — mit dem Risiko, dass URLs sich ändern oder CORS-Sperren greifen:
+Die HTML-Variante oben ist auch eine Vorlage. Im Quelltext dieses Kapitels (`parts/04-charts.qmd`) sehen Sie den `<div>`+`<script>`-Block. Diesen können Sie eins zu eins in eigene Kapitel kopieren — die einzige Voraussetzung: einmal pro Kapitel den Plotly-Loader einbinden:
+
+```html
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+```
+
+Diesen Block packen Sie ans Anfang des `.qmd`-Kapitels in einen `{=html}`-Block:
+
+````markdown
+```{=html}
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+```
+````
+
+## Daten direkt aus dem Netz (für Fortgeschrittene mit R)
+
+Statt Daten im Code anzulegen, lassen sich CSVs direkt von Our World in Data laden:
 
 ````markdown
 ```{r}
@@ -245,15 +209,13 @@ owid <- read_csv("https://ourworldindata.org/grapher/life-expectancy.csv")
 ```
 ````
 
-Wenn das Laden fehlschlägt, hilft fast immer der Workaround: Datei manuell aus der Grapher-Seite herunterladen, in `data/` ablegen und lokal lesen.
+Wenn das Laden fehlschlägt: Datei manuell aus der Grapher-Seite herunterladen, in `data/` ablegen und lokal lesen.
 
 ## Wann **kein** interaktives Diagramm?
 
-Drei Situationen, in denen ein statisches PNG genauso gut wirkt:
-
 - **Reine Illustration** — wenn die Lernenden nichts ändern sollen, sondern nur etwas „sehen", reicht ein Bild [@tufte2001].
-- **Print-Version** wichtig — interaktive Plots werden im PDF zu statischen Screenshots; wenn das PDF die Hauptform ist, planen Sie direkt für Print.
-- **Performance** — sehr große Datensätze (>100.000 Punkte) machen plotly träge. Dann besser aggregieren oder ein statisches ggplot exportieren.
+- **Print-Version** wichtig — interaktive Plots werden im PDF zu statischen Screenshots.
+- **Performance** — sehr große Datensätze (>100.000 Punkte) machen plotly träge.
 
 ::: {.callout-tip}
 ## Mach mit
@@ -263,11 +225,10 @@ Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang in
 ::: {.callout-warning}
 ## Was, wenn …
 
-- **`could not find function "plot_ly"`** → `install.packages("plotly")` in der R-Konsole.
-- **`there is no package called 'tibble'`** → `install.packages("tibble")` (ist Teil des Tidyverse).
-- **CSV lässt sich nicht laden** → Datei lokal in `data/` speichern und von dort lesen (CORS-Beschränkungen). Die OWID-Grapher-URLs ändern sich gelegentlich; im Zweifel den CSV-Download direkt von der Grapher-Seite holen.
-- **Diagramm zu klein** → `fig-width: 8` und `fig-height: 5` im Chunk-Header setzen.
-- **Spaltenname unbekannt** → `colnames(owid)` in der R-Konsole laufen lassen, um die exakte Schreibweise zu sehen (manche Spalten haben Sonderzeichen).
+- **R-Render bricht ab mit `there is no package called 'plotly'`** → entweder `install.packages(c("plotly", "tibble"))` in der R-Konsole, **oder** die HTML-Variante aus diesem Kapitel kopieren — kein R nötig.
+- **Plotly-Chart erscheint nicht im Browser?** → Prüfen, ob der CDN-Loader (`<script src="https://cdn.plot.ly/...">`) am Anfang des Kapitels eingebunden ist.
+- **CSV lässt sich nicht laden** → lokal in `data/` speichern und von dort lesen (CORS).
+- **Diagramm zu klein** → `height` im `<div style="...">` höher setzen.
 :::
 
 ## Tutor
@@ -278,7 +239,7 @@ Tauschen Sie im Code zwei Datenpunkte gegen welche aus, die für Ihren Strang in
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Ich bin R-Anfänger. Schreiben Sie mir einen kommentierten Code-Chunk, in dem jede Zeile mit einer Lay-Erklärung versehen ist. Falls die Daten nicht ladbar sind, schlagen Sie einen Workaround vor.
+> Ich will ein interaktives Diagramm in mein Quarto-Skript einbauen. Daten: [URL oder lokale Datei]. Frage: [welche Variablen, welcher Vergleich]. Bitte schreiben Sie mir sowohl die R+plotly-Variante als auch die reine HTML+Plotly.js-Variante, damit ich beides vergleichen kann.
 :::
 
 # Literatur {.unnumbered}

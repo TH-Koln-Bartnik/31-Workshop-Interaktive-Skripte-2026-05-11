@@ -158,9 +158,8 @@ div.csl-indent {
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Interaktive Skripte mit KI erstellen</a> 
-        <div class="sidebar-tools-main tools-wide">
+        <div class="sidebar-tools-main">
     <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -319,8 +318,8 @@ div.csl-indent {
 </header>
 
 
-<section id="was-sie-nach-diesem-kapitel-kannst" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-kannst">Was Sie nach diesem Kapitel kannst</h4>
+<section id="was-sie-nach-diesem-kapitel-können" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-können">Was Sie nach diesem Kapitel können</h4>
 <ul>
 <li>ein <strong>automatisches Inhaltsverzeichnis</strong> in Ihrem Skript einschalten,</li>
 <li>eine <strong>Zotero-Bibliothek als BibTeX exportieren</strong> und ins Projekt einbinden,</li>
@@ -343,7 +342,7 @@ div.csl-indent {
 </section>
 <section id="zotero-anbinden" class="level2">
 <h2 class="anchored" data-anchor-id="zotero-anbinden">Zotero anbinden</h2>
-<p>Zotero exportiert Ihre Bibliothek als <code>.bib</code>-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das <strong>Better-BibTeX</strong>-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. <code>mayer2021</code>) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas änderst.</p>
+<p>Zotero exportiert Ihre Bibliothek als <code>.bib</code>-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das <strong>Better-BibTeX</strong>-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. <code>mayer2021</code>) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas ändern.</p>
 <section id="mach-mit-in-fünf-schritten" class="level3">
 <h3 class="anchored" data-anchor-id="mach-mit-in-fünf-schritten">Mach mit — in fünf Schritten</h3>
 <ol type="1">
@@ -362,7 +361,7 @@ div.csl-indent {
 <p>Im Text:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Generative Lernaktivitäten verbessern das Behalten <span class="co">[</span><span class="ot">@fiorella2016</span><span class="co">]</span>.</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Die zugrundeliegende Theorie geht auf Mayer <span class="co">[</span><span class="ot">-@mayer2021</span><span class="co">]</span> zurück.</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern Sie dort einen <code># Literatur</code>-Heading mit <code>::: {#refs}</code> setzt — wie in diesem Skript.</p>
+<p>Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern Sie dort einen <code># Literatur</code>-Heading mit <code>::: {#refs}</code> setzen — wie in diesem Skript.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -373,11 +372,11 @@ Mach mit — strangbezogen
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Wählen Sie aus Ihrem Strang <strong>drei Quellen</strong>, lege sie in Zotero an, exportiere und zitiere sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt hast, hier je eine Empfehlung:</p>
+<p>Wählen Sie aus Ihrem Strang <strong>drei Quellen</strong>, legen Sie sie in Zotero an, exportieren und zitieren Sie sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt haben, hier je eine Empfehlung:</p>
 <ul>
-<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
-<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
-<li><strong>Strang C — Transparent schreiben:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
+<li><strong>Strang A — Wissenschaftliche Einstellung:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu zwei eigene Ergänzungen.</li>
+<li><strong>Strang B — Recherche und Quellenqualität:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zu Open-Access-Datenbanken (z. B. <a href="https://doaj.org" class="uri">https://doaj.org</a>) und eine zu Pre-Print-Servern.</li>
+<li><strong>Strang C — Transparent schreiben:</strong> Bartnik &amp; Palmer <span class="citation" data-cites="bartnik2024">(<a href="01-didaktik.html#ref-bartnik2024" role="doc-biblioref">2024</a>)</span>, dazu eine Quelle zur TOP-Guideline-Initiative und eine zu Reproducible Research.</li>
 </ul>
 </div>
 </div>
@@ -416,22 +415,20 @@ Tutor öffnen
 <p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
 <p>Vorschlag-Prompt für dieses Kapitel:</p>
 <blockquote class="blockquote">
-<p>Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.</p>
+<p>Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.</p>
 </blockquote>
 </div>
 </div>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>
-<div class="{">
-
-
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-bartnik2024" class="csl-entry" role="listitem">
 Bartnik, R., &amp; Palmer, C. (2024). <em>Projektorientierte Einführung in kritisches wissenschaftliches Denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
 </div>
 </div>
+
+
 </section>
 
 </main> <!-- /main -->

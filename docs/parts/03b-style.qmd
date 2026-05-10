@@ -1,0 +1,124 @@
+---
+title: "3b — TH-Köln-Stil einbauen"
+---
+
+::: {.lernziel-box}
+#### Was Sie nach diesem Kapitel kannst
+
+- die Hochschulfarben über `_brand.yml` setzen,
+- per CSS scharfkantige Callouts, Tabellen und Code-Blöcke gestalten,
+- das TH-Köln-Logo einbinden und prüfen, dass es überall korrekt erscheint.
+:::
+
+## Worum es im Kern geht
+
+Gestaltung ist nicht Dekoration, sondern Lese-Hilfe. Ein konsistentes Layout reduziert kognitive Last [@mayer2021] — die Lernenden müssen nicht für jedes neue Element wieder verstehen, was wo wichtig ist. Tufte [-@tufte2001] formuliert dasselbe Prinzip für Datenvisualisierung: maximaler Informationsgehalt bei minimalem Tinte-zu-Daten-Verhältnis. Beides spricht für Zurückhaltung im Stil — wenige Farben, klare Hierarchien, kein Schmuck.
+
+## Wie Quarto Aussehen handhabt
+
+Drei Stellschrauben, in dieser Reihenfolge:
+
+1. **`_brand.yml`** — die Hochschulfarben und -schriften an einem Ort.
+2. **`styles.scss`** — alles, was `_brand.yml` nicht abdeckt (Layout, Akzente, eigene Boxen).
+3. **`format.html.theme`** in `_quarto.yml` — wählt das Bootstrap-Basistheme.
+
+## Die TH-Köln-Palette in Stichworten
+
+Drei Farben, sonst nur Grautöne. Alles andere ist Verstoß gegen das Corporate Design.
+
+| Rolle | Hex | Wo? |
+|---|---|---|
+| TH Red | `#c81e0f` | Links, Akzente, wichtige Hervorhebungen |
+| TH Magenta | `#b43092` | Strukturlinien, Callout-Ränder |
+| TH Orange | `#ea5a00` | Sehr sparsam — Warnungen, Verlauf |
+| Ink | `#111111` | Fließtext (weicheres Schwarz) |
+| Paper | `#ffffff` | Hintergründe, immer |
+
+## Mach mit — `_brand.yml` kopieren
+
+Im Repository des Workshops liegt eine fertige `_brand.yml` mit der TH-Köln-Palette. Kopiere sie in Ihr Projektverzeichnis. Beim nächsten `quarto render` sind Links rot, Überschriften schwarz, Akzente magenta.
+
+```yaml
+color:
+  palette:
+    th-red: "#c81e0f"
+    th-magenta: "#b43092"
+    th-orange: "#ea5a00"
+  primary: th-red
+  secondary: th-magenta
+```
+
+## SCSS-Ergänzungen
+
+Drei Dinge, die `_brand.yml` nicht regelt: scharfe Ecken („kantig"), die magenta H2-Unterstreichung und die TH-Farbleiste am Seitenanfang. Quarto verarbeitet eigene Stile als **SCSS** (Sass) — eine Erweiterung von CSS, die mit Bootstrap zusammenarbeitet. Sie brauchen dafür kein Sass-Wissen: jede gültige CSS-Regel ist auch gültiges SCSS.
+
+::: {.callout-warning}
+Die Datei muss `styles.scss` heißen (nicht `.css`) und am Anfang einen **Layer-Marker** enthalten — sonst bricht `quarto render` mit einer Fehlermeldung „doesn't contain at least one layer boundary" ab.
+:::
+
+Lege `styles.scss` an und binde sie in `_quarto.yml` ein:
+
+```yaml
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+```
+
+In `styles.scss` (Auszug — Layer-Marker am Anfang ist Pflicht):
+
+```scss
+/*-- scss:rules --*/
+
+:root {
+  --th-red: #c81e0f;
+  --th-magenta: #b43092;
+}
+
+h1, h2, h3 { border-radius: 0 !important; font-weight: 600; }
+h2 { border-bottom: 2px solid rgba(180, 48, 146, 0.35); padding-bottom: 0.3rem; }
+.callout { border-radius: 0 !important; }
+pre, code { border-radius: 0 !important; }
+```
+
+::: {.callout-tip}
+## Mach mit — Vorher/Nachher
+Rendern Sie Ihr Skript einmal **vor** und einmal **nach** dem Einbau von `_brand.yml`. Vergleichen Sie beide Versionen nebeneinander. Was ändert sich? Was nicht? Schreiben Sie sich drei Beobachtungen auf — wir nutzen sie im Showcase am Ende.
+:::
+
+## Logo einbinden
+
+1. Laden Sie das TH-Köln-Logo (PNG, transparent) in `images/th-koeln-logo.png`.
+2. In `_brand.yml`:
+
+```yaml
+logo:
+  small: images/th-koeln-logo.png
+  medium: images/th-koeln-logo.png
+```
+
+3. Rendern und prüfen.
+
+::: {.callout-warning}
+## Was, wenn …
+
+- **Farben tauchen nicht auf?** → Cache leeren (`quarto render --cache-refresh`) oder den Ordner `_freeze/` löschen.
+- **CSS wird nicht geladen?** → Pfad in `_quarto.yml` prüfen, relative Pfade ohne führenden Slash.
+- **Logo wird nicht angezeigt?** → PNG-Datei muss tatsächlich im `images/`-Ordner liegen, nicht nur in `_brand.yml` referenziert sein.
+- **Farben sehen ausgewaschen aus?** → Eventuell ein Bootstrap-Theme aktiv, das die Variablen überschreibt. `theme: [cosmo, styles.scss]` in dieser Reihenfolge halten — die SCSS-Datei muss zuletzt geladen werden.
+- **„doesn't contain at least one layer boundary"** beim Render? → Am Anfang von `styles.scss` muss `/*-- scss:rules --*/` stehen.
+:::
+
+## Tutor
+
+::: {.callout-tip}
+## Tutor öffnen
+[Tutor „Interaktive Skripte" →](https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte){target="_blank"}
+
+Vorschlag-Prompt für dieses Kapitel:
+
+> Ich möchte mein Quarto-Skript im TH-Köln-Stil gestalten (rot #c81e0f, magenta #b43092, orange #ea5a00, kantige Ecken, Arial). Mein Stand: [_brand.yml vorhanden / fehlt]; [styles.scss vorhanden / fehlt]. Was ist mein nächster Schritt? Lay-Erklärung zuerst, dann ein konkreter Code-Schnipsel.
+:::
+
+# Literatur {.unnumbered}

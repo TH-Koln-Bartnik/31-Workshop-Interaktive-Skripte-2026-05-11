@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1 — Warum interaktiv? – Interaktive Skripte mit KI erstellen</title>
+<title>6 — Slides mit Quarto (optional) – Interaktive Skripte mit KI erstellen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -50,8 +85,8 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../parts/02-setup.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../appendix/quickstart.html" rel="next">
+<link href="../parts/03c-style.html" rel="prev">
 <link href="../images/th-koeln-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -104,7 +139,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/01-didaktik.html"><span class="chapter-title">1 — Warum interaktiv?</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/06-slides-optional.html"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -168,7 +203,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/01-didaktik.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1 — Warum interaktiv?</span></a>
+  <a href="../parts/01-didaktik.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 — Warum interaktiv?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,7 +238,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
+  <a href="../parts/06-slides-optional.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a>
   </div>
 </li>
       </ul>
@@ -249,26 +284,32 @@ div.csl-indent {
     <h2 id="toc-title">Inhalt</h2>
    
   <ul>
-  <li><a href="#drei-argumente-in-drei-sätzen" id="toc-drei-argumente-in-drei-sätzen" class="nav-link active" data-scroll-target="#drei-argumente-in-drei-sätzen">Drei Argumente in drei Sätzen</a>
+  <li><a href="#worum-es-im-kern-geht" id="toc-worum-es-im-kern-geht" class="nav-link active" data-scroll-target="#worum-es-im-kern-geht">Worum es im Kern geht</a></li>
+  <li><a href="#schnellbau-in-vier-schritten" id="toc-schnellbau-in-vier-schritten" class="nav-link" data-scroll-target="#schnellbau-in-vier-schritten">Schnellbau in vier Schritten</a></li>
+  <li><a href="#yaml-header-für-reveal.js" id="toc-yaml-header-für-reveal.js" class="nav-link" data-scroll-target="#yaml-header-für-reveal.js">YAML-Header für Reveal.js</a></li>
+  <li><a href="#bausteine-sieben-techniken-zum-übernehmen" id="toc-bausteine-sieben-techniken-zum-übernehmen" class="nav-link" data-scroll-target="#bausteine-sieben-techniken-zum-übernehmen">Bausteine — sieben Techniken zum Übernehmen</a>
   <ul class="collapse">
-  <li><a href="#generatives-lernen" id="toc-generatives-lernen" class="nav-link" data-scroll-target="#generatives-lernen">Generatives Lernen</a></li>
-  <li><a href="#retrieval-practice" id="toc-retrieval-practice" class="nav-link" data-scroll-target="#retrieval-practice">Retrieval Practice</a></li>
-  <li><a href="#multimedia-prinzip" id="toc-multimedia-prinzip" class="nav-link" data-scroll-target="#multimedia-prinzip">Multimedia-Prinzip</a></li>
+  <li><a href="#eine-folie-pro--überschrift" id="toc-eine-folie-pro--überschrift" class="nav-link" data-scroll-target="#eine-folie-pro--überschrift">1. Eine Folie pro <code>##</code>-Überschrift</a></li>
+  <li><a href="#section-divider-großer-trenner-zwischen-themenblöcken" id="toc-section-divider-großer-trenner-zwischen-themenblöcken" class="nav-link" data-scroll-target="#section-divider-großer-trenner-zwischen-themenblöcken">2. Section-Divider (großer Trenner zwischen Themenblöcken)</a></li>
+  <li><a href="#stichpunkte-mit-appear-effekt-einer-nach-dem-anderen" id="toc-stichpunkte-mit-appear-effekt-einer-nach-dem-anderen" class="nav-link" data-scroll-target="#stichpunkte-mit-appear-effekt-einer-nach-dem-anderen">3. Stichpunkte mit Appear-Effekt — einer nach dem anderen</a></li>
+  <li><a href="#beliebige-blöcke-einzeln-einblenden" id="toc-beliebige-blöcke-einzeln-einblenden" class="nav-link" data-scroll-target="#beliebige-blöcke-einzeln-einblenden">4. Beliebige Blöcke einzeln einblenden</a></li>
+  <li><a href="#bild-mit-appear-effekt" id="toc-bild-mit-appear-effekt" class="nav-link" data-scroll-target="#bild-mit-appear-effekt">5. Bild mit Appear-Effekt</a></li>
+  <li><a href="#zwei-spalten-text-links-bild-rechts" id="toc-zwei-spalten-text-links-bild-rechts" class="nav-link" data-scroll-target="#zwei-spalten-text-links-bild-rechts">6. Zwei Spalten — Text links, Bild rechts</a></li>
+  <li><a href="#speaker-notes-sichtbar-nur-in-der-sprecheransicht-taste-s" id="toc-speaker-notes-sichtbar-nur-in-der-sprecheransicht-taste-s" class="nav-link" data-scroll-target="#speaker-notes-sichtbar-nur-in-der-sprecheransicht-taste-s">7. Speaker-Notes (sichtbar nur in der Sprecher­ansicht, Taste „S”)</a></li>
   </ul></li>
-  <li><a href="#was-das-für-ihr-skript-heißt" id="toc-was-das-für-ihr-skript-heißt" class="nav-link" data-scroll-target="#was-das-für-ihr-skript-heißt">Was das für Ihr Skript heißt</a></li>
-  <li><a href="#wann-kein-interaktives-element" id="toc-wann-kein-interaktives-element" class="nav-link" data-scroll-target="#wann-kein-interaktives-element">Wann <strong>kein</strong> interaktives Element?</a></li>
-  <li><a href="#mach-mit-lernspiel-zur-selbstprüfung" id="toc-mach-mit-lernspiel-zur-selbstprüfung" class="nav-link" data-scroll-target="#mach-mit-lernspiel-zur-selbstprüfung">Mach mit — Lernspiel zur Selbstprüfung</a></li>
+  <li><a href="#die-komplette-vorlage-zum-kopieren" id="toc-die-komplette-vorlage-zum-kopieren" class="nav-link" data-scroll-target="#die-komplette-vorlage-zum-kopieren">Die komplette Vorlage zum Kopieren</a></li>
+  <li><a href="#th-köln-brand-auf-slides" id="toc-th-köln-brand-auf-slides" class="nav-link" data-scroll-target="#th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</a></li>
   <li><a href="#tutor" id="toc-tutor" class="nav-link" data-scroll-target="#tutor">Tutor</a></li>
   <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/01-didaktik.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/06-slides-optional.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/01-didaktik.html"><span class="chapter-title">1 — Warum interaktiv?</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../parts/01-didaktik.html">Teil 1 — Werkstatt</a></li><li class="breadcrumb-item"><a href="../parts/06-slides-optional.html"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">1 — Warum interaktiv?</span></h1>
+<h1 class="title"><span class="chapter-title">6 — Slides mit Quarto (optional)</span></h1>
 </div>
 
 
@@ -285,91 +326,145 @@ div.csl-indent {
 </header>
 
 
-<section id="was-sie-nach-diesem-kapitel-können" class="level4 lernziel-box">
-<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-können">Was Sie nach diesem Kapitel können</h4>
-<ul>
-<li>drei lerntheoretisch gestützte Argumente nennen, <strong>warum</strong> ein interaktives Skript ein passives Skriptum schlägt,</li>
-<li>jedes Argument einem <strong>konkreten Skript-Element</strong> zuordnen (Quiz, Diagramm, Tutor),</li>
-<li>entscheiden, <strong>wann sich Interaktivität lohnt</strong> und wann nicht.</li>
-</ul>
-</section>
-<section id="drei-argumente-in-drei-sätzen" class="level2">
-<h2 class="anchored" data-anchor-id="drei-argumente-in-drei-sätzen">Drei Argumente in drei Sätzen</h2>
-<p>Lehrforschung sagt es seit Jahren — aber selten so kompakt: Lernen klappt besser, wenn Lernende <strong>selbst etwas tun</strong>, <strong>regelmäßig abrufen</strong> und <strong>Bilder neben Worten</strong> bekommen. Drei Prinzipien, drei Belege, drei Konsequenzen für Ihr Skript.</p>
-<section id="generatives-lernen" class="level3">
-<h3 class="anchored" data-anchor-id="generatives-lernen">Generatives Lernen</h3>
-<p>Auch beim Lernen gilt eine Form von „wer schreibt, der bleibt”. Wenn wir einen Lerninhalt selbst zusammenfassen, erklären oder anwenden, behalten wir ihn besser, als wenn wir einen Text nur lesen <span class="citation" data-cites="fiorella2016">(<a href="01-didaktik.html#ref-fiorella2016" role="doc-biblioref">Fiorella &amp; Mayer, 2016</a>)</span>. Das beinhaltet verschiedene Lernaktivitäten — Zusammenfassen, Selbsterklären, Lehren, Mappen, Vorhersagen, Vorstellen, Zeichnen, Aufführen. Übersetzt: in Ihrem Skript braucht jedes Kapitel <strong>eine Aufgabe, die der Lernende selbst tut</strong>, nicht nur einen Text, den er liest.</p>
-</section>
-<section id="retrieval-practice" class="level3">
-<h3 class="anchored" data-anchor-id="retrieval-practice">Retrieval Practice</h3>
-<p>Sich an etwas erinnern zu <strong>müssen</strong> verbessert das Behalten stärker als wiederholtes Lesen <span class="citation" data-cites="roediger2006">(<a href="01-didaktik.html#ref-roediger2006" role="doc-biblioref">Roediger &amp; Karpicke, 2006</a>)</span>. Karpicke und Roediger ließen Studierende dasselbe Material drei Mal lesen oder zwei Mal lesen plus einmal aus dem Gedächtnis aufschreiben — die zweite Gruppe schlug die erste eine Woche später deutlich. Übersetzt: ein <strong>kurzes Quiz</strong> oder eine <strong>Drag-and-Drop-Aufgabe</strong> in Ihrem Skript wirkt wie eine Mini-Klausur, ohne dass jemand die Klausur korrigieren muss.</p>
-</section>
-<section id="multimedia-prinzip" class="level3">
-<h3 class="anchored" data-anchor-id="multimedia-prinzip">Multimedia-Prinzip</h3>
-<p>Worte plus passende Bilder schlagen Worte allein <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. „Passend” heißt: das Bild zeigt, wovon der Text spricht — nicht zur Dekoration, sondern als zweite Repräsentation desselben Inhalts. Übersetzt: das <strong>interaktive Diagramm</strong>, das Sie in Kapitel 4 einbauen werden, hat einen lerntheoretischen Grund — keine Spielerei.</p>
-</section>
-</section>
-<section id="was-das-für-ihr-skript-heißt" class="level2">
-<h2 class="anchored" data-anchor-id="was-das-für-ihr-skript-heißt">Was das für Ihr Skript heißt</h2>
-<p>Drei Bauteile, die Sie heute alle einbauen, lassen sich genau diesen drei Prinzipien zuordnen:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Prinzip</th>
-<th>Skript-Element</th>
-<th>Wo im Workshop?</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Generatives Lernen</td>
-<td>KI-Tutor, eigene Übungsaufgabe</td>
-<td>Kap. 5</td>
-</tr>
-<tr class="even">
-<td>Retrieval Practice</td>
-<td>Lernspiel, Memory, Quiz (iFrame oder H5P)</td>
-<td>Kap. 1, 2, 5</td>
-</tr>
-<tr class="odd">
-<td>Multimedia</td>
-<td>Interaktives Diagramm, Grafiken</td>
-<td>Kap. 4</td>
-</tr>
-</tbody>
-</table>
-<p>Das ist die didaktische Architektur Ihres Skripts — und gleichzeitig die Architektur dieses Workshops.</p>
-</section>
-<section id="wann-kein-interaktives-element" class="level2">
-<h2 class="anchored" data-anchor-id="wann-kein-interaktives-element">Wann <strong>kein</strong> interaktives Element?</h2>
-<p>Drei Situationen, in denen Interaktivität schadet:</p>
-<ul>
-<li><strong>Kognitive Überforderung.</strong> Wenn die Lernenden gleichzeitig neuen Stoff verarbeiten <em>und</em> die Bedienung des Widgets lernen müssen, kostet das Aufmerksamkeit, die für den Inhalt fehlt <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">Mayer, 2021</a>)</span>. Lieber erst Stoff, dann Übung.</li>
-<li><strong>Reine Illustration.</strong> Wenn das Diagramm keine Variation erlaubt, die didaktisch interessant ist, reicht ein PNG. Interaktivität sollte einen Lernzweck haben, nicht nur „können wir technisch”.</li>
-<li><strong>Ablenkung durch Kontrolle.</strong> Wenn ein Spiel die Lernenden in den Spielmodus zieht („wie viele Punkte krieg ich?“), kann das vom Inhalt wegführen. Faustregel: Belohnung für <strong>richtige Inhalte</strong>, nicht für Schnelligkeit.</li>
-</ul>
-</section>
-<section id="mach-mit-lernspiel-zur-selbstprüfung" class="level2">
-<h2 class="anchored" data-anchor-id="mach-mit-lernspiel-zur-selbstprüfung">Mach mit — Lernspiel zur Selbstprüfung</h2>
-<p>Drei Beispiele, drei Prinzipien, fünf Minuten. Ziehen Sie jedes Beispiel auf das Prinzip, das es illustriert.</p>
-<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lernspiel öffnen
+Optional, für Fortgeschrittene
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><a href="../interactions/lernspiel-kapitel1.html" target="_blank">Lernspiel: Welches Prinzip steckt hinter welchem Beispiel? →</a></p>
+<p>Dieses Kapitel ist nicht Teil der gemeinsamen Übung. Wer mit Kapitel 1–5 früher fertig ist, baut hier eigene Folien. Vorlage und Inspiration: Békés (2025), <a href="https://gabors-data-analysis.com/courses/da-w-ai-2025/da-w-ai-01-llm-course.html" target="_blank">Course slides for “Data Analysis with AI”</a>.</p>
 </div>
 </div>
+<section id="was-sie-nach-diesem-kapitel-können" class="level4 lernziel-box">
+<h4 class="anchored" data-anchor-id="was-sie-nach-diesem-kapitel-können">Was Sie nach diesem Kapitel können</h4>
+<ul>
+<li>aus einem <code>.qmd</code>-Kapitel einen <strong>Foliensatz</strong> mit Quarto Reveal.js erzeugen,</li>
+<li><strong>Stichpunkte schrittweise einblenden</strong> (Appear-Effekt wie in PowerPoint),</li>
+<li><strong>Bilder und Diagramme</strong> in Folien einbetten — auch in zwei Spalten neben dem Text,</li>
+<li>die <strong>TH-Köln-Farben</strong> auf Slides übertragen.</li>
+</ul>
+</section>
+<section id="worum-es-im-kern-geht" class="level2">
+<h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
+<p>Folien sind nicht der bessere Skripttext, sondern ein eigener Modus — sie unterstützen die mündliche Erläuterung. Mayer <span class="citation" data-cites="mayer2021">(<a href="01-didaktik.html#ref-mayer2021" role="doc-biblioref">2021</a>)</span> zeigt: Folien wirken am stärksten, wenn sie <strong>Bild plus wenig Text</strong> kombinieren und Inhalte <strong>schrittweise</strong> enthüllen. Genau das liefert Quarto Reveal.js mit zwei Konstrukten: <code>incremental</code> (Listen punktweise) und <code>::: {.fragment}</code> (beliebige Blöcke einzeln).</p>
+</section>
+<section id="schnellbau-in-vier-schritten" class="level2">
+<h2 class="anchored" data-anchor-id="schnellbau-in-vier-schritten">Schnellbau in vier Schritten</h2>
+<ol type="1">
+<li>Neue Datei <code>slides/template-vorlesungsfolien.qmd</code> anlegen — oder die <a href="../slides/template-vorlesungsfolien.qmd">vorhandene Vorlage</a> kopieren.</li>
+<li>YAML-Header ergänzen (siehe unten).</li>
+<li>Inhalt strukturieren: <strong>eine <code>##</code>-Überschrift = eine Folie</strong>.</li>
+<li>Im RStudio-Terminal rendern: <code>quarto render slides/template-vorlesungsfolien.qmd</code> oder Knopf <strong>Render</strong> im Editor.</li>
+</ol>
+</section>
+<section id="yaml-header-für-reveal.js" class="level2">
+<h2 class="anchored" data-anchor-id="yaml-header-für-reveal.js">YAML-Header für Reveal.js</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Vorlesungsfolien — Vorlage"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ihr Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> ../styles.scss</span><span class="kw">]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">slide-number</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">chalkboard</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">incremental</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">logo</span><span class="kw">:</span><span class="at"> ../images/th-koeln-logo.png</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">footer</span><span class="kw">:</span><span class="at"> </span><span class="st">"Workshop · TH Köln"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">transition</span><span class="kw">:</span><span class="at"> fade</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Wichtig: <code>theme: [default, ../styles.scss]</code> zieht Ihre TH-Köln-Farben auch auf die Folien.</p>
+</section>
+<section id="bausteine-sieben-techniken-zum-übernehmen" class="level2">
+<h2 class="anchored" data-anchor-id="bausteine-sieben-techniken-zum-übernehmen">Bausteine — sieben Techniken zum Übernehmen</h2>
+<section id="eine-folie-pro--überschrift" class="level3">
+<h3 class="anchored" data-anchor-id="eine-folie-pro--überschrift">1. Eine Folie pro <code>##</code>-Überschrift</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Eine Folie pro Überschrift</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Stichpunkte direkt darunter, Bilder, Code — was Sie wollen.</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section-divider-großer-trenner-zwischen-themenblöcken" class="level3">
+<h3 class="anchored" data-anchor-id="section-divider-großer-trenner-zwischen-themenblöcken">2. Section-Divider (großer Trenner zwischen Themenblöcken)</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Block 2 — Stichpunkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ein einfaches <code>#</code> (statt <code>##</code>) erzeugt eine Übersichts-/Trennfolie.</p>
+</section>
+<section id="stichpunkte-mit-appear-effekt-einer-nach-dem-anderen" class="level3">
+<h3 class="anchored" data-anchor-id="stichpunkte-mit-appear-effekt-einer-nach-dem-anderen">3. Stichpunkte mit Appear-Effekt — einer nach dem anderen</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: incremental</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt eins</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt zwei</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Punkt drei</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Im Vortrag: erst der erste Punkt, dann auf Klick (Pfeiltaste, Leertaste oder Klicker) der zweite, der dritte.</p>
+</section>
+<section id="beliebige-blöcke-einzeln-einblenden" class="level3">
+<h3 class="anchored" data-anchor-id="beliebige-blöcke-einzeln-einblenden">4. Beliebige Blöcke einzeln einblenden</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>**Beobachtung:** Lernende vergessen 70 % innerhalb einer Woche.</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>**Konsequenz:** Spaced Repetition statt Frontalvortrag.</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>**Konkret heute:** Mini-Quizze in jedem Skriptkapitel.</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Drei Klicks, drei Erkenntnis­schritte — perfekt für Argumentationsketten.</p>
+</section>
+<section id="bild-mit-appear-effekt" class="level3">
+<h3 class="anchored" data-anchor-id="bild-mit-appear-effekt">5. Bild mit Appear-Effekt</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Was ist Generatives Lernen?</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>::: {.fragment}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/wissens-zyklus.png)</span>{fig-align="center" width="60%"}</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Erst die Frage in den Raum stellen, dann das Schaubild aufdecken.</p>
+</section>
+<section id="zwei-spalten-text-links-bild-rechts" class="level3">
+<h3 class="anchored" data-anchor-id="zwei-spalten-text-links-bild-rechts">6. Zwei Spalten — Text links, Bild rechts</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>**Drei Hebel:**</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>::: incremental</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Selbst zusammenfassen</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Selbst erklären</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Selbst anwenden</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="al">![](../images/skizze.png)</span>{fig-align="center" width="80%"}</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>::::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="speaker-notes-sichtbar-nur-in-der-sprecheransicht-taste-s" class="level3">
+<h3 class="anchored" data-anchor-id="speaker-notes-sichtbar-nur-in-der-sprecheransicht-taste-s">7. Speaker-Notes (sichtbar nur in der Sprecher­ansicht, Taste „S”)</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>::: notes</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>Hier baue ich Spannung auf. Erst Punkt eins erklären, dann</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>mit der Pfeiltaste den nächsten enthüllen. Beispiel aus Kapitel 4 nennen.</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="die-komplette-vorlage-zum-kopieren" class="level2">
+<h2 class="anchored" data-anchor-id="die-komplette-vorlage-zum-kopieren">Die komplette Vorlage zum Kopieren</h2>
+<p>Acht Beispielfolien — Titel, Section-Divider, Bullets statisch und mit Appear, Bild ganzseitig, Bild mit Fragment, zwei Spalten, Code-Folie mit Zeilen-Highlighting, Schlussfolie. Liegt im Projekt unter:</p>
+<pre><code>slides/template-vorlesungsfolien.qmd</code></pre>
+<p>Im RStudio-Files-Pane öffnen, ansehen, einzelne Folien herauspicken und in eigene Foliensätze übernehmen.</p>
+</section>
+<section id="th-köln-brand-auf-slides" class="level2">
+<h2 class="anchored" data-anchor-id="th-köln-brand-auf-slides">TH-Köln-Brand auf Slides</h2>
+<p>Die <code>_brand.yml</code> aus Ihrem Skript wird auch von Reveal.js gelesen, sobald Sie sie in den Reveal-YAML einbauen:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">brand</span><span class="kw">:</span><span class="at"> ../_brand.yml</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">default</span><span class="kw">,</span><span class="at"> ../styles.scss</span><span class="kw">]</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -381,8 +476,10 @@ Was, wenn …
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Das Spiel öffnet sich nicht?</strong> → Direkt im Browser über die Datei <code>interactions/lernspiel-kapitel1.html</code> öffnen. Die Datei ist eine einzige HTML-Datei, ohne Backend.</li>
-<li><strong>Die Lösungen scheinen mehrdeutig?</strong> → Stimmt — in der Praxis überschneiden sich die Prinzipien. Schauen Sie in die Erklärung am Ende des Spiels, dort steht, warum die jeweilige Zuordnung am stärksten passt.</li>
+<li><strong>Pfeiltaste blättert über Fragmente weg statt sie einzeln zu zeigen?</strong> → <code>incremental: true</code> im YAML setzen oder einzelne Listen mit <code>::: incremental</code> umhüllen.</li>
+<li><strong>Bild wird nicht angezeigt?</strong> → Pfad relativ zur Slides-Datei: aus <code>slides/foo.qmd</code> zeigt <code>../images/bild.png</code> ins richtige Verzeichnis.</li>
+<li><strong>Diagramm aus R-Chunk erscheint nicht?</strong> → Pakete prüfen (<code>install.packages("plotly")</code>), und am Chunk <code>#| echo: false</code> setzen, sonst stört der Code-Block die Folienaufteilung.</li>
+<li><strong>Folien zu textreich?</strong> → Faustregel: max. 6 Zeilen pro Folie, eine Idee pro Folie.</li>
 </ul>
 </div>
 </div>
@@ -400,84 +497,18 @@ Tutor öffnen
 </div>
 <div class="callout-body-container callout-body">
 <p><a href="https://chatgpt.com/g/g-69fec93348108191af1ffb8ce0cf6712-tutor-interaktive-skripte" target="_blank">Tutor „Interaktive Skripte” →</a></p>
-<p>Fragen Sie den Tutor nach passenden interaktiven Elementen für Ihr Kapitel. Vorschlag-Prompt:</p>
+<p>Vorschlag-Prompt für dieses Kapitel:</p>
 <blockquote class="blockquote">
-<p>Ich überlege, welche interaktiven Elemente in mein Skript zum Thema [Strang A/B/C] passen. Fragen Sie mich nach dem Lernziel des jeweiligen Kapitels und schlagen Sie dann pro Kapitel EIN passendes Element vor — verbunden mit einem der drei Lernprinzipien (generativ, retrieval, multimedia). Begründen Sie in einem Satz, warum genau dieses Element passt.</p>
+<p>Ich will aus meinem bestehenden Quarto-Kapitel einen Foliensatz mit Reveal.js machen. TH-Köln-Brand soll erhalten bleiben. Schlagen Sie mir die einfachste Aufteilung vor: Welche Abschnitte werden eine Folie, welche mehrere? Welche Stichpunkte sollen mit Appear-Effekt erscheinen? Geben Sie mir den YAML-Header und ein bis zwei Beispielfolien.</p>
 </blockquote>
 </div>
 </div>
 </section>
 <section id="literatur" class="level1 unnumbered">
 <h1 class="unnumbered">Literatur</h1>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-allaire2024" class="csl-entry" role="listitem">
-Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C.
-(2024). <em>Quarto: An open-source scientific and technical publishing
-system</em>. <a href="https://quarto.org/">https://quarto.org/</a>
-</div>
-<div id="ref-bartnik2024" class="csl-entry" role="listitem">
-Bartnik, R., &amp; Palmer, C. (2024). <em>Projektorientierte einführung
-in kritisches wissenschaftliches denken</em>. <a href="https://publish.obsidian.md/wagp-calling-bullshit/">https://publish.obsidian.md/wagp-calling-bullshit/</a>
-</div>
-<div id="ref-bryan2018" class="csl-entry" role="listitem">
-Bryan, J. (2018). Excuse me, do you have a moment to talk about version
-control? <em>The American Statistician</em>, <em>72</em>(1), 20–27. <a href="https://doi.org/10.1080/00031305.2017.1399928">https://doi.org/10.1080/00031305.2017.1399928</a>
-</div>
-<div id="ref-fiorella2016" class="csl-entry" role="listitem">
-Fiorella, L., &amp; Mayer, R. E. (2016). Eight ways to promote
-generative learning. <em>Educational Psychology Review</em>,
-<em>28</em>(4), 717–741. <a href="https://doi.org/10.1007/s10648-015-9348-9">https://doi.org/10.1007/s10648-015-9348-9</a>
-</div>
-<div id="ref-healy2018" class="csl-entry" role="listitem">
-Healy, K. (2018). <em>Data visualization: A practical introduction</em>.
-Princeton University Press.
-</div>
-<div id="ref-karpicke2011" class="csl-entry" role="listitem">
-Karpicke, J. D., &amp; Blunt, J. R. (2011). Retrieval practice produces
-more learning than elaborative studying with concept mapping.
-<em>Science</em>, <em>331</em>(6018), 772–775. <a href="https://doi.org/10.1126/science.1199327">https://doi.org/10.1126/science.1199327</a>
-</div>
-<div id="ref-kasneci2023" class="csl-entry" role="listitem">
-Kasneci, E., Sessler, K., Küchemann, S., Bannert, M., Dementieva, D.,
-Fischer, F., Gasser, U., Groh, G., Günnemann, S., Hüllermeier, E.,
-Krusche, S., Kutyniok, G., Michaeli, T., Nerdel, C., Pfeffer, J.,
-Poquet, O., Sailer, M., Schmidt, A., Seidel, T., … Kasneci, G. (2023).
-<span>ChatGPT</span> for good? On opportunities and challenges of large
-language models for education. <em>Learning and Individual
-Differences</em>, <em>103</em>, 102274. <a href="https://doi.org/10.1016/j.lindif.2023.102274">https://doi.org/10.1016/j.lindif.2023.102274</a>
-</div>
-<div id="ref-lakens2022" class="csl-entry" role="listitem">
-Lakens, D. (2022). <em>Improving your statistical inferences</em>. <a href="https://doi.org/10.5281/zenodo.6409077">https://doi.org/10.5281/zenodo.6409077</a>
-</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-mayer2021" class="csl-entry" role="listitem">
-Mayer, R. E. (2021). <em>Multimedia learning</em> (3rd ed.). Cambridge
-University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
-</div>
-<div id="ref-mollick2023" class="csl-entry" role="listitem">
-Mollick, E. R., &amp; Mollick, L. (2023). Assigning <span>AI</span>:
-Seven approaches for students, with prompts. <em>SSRN Working
-Paper</em>. <a href="https://doi.org/10.2139/ssrn.4475995">https://doi.org/10.2139/ssrn.4475995</a>
-</div>
-<div id="ref-roediger2006" class="csl-entry" role="listitem">
-Roediger, H. L., &amp; Karpicke, J. D. (2006). Test-enhanced learning:
-Taking memory tests improves long-term retention. <em>Psychological
-Science</em>, <em>17</em>(3), 249–255. <a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">https://doi.org/10.1111/j.1467-9280.2006.01693.x</a>
-</div>
-<div id="ref-owid2024" class="csl-entry" role="listitem">
-Roser, M., Ritchie, H., Mathieu, E., &amp; Ortiz-Ospina, E. (2024).
-<em>Our world in data</em>. <a href="https://ourworldindata.org/">https://ourworldindata.org/</a>
-</div>
-<div id="ref-tufte2001" class="csl-entry" role="listitem">
-Tufte, E. R. (2001). <em>The visual display of quantitative
-information</em> (2nd ed.). Graphics Press.
-</div>
-<div id="ref-wickham2019" class="csl-entry" role="listitem">
-Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D.,
-François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M.,
-Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J.,
-Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to
-the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
-1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+Mayer, R. E. (2021). <em>Multimedia Learning</em> (3. Aufl.). Cambridge University Press. <a href="https://doi.org/10.1017/9781316941355">https://doi.org/10.1017/9781316941355</a>
 </div>
 </div>
 
@@ -891,13 +922,13 @@ the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Willkommen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Willkommen</span></span>
+      <a href="../parts/03c-style.html" class="pagination-link" aria-label="3c — TH-Köln-Stil einbauen (optional)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">3c — TH-Köln-Stil einbauen (optional)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../parts/02-setup.html" class="pagination-link" aria-label="2 — Bausteine und Workflow">
-        <span class="nav-page-text"><span class="chapter-title">2 — Bausteine und Workflow</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendix/quickstart.html" class="pagination-link" aria-label="Quick-Starter Guide">
+        <span class="nav-page-text"><span class="chapter-title">Quick-Starter Guide</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -909,7 +940,7 @@ the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43),
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/01-didaktik.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/edit/main/parts/06-slides-optional.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li><li><a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Erstellt mit <a href="https://quarto.org">Quarto</a></p>
 </div>

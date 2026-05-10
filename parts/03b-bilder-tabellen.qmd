@@ -12,7 +12,7 @@ title: "3b — Bilder, Tabellen und Cross-Refs"
 
 ## Worum es im Kern geht
 
-Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt [@mayer2021]. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine **stabile Adresse** (Label). Ein Verweis wie „siehe @fig-co2" tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3"), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.
+Bilder und Tabellen sind die zwei Mittel, mit denen ein Skript komplexe Information verdichtet. Der Multimedia-Effekt — Worte plus passendes Bild schlagen Worte allein — ist seit Jahrzehnten belegt [@mayer2021]. Damit ein Verweis im Lauftext nicht ins Leere zeigt, gibt Quarto jedem Bild und jeder Tabelle eine **stabile Adresse** (Label). Ein Verweis wie „siehe `@fig-co2`" tut dann zwei Dinge auf einmal: er nummeriert sich automatisch („siehe Abbildung 3"), und er zeigt beim Hovern eine kleine Vorschau der Abbildung — derselbe Tooltip-Mechanismus, den Sie schon von den Zitaten kennen.
 
 Das spart Pflege (Nummerierung passt sich an), reduziert Fehler (kein „siehe Abbildung 7", die längst Abbildung 8 ist), und es macht das Skript für die Lesenden bequemer.
 
@@ -113,19 +113,19 @@ Bauen Sie in Ihr Kapitel **ein Bild und eine Tabelle** ein, beide mit Label und 
 
 - **Bild:** Ein Diagramm „Wie wissenschaftliches Wissen entsteht" (Skizze als PNG in `images/`, Label `#fig-wissenszyklus`).
 - **Tabelle:** Drei Haltungen (Skepsis, intellektuelle Demut, Korrektur­bereitschaft), je mit Beispiel — Label `#tbl-haltungen`.
-- **Verweis im Text:** „@fig-wissenszyklus zeigt den Kreislauf, @tbl-haltungen die drei Haltungen."
+- **Verweis im Text:** „`@fig-wissenszyklus` zeigt den Kreislauf, `@tbl-haltungen` die drei Haltungen."
 
 #### Strang B — Recherche und Quellenqualität
 
 - **Bild:** Eine Pyramide der Quellenarten (primär/sekundär/tertiär) als PNG, Label `#fig-quellpyramide`.
 - **Tabelle:** Drei Filter zur 30-Sekunden-Quellenprüfung — Label `#tbl-filter`.
-- **Verweis:** „Die Hierarchie zeigt @fig-quellpyramide; die Schnellprüfung folgt @tbl-filter."
+- **Verweis:** „Die Hierarchie zeigt `@fig-quellpyramide`; die Schnellprüfung folgt `@tbl-filter`."
 
 #### Strang C — Transparent schreiben
 
 - **Bild:** Ein Schema „Bestandteile eines transparenten Methodenteils" als PNG, Label `#fig-methodenteil`.
 - **Tabelle:** Vergleich „transparent" vs. „intransparent" für drei Methodenentscheidungen — Label `#tbl-vergleich`.
-- **Verweis:** „Den Aufbau zeigt @fig-methodenteil, den Kontrast @tbl-vergleich."
+- **Verweis:** „Den Aufbau zeigt `@fig-methodenteil`, den Kontrast `@tbl-vergleich`."
 
 :::
 :::

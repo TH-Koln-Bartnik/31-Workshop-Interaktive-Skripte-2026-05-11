@@ -158,9 +158,8 @@ div.csl-indent {
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Interaktive Skripte mit KI erstellen</a> 
-        <div class="sidebar-tools-main tools-wide">
+        <div class="sidebar-tools-main">
     <a href="https://github.com/TH-Koln-Bartnik/Workshop-Interaktive-Skripte-Bartnik" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
-    <a href="../Interaktive-Skripte-mit-KI-erstellen.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
       <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
@@ -336,7 +335,7 @@ div.csl-indent {
 </section>
 <section id="worum-es-im-kern-geht" class="level2">
 <h2 class="anchored" data-anchor-id="worum-es-im-kern-geht">Worum es im Kern geht</h2>
-<p>Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
+<p>Sie schreiben Text in einer Datei. Ein Programm verwandelt diese Datei in eine Webseite. Eine zweite Datei legt fest, wie sie aussieht. Ein Online-Speicher liefert die Webseite weltweit aus. Mehr ist es nicht — alles, was wir heute machen, sind Variationen dieses Vier-Zeilen-Workflows. Dass Forschungsarbeit von Versionsverwaltung profitiert, ist seit langem belegt <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">Bryan, 2018</a>)</span>; Quarto bringt diese Logik in die Lehre <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</p>
 </section>
 <section id="die-sechs-bausteine-lay-erklärung-zuerst" class="level2">
 <h2 class="anchored" data-anchor-id="die-sechs-bausteine-lay-erklärung-zuerst">Die sechs Bausteine — Lay-Erklärung zuerst</h2>
@@ -358,7 +357,7 @@ div.csl-indent {
 <tr class="odd">
 <td><strong>Quarto</strong></td>
 <td>Programm, das aus einer Textdatei eine Webseite, ein PDF oder Folien macht.</td>
-<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
+<td>Open-Source-Publishing-System, Nachfolger von R Markdown <span class="citation" data-cites="allaire2024">(<a href="01-didaktik.html#ref-allaire2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>.</td>
 </tr>
 <tr class="even">
 <td><strong>YAML</strong></td>
@@ -408,7 +407,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 <pre><code>RStudio (schreiben + rendern)  →  GitHub Desktop (versionieren)  →  GitHub Pages (veröffentlichen)
         ↑                                                                            │
         └──────────────────────────  Tutor im Browser-Tab (helfen)  ─────────────────┘</code></pre>
-<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass Ihr Skript jederzeit reproduzierbar gerendert werden kann und dass Sie ohne Angst Änderungen vornehmen — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
+<p>Versionsverwaltung ist hier kein Nice-to-have. Sie ist die Voraussetzung dafür, dass Ihr Skript jederzeit reproduzierbar gerendert werden kann und dass Sie ohne Angst Änderungen vornehmen — ein Punkt, den Bryan <span class="citation" data-cites="bryan2018">(<a href="01-didaktik.html#ref-bryan2018" role="doc-biblioref">2018</a>)</span> für die Forschungsarbeit ausführlich begründet, der für die Lehre genauso gilt.</p>
 </section>
 <section id="rstudio-als-arbeitszentrale-vier-bereiche" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-als-arbeitszentrale-vier-bereiche">RStudio als Arbeitszentrale — vier Bereiche</h2>
@@ -520,7 +519,7 @@ Mach mit — Memory-Spiel zu den Bausteinen
 </section>
 <section id="schritt-4-ordnerstruktur-anlegen-in-rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-4-ordnerstruktur-anlegen-in-rstudio">Schritt 4 — Ordnerstruktur anlegen (in RStudio)</h3>
-<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
+<p>Im <strong>Files-Pane</strong> (unten rechts) klicken Sie auf <strong>New Folder</strong> und legst nacheinander an: <code>images/</code>, <code>interactions/</code>, <code>include/</code>, <code>data/</code>. Das sind die Ordner für Ihre späteren Bilder, HTML-Widgets, eingebundene Schnipsel und Datendateien — die Aufteilung folgt der Konvention, die Lakens <span class="citation" data-cites="lakens2022">(<a href="01-didaktik.html#ref-lakens2022" role="doc-biblioref">2022</a>)</span> in seinem Skript verwendet.</p>
 </section>
 <section id="schritt-5-github-desktop-verknüpfen" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-5-github-desktop-verknüpfen">Schritt 5 — GitHub Desktop verknüpfen</h3>
@@ -583,7 +582,7 @@ Tutor öffnen
 <h1 class="unnumbered">Literatur</h1>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-allaire2024" class="csl-entry" role="listitem">
 Allaire, J. J., Teague, C., Scheidegger, C., Xie, Y., &amp; Dervieux, C. (2024). <em>Quarto: An Open-Source Scientific and Technical Publishing System</em>. <a href="https://quarto.org/">https://quarto.org/</a>
 </div>

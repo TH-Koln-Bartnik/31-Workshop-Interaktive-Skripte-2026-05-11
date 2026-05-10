@@ -3,7 +3,7 @@ title: "3a — Inhaltsverzeichnis und Literatur"
 ---
 
 ::: {.lernziel-box}
-#### Was Sie nach diesem Kapitel kannst
+#### Was Sie nach diesem Kapitel können
 
 - ein **automatisches Inhaltsverzeichnis** in Ihrem Skript einschalten,
 - eine **Zotero-Bibliothek als BibTeX exportieren** und ins Projekt einbinden,
@@ -30,7 +30,7 @@ Quarto baut das TOC automatisch aus den Überschriften. Tiefe drei heißt: Kapit
 
 ## Zotero anbinden
 
-Zotero exportiert Ihre Bibliothek als `.bib`-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das **Better-BibTeX**-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. `mayer2021`) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas änderst.
+Zotero exportiert Ihre Bibliothek als `.bib`-Datei, Quarto liest sie ein, Sie zitieren per Schlüssel. Das **Better-BibTeX**-Plugin sorgt dafür, dass die Schlüssel stabil bleiben (z. B. `mayer2021`) und der Export sich automatisch aktualisiert, wenn Sie in Zotero etwas ändern.
 
 ### Mach mit — in fünf Schritten
 
@@ -55,12 +55,12 @@ Generative Lernaktivitäten verbessern das Behalten [@fiorella2016].
 Die zugrundeliegende Theorie geht auf Mayer [-@mayer2021] zurück.
 ```
 
-Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern Sie dort einen `# Literatur`-Heading mit `::: {#refs}` setzt — wie in diesem Skript.
+Quarto rendert das in APA und hängt am Kapitelende automatisch eine Literaturliste an, sofern Sie dort einen `# Literatur`-Heading mit `::: {#refs}` setzen — wie in diesem Skript.
 
 ::: {.callout-tip}
 ## Mach mit — strangbezogen
 
-Wählen Sie aus Ihrem Strang **drei Quellen**, lege sie in Zotero an, exportiere und zitiere sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt hast, hier je eine Empfehlung:
+Wählen Sie aus Ihrem Strang **drei Quellen**, legen Sie sie in Zotero an, exportieren und zitieren Sie sie in Ihrem Kapitel. Wenn Sie keinen passenden Startpunkt haben, hier je eine Empfehlung:
 
 - **Strang A — Wissenschaftliche Einstellung:** Bartnik & Palmer [-@bartnik2024], dazu zwei eigene Ergänzungen.
 - **Strang B — Recherche und Quellenqualität:** Bartnik & Palmer [-@bartnik2024], dazu eine Quelle zu Open-Access-Datenbanken (z. B. <https://doaj.org>) und eine zu Pre-Print-Servern.
@@ -84,9 +84,10 @@ Wählen Sie aus Ihrem Strang **drei Quellen**, lege sie in Zotero an, exportiere
 
 Vorschlag-Prompt für dieses Kapitel:
 
-> Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erkläre mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.
+> Ich möchte aus Zotero exportierte Quellen in einem Quarto-Skript zitieren. Mein Stand: [Better BibTeX installiert / nicht installiert]; [references.bib liegt im Projekt / fehlt noch]. Erklären Sie mir den nächsten Schritt mit Lay-Erklärung vor dem Code. Fragen Sie, wo ich gerade stehe.
 :::
 
 # Literatur {.unnumbered}
 
-::: {
+::: {#refs}
+:::

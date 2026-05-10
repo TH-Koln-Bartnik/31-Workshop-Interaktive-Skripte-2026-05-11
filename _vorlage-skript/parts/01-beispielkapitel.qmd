@@ -2,6 +2,10 @@
 title: "1 — Beispielkapitel mit allen Elementen"
 ---
 
+```{=html}
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+```
+
 ::: {.lernziel-box}
 #### Was Sie nach diesem Kapitel können
 
@@ -16,7 +20,7 @@ Dieser Block ist ein Platz für die Lay-Erklärung Ihres Themas. Zwei bis drei S
 
 ## Bild mit Caption und Label
 
-@fig-platzhalter zeigt das TH-Köln-Logo als Beispielbild. Mauszeiger über `@fig-platzhalter` halten — eine Vorschau erscheint.
+@fig-platzhalter zeigt ein Beispielbild. Mauszeiger über `@fig-platzhalter` halten — eine Vorschau erscheint.
 
 ![Beispielbild als Platzhalter. Eigene Datei in `images/` ablegen und hier verweisen.](../images/platzhalter.png){#fig-platzhalter width=40%}
 
@@ -32,53 +36,57 @@ Die drei Lernprinzipien im Überblick (siehe @tbl-prinzipien):
 
 : Drei Lernprinzipien und ihre Skript-Elemente. {#tbl-prinzipien}
 
-## Interaktive Grafik aus R-Chunk
+## Interaktives Diagramm — Plotly.js direkt im Browser
 
 Live-gerendert (zuerst die Grafik, dann der Code zum Kopieren):
 
-```{r}
-#| label: fig-beispielchart
-#| fig-cap: "Beispielhafter Lerneffekt verschiedener Lernaktivitäten."
-#| echo: false
-#| message: false
-#| warning: false
-
-library(plotly)
-library(tibble)
-
-d <- tribble(
-  ~Methode,                  ~Behalten,
-  "Lesen × 3",               30,
-  "Lesen × 2 + Test × 1",    65,
-  "Lesen + Selbst erklären", 78
-)
-
-plot_ly(d, x = ~Methode, y = ~Behalten, type = "bar",
-        marker = list(color = "#c81e0f")) |>
-  layout(yaxis = list(title = "Behalten nach 1 Woche (%)"))
+```{=html}
+<div id="plot-beispiel" style="width:100%; height:380px;"></div>
+<script>
+Plotly.newPlot('plot-beispiel', [
+  { x: ["Lesen × 3", "Lesen × 2 + Test × 1", "Lesen + Selbst erklären"],
+    y: [30, 65, 78],
+    type: 'bar', marker: {color: '#c81e0f'}, name: 'Behalten (%)' }
+], {
+  yaxis: {title: 'Behalten nach 1 Woche (%)'},
+  xaxis: {title: ''},
+  margin: {t: 30, r: 30, b: 80, l: 60}
+}, {responsive: true});
+</script>
 ```
 
-**Code zum Übernehmen:**
+**HTML-Code zum Übernehmen** (kein R nötig):
+
+````markdown
+```{=html}
+<div id="plot-beispiel" style="width:100%; height:380px;"></div>
+<script>
+Plotly.newPlot('plot-beispiel', [
+  { x: ["Lesen × 3", "Lesen × 2 + Test × 1", "Lesen + Selbst erklären"],
+    y: [30, 65, 78],
+    type: 'bar', marker: {color: '#c81e0f'} }
+], {
+  yaxis: {title: 'Behalten nach 1 Woche (%)'},
+  xaxis: {title: ''}
+}, {responsive: true});
+</script>
+```
+````
+
+**Alternativ R-Code** (wenn `plotly` und `tibble` installiert sind):
 
 ````markdown
 ```{r}
 #| label: fig-beispielchart
-#| fig-cap: "Beispielhafter Lerneffekt verschiedener Lernaktivitäten."
+#| fig-cap: "Lerneffekt verschiedener Lernaktivitäten."
 #| message: false
-
-library(plotly)
-library(tibble)
-
-d <- tribble(
-  ~Methode,                  ~Behalten,
-  "Lesen × 3",               30,
-  "Lesen × 2 + Test × 1",    65,
-  "Lesen + Selbst erklären", 78
-)
-
+library(plotly); library(tibble)
+d <- tribble(~Methode, ~Behalten,
+  "Lesen × 3", 30,
+  "Lesen × 2 + Test × 1", 65,
+  "Lesen + Selbst erklären", 78)
 plot_ly(d, x = ~Methode, y = ~Behalten, type = "bar",
-        marker = list(color = "#c81e0f")) |>
-  layout(yaxis = list(title = "Behalten nach 1 Woche (%)"))
+        marker = list(color = "#c81e0f"))
 ```
 ````
 
@@ -112,6 +120,7 @@ Ersetzen Sie das Platzhalterbild und die Beispieltabelle durch eigene Inhalte au
 - **`?@fig-xyz` im gerenderten Text?** → Label-Tippfehler, prüfen.
 - **iFrame leer?** → `resources: ["interactions/*"]` in `_quarto.yml`.
 - **Citation als `[?]`?** → Citation-Key in `references.bib` prüfen.
+- **Plotly-Chart unsichtbar?** → CDN-Loader-Block ganz oben im Kapitel prüfen.
 :::
 
 ## Tutor
