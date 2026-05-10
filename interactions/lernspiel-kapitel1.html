@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Lernspiel — Welches Prinzip steckt hinter welchem Beispiel?</title>
+<style>
+  :root {
+    --th-red: #c81e0f;
+    --th-magenta: #b43092;
+    --th-orange: #ea5a00;
+    --ink: #111111;
+    --paper: #ffffff;
+    --gray-100: #f5f5f7;
+    --gray-200: #e6e6ea;
+    --gray-500: #6b6b73;
+    --green: #2d8c2d;
+    --green-bg: #f3fff3;
+    --red-bg: #fff3f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2.5rem;
+    line-height: 1.5;
+  }
+  .th-bar {
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--th-red) 0%, var(--th-red) 45%,
+      var(--th-magenta) 45%, var(--th-magenta) 80%,
+      var(--th-orange) 80%, var(--th-orange) 100%);
+    margin-bottom: 1.25rem;
+  }
+  h1 { font-size: 1.4rem; font-weight: 600; margin: 0 0 0.3rem; }
+  .lead { color: var(--gray-500); margin: 0 0 1rem; }
+  .stats {
+    display: flex; gap: 1.5rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+  }
+  .stats span strong { color: var(--th-red); margin-right: 0.3rem; }
+
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 1.25rem;
+  }
+  @media (max-width: 720px) {
+    .columns { grid-template-columns: 1fr; }
+  }
+
+  .col-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
+    margin-bottom: 0.4rem;
+  }
+
+  .examples { display: flex; flex-direction: column; gap: 0.6rem; }
+  .example {
+    background: var(--paper);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--th-red);
+    padding: 0.7rem 0.9rem;
+    cursor: grab;
+    user-select: none;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    transition: opacity 0.15s, background 0.15s;
+  }
+  .example:active { cursor: grabbing; }
+  .example.dragging { opacity: 0.4; }
+  .example.placed {
+    background: var(--gray-100);
+    color: var(--gray-500);
+    cursor: default;
+    text-decoration: line-through;
+  }
+  .example.selected {
+    outline: 2px solid var(--th-magenta);
+    outline-offset: -2px;
+    background: rgba(180,48,146,0.08);
+  }
+
+  .principles { display: flex; flex-direction: column; gap: 0.7rem; }
+  .principle {
+    border: 2px dashed var(--gray-200);
+    background: var(--gray-100);
+    padding: 0.75rem 0.9rem;
+    min-height: 5rem;
+  }
+  .principle.over { background: rgba(180,48,146,0.08); border-color: var(--th-magenta); }
+  .principle h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1rem;
+    color: var(--th-red);
+  }
+  .principle .hint {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin: 0 0 0.4rem;
+  }
+  .placed-card {
+    background: var(--paper);
+    border: 1px solid var(--gray-200);
+    border-left: 4px solid var(--th-magenta);
+    padding: 0.5rem 0.7rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+  }
+  .placed-card.correct {
+    border-left-color: var(--green);
+    background: var(--green-bg);
+  }
+  .placed-card.wrong {
+    border-left-color: var(--th-red);
+    background: var(--red-bg);
+  }
+  .placed-card .feedback {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.82rem;
+    color: var(--gray-500);
+    line-height: 1.4;
+  }
+
+  .controls {
+    margin: 1.5rem 0 0;
+    display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;
+  }
+  button.btn {
+    background: var(--th-red);
+    color: var(--paper);
+    border: none;
+    padding: 0.55rem 1.1rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button.btn:hover:not(:disabled) { background: var(--th-magenta); }
+  button.btn:disabled { background: var(--gray-200); color: var(--gray-500); cursor: default; }
+  button.btn-secondary {
+    background: var(--paper);
+    color: var(--th-red);
+    border: 1px solid var(--th-red);
+  }
+  button.btn-secondary:hover { background: var(--th-magenta); color: var(--paper); border-color: var(--th-magenta); }
+
+  .hint-text { color: var(--gray-500); font-size: 0.85rem; }
+
+  .summary {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--green-bg);
+    border-left: 4px solid var(--green);
+    display: none;
+  }
+  .summary.visible { display: block; }
+  .summary strong { color: var(--green); }
+
+  footer {
+    margin-top: 2.5rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 0.6rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="th-bar"></div>
+
+<h1>Welches Prinzip steckt hinter welchem Beispiel?</h1>
+<p class="lead">Drei Beispiele aus der Praxis, drei Lerntheorie-Prinzipien. Ziehen Sie jedes Beispiel auf das Prinzip, das es am stärksten illustriert. Touch-fähig: Beispiel antippen, dann Prinzip antippen. Wenn Sie alle drei platziert haben, klicken Sie auf <strong>Auflösung anzeigen</strong>.</p>
+
+<div class="stats">
+  <span><strong id="placed-count">0</strong>von 3 platziert</span>
+</div>
+
+<div class="columns">
+  <div>
+    <div class="col-title">Beispiele aus der Lehrpraxis</div>
+    <div class="examples" id="examples"></div>
+  </div>
+  <div>
+    <div class="col-title">Drei Lerntheorie-Prinzipien</div>
+    <div class="principles" id="principles"></div>
+  </div>
+</div>
+
+<div class="controls">
+  <button class="btn" id="reveal" disabled>Auflösung anzeigen</button>
+  <button class="btn btn-secondary" id="reset">Neu mischen</button>
+  <span class="hint-text">Tipp: Drag-Drop oder erst Beispiel, dann Prinzip antippen.</span>
+</div>
+
+<div class="summary" id="summary">
+  <strong>Auflösung sichtbar.</strong> Korrekte Zuordnungen sind grün, falsche rot — mit kurzer Begründung darunter. Die drei Prinzipien überschneiden sich oft; entscheidend ist, welches im jeweiligen Beispiel <em>am stärksten</em> wirkt.
+</div>
+
+<footer>
+  Lernspiel zum Workshop „Interaktive Skripte mit KI erstellen", TH Köln, 11.05.2026 · Prof. Dr. Roman Bartnik
+</footer>
+
+<script>
+(function() {
+  const principles = [
+    {
+      id: 'generativ',
+      name: 'Generatives Lernen',
+      hint: 'Lernende tun selbst etwas mit dem Stoff (zusammenfassen, erklären, anwenden, zeichnen).'
+    },
+    {
+      id: 'retrieval',
+      name: 'Retrieval Practice',
+      hint: 'Lernende rufen aus dem Gedächtnis ab — das Erinnern selbst stärkt die Spur.'
+    },
+    {
+      id: 'multimedia',
+      name: 'Multimedia-Prinzip',
+      hint: 'Worte plus passendes Bild schlagen Worte allein.'
+    }
+  ];
+
+  const examples = [
+    {
+      id: 'e1',
+      text: 'Am Ende jedes Kapitels schreiben Studierende die Kernaussage in zwei Sätzen in eigenen Worten auf.',
+      correct: 'generativ',
+      explanation: 'Selbst formulieren ist eine generative Aktivität: die Lernenden produzieren etwas, statt nur zu lesen.'
+    },
+    {
+      id: 'e2',
+      text: 'Nach jedem Abschnitt erscheint ein Drei-Fragen-Quiz, das ohne Nachschlagen beantwortet werden muss.',
+      correct: 'retrieval',
+      explanation: 'Aus dem Gedächtnis abrufen ohne Vorlage: Retrieval Practice. Auch ein einfaches Quiz wirkt wie eine Mini-Klausur.'
+    },
+    {
+      id: 'e3',
+      text: 'Ein interaktives Diagramm zeigt den Workflow, während der Text die einzelnen Schritte parallel erklärt.',
+      correct: 'multimedia',
+      explanation: 'Bild plus passender Text: das ist exakt die Multimedia-Konstellation. Beide Repräsentationen zusammen schlagen jede einzeln.'
+    }
+  ];
+
+  const examplesEl = document.getElementById('examples');
+  const principlesEl = document.getElementById('principles');
+  const placedCountEl = document.getElementById('placed-count');
+  const revealBtn = document.getElementById('reveal');
+  const resetBtn = document.getElementById('reset');
+  const summary = document.getElementById('summary');
+
+  let state = {};       // { exampleId: principleId }
+  let selectedExample = null;
+  let revealed = false;
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function build() {
+    state = {};
+    selectedExample = null;
+    revealed = false;
+    placedCountEl.textContent = '0';
+    revealBtn.disabled = true;
+    summary.classList.remove('visible');
+
+    examplesEl.innerHTML = '';
+    shuffle(examples).forEach(ex => {
+      const div = document.createElement('div');
+      div.className = 'example';
+      div.draggable = true;
+      div.dataset.id = ex.id;
+      div.textContent = ex.text;
+      div.addEventListener('click', () => selectExample(div, ex));
+      div.addEventListener('dragstart', e => {
+        if (div.classList.contains('placed')) { e.preventDefault(); return; }
+        e.dataTransfer.setData('text/plain', ex.id);
+        e.dataTransfer.effectAllowed = 'move';
+        div.classList.add('dragging');
+        selectedExample = ex;
+      });
+      div.addEventListener('dragend', () => div.classList.remove('dragging'));
+      examplesEl.appendChild(div);
+    });
+
+    principlesEl.innerHTML = '';
+    principles.forEach(pr => {
+      const div = document.createElement('div');
+      div.className = 'principle';
+      div.dataset.id = pr.id;
+      div.innerHTML = `
+        <h3>${pr.name}</h3>
+        <p class="hint">${pr.hint}</p>
+        <div class="drop-area" data-drop="${pr.id}"></div>
+      `;
+      div.addEventListener('dragover', e => {
+        e.preventDefault();
+        div.classList.add('over');
+      });
+      div.addEventListener('dragleave', () => div.classList.remove('over'));
+      div.addEventListener('drop', e => {
+        e.preventDefault();
+        div.classList.remove('over');
+        const exId = e.dataTransfer.getData('text/plain');
+        const ex = examples.find(x => x.id === exId);
+        if (ex) place(ex, pr);
+      });
+      div.addEventListener('click', () => {
+        if (selectedExample && !state[selectedExample.id]) {
+          place(selectedExample, pr);
+        }
+      });
+      principlesEl.appendChild(div);
+    });
+  }
+
+  function selectExample(el, ex) {
+    if (el.classList.contains('placed')) return;
+    if (selectedExample && selectedExample.id === ex.id) {
+      el.classList.remove('selected');
+      selectedExample = null;
+      return;
+    }
+    document.querySelectorAll('.example.selected').forEach(e => e.classList.remove('selected'));
+    selectedExample = ex;
+    el.classList.add('selected');
+  }
+
+  function place(ex, pr) {
+    if (state[ex.id]) return;
+    state[ex.id] = pr.id;
+
+    // Beispiel-Karte ausgrauen
+    const exEl = examplesEl.querySelector(`[data-id="${ex.id}"]`);
+    exEl.classList.remove('selected');
+    exEl.classList.add('placed');
+    exEl.draggable = false;
+
+    // Karte unter dem Prinzip einsetzen
+    const drop = principlesEl.querySelector(`[data-drop="${pr.id}"]`);
+    const card = document.createElement('div');
+    card.className = 'placed-card';
+    card.dataset.exId = ex.id;
+    card.textContent = ex.text;
+    drop.appendChild(card);
+
+    selectedExample = null;
+    const placedCount = Object.keys(state).length;
+    placedCountEl.textContent = String(placedCount);
+    if (placedCount === examples.length) revealBtn.disabled = false;
+  }
+
+  function reveal() {
+    if (revealed) return;
+    revealed = true;
+    Object.entries(state).forEach(([exId, prId]) => {
+      const ex = examples.find(x => x.id === exId);
+      const card = principlesEl.querySelector(`.placed-card[data-ex-id="${exId}"]`);
+      if (!card || !ex) return;
+      const isCorrect = ex.correct === prId;
+      card.classList.add(isCorrect ? 'correct' : 'wrong');
+      const fb = document.createElement('span');
+      fb.className = 'feedback';
+      const correctName = principles.find(p => p.id === ex.correct).name;
+      fb.innerHTML = isCorrect
+        ? `<strong>✓ Richtig.</strong> ${ex.explanation}`
+        : `<strong>✗ Stärker passt:</strong> ${correctName}. ${ex.explanation}`;
+      card.appendChild(fb);
+    });
+    summary.classList.add('visible');
+    revealBtn.disabled = true;
+  }
+
+  revealBtn.addEventListener('click', reveal);
+  resetBtn.addEventListener('click', build);
+  build();
+})();
+</script>
+
+</body>
+</html>
