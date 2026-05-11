@@ -6,6 +6,13 @@ subtitle: "Skript zum Workshop am 11.05.2026"
 ::: th-color-bar
 :::
 
+::: {.callout-tip appearance="minimal"}
+## Auftakt-Folien zum Workshop
+[**Zur Intro-Slideshow →**](slides/intro-vorstellung.html){target="_blank"}
+
+Sechs Folien für den Einstieg: Titelfolie, Vorstellung & Motivation, Vorstellungsrunde, Drei Phasen, Workflow, „Los geht's" mit der Live-URL.
+:::
+
 # Was Sie heute bauen
 
 Ihr eigenes interaktives Skript live im Netz.
